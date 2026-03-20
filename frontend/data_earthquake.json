@@ -1,0 +1,287 @@
+{
+  "last_update": "2026-03-20 07:28",
+  "topic_name": "地震研究",
+  "papers": [
+    {
+      "id": "2603.18925v1",
+      "title": "Improving moment tensor solutions under Earth structure uncertainty with simulation-based inference",
+      "abstract": "Bayesian inference represents a principled way to incorporate Earth structure uncertainty in full-waveform moment tensor inversions, but traditional approaches generally require significant approximations that risk biasing the resulting solutions. We introduce a robust method for handling theory errors using simulation-based inference (SBI), a machine learning approach that empirically models their impact on the observations. This framework retains the rigour of Bayesian inference while avoiding restrictive assumptions about the functional form of the uncertainties. We begin by demonstrating that the common Gaussian parametrisation of theory errors breaks down under minor ($1-3 \\%$) 1-D Earth model uncertainty. To address this issue, we develop two formalisms for utilising SBI to improve the quality of the moment tensor solutions: one using physics-based insights into the theory errors, and another utilising an end-to-end deep learning algorithm. We then compare the results of moment tensor inversion with the standard Gaussian approach and SBI, and demonstrate that Gaussian assumptions induce bias and significantly under-report moment tensor uncertainties. We also show that these effects are particularly problematic when inverting short period data and for shallow, isotropic events. On the other hand, SBI produces more reliable, better calibrated posteriors of the earthquake source mechanism. Finally, we successfully apply our methodology to two well studied moderate magnitude earthquakes: one from the 1997 Long Valley Caldera volcanic earthquake sequence, and the 2020 Zagreb earthquake.",
+      "translated_abstract": "贝叶斯推理代表了将地球结构不确定性纳入全波形矩张量反演中的原则性方法，但传统方法通常需要显着的近似，这可能会导致结果解出现偏差。我们引入了一种使用基于模拟的推理（SBI）来处理理论错误的稳健方法，这是一种机器学习方法，可以根据经验模拟理论错误对观察的影响。该框架保留了贝叶斯推理的严谨性，同时避免了对不确定性函数形式的限制性假设。我们首先证明理论误差的常见高斯参数化在较小的（$1-3 \\%$）一维地球模型不确定性下会崩溃。为了解决这个问题，我们开发了两种利用 SBI 来提高矩张量解决方案质量的形式：一种使用基于物理的理论错误洞察，另一种使用端到端深度学习算法。然后，我们将矩张量反演的结果与标准高斯方法和 SBI 进行比较，并证明高斯假设会产生偏差并显着低估矩张量的不确定性。我们还表明，当反演短期数据和浅层各向同性事件时，这些影响尤其成问题。另一方面，SBI 产生更可靠、更好校准的震源机制后验。最后，我们成功地将我们的方法应用于两个经过充分研究的中等强度",
+      "authors": [
+        "A. A. Saoulis",
+        "T. -S. Pham",
+        "A. M. G. Ferreira"
+      ],
+      "published": "2026-03-19T14:04:17Z",
+      "updated": "2026-03-19T14:04:17Z",
+      "categories": [
+        "physics.geo-ph",
+        "cs.AI"
+      ],
+      "first_author": "A. A. Saoulis"
+    },
+    {
+      "id": "2603.18626v1",
+      "title": "GEAR: Geography-knowledge Enhanced Analog Recognition Framework in Extreme Environments",
+      "abstract": "The Mariana Trench and the Qinghai-Tibet Plateau exhibit significant similarities in geological origins and microbial metabolic functions. Given that deep-sea biological sampling faces prohibitive costs, recognizing structurally homologous terrestrial analogs of the Mariana Trench on the Qinghai-Tibet Plateau is of great significance. Yet, no existing model adequately addresses cross-domain topographic similarity retrieval, either neglecting geographical knowledge or sacrificing computational efficiency. To address these challenges, we present \\underline{\\textbf{G}}eography-knowledge \\underline{\\textbf{E}}nhanced \\underline{\\textbf{A}}nalog \\underline{\\textbf{R}}ecognition (\\textbf{GEAR}) Framework, a three-stage pipeline designed to efficiently retrieve analogs from 2.5 million square kilometers of the Qinghai-Tibet Plateau: (1) Skeleton guided Screening and Clipping: Recognition of candidate valleys and initial screening based on size and linear morphological criteria. (2) Physics aware Filtering: The Topographic Waveform Comparator (TWC) and Morphological Texture Module (MTM) evaluate the waveform and texture and filter out inconsistent candidate valleys. (3) Graph based Fine Recognition: We design a \\underline{\\textbf{M}}orphology-integrated \\underline{\\textbf{S}}iamese \\underline{\\textbf{G}}raph \\underline{\\textbf{N}}etwork (\\textbf{MSG-Net}) based on geomorphological metrics. Correspondingly, we release an expert-annotated topographic similarity dataset targeting tectonic collision zones. Experiments demonstrate the effectiveness of every stage. Besides, MSG-Net achieved an F1-Score 1.38 percentage points higher than the SOTA baseline. Using features extracted by MSG-Net, we discovered a significant correlation with biological data, providing evidence for future biological analysis.",
+      "translated_abstract": "马里亚纳海沟与青藏高原在地质起源和微生物代谢功能方面表现出显着的相似性。鉴于深海生物采样面临着高昂的成本，识别青藏高原马里亚纳海沟在结构上的同源陆地类似物具有重要意义。然而，现有模型还没有充分解决跨域地形相似性检索问题，要么忽略了地理知识，要么牺牲了计算效率。为了应对这些挑战，我们提出了\\underline{\\textbf{G}}地理知识\\underline{\\textbf{E}}增强型\\underline{\\textbf{A}}nalog \\underline{\\textbf{R}}识别（\\textbf{GEAR}）框架，这是一个三阶段管道，旨在有效地检索青藏高原250万平方公里的类似物：（1）骨骼引导筛选和剪切：根据大小和线性形态标准识别候选谷并进行初步筛选。 (2) 物理感知过滤：地形波形比较器 (TWC) 和形态纹理模块 (MTM) 评估波形和纹理并过滤掉不一致的候选波谷。 （3）基于图的精细识别：我们基于地貌度量设计了一个\\underline{\\textbf{M}}形态集成\\underline{\\textbf{S}}iamese \\underline{\\textbf{G}}raph \\underline{\\textbf{N}}网络（\\textbf{MSG-Net}）。相应地，我们发布了针对构造的专家注释的地形相似性数据集",
+      "authors": [
+        "Zelin Liu",
+        "Bocheng Li",
+        "Yuling Zhou",
+        "Xuanting Li",
+        "Yixuan Yang",
+        "Jing Wang",
+        "Weishu Zhao",
+        "Xiaofeng Gao"
+      ],
+      "published": "2026-03-19T08:45:45Z",
+      "updated": "2026-03-19T08:45:45Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "first_author": "Zelin Liu"
+    },
+    {
+      "id": "2603.17855v1",
+      "title": "Physics-Aware Machine Learning for Seismic and Volcanic Signal Interpretation",
+      "abstract": "Modern seismic and volcanic monitoring is increasingly shaped by continuous, multi-sensor observations and by the need to extract actionable information from nonstationary, noisy wavefields. In this context, machine learning has moved from a research curiosity to a practical ingredient of processing chains for detection, phase picking, classification, denoising, and anomaly tracking. However, improved accuracy on a fixed dataset is not sufficient for operational use. Models must remain reliable under domain shift (new stations, changing noise, evolving volcanic activity), provide uncertainty that supports decision-making, and connect their outputs to physically meaningful constraints. This paper surveys and organizes recent ML approaches for seismic and volcanic signal analysis, highlighting where classical signal processing provides indispensable inductive bias, how self-supervision and generative modeling can reduce dependence on labels, and which evaluation protocols best reflect transfer across regions. We conclude with open challenges for robust, interpretable, and maintainable AI-assisted monitoring.",
+      "translated_abstract": "现代地震和火山监测越来越受到连续、多传感器观测的影响，并且需要从非平稳、嘈杂的波场中提取可操作的信息。在这种背景下，机器学习已经从一种研究兴趣转变为检测、相位选取、分类、去噪和异常跟踪处理链的实用组成部分。然而，提高固定数据集的准确性不足以满足操作使用。模型必须在领域转移（新站、不断变化的噪音、不断变化的火山活动）下保持可靠，提供支持决策的不确定性，并将其输出与物理上有意义的约束联系起来。本文调查并整理了最新的用于地震和火山信号分析的机器学习方法，重点介绍了经典信号处理在何处提供了不可或缺的归纳偏差、自我监督和生成建模如何减少对标签的依赖，以及哪些评估协议最能反映跨区域的传输。最后，我们提出了稳健、可解释和可维护的人工智能辅助监控的开放挑战。",
+      "authors": [
+        "William Thorossian"
+      ],
+      "published": "2026-03-18T15:43:22Z",
+      "updated": "2026-03-18T15:43:22Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "first_author": "William Thorossian"
+    },
+    {
+      "id": "2603.17701v1",
+      "title": "Deep Learning-Based 3D Seismic Velocity Inversion Under Dual-Domain Sparse Representation",
+      "abstract": "Three-dimensional seismic full-waveform inversion (FWI) provides high-fidelity subsurface velocity models but is restricted by high computational cost, strong nonlinearity, cycle-skipping, and heavy dependence on initial models. Although data-driven deep learning mitigates these issues, it still produces over-smoothed results with limited physical interpretability and low efficiency. To address these challenges, we propose a dual-domain sparse deep learning framework for 3D seismic velocity inversion using the discrete cosine transform (DCT). DCT compresses seismic data and velocity models into a sparse domain to remove redundancy while preserving key structural features. A geometry-adaptive network named SEDCN (Squeeze-and-Excitation Deformable Convolutional Network) is adopted to better capture irregular salt-dome geometries and sharp velocity boundaries. We train and validate the network on 676 samples from the 3D SEG/EAGE salt model, with two schemes for comparison: the proposed DCT-SEDCN and the baseline SEDCN without DCT. Numerical results show that DCT-SEDCN reduces training time by more than 90% and achieves higher PSNR and SSIM than conventional spatiotemporal-domain methods. It effectively suppresses over-smoothing, recovers salt body boundaries and stratigraphic details clearly, and generates geologically more reliable velocity models. This study confirms that DCT-based sparse representation combined with geometry-adaptive deep learning significantly improves the efficiency, accuracy, and robustness of 3D seismic velocity inversion. The framework offers a scalable solution for large-scale 3D FWI and can be extended to elastic/viscoelastic multi-parameter inversion and field data applications.",
+      "translated_abstract": "三维地震全波形反演（FWI）提供了高保真地下速度模型，但受到计算成本高、非线性强、跳周期和对初始模型严重依赖的限制。尽管数据驱动的深度学习缓解了这些问题，但它仍然会产生过度平滑的结果，物理可解释性有限且效率低。为了解决这些挑战，我们提出了一种使用离散余弦变换（DCT）进行 3D 地震速度反演的双域稀疏深度学习框架。 DCT 将地震数据和速度模型压缩到稀疏域中，以消除冗余，同时保留关键结构特征。采用名为 SEDCN（挤压和激励可变形卷积网络）的几何自适应网络来更好地捕获不规则的盐丘几何形状和尖锐的速度边界。我们在 3D SEG/EAGE 盐模型的 676 个样本上训练和验证网络，并使用两种方案进行比较：提出的 DCT-SEDCN 和不带 DCT 的基线 SEDCN。数值结果表明，与传统时空域方法相比，DCT-SEDCN 减少了 90% 以上的训练时间，并实现了更高的 PSNR 和 SSIM。它有效地抑制了过度平滑，清晰地恢复了盐体边界和地层细节，并生成了地质上更可靠的速度模型。这项研究证实，基于 DCT 的稀疏表示与几何自适应深度学习相结合，显着提高了 e",
+      "authors": [
+        "Guoxin Chen",
+        "Wenjie Wang",
+        "Haiyang Lu",
+        "Jinxin Chen"
+      ],
+      "published": "2026-03-18T13:19:38Z",
+      "updated": "2026-03-18T13:19:38Z",
+      "categories": [
+        "physics.geo-ph"
+      ],
+      "first_author": "Guoxin Chen"
+    },
+    {
+      "id": "2603.15982v1",
+      "title": "Elastic waveform inversion for double-couple microseismic source estimation in vertically fractured transversely isotropic media",
+      "abstract": "Accurate characterization of microseismic events during fluid injection in sedimentary formations is essential to mitigate environmental risks. The source mechanism for microseismic events related to a slip on a fault plane is given by a double-couple. Waveform inversion has emerged as a promising technique for estimating the moment tensor and the position vector of double-couple sources. In most applications of waveform inversion for the moment tensor of double-couple sources, the formation is typically assumed to be isotropic or, less frequently, transversely isotropic. Modification of the moment-tensor representation to account for anisotropy created by aligned vertical fractures in transversely isotropic formations has not been included while inverting microseismic waveform data. In this study on synthetic microseismic data, we present a waveform inversion algorithm that includes this modification, considering the formation in the focal region to be vertically fractured transversely isotropic (VFTI) and possessing orthorhombic symmetry. Since VFTI media lack rotational symmetry, no assumptions have been made about the orientation of the fault plane where the slip occurred. The moment tensor of double-couple sources is formulated in terms of the elastic parameters of the VFTI medium and geometrical parameters which are slip magnitude, slip angle, fault dip, and azimuth angle of the fault-normal. Source inversion is treated as a local optimization problem, and we invert for the source location and the geometrical parameters. These geometrical parameters are more directly constrained by seismic data than the moment tensor components and offer geologically meaningful insights. This approach enhances microseismic monitoring in fractured formations and can be extended to more complex anisotropic media, such as monoclinic systems.",
+      "translated_abstract": "准确表征沉积地层流体注入过程中的微震事件对于减轻环境风险至关重要。与断层面上滑动相关的微震事件的震源机制由双力偶给出。波形反演已成为一种用于估计双耦合源的矩张量和位置矢量的有前途的技术。在双偶源矩张量的波形反演的大多数应用中，通常假设地层是各向同性的，或者较少见的是横观各向同性的。在反演微震波形数据时，未包括对矩张量表示的修改，以考虑横向各向同性地层中对齐的垂直裂缝所产生的各向异性。在这项关于合成微震数据的研究中，我们提出了一种包含这种修改的波形反演算法，考虑到震源区域中的地层是垂直断裂横观各向同性（VFTI）并具有正交对称性。由于 VFTI 介质缺乏旋转对称性，因此没有对发生滑移的断层面的方向做出任何假设。双力偶源的力矩张量是根据VFTI介质的弹性参数和滑移幅度、滑移角、断层倾角和断层法线方位角等几何参数来公式化的。源反演被视为局部优化问题，我们反演为",
+      "authors": [
+        "Ujjwal Shekhar",
+        "Einar Iversen",
+        "Florin A. Radu",
+        "Inga Berre",
+        "Morten Jakobsen"
+      ],
+      "published": "2026-03-16T22:55:32Z",
+      "updated": "2026-03-16T22:55:32Z",
+      "categories": [
+        "physics.geo-ph"
+      ],
+      "first_author": "Ujjwal Shekhar"
+    },
+    {
+      "id": "2603.15424v1",
+      "title": "A numerical framework for Newtonian-noise estimation at the Einstein Telescope: 2-D simulations beyond the plane-wave approximation",
+      "abstract": "The Einstein Telescope (ET) is a third-generation underground gravitational-wave observatory designed to extend the detection sensitivity down to a few Hertz. Newtonian noise is expected to limit the low-frequency sensitivity of ET, particularly in the 1.7-6 Hz band. Most existing estimates rely on analytical or semi-analytical models assuming homogeneous or layered media, neglecting geological heterogeneity and complex wave interactions. In this work, we present a numerical framework for Newtonian-noise estimation based on spectral-element simulations of a seismic wave field. As a proof of concept, we first benchmark the numerical results against analytical plane-wave predictions in a two-dimensional homogeneous medium with a single surface source, demonstrating excellent agreement for both bulk and cavern contributions. We then extend the model to an array of 30 stochastic surface sources to approximate stationary ambient seismic excitation. The P-wave fraction inferred from the simulated wave field is, in this simple homogeneous case, significantly lower than commonly assumed, indicating enhanced prospects for Newtonian-noise mitigation. The framework is readily applicable to three-dimensional simulations and to integration of detailed local seismic models and topography, offering strong potential for site-specific Newtonian-noise estimation.",
+      "translated_abstract": "爱因斯坦望远镜（ET）是第三代地下引力波天文台，旨在将探测灵敏度扩展到几赫兹。牛顿噪声预计会限制 ET 的低频灵敏度，特别是在 1.7-6 Hz 频段。大多数现有的估计依赖于假设均匀或层状介质的分析或半分析模型，忽略地质异质性和复杂的波相互作用。在这项工作中，我们提出了基于地震波场谱元模拟的牛顿噪声估计的数值框架。作为概念证明，我们首先将数值结果与具有单个表面源的二维均匀介质中的分析平面波预测进行基准比较，证明了体块和洞穴贡献的良好一致性。然后，我们将模型扩展到 30 个随机表面源的阵列，以近似静态环境地震激励。在这种简单的均匀情况下，从模拟波场推断出的纵波分数明显低于通常假设的水平，表明牛顿噪声缓解的前景增强。该框架很容易适用于三维模拟以及详细的局部地震模型和地形的集成，为特定地点的牛顿噪声估计提供了强大的潜力。",
+      "authors": [
+        "Patrick Schillings",
+        "Shi Yao",
+        "Johannes Erdmann",
+        "Andreas Rietbrock"
+      ],
+      "published": "2026-03-16T15:32:35Z",
+      "updated": "2026-03-16T15:32:35Z",
+      "categories": [
+        "astro-ph.IM",
+        "gr-qc"
+      ],
+      "first_author": "Patrick Schillings"
+    },
+    {
+      "id": "2603.15354v1",
+      "title": "Conditional Rectified Flow-based End-to-End Rapid Seismic Inversion Method",
+      "abstract": "Seismic inversion is a core problem in geophysical exploration, where traditional methods suffer from high computational costs and are susceptible to initial model dependence. In recent years, deep generative model-based seismic inversion methods have achieved remarkable progress, but existing generative models struggle to balance sampling efficiency and inversion accuracy. This paper proposes an end-to-end fast seismic inversion method based on Conditional Rectified Flow[1], which designs a dedicated seismic encoder to extract multi-scale seismic features and adopts a layer-by-layer injection control strategy to achieve fine-grained conditional control. Experimental results demonstrate that the proposed method achieves excellent inversion accuracy on the OpenFWI[2] benchmark dataset. Compared with Diffusion[3,4] methods, it achieves sampling acceleration; compared with InversionNet[5,6,7] methods, it achieves higher accuracy in generation. Our zero-shot generalization experiments on Marmousi[8,9] real data further verify the practical value of the method. Experimental results show that the proposed method achieves excellent inversion accuracy on the OpenFWI benchmark dataset; compared with Diffusion methods, it achieves sampling acceleration while maintaining higher accuracy than InversionNet methods; experiments based on the Marmousi standard model further verify that this method can generate high-quality initial velocity models in a zero-shot manner, effectively alleviating the initial model dependency problem in traditional Full Waveform Inversion (FWI), and possesses industrial practical value.",
+      "translated_abstract": "地震反演是地球物理勘探的核心问题，传统方法计算成本高，并且容易受到初始模型依赖性的影响。近年来，基于深层生成模型的地震反演方法取得了显着进展，但现有的生成模型难以平衡采样效率和反演精度。本文提出一种基于条件整流流的端到端快速地震反演方法[1]，该方法设计专用地震编码器提取多尺度地震特征，并采用逐层注入控制策略实现细粒度条件控制。实验结果表明，该方法在OpenFWI[2]基准数据集上取得了良好的反演精度。与Diffusion[3,4]方法相比，实现了采样加速；与InversionNet[5,6,7]方法相比，其生成精度更高。我们在Marmousi[8,9]真实数据上进行的零样本泛化实验进一步验证了该方法的实用价值。实验结果表明，该方法在OpenFWI基准数据集上取得了优异的反演精度；与Diffusion方法相比，实现了采样加速，同时保持了比InversionNet方法更高的精度；基于Marmousi标准模型的实验进一步验证了该方法能够以零样本的方式生成高质量的初速度模型，有效缓解",
+      "authors": [
+        "Haofei Xu",
+        "Wei Cheng",
+        "Sizhe Li",
+        "Jie Xiong"
+      ],
+      "published": "2026-03-16T14:36:28Z",
+      "updated": "2026-03-16T14:36:28Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "first_author": "Haofei Xu"
+    },
+    {
+      "id": "2603.15157v2",
+      "title": "ANNA: a toolbox for Newtonian Noise Analysis",
+      "abstract": "The Einstein Telescope (ET) is a third-generation underground gravitational wave observatory designed to achieve an unprecedented sensitivity down to 3 Hz. Waves propagating in the soil due to anthropogenic or natural vibration sources generate density fluctuations which cause gravitational attraction, resulting in motion of the mirrors of the laser interferometer known as Newtonian noise. The latter is computed by integrating density fluctuations due to seismic wave fields over the soil domain surrounding the test mass.   ANNA Newtonian Noise Analysis is a toolbox that computes Newtonian Noise from a seismic wave field defined on a finite element mesh, using Gaussian quadrature. 3D finite element meshes composed of linear and quadratic tetrahedral (4-node and 10-node) and brick (8-node and 20-node) elements are supported. The user computes (or interpolates) a seismic wave field on a finite element mesh and the toolbox computes the total Newtonian noise, as well as the bulk and surface contributions. ANNA runs in the MATLAB programming and numeric computing platform and is compatible with the open-source GNU Octave Scientific Programming Language; a Python version is also available.   The toolbox is verified for plane P- and S-waves propagating in an elastic homogeneous full space with a mirror suspended in a spherical cavity, assuming that the wavelength is much larger than the radius of the cavity, so that wave scattering can be ignored. Excellent agreement with analytical solutions is obtained. Similar good agreement is reported for the Newtonian noise on a test mass suspended at a finite distance above the free surface of a homogeneous elastic halfspace in which a Rayleigh wave propagates.   The proposed finite element framework provides a physically consistent and computationally efficient approach for computing gravitational-seismic coupling in heterogeneous media.",
+      "translated_abstract": "爱因斯坦望远镜 (ET) 是第三代地下引力波天文台，旨在实现低至 3 Hz 的前所未有的灵敏度。由于人为或自然振动源而在土壤中传播的波会产生密度波动，从而引起引力，导致激光干涉仪的镜子运动，称为牛顿噪声。后者是通过积分测试质量周围土壤域上地震波场引起的密度波动来计算的。   ANNA 牛顿噪声分析是一个工具箱，它使用高斯求积法根据有限元网格上定义的地震波场计算牛顿噪声。支持由线性和二次四面体（4 节点和 10 节点）和砖块（8 节点和 20 节点）元素组成的 3D 有限元网格。用户在有限元网格上计算（或插值）地震波场，工具箱计算总牛顿噪声以及体积和表面贡献。 ANNA运行在MATLAB编程和数值计算平台上，并与开源GNU Octave科学编程语言兼容； Python 版本也可用。   该工具箱针对在弹性均匀全空间中传播的平面 P 波和 S 波进行了验证，其中镜子悬挂在球形腔中，假设波长远大于腔的半径，因此可以忽略波散射。与分析结果非常吻合",
+      "authors": [
+        "Pieter Reumers",
+        "Xhorxha Kuci",
+        "Stijn François",
+        "Geert Degrande"
+      ],
+      "published": "2026-03-16T11:52:01Z",
+      "updated": "2026-03-17T08:48:47Z",
+      "categories": [
+        "physics.app-ph",
+        "astro-ph.IM",
+        "physics.comp-ph"
+      ],
+      "first_author": "Pieter Reumers"
+    },
+    {
+      "id": "2603.14907v1",
+      "title": "Machine learning for sustainable geoenergy: uncertainty, physics and decision-ready inference",
+      "abstract": "Geoenergy projects (CO2 storage, geothermal, subsurface H2 generation/storage, critical minerals from subsurface fluids, or nuclear waste disposal) increasingly follow a petroleum-style funnel from screening and appraisal to operations, monitoring, and stewardship. Across this funnel, limited and heterogeneous observations must be turned into risk-bounded operational choices under strong physical and geological constraints - choices that control deployment rate, cost of capital, and the credibility of climate-mitigation claims. These choices are inherently multi-objective, balancing performance against containment, pressure footprint, induced seismicity, energy/water intensity, and long-term stewardship. We argue that progress is limited by four recurring bottlenecks: (i) scarce, biased labels and few field performance outcomes; (ii) uncertainty treated as an afterthought rather than the deliverable; (iii) weak scale-bridging from pore to basin (including coupled chemical-flow-geomechanics); and (iv) insufficient quality assurance (QA), auditability, and governance for regulator-facing deployment. We outline machine learning (ML) approaches that match these realities (hybrid physics-ML, probabilistic uncertainty quantification (UQ), structure-aware representations, and multi-fidelity/continual learning) and connect them to four anchor applications: imaging-to-process digital twins, multiphase flow and near-well conformance, monitoring and inverse problems (monitoring, measurement, and verification (MMV), including deformation and microseismicity), and basin-scale portfolio management. We close with a pragmatic agenda for benchmarks, validation, reporting standards, and policy support needed for reproducible and defensible ML in sustainable geoenergy.",
+      "translated_abstract": "地能项目（二氧化碳封存、地热、地下氢气生成/封存、地下流体中的关键矿物或核废料处理）越来越多地遵循石油式漏斗，从筛选和评估到运营、监测和管理。在这个漏斗中，有限和异质的观测必须转化为在强大的物理和地质约束下的风险限制的操作选择——控制部署率、资本成本和气候减缓声明可信度的选择。这些选择本质上是多目标的，平衡性能与遏制、压力足迹、诱发地震活动、能源/水强度和长期管理。我们认为，进展受到四个反复出现的瓶颈的限制：（i）稀缺、有偏见的标签和很少的现场绩效结果； (ii) 不确定性被视为事后的想法而不是可交付成果； (iii) 从孔隙到盆地的弱尺度桥接（包括化学-流动-地质力学耦合）； (iv) 面向监管机构的部署的质量保证 (QA)、可审计性和治理不足。我们概述了与这些现实相匹配的机器学习 (ML) 方法（混合物理 ML、概率不确定性量化 (UQ)、结构感知表示和多保真度/持续学习），并将它们连接到四个锚应用：成像到处理数字孪生、多相流和近井一致性、监控和反问题（监控、测量）",
+      "authors": [
+        "Hannah P. Menke",
+        "Ahmed H. Elsheikh",
+        "Lingli Wei",
+        "Nanzhe Wang",
+        "Andreas Busch"
+      ],
+      "published": "2026-03-16T07:08:45Z",
+      "updated": "2026-03-16T07:08:45Z",
+      "categories": [
+        "cond-mat.dis-nn",
+        "cs.LG"
+      ],
+      "first_author": "Hannah P. Menke"
+    },
+    {
+      "id": "2603.14879v1",
+      "title": "Seismic full-waveform inversion based on a physics-driven generative adversarial network",
+      "abstract": "Objectives: Full-waveform inversion (FWI) is a high-resolution geophysical imaging technique that reconstructs subsurface velocity models by iteratively minimizing the misfit between predicted and observed seismic data. However, under complex geological conditions, conventional FWI suffers from strong dependence on the initial model and tends to produce unstable results when the data are sparse or contaminated by noise. Methods: To address these limitations, this paper proposes a physics-driven generative adversarial network-based full-waveform inversion method. The proposed approach integrates the data-driven capability of deep neural networks with the physical constraints imposed by the seismic wave equation, and employs adversarial training through a discriminator to enhance the stability and robustness of the inversion results. Results: Experimental results on two representative benchmark geological models demonstrate that the proposed method can effectively recover complex velocity structures and achieves superior performance in terms of structural similarity (SSIM) and signal-to-noise ratio (SNR). Conclusions: This method provides a promising solution for alleviating the initial-model dependence in full-waveform inversion and shows strong potential for practical applications.",
+      "translated_abstract": "目标：全波形反演（FWI）是一种高分辨率地球物理成像技术，通过迭代最小化预测和观测的地震数据之间的失配来重建地下速度模型。然而，在复杂的地质条件下，传统的FWI对初始模型的依赖性很强，当数据稀疏或受到噪声污染时往往会产生不稳定的结果。方法：为了解决这些局限性，本文提出了一种基于物理驱动的生成对抗网络的全波形反演方法。该方法将深度神经网络的数据驱动能力与地震波方程施加的物理约束相结合，并通过判别器采用对抗训练来增强反演结果的稳定性和鲁棒性。结果：在两个具有代表性的基准地质模型上的实验结果表明，该方法能够有效地恢复复杂的速度结构，并在结构相似性（SSIM）和信噪比（SNR）方面取得了优越的性能。结论：该方法为减轻全波形反演中的初始模型依赖性提供了一种有前景的解决方案，并显示出巨大的实际应用潜力。",
+      "authors": [
+        "Xinyi Zhang",
+        "Caiyun Liu",
+        "Jie Xiong",
+        "Qingfeng Yu"
+      ],
+      "published": "2026-03-16T06:24:17Z",
+      "updated": "2026-03-16T06:24:17Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "first_author": "Xinyi Zhang"
+    },
+    {
+      "id": "2603.14844v1",
+      "title": "A deep learning framework for marine acoustic and seismic monitoring with distributed acoustic sensing",
+      "abstract": "Distributed Acoustic Sensing (DAS) enables high-resolution and long-duration monitoring of marine acoustic and seismic activity by turning existing fiber-optic cables into dense sensor arrays. However, extracting diverse signals from continuous DAS data remains challenging due to the massive data volumes and signal complexity. Here, we present DASNet, a deep learning framework for automated detection, classification, and arrival-time picking of diverse marine signals in DAS data. The model is trained using a semi-supervised pipeline on continuous recordings and jointly predicts spatiotemporal bounding boxes and segmentation masks for each detected event. Applied to three years of data from the Seafloor Fiber-Optic Array in Monterey Bay (SeaFOAM), DASNet identified over 500,000 events spanning multiple signal categories. For seismic monitoring, the model detects the majority of cataloged local earthquakes within 100 km and identifies distant earthquake-generated T-waves, with beamforming analysis revealing source azimuths clustered toward the southwestern Pacific and along mid-ocean ridge systems. For bioacoustic monitoring, DASNet detects and tracks more than 400,000 blue and fin whale calls, revealing seasonal and interannual variability consistent with independent hydrophone records. For anthropogenic activity, DASNet detects and localizes vessel traffic near the cable, with estimated positions validated against Automatic Identification System (AIS) tracks. These results demonstrate that combining DAS with deep learning provides a scalable, high-resolution monitoring approach for marine environmental observation. As submarine DAS deployments expand, this framework could substantially enhance seismic, bioacoustic, and anthropogenic observations in regions where conventional instrumentation remains sparse.",
+      "translated_abstract": "分布式声学传感 (DAS) 通过将现有光纤电缆转变为密集的传感器阵列，能够对海洋声学和地震活动进行高分辨率和长时间的监测。然而，由于数据量巨大且信号复杂，从连续 DAS 数据中提取不同信号仍然具有挑战性。在这里，我们介绍 DASNet，这是一个深度学习框架，用于自动检测、分类和 DAS 数据中各种海洋信号的到达时间拾取。该模型使用半监督管道对连续记录进行训练，并联合预测每个检测到的事件的时空边界框和分割掩模。应用蒙特利湾海底光纤阵列 (SeaFOAM) 的三年数据，DASNet 识别出跨越多个信号类别的超过 500,000 个事件。对于地震监测，该模型可检测 100 公里范围内的大多数已编录的当地地震，并识别遥远的地震产生的 T 波，波束形成分析显示震源方位角聚集在西南太平洋和沿洋中脊系统。对于生物声学监测，DASNet 检测并跟踪超过 400,000 次蓝鲸和长须鲸叫声，揭示与独立水听器记录一致的季节和年际变化。对于人类活动，DASNet 可检测并定位电缆附近的船只交通，并根据自动识别系统 (AIS) 轨迹验证估计位置。这些结果德",
+      "authors": [
+        "Chun Zhang",
+        "Weiqiang Zhu",
+        "Barbara A. Romanowicz",
+        "Richard M Allen",
+        "Kenichi Soga",
+        "Yuxin Wu"
+      ],
+      "published": "2026-03-16T05:43:51Z",
+      "updated": "2026-03-16T05:43:51Z",
+      "categories": [
+        "physics.geo-ph"
+      ],
+      "first_author": "Chun Zhang"
+    },
+    {
+      "id": "2603.14759v1",
+      "title": "Thermodynamic criticality in seismicity: Uniqueness of surface-energy scaling in the fragment-asperity model",
+      "abstract": "We propose that a linear relation between the energy of stress-bearing interactions and the surface of contact within the fragment-asperity model for earthquakes. It reveals as the only one that leads to a closed elementary form for a well-defined total entropy as a function of non-extensivity parameter, $q$. By writing the total Tsallis entropy as a function of $q$, a critical range of values is identified: $1.4\\lesssim q\\lesssim 1.8$. Such interval of $q$-values corresponds to the strong variation of entropy and contains the most of reported results for this parameter determined for main-shocks around the world in recent decades, indicating the role of $q$ as a criticality indicator, more than just a fitting parameter.",
+      "translated_abstract": "我们提出了地震碎片-粗糙度模型中应力相互作用能量与接触表面之间的线性关系。它揭示了作为非广延性参数 $q$ 的函数的唯一一种导致明确定义的总熵的封闭基本形式的形式。通过将总 Tsallis 熵写为 $q$ 的函数，可以确定关键值范围：$1.4\\lesssim q\\lesssim 1.8$。 $q$ 值的这种区间对应于熵的强烈变化，并且包含近几十年来针对世界各地主震确定的该参数的大部分报告结果，表明 $q$ 作为关键性指标的作用，而不仅仅是拟合参数。",
+      "authors": [
+        "O. Sotolongo-Costa",
+        "A. V. Mora-Rodríguez",
+        "M. E. Mora-Ramos"
+      ],
+      "published": "2026-03-16T02:41:33Z",
+      "updated": "2026-03-16T02:41:33Z",
+      "categories": [
+        "physics.geo-ph"
+      ],
+      "first_author": "O. Sotolongo-Costa"
+    },
+    {
+      "id": "2603.14284v2",
+      "title": "High-Fidelity Compression of Seismic Velocity Models via SIREN Auto-Decoders",
+      "abstract": "Implicit Neural Representations (INRs) have emerged as a powerful paradigm for representing continuous signals independently of grid resolution. In this paper, we propose a high-fidelity neural compression framework based on a SIREN (Sinusoidal Representation Networks) auto-decoder to represent multi-structural seismic velocity models from the OpenFWI benchmark. Our method compresses each 70x70 velocity map (4,900 points) into a compact 256-dimensional latent vector, achieving a compression ratio of 19:1. We evaluate the framework on 1,000 samples across five diverse geological families: FlatVel, CurveVel, FlatFault, CurveFault, and Style. Experimental results demonstrate an average PSNR of 32.47 dB and SSIM of 0.956, indicating high-quality reconstruction. Furthermore, we showcase two key advantages of our implicit representation: (1) smooth latent space interpolation that generates plausible intermediate velocity structures, and (2) zero-shot super-resolution capability that reconstructs velocity fields at arbitrary resolutions up to 280x280 without additional training. The results highlight the potential of INR-based auto-decoders for efficient storage, multi-scale analysis, and downstream geophysical applications such as full waveform inversion.",
+      "translated_abstract": "隐式神经表示（INR）已成为独立于网格分辨率表示连续信号的强大范例。在本文中，我们提出了一种基于 SIREN（正弦表示网络）自动解码器的高保真神经压缩框架，用于表示来自 OpenFWI 基准的多结构地震速度模型。我们的方法将每个 70x70 速度图（4,900 个点）压缩为紧凑的 256 维潜在向量，实现 19:1 的压缩比。我们评估了五个不同地质族的 1,000 个样本的框架：FlatVel、CurveVel、FlatFault、CurveFault 和 Style。实验结果表明，平均 PSNR 为 32.47 dB，SSIM 为 0.956，表明重建质量很高。此外，我们展示了隐式表示的两个关键优势：（1）平滑的潜在空间插值，可生成合理的中间速度结构；（2）零样本超分辨率能力，可在高达 280x280 的任意分辨率下重建速度场，无需额外训练。结果凸显了基于 INR 的自动解码器在高效存储、多尺度分析和下游地球物理应用（例如全波形反演）方面的潜力。",
+      "authors": [
+        "Caiyun Liu",
+        "Xiaoxue Luo",
+        "Jie Xiong"
+      ],
+      "published": "2026-03-15T08:43:39Z",
+      "updated": "2026-03-17T13:22:14Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "first_author": "Caiyun Liu"
+    },
+    {
+      "id": "2603.14132v1",
+      "title": "DualSwinFusionSeg: Multimodal Martian Landslide Segmentation via Dual Swin Transformer with Multi-Scale Fusion and UNet++",
+      "abstract": "Automated segmentation of Martian landslides, particularly in tectonically active regions such as Valles Marineris,is important for planetary geology, hazard assessment, and future robotic exploration. However, detecting landslides from planetary imagery is challenging due to the heterogeneous nature of available sensing modalities and the limited number of labeled samples. Each observation combines RGB imagery with geophysical measurements such as digital elevation models, slope maps, thermal inertia, and contextual grayscale imagery, which differ significantly in resolution and statistical properties. To address these challenges, we propose DualSwinFusionSeg, a multimodal segmentation architecture that separates modality-specific feature extraction and performs multi-scale cross-modal fusion. The model employs two parallel Swin Transformer V2 encoders to independently process RGB and auxiliary geophysical inputs, producing hierarchical feature representations. Corresponding features from the two streams are fused at multiple scales and decoded using a UNet++ decoder with dense nested skip connections to preserve fine boundary details. Extensive ablation studies evaluate modality contributions, loss functions, decoder architectures, and fusion strategies. Experiments on the MMLSv2 dataset from the PBVS 2026 Mars-LS Challenge show that modality-specific encoders and simple concatenation-based fusion improve segmentation accuracy under limited training data. The final model achieves 0.867 mIoU and 0.905 F1 on the development benchmark and 0.783 mIoU on the held-out test set, demonstrating strong performance for multimodal planetary surface segmentation.",
+      "translated_abstract": "火星滑坡的自动分割，特别是在水手谷等构造活跃地区，对于行星地质学、灾害评估和未来的机器人探索非常重要。然而，由于可用传感方式的异构性和标记样本数量有限，从行星图像中检测山体滑坡具有挑战性。每次观测都将 RGB 图像与地球物理测量结果相结合，例如数字高程模型、坡度图、热惯性和上下文灰度图像​​，这些图像在分辨率和统计特性方面存在显着差异。为了应对这些挑战，我们提出了 DualSwinFusionSeg，一种多模态分割架构，可分离模态特定的特征提取并执行多尺度跨模态融合。该模型采用两个并行的 Swin Transformer V2 编码器来独立处理 RGB 和辅助地球物理输入，生成分层特征表示。两个流的相应特征在多个尺度上融合，并使用具有密集嵌套跳跃连接的 UNet++ 解码器进行解码，以保留精细的边界细节。广泛的消融研究评估了模态贡献、损失函数、解码器架构和融合策略。对 PBVS 2026 Mars-LS Challenge 的 MMLSv2 数据集进行的实验表明，特定于模态的编码器和简单的基于串联的融合可以在有限的训练数据下提高分割精度。最终模型ac",
+      "authors": [
+        "Shahriar Kabir",
+        "Abdullah Muhammed Amimul Ehsan",
+        "Istiak Ahmmed Rifti",
+        "Md Kaykobad Reza"
+      ],
+      "published": "2026-03-14T21:42:14Z",
+      "updated": "2026-03-14T21:42:14Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "first_author": "Shahriar Kabir"
+    },
+    {
+      "id": "2603.13701v1",
+      "title": "Asteroseismology of red giants in the globular cluster 47 Tuc using the HST",
+      "abstract": "Globular clusters are complex stellar populations that provide unique opportunities to study stellar evolution -- as the second brightest cluster, 47 Tuc is a prime target. Asteroseismology can be used to measure precise masses of stars and has recently been applied to red giants in globular clusters, but so far not for 47 Tuc. Here, we present a search for solar-like oscillations in red giants of 47 Tuc using 8.3 days of high-cadence Hubble Space Telescope data. We detect oscillations in two out of the five giants falling in the field of view, 5 arcmin from the cluster center. One is on the horizontal branch (HB) while the other is on the red giant branch (RGB) at a similar brightness. From the seismic signal, we measure the stellar masses to be $0.78\\pm0.13\\,$M$_\\odot$ (HB) and $0.94\\pm0.15\\,$M$_\\odot$ (RGB), and hence an inferred integrated mass loss along the upper RGB of $0.16\\pm0.20\\,$M$_\\odot$. A mass uncertainty of less than 0.05M$_\\odot$ would be required to obtain a useful estimate of the mass loss, while an uncertainty below 0.01M$_\\odot$ would be required to measure the mass difference between the cluster's multiple chemical populations. The former would be attainable with observations of about 100 times more stars to form ensemble-averaged values (assuming a similar length campaign), or alternatively a longer campaign observing fewer stars. Detecting mass differences between the chemical sub-populations, would require a 20-day campaign observing several hundreds of stars. Our clear detection of oscillations and the prospects presented here warrant dedicated high-cadence campaigns of 47 Tuc, which are possible with NASA's Roman mission and future missions like HAYDN.",
+      "translated_abstract": "球状星团是复杂的恒星群，为研究恒星演化提供了独特的机会——作为第二亮的星团，47 Tuc 是主要目标。星震学可用于测量恒星的精确质量，最近已应用于球状星团中的红巨星，但到目前为止还没有应用于 47 Tuc。在这里，我们使用 8.3 天的高频率哈勃太空望远镜数据来搜索 47 Tuc 红巨星中的类太阳振荡。我们检测到落在视野中、距星团中心 5 角分的 5 个巨星中的两个的振荡。一个位于水平分支（HB），另一个位于红巨星分支（RGB），亮度相似。根据地震信号，我们测量出恒星质量为 $0.78\\pm0.13\\,$M$_\\odot$ (HB) 和 $0.94\\pm0.15\\,$M$_\\odot$ (RGB)，因此推断沿上部 RGB 的综合质量损失为 $0.16\\pm0.20\\,$M$_\\odot$。需要小于 0.05M$_\\odot$ 的质量不确定性才能获得质量损失的有用估计，而需要低于 0.01M$_\\odot$ 的不确定性才能测量簇中多个化学群体之间的质量差异。前者可以通过观测大约 100 倍以上的恒星来形成整体平均值（假设类似长度的活动）来实现，或者通过更长的活动观测更少的恒星来实现。检测化学亚群之间的质量差异需要开展为期 20 天的活动，观察数百个化学亚群",
+      "authors": [
+        "Dennis Stello",
+        "Timothy R. Bedding",
+        "Ronald L. Gilliland"
+      ],
+      "published": "2026-03-14T02:18:04Z",
+      "updated": "2026-03-14T02:18:04Z",
+      "categories": [
+        "astro-ph.SR",
+        "astro-ph.GA"
+      ],
+      "first_author": "Dennis Stello"
+    }
+  ]
+}
