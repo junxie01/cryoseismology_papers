@@ -1,343 +1,221 @@
 {
-  "last_update": "2026-03-20 16:00",
+  "last_update": "2026-03-20 14:03",
   "topic_name": "DAS论文",
   "papers": [
     {
-      "id": "10.15556/ijiim.02.01.001",
-      "title": "Distributed Processing for Knowledge Management in cooperative e-Government administration projects",
-      "abstract": "Published in International Journal on Integrated Information Management. DOI: 10.15556/ijiim.02.01.001",
-      "translated_abstract": "发表于 International Journal on Integrated Information Management。点击链接查看详情。",
-      "authors": [
-        "Belsis",
-        "Skourlas"
+      "id": "10.1785/0220250167",
+      "title": "SEED-Vault: A New Software Package for Browsing, Downloading, and Archiving Continuous and Event-Based Seismic Data via FDSN",
+      "url": "https://doi.org/10.1785/0220250167",
+      "first_author": "Robert Pickle",
+      "corr_author": "Yunlong Li",
+      "affiliation": "1Research School of Earth Sciences, Australian National University, Acton, Australia",
+      "other_works": [
+        {
+          "title": "Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density",
+          "year": 2002,
+          "url": "https://doi.org/10.1103/physrevb.37.785"
+        },
+        {
+          "title": "Hallmarks of Cancer: The Next Generation",
+          "year": 2011,
+          "url": "https://doi.org/10.1016/j.cell.2011.02.013"
+        },
+        {
+          "title": "Research electronic data capture (REDCap)—A metadata-driven methodology and workflow process for providing translational research informatics support",
+          "year": 2008,
+          "url": "https://doi.org/10.1016/j.jbi.2008.08.010"
+        }
       ],
-      "published": "2115",
-      "url": "https://doi.org/10.15556/ijiim.02.01.001",
-      "source": "Crossref"
+      "abs_zh": "<jats:title>摘要</jats:title>\n                  <jats:p>我们推出了 SEED-Vault，这是一个新的开源软件包，可促进从国际数字地震仪网络联合会 (FDSN) 服务器下载和存档地震数据。该代码围绕 ObsPy 包构建，并在大多数当前软件的基础上进行了扩展，允许用户在地震学的三种常见工作流程之间进行选择，此外还为大型或重复的归档任务提供简单的图形用户界面 (GUI) 和可编写脚本的命令行界面 (CLI)。 GUI 在网络浏览器中运行，提供简单的跨平台兼容性，可以快速浏览事件、台站和地震到达，以及下载 BibTeX 格式的元数据、波形数据、网络参考和 DOI。该代码还可以通过 CLI 运行来处理大型或自动化请求，这使得新手和高级用户都可以轻松下载大型数据集，并使本地存档与远程 FDSN 服务器保持同步。下载的数据由 SQLite 数据库存储和交叉引用，以确保请求经过定制和组合，以避免不必要或重复的下载。该代码（可通过 PyPI 作为“seed-vault”获得）仍在积极开发中，目前版本为 1.1.0，这是其第 12 个版本。</jats:p>",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026",
+      "source": "Journal"
     },
     {
-      "id": "10.5705/ss.202025.0087",
-      "title": "Distributed Algorithms for High-Dimensional Statistical Inference and Structure Learning with Heterogeneous Data",
-      "abstract": "Published in Statistica Sinica. DOI: 10.5705/ss.202025.0087",
-      "translated_abstract": "发表于 Statistica Sinica。点击链接查看详情。",
-      "authors": [
-        "Zhao",
-        "Shen"
+      "id": "10.1785/0220250249",
+      "title": "Building a Machine Condition Monitoring Device as a Hands-on Teaching Tool: An Educational Experience for Students of Engineering and Seismology",
+      "url": "https://doi.org/10.1785/0220250249",
+      "first_author": "Ahu Komec Mutlu",
+      "corr_author": "Muhammed Emre Türkan",
+      "affiliation": "1Civil Engineering Department, Gebze Technical University, Kocaeli, Türkiye",
+      "other_works": [
+        {
+          "title": "Mitochondrial metabolism and ROS generation are essential for Kras-mediated tumorigenicity",
+          "year": 2010,
+          "url": "https://doi.org/10.1073/pnas.1003428107"
+        },
+        {
+          "title": "Disease-Specific Alterations in the Enteric Virome in Inflammatory Bowel Disease",
+          "year": 2015,
+          "url": "https://doi.org/10.1016/j.cell.2015.01.002"
+        },
+        {
+          "title": "Colonic bacterial composition in Parkinson's disease",
+          "year": 2015,
+          "url": "https://doi.org/10.1002/mds.26307"
+        }
       ],
-      "published": "2028",
-      "url": "https://doi.org/10.5705/ss.202025.0087",
-      "source": "Crossref"
+      "abs_zh": "<jats:title>摘要</jats:title>\n                  <jats:p>这项研究介绍了 VibroScan，这是一种低成本、开源振动监测系统，使用基于微机电系统的加速度计和 ESP32 微控制器开发，专为教育和现场应用量身定制。该系统能够实现实时三轴加速度数据采集、通过快速傅里叶变换和机器学习算法进行频域异常检测，以及通过基于消息队列遥测传输的网络界面进行远程监控。该系统在金属铸造机上进行设计和测试，成功识别铸造周期期间的主要光谱行为和操作异常。作为实践工程经验的一部分，学生们参与了传感器外壳、系统徽标以及使用 HTML、JavaScript 和 Chart.js 构建的响应式 Web 仪表板的设计。这些任务不仅增强了他们对嵌入式系统和信号处理的理解，而且增强了对产品开发和系统集成的理解。 Z 分数和基于长短期记忆 (LSTM) 的模型的比较分析表明，虽然两种方法都能有效检测频谱异常，但 LSTM 对动态频移表现出卓越的敏感性。除了工业诊断之外，这项研究在地震学方面也很有价值，例如地震预警背景下机器健康监测的影响。许多工业机器在地震期间由于未检测到的共振或结构故障而遭受重大经济损失。在关键设施中部署 VibroScan 等智能传感器可实现双重功能监控、连续机械评估和震前异常跟踪，为基础设施恢复能力迈出了切实可行的一步。 VibroScan 举例说明了如何在科学、技术、工程和数学课程中为工程和地震学学生利用可访问的硬件和现代信号分析来搭建理论桥梁",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026",
+      "source": "Journal"
     },
     {
-      "id": "10.1504/ijbpm.2028.10074007",
-      "title": "Bank profitability performance and financial risk analysis of regional rural and cooperative urban banks in India",
-      "abstract": "Published in International Journal of Business Performance Management. DOI: 10.1504/ijbpm.2028.10074007",
-      "translated_abstract": "发表于 International Journal of Business Performance Management。点击链接查看详情。",
-      "authors": [
-        "N.A."
+      "id": "10.1785/0220250331",
+      "title": "Typhoon Wind Speed Estimation via Microseismic Noise Recorded by Submarine Optical-Fiber Distributed Acoustic Sensing",
+      "url": "https://doi.org/10.1785/0220250331",
+      "first_author": "Chensong Xu",
+      "corr_author": "Wen Xu",
+      "affiliation": "1State Key Laboratory of Ocean Sensing and Ocean College, Zhejiang University, Zhoushan, China",
+      "other_works": [
+        {
+          "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30183-5"
+        },
+        {
+          "title": "A Novel Coronavirus from Patients with Pneumonia in China, 2019",
+          "year": 2020,
+          "url": "https://doi.org/10.1056/nejmoa2001017"
+        },
+        {
+          "title": "Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30566-3"
+        }
       ],
-      "published": "2028",
-      "url": "https://doi.org/10.1504/ijbpm.2028.10074007",
-      "source": "Crossref"
+      "abs_zh": "<jats:title>摘要</jats:title>\n                  <jats:p>海面风速（SSWS）是台风监测和预报的重要参数。然而，台风条件下的实地观测却相当罕见。使用光纤 (OF) 电缆的分布式声学传感 (DAS) 最近已广泛用于监测海况。本研究提出了一种使用 DAS 仪表海底 OF 电缆来估计 SSWS 的方法。台风 Muifa (2022) 通过 OF 电缆期间海洋表面重力波 (OSGW) 产生的微震噪声作为输入数据集。开发了一个数学模型，用于根据微震噪声强度和推断的 OSGW 能量反演 SSWS。与附近海洋浮标的同步观测相比，反演结果产生的均方根误差约为 1.76 m/s。这些发现表明，DAS 仪表电缆有可能用于监测台风条件下的 SSWS，从而提供一种跨学科方法来补充传统的基于海洋和卫星的观测。</jats:p>",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026",
+      "source": "Journal"
     },
     {
-      "id": "10.5705/ss.202024.0215",
-      "title": "Distributed Sequential Federated Estimation",
-      "abstract": "Published in Statistica Sinica. DOI: 10.5705/ss.202024.0215",
-      "translated_abstract": "发表于 Statistica Sinica。点击链接查看详情。",
-      "authors": [
-        "Wang",
-        "Zhang",
-        "Chang"
+      "id": "10.1785/0220250329",
+      "title": "On the Seismic Hazard Regulations for NPP Sites in Europe: A Controversial Case in Slovenia",
+      "url": "https://doi.org/10.1785/0220250329",
+      "first_author": "Livio Sirovich",
+      "corr_author": "Kurt Decker",
+      "affiliation": "1National Institute of Oceanography and Applied Geophysics, OGS, (retired), Trieste, Italy",
+      "other_works": [
+        {
+          "title": "Turbulence and the dynamics of coherent structures. I. Coherent structures",
+          "year": 2016,
+          "url": "https://doi.org/10.1090/qam/910462"
+        },
+        {
+          "title": "Baseline Characteristics and Outcomes of 1591 Patients Infected With SARS-CoV-2 Admitted to ICUs of the Lombardy Region, Italy",
+          "year": 2020,
+          "url": "https://doi.org/10.1001/jama.2020.5394"
+        },
+        {
+          "title": "Type Ia Supernova Discoveries at<i>z</i>&gt; 1 from the<i>Hubble Space Telescope</i>: Evidence for Past Deceleration and Constraints on Dark Energy Evolution",
+          "year": 2004,
+          "url": "https://doi.org/10.1086/383612"
+        }
       ],
-      "published": "2028",
-      "url": "https://doi.org/10.5705/ss.202024.0215",
-      "source": "Crossref"
+      "abs_zh": "请点击链接查看原文摘要。",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026",
+      "source": "Journal"
     },
     {
-      "id": "10.1504/ijef.2028.10068574",
-      "title": "Socio-demographic factors influencing the adoption and uses of FinTech: An empirical study in Assam",
-      "abstract": "Published in International Journal of Electronic Finance. DOI: 10.1504/ijef.2028.10068574",
-      "translated_abstract": "发表于 International Journal of Electronic Finance。点击链接查看详情。",
-      "authors": [
-        "Das",
-        "Das"
+      "id": "2603.19235v1",
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+      "url": "https://arxiv.org/abs/2603.19235v1",
+      "first_author": "Xianjin Wu",
+      "corr_author": "见原文",
+      "affiliation": "arXiv Preprint",
+      "other_works": [
+        {
+          "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30183-5"
+        },
+        {
+          "title": "limma powers differential expression analyses for RNA-sequencing and microarray studies",
+          "year": 2015,
+          "url": "https://doi.org/10.1093/nar/gkv007"
+        },
+        {
+          "title": "A Novel Coronavirus from Patients with Pneumonia in China, 2019",
+          "year": 2020,
+          "url": "https://doi.org/10.1056/nejmoa2001017"
+        }
       ],
-      "published": "2028",
-      "url": "https://doi.org/10.1504/ijef.2028.10068574",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5705/ss.202025.0060",
-      "title": "Distributed Focused Information Criterion and Focused Frequentist Model Averaging for Massive Data",
-      "abstract": "Published in Statistica Sinica. DOI: 10.5705/ss.202025.0060",
-      "translated_abstract": "发表于 Statistica Sinica。点击链接查看详情。",
-      "authors": [
-        "Zhang",
-        "Chen",
-        "Xing"
-      ],
-      "published": "2028",
-      "url": "https://doi.org/10.5705/ss.202025.0060",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.1504/ijmed.2027.10076468",
-      "title": "Innovation capabilities for SME competitiveness: exploring the role of sensing and proactive capabilities as critical links in emerging economies",
-      "abstract": "Published in International Journal of Management and Enterprise Development. DOI: 10.1504/ijmed.2027.10076468",
-      "translated_abstract": "发表于 International Journal of Management and Enterprise Development。点击链接查看详情。",
-      "authors": [
-        "Tesfa",
-        "Gebremichael"
-      ],
-      "published": "2027",
-      "url": "https://doi.org/10.1504/ijmed.2027.10076468",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5705/ss.202024.0222",
-      "title": "Distributed Inference for Tail Risks",
-      "abstract": "Published in Statistica Sinica. DOI: 10.5705/ss.202024.0222",
-      "translated_abstract": "发表于 Statistica Sinica。点击链接查看详情。",
-      "authors": [
-        "Chen",
-        "Li",
-        "Zhou"
-      ],
-      "published": "2027",
-      "url": "https://doi.org/10.5705/ss.202024.0222",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.1504/ijaac.2027.10074261",
-      "title": "Reconfiguration of multi-agent system in cyclic pursuit",
-      "abstract": "Published in International Journal of Automation and Control. DOI: 10.1504/ijaac.2027.10074261",
-      "translated_abstract": "发表于 International Journal of Automation and Control。点击链接查看详情。",
-      "authors": [
-        "Das",
-        "Babu"
-      ],
-      "published": "2027",
-      "url": "https://doi.org/10.1504/ijaac.2027.10074261",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.1504/ijpelec.2027.10076754",
-      "title": "Model predictive control-based secondary voltage and frequency control of inverter-interfaced distributed generator",
-      "abstract": "Published in International Journal of Power Electronics. DOI: 10.1504/ijpelec.2027.10076754",
-      "translated_abstract": "发表于 International Journal of Power Electronics。点击链接查看详情。",
-      "authors": [
-        "Chantola",
-        "Sharma",
-        "Singh"
-      ],
-      "published": "2027",
-      "url": "https://doi.org/10.1504/ijpelec.2027.10076754",
-      "source": "Crossref"
-    },
-    {
-      "id": "2603.15828v1",
-      "title": "High-Resolution Trans-Oceanic Distributed Acoustic Sensing Enabled by a Bi-Directional Sensor Implementation",
-      "abstract": "We demonstrate continuous distributed acoustic sensing over a 4400km long undersea cable. Bi-directional operation improves the strain signal-to-noise rate by >20dB, enabling 88000 50-m-spaced measurement points at a nominal telecom launch power.",
-      "translated_abstract": "我们在 4400 公里长的海底电缆上演示了连续分布式声学传感。双向操作将应变信噪比提高了 >20dB，从而以标称电信发射功率实现 88000 个 50 米间隔的测量点。",
-      "authors": [
-        "Mikael Mazur",
-        "Nicolas K. Fontaine",
-        "Roland Ryf",
-        "Martin Karrenbach",
-        "Kristopher McBrian",
-        "Keith McLaughlin",
-        "Brian Sperry",
-        "Anuar Butler",
-        "Valey Kamalov",
-        "Lauren Dallachiesa",
-        "Ells Burrows",
-        "David Winter",
-        "Haoshuo Chen",
-        "Jeewan Naik",
-        "Kishore Padmaraju",
-        "Ajay Mistry",
-        "David Neilson"
-      ],
-      "published": "2026-03-16T19:01:33Z",
-      "url": "http://arxiv.org/abs/2603.15828v1",
+      "abs_zh": "虽然多模态大语言模型表现出令人印象深刻的语义能力，但它们经常遭受空间盲症，难以应对细粒度的几何推理和物理动力学。现有的解决方案通常依赖于显式 3D 模式或复杂的几何脚手架，而这受到数据稀缺和泛化挑战的限制。在这项工作中，我们通过利用大规模视频生成模型中的隐式空间先验提出了范式转变。我们假设，为了合成时间相干的视频，这些模型本质上学习了强大的 3D 结构先验和物理定律。我们引入了 VEGA-3D（视频提取生成意识），这是一种即插即用框架，可将预先训练的视频扩散模型重新用作潜在世界模拟器。通过从中间噪声水平中提取时空特征，并通过令牌级自适应门控融合机制将它们与语义表示集成，我们在没有显式 3D 监督的情况下用密集的几何线索丰富了 MLLM。 3D 场景理解、空间推理和具体操作基准的广泛实验表明，我们的方法优于最先进的基线，验证生成先验为物理世界理解提供了可扩展的基础。代码可在 https://github.com/H-EmbodVis/VEGA-3D 上公开获取。",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026-03-19T17:59:58Z",
       "source": "arXiv"
     },
     {
-      "id": "2603.14844v1",
-      "title": "A deep learning framework for marine acoustic and seismic monitoring with distributed acoustic sensing",
-      "abstract": "Distributed Acoustic Sensing (DAS) enables high-resolution and long-duration monitoring of marine acoustic and seismic activity by turning existing fiber-optic cables into dense sensor arrays. However, extracting diverse signals from continuous DAS data remains challenging due to the massive data volumes and signal complexity. Here, we present DASNet, a deep learning framework for automated detection, classification, and arrival-time picking of diverse marine signals in DAS data. The model is trained using a semi-supervised pipeline on continuous recordings and jointly predicts spatiotemporal bounding boxes and segmentation masks for each detected event. Applied to three years of data from the Seafloor Fiber-Optic Array in Monterey Bay (SeaFOAM), DASNet identified over 500,000 events spanning multiple signal categories. For seismic monitoring, the model detects the majority of cataloged local earthquakes within 100 km and identifies distant earthquake-generated T-waves, with beamforming analysis revealing source azimuths clustered toward the southwestern Pacific and along mid-ocean ridge systems. For bioacoustic monitoring, DASNet detects and tracks more than 400,000 blue and fin whale calls, revealing seasonal and interannual variability consistent with independent hydrophone records. For anthropogenic activity, DASNet detects and localizes vessel traffic near the cable, with estimated positions validated against Automatic Identification System (AIS) tracks. These results demonstrate that combining DAS with deep learning provides a scalable, high-resolution monitoring approach for marine environmental observation. As submarine DAS deployments expand, this framework could substantially enhance seismic, bioacoustic, and anthropogenic observations in regions where conventional instrumentation remains sparse.",
-      "translated_abstract": "分布式声学传感 (DAS) 通过将现有光纤电缆转变为密集的传感器阵列，能够对海洋声学和地震活动进行高分辨率和长时间的监测。然而，由于数据量巨大且信号复杂，从连续 DAS 数据中提取不同信号仍然具有挑战性。在这里，我们介绍 DASNet，这是一个深度学习框架，用于自动检测、分类和 DAS 数据中各种海洋信号的到达时间拾取。该模型使用半监督管道对连续记录进行训练，并联合预测每个检测到的事件的时空边界框和分割掩模。应用蒙特利湾海底光纤阵列 (SeaFOAM) 的三年数据，DASNet 识别出跨越多个信号类别的超过 500,000 个事件。对于地震监测，该模型可检测 100 公里范围内的大多数已编录的当地地震，并识别遥远的地震产生的 T 波，波束形成分析显示震源方位角聚集在西南太平洋和沿洋中脊系统。对于生物声学监测，DASNet 检测并跟踪超过 400,000 次蓝鲸和长须鲸叫声，揭示与独立水听器记录一致的季节和年际变化。对于人类活动，DASNet 可检测并定位电缆附近的船只交通，并根据自动识别系统 (AIS) 轨迹验证估计位置。这些结果德",
-      "authors": [
-        "Chun Zhang",
-        "Weiqiang Zhu",
-        "Barbara A. Romanowicz",
-        "Richard M Allen",
-        "Kenichi Soga",
-        "Yuxin Wu"
+      "id": "2603.19234v1",
+      "title": "Matryoshka Gaussian Splatting",
+      "url": "https://arxiv.org/abs/2603.19234v1",
+      "first_author": "Zhilin Guo",
+      "corr_author": "见原文",
+      "affiliation": "arXiv Preprint",
+      "other_works": [
+        {
+          "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30183-5"
+        },
+        {
+          "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+          "year": 2022,
+          "url": "https://doi.org/10.1109/iccv48922.2021.00986"
+        },
+        {
+          "title": "Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2",
+          "year": 2019,
+          "url": "https://doi.org/10.1038/s41587-019-0209-9"
+        }
       ],
-      "published": "2026-03-16T05:43:51Z",
-      "url": "http://arxiv.org/abs/2603.14844v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2603.13903v1",
-      "title": "Distributed Acoustic Sensing for Urban Traffic Monitoring: Spatio-Temporal Attention in Recurrent Neural Networks",
-      "abstract": "Effective urban traffic monitoring is essential for improving mobility, enhancing safety, and supporting sustainable cities. Distributed Acoustic Sensing (DAS) enables large-scale traffic observation by transforming existing fiber-optic infrastructure into dense arrays of vibration sensors. However, modeling the high-resolution spatio-temporal structure of DAS data for reliable traffic event recognition remains challenging. This study presents a real-world DAS-based traffic monitoring experiment conducted in Granada, Spain, where vehicles cross a fiber deployed perpendicular to the roadway. Recurrent neural networks (RNNs) are employed to model intra- and inter-event temporal dependencies. Spatial and temporal attention mechanisms are systematically integrated within the RNN architecture to analyze their impact on recognition performance, parameter efficiency, and interpretability. Results show that an appropriate and complementary placement of attention modules improves the balance between accuracy and model complexity. Attention heatmaps provide physically meaningful interpretations of classification decisions by highlighting informative spatial locations and temporal segments. Furthermore, the proposed SA-bi-TA configuration demonstrates spatial transferability, successfully recognizing traffic events at sensing locations different from those used during training, with only moderate performance degradation. These findings support the development of scalable and interpretable DAS-based traffic monitoring systems capable of operating under heterogeneous urban sensing conditions.",
-      "translated_abstract": "有效的城市交通监控对于改善流动性、增强安全性和支持可持续城市至关重要。分布式声学传感 (DAS) 通过将现有光纤基础设施转变为密集的振动传感器阵列，实现大规模交通观测。然而，对 DAS 数据的高分辨率时空结构进行建模以实现可靠的交通事件识别仍然具有挑战性。本研究介绍了在西班牙格拉纳达进行的基于 DAS 的真实交通监控实验，其中车辆穿过垂直于道路部署的光纤。循环神经网络 (RNN) 用于对事件内和事件间时间依赖性进行建模。空间和时间注意力机制被系统地集成到 RNN 架构中，以分析它们对识别性能、参数效率和可解释性的影响。结果表明，注意力模块的适当且互补的放置可以提高准确性和模型复杂性之间的平衡。注意力热图通过突出显示信息丰富的空间位置和时间片段，为分类决策提供物理上有意义的解释。此外，所提出的 SA-bi-TA 配置展示了空间可转移性，成功识别与训练期间使用的传感位置不同的交通事件，且性能仅适度下降。这些发现支持可扩展和可解释的开发",
-      "authors": [
-        "Izhan Fakhruzi",
-        "Manuel Titos",
-        "Carmen Benítez",
-        "Luz García"
-      ],
-      "published": "2026-03-14T11:30:39Z",
-      "url": "http://arxiv.org/abs/2603.13903v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2602.20144v1",
-      "title": "Agentic AI for Scalable and Robust Optical Systems Control",
-      "abstract": "We present AgentOptics, an agentic AI framework for high-fidelity, autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics interprets natural language tasks and executes protocol-compliant actions on heterogeneous optical devices through a structured tool abstraction layer. We implement 64 standardized MCP tools across 8 representative optical devices and construct a 410-task benchmark to evaluate request understanding, role-aware responses, multi-step coordination, robustness to linguistic variation, and error handling. We assess two deployment configurations--commercial online LLMs and locally hosted open-source LLMs--and compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0% average task success rates, significantly outperforming code-generation approaches, which reach up to 50% success. We further demonstrate broader applicability through five case studies extending beyond device-level control to system orchestration, monitoring, and closed-loop optimization. These include DWDM link provisioning and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF) channels; autonomous characterization and bias optimization of a wideband ARoF link carrying 5G fronthaul traffic; multi-span channel provisioning with launch power optimization; closed-loop fiber polarization stabilization; and distributed acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection. These results establish AgentOptics as a scalable, robust paradigm for autonomous control and orchestration of heterogeneous optical systems.",
-      "translated_abstract": "我们推出了 AgentOptics，这是一种基于模型上下文协议 (MCP) 的代理 AI 框架，用于高保真、自主光学系统控制。 AgentOptics 解释自然语言任务，并通过结构化工具抽象层在异构光学设备上执行符合协议的操作。我们在 8 个代表性光学设备上实施了 64 个标准化 MCP 工具，并构建了 410 个任务基准来评估请求理解、角色感知响应、多步骤协调、对语言变化的鲁棒性和错误处理。我们评估两种部署配置——商业在线 LLM 和本地托管的开源 LLM——并将它们与基于 LLM 的代码生成基线进行比较。 AgentOptics 的平均任务成功率达到 87.7%--99.0%，明显优于代码生成方法，后者的成功率高达 50%。我们通过五个案例研究进一步证明了更广泛的适用性，从设备级控制扩展到系统编排、监控和闭环优化。其中包括 DWDM 链路配置以及相干 400 GbE 和模拟光纤无线电 (ARoF) 通道的协调监控；承载 5G 前传流量的宽带 ARoF 链路的自主表征和偏差优化；具有发射功率优化的多跨信道配置；闭环光纤偏振稳定；以及基于分布式声学传感 (DAS) 的光纤监测以及法学硕士辅助事件检测。这些结果",
-      "authors": [
-        "Zehao Wang",
-        "Mingzhe Han",
-        "Wei Cheng",
-        "Yue-Kai Huang",
-        "Philip Ji",
-        "Denton Wu",
-        "Mahdi Safari",
-        "Flemming Holtorf",
-        "Kenaish AlQubaisi",
-        "Norbert M. Linke",
-        "Danyang Zhuo",
-        "Yiran Chen",
-        "Ting Wang",
-        "Dirk Englund",
-        "Tingjun Chen"
-      ],
-      "published": "2026-02-23T18:54:32Z",
-      "url": "http://arxiv.org/abs/2602.20144v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.10858v1",
-      "title": "High-resolution measurement of sea ice mechanical characteristics using Distributed Acoustic Sensing",
-      "abstract": "Sea ice mechanical properties are involved in dynamical processes acting from the scale of meters to several hundred kilometers. The current rapid changes in the state of polar sea ice require a better understanding and modeling of these processes and, therefore, accurate measurements of properties including sea ice thickness, density, Young's modulus and Poisson's ratio. These properties can be measured by tracking the propagation of elastic waves within the ice. Recent technological advances have enabled the use of fiber-optic cables as cost-effective, dense seismic arrays. Once connected to an interrogator unit and mechanically coupled to a medium, here the ice cover, these cables can monitor strain field propagation, using a technique called Distributed Acoustic Sensing (DAS). In this work, we describe the use of such an array of sensors in the coastal ice of the St. Lawrence Estuary, Canada, where a 600 m long optical fiber was deployed across three different morphological sea ice conditions. During hour-long recordings, we measured the propagation of both multi-modal seismic signals generated by active sources and hydro-elastic swell. We computed dispersion curves of active signals and used Continuous Wavelet Transform (CWT) to observe the evolution of swell characteristics in the different ice areas. The dispersion curves were successfully inverted to measure the spatial evolution of ice thickness, and Young's and flexural rigidity in each of these areas. We observed ice thicknesses from 25 cm to 68 cm and Young's modulus values between 4.5 GPa and 5.7 GPa, in good agreement with values derived from collocated geophone arrays and drill hole thickness measurements. DAS systems therefore appear to be effective in evaluating heterogeneous sea ice mechanical properties and thus sea ice formation history and dynamics.",
-      "translated_abstract": "海冰的机械特性涉及从米到数百公里尺度的动力学过程。当前极地海冰状态的快速变化需要更好地理解和建模这些过程，因此需要准确测量海冰厚度、密度、杨氏模量和泊松比等特性。这些特性可以通过跟踪冰内弹性波的传播来测量。最近的技术进步使得光纤电缆成为具有成本效益的密集地震阵列的使用。一旦连接到询问器单元并机械耦合到介质（这里是冰盖），这些电缆就可以使用分布式声学传感（DAS）技术来监测应变场传播。在这项工作中，我们描述了此类传感器阵列在加拿大圣劳伦斯河口沿海冰中的使用，其中在三种不同形态的海冰条件下部署了 600 m 长的光纤。在长达一小时的记录中，我们测量了活动源和水弹性膨胀产生的多模态地震信号的传播。我们计算了主动信号的频散曲线，并使用连续小波变换（CWT）来观察不同冰区膨胀特征的演变。频散曲线成功反转，以测量每个区域的冰厚度、杨氏刚度和弯曲刚度的空间演变。我们观察到我",
-      "authors": [
-        "Sébastien Kuchly",
-        "Ludovic Moreau",
-        "Vasco Zanchi",
-        "Nicolas Mokus",
-        "Véronique Dansereau",
-        "Madison M. Smith",
-        "Dany Dumont",
-        "Stéphane Perrard",
-        "Antonin Eddi"
-      ],
-      "published": "2026-01-15T21:14:41Z",
-      "url": "http://arxiv.org/abs/2601.10858v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2512.13554v1",
-      "title": "Silencing Newtonian noise using fusion sensor arrays",
-      "abstract": "Newtonian noise (NN) from seismic density fluctuations is expected to limit the low-frequency sensitivity of third-generation gravitational-wave detectors, in particular the Einstein Telescope (ET). Current NN mitigation relies on seismometer arrays and Wiener filtering, while distributed acoustic sensing (DAS) offers a complementary, low-cost means of obtaining dense strain measurements. We investigate fusion sensor arrays composed of both displacement-measuring seismometers and strain-measuring DAS-type sensors. We extend the Wiener filter formalism to mixed sensor types and introduce analytic S-wave strain correlation coefficients. Using a hybrid differential evolution and covariance matrix adaptation scheme, we validate our approach against established seismometer-only results and analyze the geometry, robustness, and performance of optimized fusion arrays. Fusion arrays enhance P/S-wave disentanglement and achieve NN cancellation levels comparable to, and sometimes exceeding, those of seismometer-only arrays, particularly for small sensor numbers. When sensors are constrained to the ET infrastructure, we find that six seismometers complemented by fourteen strainmeters inside the ET arms can match the performance of twenty seismometers in boreholes, achieving a residual at the 10% level, and thereby offering a cost-efficient pathway toward ET-scale NN mitigation.",
-      "translated_abstract": "地震密度波动产生的牛顿噪声（NN）预计将限制第三代引力波探测器，特别是爱因斯坦望远镜（ET）的低频灵敏度。当前的神经网络缓解依赖于地震计阵列和维纳滤波，而分布式声学传感 (DAS) 提供了一种互补的、低成本的方法来获得密集应变测量。我们研究由位移测量地震仪和应变测量 DAS 型传感器组成的融合传感器阵列。我们将维纳滤波器形式扩展到混合传感器类型，并引入解析 S 波应变相关系数。使用混合差分进化和协方差矩阵适应方案，我们针对已建立的仅地震仪结果验证了我们的方法，并分析了优化融合阵列的几何结构、鲁棒性和性能。融合阵列增强了 P/S 波解缠结，并实现了与仅地震仪阵列相当甚至有时超过的 NN 消除水平，特别是对于传感器数量较少的情况。当传感器受限于 ET 基础设施时，我们发现 ET 臂内的 6 个地震仪辅以 14 个应变仪，可以与钻孔中 20 个地震仪的性能相匹配，实现 10% 的残差水平，从而为 ET 规模的神经网络缓解提供经济高效的途径。",
-      "authors": [
-        "Paul Ophardt",
-        "Francesca Badaracco",
-        "Katharina-Sophie Isleif"
-      ],
-      "published": "2025-12-15T17:13:29Z",
-      "url": "http://arxiv.org/abs/2512.13554v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2512.11231v1",
-      "title": "Robust Detection of Underwater Target Against Non-Uniform Noise With Optical Fiber DAS Array",
-      "abstract": "The detection of underwater targets is severely affected by the non-uniform spatial characteristics of marine environmental noise. Additionally, the presence of both natural and anthropogenic acoustic sources, including shipping traffic, marine life, and geological activity, further complicates the underwater acoustic landscape. Addressing these challenges requires advanced underwater sensors and robust signal processing techniques. In this paper, we present a novel approach that leverages an optical fiber distributed acoustic sensing (DAS) system combined with a broadband generalized sparse covariance-fitting framework for underwater target direction sensing, particularly focusing on robustness against non-uniform noise. The DAS system incorporates a newly developed spiral-sensitized optical cable, which significantly improves sensitivity compared to conventional submarine cables. This innovative design enables the system to capture acoustic signals with greater precision. Notably, the sensitivity of the spiral-wound sensitized cable is around -145.69 dB re: 1 rad / (uPa*m), as measured inside the standing-wave tube. Employing simulations, we assess the performance of the algorithm across diverse noise levels and target configurations, consistently revealing higher accuracy and reduced background noise compared to conventional beamforming techniques and other sparse techniques. In a controlled pool experiment, the correlation coefficient between waveforms acquired by the DAS system and a standard hydrophone reached 0.973, indicating high fidelity in signal capture.",
-      "translated_abstract": "海洋环境噪声的非均匀空间特征严重影响水下目标的检测。此外，自然和人为声源的存在，包括航运交通、海洋生物和地质活动，使水下声学景观进一步复杂化。应对这些挑战需要先进的水下传感器和强大的信号处理技术。在本文中，我们提出了一种利用光纤分布式声学传感（DAS）系统与宽带广义稀疏协方差拟合框架相结合的新颖方法，用于水下目标方向传感，特别关注对非均匀噪声的鲁棒性。 DAS系统采用了新开发的螺旋敏化光缆，与传统海底电缆相比，其灵敏度显着提高。这种创新设计使系统能够更精确地捕获声音信号。值得注意的是，在驻波管内测得的螺旋缠绕敏化电缆的灵敏度约为 -145.69 dB re: 1 rad / (uPa*m)。通过模拟，我们评估了算法在不同噪声水平和目标配置下的性能，与传统波束形成技术和其他稀疏技术相比，始终显示出更高的精度和更低的背景噪声。在受控池实验中，DAS 采集的波形之间的相关系数",
-      "authors": [
-        "Siyuan Cang",
-        "Cong Liu",
-        "Xueli Sheng",
-        "Xiaoming Cui",
-        "Chao Li",
-        "Changxin Fa",
-        "Jiantong Chen",
-        "Chaoran Yang",
-        "Huayong Yang"
-      ],
-      "published": "2025-12-12T02:30:48Z",
-      "url": "http://arxiv.org/abs/2512.11231v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2512.08845v1",
-      "title": "Near real-time channel selection for Distributed Acoustic Sensing technology",
-      "abstract": "Distributed Acoustic Sensing (DAS) technology is advancing seismic monitoring by providing dense observations near earthquake sources. However, the resulting data volumes often limit real-time processing capability, with most seismological applications focusing on retrospective analysis of seismic sequences. To address this challenge, we introduce ORION, a fast and versatile selector of high-quality DAS channels that efficiently reduces the amount of data to analyze. The method first adopts spatial clustering to identify cable segments with similar geometrical attributes (e.g, azimuth), and then performs channel selection within each section using waveform attributes (e.g., signal-to-noise ratio); this approach enables spatial sub-sampling while preserving azimuthal coverage. We demonstrate the flexibility of the selector across several cable geometries. Finally, we analyze a seismic sequence using ORION-selected channels and compare the source locations with those from a more conventional uniform distribution of channels along the cable, showing improvements in hypocenter accuracy.",
-      "translated_abstract": "分布式声学传感 (DAS) 技术通过在震源附近提供密集观测来推进地震监测。然而，由此产生的数据量通常限制了实时处理能力，大多数地震学应用都集中于地震序列的回顾性分析。为了应对这一挑战，我们推出了 ORION，这是一种快速、多功能的高质量 DAS 通道选择器，可有效减少要分析的数据量。该方法首先采用空间聚类来识别具有相似几何属性（例如方位角）的电缆段，然后利用波形属性（例如信噪比）在每个段内进行信道选择；这种方法可以在保留方位角覆盖的同时实现空间二次采样。我们展示了选择器在多种电缆几何形状上的灵活性。最后，我们使用 ORION 选择的通道分析地震序列，并将震源位置与沿电缆更传统的均匀分布通道的震源位置进行比较，显示震源精度有所提高。",
-      "authors": [
-        "Emanuele Bozzi",
-        "Giulio Pascucci",
-        "Giacomo Rapagnani",
-        "Gian Maria Bocchini",
-        "Rebecca Harrington",
-        "Arantza Ugalde",
-        "Gilberto Saccorotti",
-        "Francesco Grigoli"
-      ],
-      "published": "2025-12-09T17:36:04Z",
-      "url": "http://arxiv.org/abs/2512.08845v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2511.17141v1",
-      "title": "Distributed Acoustic Fiber Sensing for Research Campuses and Large Scientific Infrastructures -- The Hamburg WAVE proto-network",
-      "abstract": "Here, we demonstrate and investigate how Distributed Acoustic Sensing (DAS) can be utilized on research campuses and in large scientific infrastructures to study environmental vibrations and reduce their impact on high-precision experiments. We first discuss the potential of DAS in the context of particle accelerators, gravitational wave detection experiments and research campuses. Next, we present the results of our seismic measurement campaign conducted with our proto-network, which involved the probing of over 12 km of fiber, in May 2021. This campaign was conducted by the Hamburg WAVE initiative in Science City Hamburg Bahrenfeld and included DESY, the European XFEL, PETRA III and the University of Hamburg. Our proto-network confirms the ability to observe natural, anthropogenic, and infrastructural vibrations and how and where these couple into different parts of the heterogeneously set up fiber network. We also present results on a study of noise and motion coupling aspects of DAS probing double-redundant fiber loops in a unique environment, the European XFEL. Our results show that DAS greatly benefits research campuses and large scientific infrastructures and they highlight the opportunities and challenges of implementing and operating such seismic networks.",
-      "translated_abstract": "在这里，我们演示并研究如何在研究园区和大型科学基础设施中利用分布式声学传感 (DAS) 来研究环境振动并减少其对高精度实验的影响。我们首先讨论 DAS 在粒子加速器、引力波探测实验和研究园区中的潜力。接下来，我们将介绍 2021 年 5 月使用我们的原型网络进行的地震测量活动的结果，其中涉及对超过 12 公里光纤的探测。该活动由汉堡巴伦菲尔德科学城的汉堡 WAVE 计划进行，包括 DESY、欧洲 XFEL、PETRA III 和汉堡大学。我们的原型网络证实了观察自然、人为和基础设施振动的能力，以及这些振动如何以及在何处耦合到异构设置的光纤网络的不同部分。我们还介绍了 DAS 在独特的环境（欧洲 XFEL）中探测双冗余光纤环路的噪声和运动耦合方面的研究结果。我们的结果表明，DAS 极大地有利于研究园区和大型科学基础设施，并且凸显了实施和运行此类地震网络的机遇和挑战。",
-      "authors": [
-        "Oliver Bölt",
-        "Luigia Cristiano",
-        "Sandy Croatto",
-        "Dirk Gajewski",
-        "Erik Genthe",
-        "Oliver Gerberding",
-        "Céline Hadziioannou",
-        "Conny Hammer",
-        "Markus Hoffmann",
-        "Katharina-Sophie Isleif",
-        "Antonia Kiel",
-        "Charlotte M. Krawczyk",
-        "Regina Maass",
-        "Ingra Barbosa",
-        "Norbert Meyners",
-        "Reinhardt Rading",
-        "Holger Schlarb",
-        "Roman Schnabel",
-        "Wanda Vossius",
-        "Christopher Wollin"
-      ],
-      "published": "2025-11-21T11:04:48Z",
-      "url": "http://arxiv.org/abs/2511.17141v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2511.15638v1",
-      "title": "Learning from Imperfect Labels: A Physics-Aware Neural Operator with Application to DAS Data Denoising",
-      "abstract": "Supervised deep learning methods typically require large datasets and high-quality labels to achieve reliable predictions. However, their performance often degrades when trained on imperfect labels. To address this challenge, we propose a physics-aware loss function that serves as a penalty term to mitigate label imperfections during training. In addition, we introduce a modified U-Net-Enhanced Fourier Neural Operator (UFNO) that achieves high-fidelity feature representation while leveraging the advantages of operator learning in function space. By combining these two components, we develop a physics-aware UFNO (PAUFNO) framework that effectively learns from imperfect labels. To evaluate the proposed framework, we apply it to the denoising of distributed acoustic sensing (DAS) data from the Utah FORGE site. The label data were generated using an integrated filtering-based method, but still contain residual coupling noise in the near-wellbore channels. The denoising workflow incorporates a patching-based data augmentation strategy, including an uplifting step, spatial-domain convolutional operations, spectral convolution, and a projection layer to restore data to the desired shape. Extensive numerical experiments demonstrate that the proposed framework achieves superior denoising performance, effectively enhancing DAS records and recovering hidden signals with high accuracy.",
-      "translated_abstract": "有监督的深度学习方法通​​常需要大型数据集和高质量的标签才能实现可靠的预测。然而，当在不完美的标签上进行训练时，它们的表现往往会下降。为了应对这一挑战，我们提出了一种物理感知损失函数，作为惩罚项来减轻训练期间的标签缺陷。此外，我们引入了一种改进的 U-Net 增强型傅里叶神经算子（UFNO），它可以实现高保真特征表示，同时利用函数空间中算子学习的优势。通过结合这两个组件，我们开发了一个物理感知的 UFNO (PAUFNO) 框架，可以有效地从不完美的标签中学习。为了评估所提出的框架，我们将其应用于来自犹他州 FORGE 站点的分布式声学传感 (DAS) 数据的去噪。标签数据是使用基于集成滤波的方法生成的，但在近井筒通道中仍然包含残余耦合噪声。去噪工作流程采用了基于修补的数据增强策略，包括提升步骤、空间域卷积运算、光谱卷积和将数据恢复到所需形状的投影层。大量的数值实验表明，所提出的框架实现了卓越的去噪性能，有效增强了 DAS 记录并高精度地恢复了隐藏信号。",
-      "authors": [
-        "Yang Cui",
-        "Denis Anikiev",
-        "Umair Bin Waheed",
-        "Yangkang Chen"
-      ],
-      "published": "2025-11-19T17:21:22Z",
-      "url": "http://arxiv.org/abs/2511.15638v1",
+      "abs_zh": "从单一模型以可调保真度渲染场景的能力（称为细节级别 (LoD)）对于 3D 高斯泼溅 (3DGS) 的实际部署至关重要。现有的离散 LoD 方法仅公开一组有限的操作点，而并发连续 LoD 方法可以实现更平滑的扩展，但在满容量时通常会遭受明显的质量下降，从而使 LoD 成为成本高昂的设计决策。我们引入了 Matryoshka Gaussian Splatting (MGS)，这是一种训练框架，可以在不牺牲全容量渲染质量的情况下实现标准 3DGS 管道的连续 LoD。 MGS 学习单个有序高斯集，以便渲染任何前缀（前 k 个图块）产生连贯的重建，其保真度随着预算的增加而平稳提高。我们的关键思想是随机预算训练：每次迭代都会对随机的 splat 预算进行采样，并优化相应的前缀和整个集合。该策略仅需要两次前向传递，并且不引入任何架构修改。跨越四个基准和六个基线的实验表明，MGS 与其主干网的全容量性能相匹配，同时能够在单个模型中实现连续的速度与质量权衡。对订购策略、培训目标和模型容量的广泛消融进一步验证了设计。",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026-03-19T17:59:56Z",
       "source": "arXiv"
     }
   ]

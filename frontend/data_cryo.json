@@ -1,323 +1,77 @@
 {
-  "last_update": "2026-03-20 16:00",
+  "last_update": "2026-03-20 14:03",
   "topic_name": "冰川地震论文",
   "papers": [
     {
-      "id": "10.1029/2025gl118823",
-      "title": "Recent Observations of Thwaites Glacier, West Antarctica Are Consistent With High Rates of Loss in Next 50 Years",
-      "abstract": "Published in Geophysical Research Letters. DOI: 10.1029/2025gl118823",
-      "translated_abstract": "发表于 Geophysical Research Letters。点击链接查看详情。",
-      "authors": [
-        "Goldberg",
-        "Morlighem",
-        "Gourmelen"
+      "id": "2603.19235v1",
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+      "url": "https://arxiv.org/abs/2603.19235v1",
+      "first_author": "Xianjin Wu",
+      "corr_author": "见原文",
+      "affiliation": "arXiv Preprint",
+      "other_works": [
+        {
+          "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30183-5"
+        },
+        {
+          "title": "limma powers differential expression analyses for RNA-sequencing and microarray studies",
+          "year": 2015,
+          "url": "https://doi.org/10.1093/nar/gkv007"
+        },
+        {
+          "title": "A Novel Coronavirus from Patients with Pneumonia in China, 2019",
+          "year": 2020,
+          "url": "https://doi.org/10.1056/nejmoa2001017"
+        }
       ],
-      "published": "2026",
-      "url": "https://doi.org/10.1029/2025gl118823",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.1029/2025gl119026",
-      "title": "Glacier Retreat Amplifies Interannual Variability in Watershed Runoff, Organic Carbon and Nutrient Yields",
-      "abstract": "Published in Geophysical Research Letters. DOI: 10.1029/2025gl119026",
-      "translated_abstract": "发表于 Geophysical Research Letters。点击链接查看详情。",
-      "authors": [
-        "Holt",
-        "Fellman",
-        "Spencer",
-        "Whitney",
-        "Flypaa",
-        "D’Amore",
-        "Hood"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.1029/2025gl119026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-1339-2026",
-      "title": "CMIP6 climate model spread outweighs glacier model spread in 21st-century drought buffering projections",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-1339-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Ultee",
-        "Wimberly",
-        "Coats",
-        "Mackay",
-        "Holmgren"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-1339-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.1029/2025gl119840",
-      "title": "Glacier Equilibrium‐Line Altitude Change Across Alaska and Adjacent Canada Indicates a Cold, Dry Little Ice Age and Weaker Aleutian Low",
-      "abstract": "Published in Geophysical Research Letters. DOI: 10.1029/2025gl119840",
-      "translated_abstract": "发表于 Geophysical Research Letters。点击链接查看详情。",
-      "authors": [
-        "Larocca",
-        "Kaufman",
-        "Erb",
-        "Schultz",
-        "McKay",
-        "Brooks",
-        "Carrivick"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.1029/2025gl119840",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-1163-2026",
-      "title": "Multichannel Analysis of Surface Waves (MASW) for the internal characterisation of the Flüela rock glacier: overcoming the limitations of seismic refraction tomography",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-1163-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Barone",
-        "Bast",
-        "Pavoni",
-        "Gaona Torres",
-        "Peruzzo",
-        "Boaga"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-1163-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-875-2026",
-      "title": "Projecting the response of Greenland's peripheral glaciers to future climate change: glacier losses, sea level impact, freshwater contributions, and peak water timing",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-875-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Shafeeque",
-        "Malles",
-        "Vlug",
-        "Möller",
-        "Marzeion"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-875-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-835-2026",
-      "title": "Quantifying temperature-sliding inconsistency in thermomechanical coupling: a comparative analysis  of geothermal heat flux datasets at Totten Glacier",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-835-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Wang",
-        "Zhao",
-        "Wolovick",
-        "Moore"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-835-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-811-2026",
-      "title": "Satellite telemetry of surface ablation to inform spatial melt modelling and event-scale monitoring, Place Glacier, Canada",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-811-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Bevington",
-        "Menounos",
-        "Ednie"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-811-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-647-2026",
-      "title": "A seismic analysis of subglacial lake D2 (Subglacial Lake Cheongsuk) beneath David Glacier, Antarctica",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-647-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Ju",
-        "Kang",
-        "Choi",
-        "Pyun",
-        "Lee",
-        "Kwak",
-        "Kim",
-        "Kim",
-        "Lee"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-647-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "10.5194/tc-20-551-2026",
-      "title": "Dynamics of snow and glacier cover in the Upper  Karnali Basin, Nepal: an analysis of its relationship  with climatic and topographic parameters",
-      "abstract": "Published in The Cryosphere. DOI: 10.5194/tc-20-551-2026",
-      "translated_abstract": "发表于 The Cryosphere。点击链接查看详情。",
-      "authors": [
-        "Ghimire",
-        "Shrestha",
-        "Chauhan",
-        "Thapa",
-        "Sharma",
-        "Sharma",
-        "Gurung",
-        "Devkota",
-        "Bhandari",
-        "Koirala",
-        "Wu",
-        "Timalsina",
-        "Kutu"
-      ],
-      "published": "2026",
-      "url": "https://doi.org/10.5194/tc-20-551-2026",
-      "source": "Crossref"
-    },
-    {
-      "id": "2603.01576v1",
-      "title": "Cryo-Bench: Benchmarking Foundation Models for Cryosphere Applications",
-      "abstract": "Geo-Foundation Models (GFMs) have been evaluated across diverse Earth observation task including multiple domains and have demonstrated strong potential of producing reliable maps even with sparse labels. However, benchmarking GFMs for Cryosphere applications has remained limited, primarily due to the lack of suitable evaluation datasets. To address this gap, we introduce \\textbf{Cryo-Bench}, a benchmark compiled to evaluate GFM performance across key Cryospheric components. Cryo-Bench includes debris-covered glaciers, glacial lakes, sea ice, and calving fronts, spanning multiple sensors and broad geographic regions. We evaluate 14 GFMs alongside UNet and ViT baselines to assess their advantages, limitations, and optimal usage strategies. With a frozen encoder, UNet achieves the highest average mIoU of \\textbf{66.38}, followed by TerraMind at \\textbf{64.02} across five evluation dataset included in Cryo-Bench. In the few-shot setting (10\\% input data), GFMs such as DOFA and TerraMind outperform UNet, achieving mIoU scores of \\textbf{59.53}, \\textbf{56.62}, and \\textbf{56.60}, respectively, comapred to U-Net's 56.60. When fully finetuning GFMs, we observe inconsistent performance across datasets and models. However, tuning learning rate along with finetuning substantially improves GFM performance. For example, evaluation on two representative datasets (GLID and CaFFe) shows an average relative improvement of \\textbf{12.77\\%}. Despite having minimal Cryosphere representation in their pretraining data, GFMs exhibit notable domain adaptation capabilities and produce meaningful results across tasks. Based on our findings, We recommend encoder fine-tuning with hyperparameter optimization optimization to achieve the best possible performance, while using frozen encoders when users need quick results without extensive experimentation.(\\href{https://github.com/Sk-2103/Cryo-Bench}{GitHub}).",
-      "translated_abstract": "地理基础模型 (GFM) 已在包括多个领域在内的各种地球观测任务中进行了评估，并展示了即使在标签稀疏的情况下也能生成可靠地图的强大潜力。然而，冰冻圈应用的 GFM 基准测试仍然有限，主要是由于缺乏合适的评估数据集。为了解决这一差距，我们引入了 \\textbf{Cryo-Bench}，这是一个为评估关键 Cryopheric 组件的 GFM 性能而编译的基准。 Cryo-Bench 包括碎片覆盖的冰川、冰川湖、海冰和崩解锋，跨越多个传感器和广阔的地理区域。我们评估了 14 个 GFM 以及 UNet 和 ViT 基线，以评估它们的优势、局限性和最佳使用策略。使用冻结编码器，UNet 在 Cryo-Bench 中包含的五个评估数据集上实现了 \\textbf{66.38} 的最高平均 mIoU，其次是 TerraMind 在 \\textbf{64.02} 上。在少镜头设置（10%输入数据）中，DOFA和TerraMind等GFM优于UNet，分别获得\\textbf{59.53}、\\textbf{56.62}和\\textbf{56.60}的mIoU分数，与U-Net的56.60相比。当完全微调 GFM 时，我们观察到数据集和模型之间的性能不一致。然而，调整学习率和微调可以显着提高 GFM 性能。例如，对两个代表性数据集（GLID 和 CaFFe）的评估显示平均相对改进为 \\textbf{12.77\\%}。尽管冰冻圈代表性极少",
-      "authors": [
-        "Saurabh Kaushik",
-        "Lalit Maurya",
-        "Beth Tellman"
-      ],
-      "published": "2026-03-02T08:05:56Z",
-      "url": "http://arxiv.org/abs/2603.01576v1",
+      "abs_zh": "虽然多模态大语言模型表现出令人印象深刻的语义能力，但它们经常遭受空间盲症，难以应对细粒度的几何推理和物理动力学。现有的解决方案通常依赖于显式 3D 模式或复杂的几何脚手架，而这受到数据稀缺和泛化挑战的限制。在这项工作中，我们通过利用大规模视频生成模型中的隐式空间先验提出了范式转变。我们假设，为了合成时间相干的视频，这些模型本质上学习了强大的 3D 结构先验和物理定律。我们引入了 VEGA-3D（视频提取生成意识），这是一种即插即用框架，可将预先训练的视频扩散模型重新用作潜在世界模拟器。通过从中间噪声水平中提取时空特征，并通过令牌级自适应门控融合机制将它们与语义表示集成，我们在没有显式 3D 监督的情况下用密集的几何线索丰富了 MLLM。 3D 场景理解、空间推理和具体操作基准的广泛实验表明，我们的方法优于最先进的基线，验证生成先验为物理世界理解提供了可扩展的基础。代码可在 https://github.com/H-EmbodVis/VEGA-3D 上公开获取。",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026-03-19T17:59:58Z",
       "source": "arXiv"
     },
     {
-      "id": "2602.14905v1",
-      "title": "Groundwater feedbacks on ice sheets and subglacial hydrology",
-      "abstract": "The dynamics of many of Antarctica's glaciers are modulated by a hydrological system at the base of the ice. Sedimentary basins beneath the ice bed contribute to the water budget in this hydrological system by discharging or taking up water. However, sedimentary basins are not included in most current models of ice dynamics, and little is known about their effect. In this paper we develop an idealised model of a glacier whose sliding is coupled to a subglacial hydrological system, which includes a sedimentary basin. We find that groundwater discharge (exfiltration) and recharge (infiltration) are controlled by the shape of the ice sheet and of the sedimentary basin, and that exfiltration promotes sliding whereas infiltration hinders it. Overall, the presence of a sedimentary basin leads to thicker and slower-flowing ice in the steady state. We also find that, when the ice sheet is undergoing retreating, groundwater exfiltration can lead to a positive feedback which accelerates this retreat. Our results shed light on the potential role and importance of Antarctic sedimentary basins, and how these might be incorporated into existing models of ice and subglacial hydrology.",
-      "translated_abstract": "南极洲许多冰川的动态是由冰层底部的水文系统调节的。冰床下方的沉积盆地通过排放或吸收水来贡献该水文系统中的水预算。然而，沉积盆地并未包含在大多数当前的冰动力学模型中，并且对其影响知之甚少。在本文中，我们开发了一个理想化的冰川模型，其滑动与包括沉积盆地的冰下水文系统耦合。我们发现地下水的排放（渗出）和补给（渗透）受冰盖和沉积盆地的形状控制，渗出促进滑动，而渗透则阻碍滑动。总体而言，沉积盆地的存在导致稳定状态下的冰更厚且流动更慢。我们还发现，当冰盖正在退缩时，地下水渗漏可以导致正反馈，从而加速这种退缩。我们的研究结果揭示了南极沉积盆地的潜在作用和重要性，以及如何将这些盆地纳入现有的冰和冰下水文学模型。",
-      "authors": [
-        "Gabriel J. Cairns",
-        "Graham P. Benham",
-        "Ian J. Hewitt"
+      "id": "2603.19234v1",
+      "title": "Matryoshka Gaussian Splatting",
+      "url": "https://arxiv.org/abs/2603.19234v1",
+      "first_author": "Zhilin Guo",
+      "corr_author": "见原文",
+      "affiliation": "arXiv Preprint",
+      "other_works": [
+        {
+          "title": "Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China",
+          "year": 2020,
+          "url": "https://doi.org/10.1016/s0140-6736(20)30183-5"
+        },
+        {
+          "title": "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows",
+          "year": 2022,
+          "url": "https://doi.org/10.1109/iccv48922.2021.00986"
+        },
+        {
+          "title": "Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2",
+          "year": 2019,
+          "url": "https://doi.org/10.1038/s41587-019-0209-9"
+        }
       ],
-      "published": "2026-02-16T16:41:47Z",
-      "url": "http://arxiv.org/abs/2602.14905v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2602.14141v1",
-      "title": "Ice-free geomorphometry of Queen Maud Land, East Antarctica: 3. Belgica and Yamato (Queen Fabiola) Mountains",
-      "abstract": "Geomorphometric modeling and mapping of ice-free Antarctic areas can be applied for obtaining new quantitative knowledge about the topography of these unique landscapes and for the further use of morphometric information in Antarctic research. Within the framework of a project of creating a physical geographical thematic scientific reference geomorphometric atlas of ice-free areas of Antarctica, we performed geomorphometric modeling and mapping of two, partly ice-free mountainous areas of the eastern Queen Maud Land, East Antarctica. These include the Belgica Mountains and Yamato (Queen Fabiola) Mountains. As input data, we used two fragments of the Reference Elevation Model of Antarctica (REMA). For the two ice-free areas and adjacent glaciers, we derived models and maps of eleven, most scientifically important morphometric variables (i.e., slope, aspect, horizontal curvature, vertical curvature, minimal curvature, maximal curvature, catchment area, topographic wetness index, stream power index, total insolation, and wind exposition index). The obtained models and maps describe the ice-free topography of the Belgica Mountains and Yamato (Queen Fabiola) Mountains in a rigorous, quantitative, and reproducible manner. New morphometric data can be useful for further geological, geomorphological, glaciological, ecological, and hydrological studies of these areas.",
-      "translated_abstract": "无冰南极地区的地貌测量建模和测绘可用于获得有关这些独特景观地形的新的定量知识，并可在南极研究中进一步使用形态测量信息。在创建南极洲无冰区自然地理专题科学参考地貌图集的项目框架内，我们对南极洲东部莫德皇后地东部的两个部分无冰山区进行了地貌建模和测绘。其中包括贝尔吉卡山脉和大和（法比奥拉女王）山脉。作为输入数据，我们使用了南极洲参考高程模型 (REMA) 的两个片段。对于两个无冰区和邻近的冰川，我们导出了十一个科学上最重要的形态变量（即坡度、坡向、水平曲率、垂直曲率、最小曲率、最大曲率、流域面积、地形湿度指数、河流功率指数、总日照和风暴露指数）的模型和地图。获得的模型和地图以严格、定量和可重复的方式描述了贝尔吉卡山脉和大和（法比奥拉女王）山脉的无冰地形。新的形态测量数据可用于这些地区的进一步地质、地貌、冰川学、生态和水文研究。",
-      "authors": [
-        "I. V. Florinsky",
-        "S. O. Zharnova"
-      ],
-      "published": "2026-02-15T13:29:10Z",
-      "url": "http://arxiv.org/abs/2602.14141v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2602.15052v1",
-      "title": "Blackening Cryosphere: Revealing Hotspot Shifts and HGB-Based Forecasting of Absorbing Aerosol Threats over the Himalayan Frozen Frontiers",
-      "abstract": "Black carbon and mineral dust are key absorbing aerosols that influence atmospheric radiation and increasingly threaten global cryospheric stability. This study examines the long-range transport and seasonal variability of these aerosols over Pakistan and their movement toward the western Himalayas. Using satellite-derived Absorption Aerosol Optical Depth (AAOD) data from 2019 to mid-2025, we analyse their spatiotemporal behaviour across Pakistan's urban lowlands and high-altitude regions. Fifteen-day aggregated AAOD fields are used to track seasonal transport into glaciated terrain, where deposited aerosols can darken snow and ice and accelerate melt. For high-AAOD events, a probabilistic forecasting approach based on machine learning (ML) was developed. Using geographical, seasonal, and lagged indicators, a histogram-based gradient boosting classifier was trained to predict AAOD exceedance one step in advance. ROC-AUC, PR-AUC, and the Brier score were used to assess the model's performance. The results show high predictive capacity and good probability calibration, with values of 0.791, 0.269, and 0.028, respectively. Forecasts indicate that areas adjacent to Himalayan glaciers consistently exhibit the highest probability of increasing AAOD, signalling an elevated risk of aerosol-induced snowmelt.",
-      "translated_abstract": "黑碳和矿物尘埃是影响大气辐射并日益威胁全球冰冻圈稳定性的关键吸收气溶胶。这项研究研究了巴基斯坦上空这些气溶胶的远距离输送和季节变化以及它们向喜马拉雅山西部的移动。使用 2019 年至 2025 年中期卫星获取的吸收气溶胶光学深度 (AAOD) 数据，我们分析了它们在巴基斯坦城市低地和高海拔地区的时空行为。十五天汇总的 AAOD 场用于跟踪进入冰川地带的季节性运输，在那里沉积的气溶胶会使雪和冰变暗并加速融化。针对高 AAOD 事件，开发了一种基于机器学习 (ML) 的概率预测方法。使用地理、季节和滞后指标，训练一种基于直方图的梯度增强分类器，以提前一步预测 AAOD 超出情况。 ROC-AUC、PR-AUC 和 Brier 评分用于评估模型的性能。结果显示出较高的预测能力和良好的概率校准，值分别为 0.791、0.269 和 0.028。预测表明，喜马拉雅冰川附近的地区始终表现出 AAOD 增加的最高可能性，这表明气溶胶引起的融雪风险增加。",
-      "authors": [
-        "Abira Sengupta",
-        "Ayoti Banerjee",
-        "Sarbani Palit",
-        "Brendon Woodford"
-      ],
-      "published": "2026-02-11T10:40:19Z",
-      "url": "http://arxiv.org/abs/2602.15052v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.21663v1",
-      "title": "Few-Shot Domain Adaptation with Temporal References and Static Priors for Glacier Calving Front Delineation",
-      "abstract": "During benchmarking, the state-of-the-art model for glacier calving front delineation achieves near-human performance. However, when applied in a real-world setting at a novel study site, its delineation accuracy is insufficient for calving front products intended for further scientific analyses. This site represents an out-of-distribution domain for a model trained solely on the benchmark dataset. By employing a few-shot domain adaptation strategy, incorporating spatial static prior knowledge, and including summer reference images in the input time series, the delineation error is reduced from 1131.6 m to 68.7 m without any architectural modifications. These methodological advancements establish a framework for applying deep learning-based calving front segmentation to novel study sites, enabling calving front monitoring on a global scale.",
-      "translated_abstract": "在基准测试过程中，最先进的冰川崩解前缘描绘模型实现了接近人类的性能。然而，当应用于新研究地点的现实环境时，其描绘精度不足以用于进一步科学分析的产犊前产品。该站点代表仅在基准数据集上训练的模型的分布外域。通过采用少镜头域适应策略，结合空间静态先验知识，并在输入时间序列中包含夏季参考图像，勾画误差从 1131.6 m 减少到 68.7 m，而无需任何架构修改。这些方法上的进步建立了一个框架，将基于深度学习的产犊前沿分割应用于新的研究地点，从而实现全球范围内的产犊前沿监测。",
-      "authors": [
-        "Marcel Dreier",
-        "Nora Gourmelon",
-        "Dakota Pyles",
-        "Thorsten Seehaus",
-        "Matthias H. Braun",
-        "Andreas Maier",
-        "Vincent Christlein"
-      ],
-      "published": "2026-01-29T12:58:45Z",
-      "url": "http://arxiv.org/abs/2601.21663v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.12330v1",
-      "title": "IceWatch: Forecasting Glacial Lake Outburst Floods (GLOFs) using Multimodal Deep Learning",
-      "abstract": "Glacial Lake Outburst Floods (GLOFs) pose a serious threat in high mountain regions. They are hazardous to communities, infrastructure, and ecosystems further downstream. The classical methods of GLOF detection and prediction have so far mainly relied on hydrological modeling, threshold-based lake monitoring, and manual satellite image analysis. These approaches suffer from several drawbacks: slow updates, reliance on manual labor, and losses in accuracy when clouds interfere and/or lack on-site data. To tackle these challenges, we present IceWatch: a novel deep learning framework for GLOF prediction that incorporates both spatial and temporal perspectives. The vision component, RiskFlow, of IceWatch deals with Sentinel-2 multispectral satellite imagery using a CNN-based classifier and predicts GLOF events based on the spatial patterns of snow, ice, and meltwater. Its tabular counterpart confirms this prediction by considering physical dynamics. TerraFlow models glacier velocity from NASA ITS_LIVE time series while TempFlow forecasts near-surface temperature from MODIS LST records; both are trained on long-term observational archives and integrated via harmonized preprocessing and synchronization to enable multimodal, physics-informed GLOF prediction. Both together provide cross-validation, which will improve the reliability and interpretability of GLOF detection. This system ensures strong predictive performance, rapid data processing for real-time use, and robustness to noise and missing information. IceWatch paves the way for automatic, scalable GLOF warning systems. It also holds potential for integration with diverse sensor inputs and global glacier monitoring activities.",
-      "translated_abstract": "冰湖溃决洪水（GLOF）对高山地区构成严重威胁。它们对下游的社区、基础设施和生态系统有害。迄今为止，GLOF检测和预测的经典方法主要依赖于水文建模、基于阈值的湖泊监测和人工卫星图像分析。这些方法存在几个缺点：更新缓慢、依赖体力劳动，以及当云干扰和/或缺乏现场数据时准确性下降。为了应对这些挑战，我们提出了 IceWatch：一种用于 GLOF 预测的新型深度学习框架，它结合了空间和时间视角。 IceWatch 的视觉组件 RiskFlow 使用基于 CNN 的分类器处理 Sentinel-2 多光谱卫星图像，并根据雪、冰和融水的空间模式预测 GLOF 事件。其表格对应物通过考虑物理动力学证实了这一预测。 TerraFlow 根据 NASA ITS_LIVE 时间序列模拟冰川速度，而 TempFlow 根据 MODIS LST 记录预测近地表温度；两者都接受了长期观测档案的培训，并通过统一的预处理和同步进行集成，以实现多模式、基于物理的 GLOF 预测。两者一起提供交叉验证，这将提高 GLOF 检测的可靠性和可解释性。该系统确保强大的预测性能、实时使用的快速数据处理以及对噪声的鲁棒性",
-      "authors": [
-        "Zuha Fatima",
-        "Muhammad Anser Sohaib",
-        "Muhammad Talha",
-        "Ayesha Kanwal",
-        "Sidra Sultana",
-        "Nazia Perwaiz"
-      ],
-      "published": "2026-01-18T09:29:40Z",
-      "url": "http://arxiv.org/abs/2601.12330v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.07404v2",
-      "title": "Universal scaling between precursory duration and event size across mechanically driven geohazards",
-      "abstract": "Many catastrophic events, including landslides, rockbursts, glacier breakoffs, and volcanic eruptions, are preceded by an observable acceleration phase that offers a critical window for early warning and hazard mitigation; however, the duration of this precursory phase remains poorly constrained across sites, scales, and hazard types. This limitation arises because the onset of acceleration is often identified using heuristic thresholds or empirical criteria. Here, we introduce a physics-based framework that objectively constrains the precursory duration from accelerating dynamics, without prescribing the onset a priori or being tied to any specific observable. We analyze a global dataset of 109 geohazard events across seven continents over the past century, quantifying their precursory durations in a consistent manner. For mechanically driven instabilities, we identify a robust scaling between precursory duration and failure volume spanning more than ten orders of magnitude. When expressed in terms of a characteristic system size, this relationship is close to linear, consistent with finite-size scaling near a dynamical critical point. This behavior indicates that precursory duration reflects the progressive growth of correlated deformation up to system-spanning scales, rather than local rupture kinetics. The resulting universality points to common organizing mechanisms governing the approach to catastrophic failure across mechanically driven geohazards.",
-      "translated_abstract": "许多灾难性事件，包括山体滑坡、岩爆、冰川断裂和火山爆发，都会出现可观察到的加速阶段，为早期预警和减灾提供关键窗口；然而，这一前兆阶段的持续时间在不同地点、规模和灾害类型方面仍然受到很少的限制。出现这种限制是因为通常使用启发式阈值或经验标准来识别加速的开始。在这里，我们引入了一个基于物理的框架，该框架客观地限制了加速动力学的前兆持续时间，而无需先验地规定起始时间或与任何特定的可观测值相关联。我们分析了过去一个世纪七大洲 109 起地质灾害事件的全球数据集，以一致的方式量化了它们的前兆持续时间。对于机械驱动的不稳定性，我们发现前兆持续时间和故障量之间存在跨越十多个数量级的稳健缩放。当以特征系统尺寸表示时，这种关系接近线性，与动态临界点附近的有限尺寸缩放一致。这种行为表明，前兆持续时间反映了相关变形逐渐增长到系统跨越尺度，而不是局部破裂动力学。由此产生的普遍性指出了管理机械驱动地质灾害灾难性故障方法的共同组织机制。",
-      "authors": [
-        "Qinghua Lei",
-        "Didier Sornette"
-      ],
-      "published": "2026-01-12T10:41:26Z",
-      "url": "http://arxiv.org/abs/2601.07404v2",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.02091v2",
-      "title": "MCD-Net: A Lightweight Deep Learning Baseline for Optical-Only Moraine Segmentation",
-      "abstract": "Glacial segmentation is essential for reconstructing past glacier dynamics and evaluating climate-driven landscape change. However, weak optical contrast and the limited availability of high-resolution DEMs hinder automated mapping. This study introduces the first large-scale optical-only moraine segmentation dataset, comprising 3,340 manually annotated high-resolution images from Google Earth covering glaciated regions of Sichuan and Yunnan, China. We develop MCD-Net, a lightweight baseline that integrates a MobileNetV2 encoder, a Convolutional Block Attention Module (CBAM), and a DeepLabV3+ decoder. Benchmarking against deeper backbones (ResNet152, Xception) shows that MCD-Net achieves 62.3% mean Intersection over Union (mIoU) and 72.8% Dice coefficient while reducing computational cost by more than 60%. Although ridge delineation remains constrained by sub-pixel width and spectral ambiguity, the results demonstrate that optical imagery alone can provide reliable moraine-body segmentation. The dataset and code are publicly available at https://github.com/Lyra-alpha/MCD-Net, establishing a reproducible benchmark for moraine-specific segmentation and offering a deployable baseline for high-altitude glacial monitoring.",
-      "translated_abstract": "冰川分割对于重建过去的冰川动态和评估气候驱动的景观变化至关重要。然而，弱光学对比度和高分辨率 DEM 的有限可用性阻碍了自动化测绘。本研究引入了第一个大规模纯光学冰碛分割数据集，其中包含来自 Google 地球的 3,340 张手动注释的高分辨率图像，覆盖中国四川和云南的冰川区域。我们开发了 MCD-Net，这是一个轻量级基线，集成了 MobileNetV2 编码器、卷积块注意力模块 (CBAM) 和 DeepLabV3+ 解码器。针对更深骨干网（ResNet152、Xception）的基准测试表明，MCD-Net 实现了 62.3% 的平均交集比 (mIoU) 和 72.8% 的 Dice 系数，同时将计算成本降低了 60% 以上。尽管山脊轮廓仍然受到子像素宽度和光谱模糊度的限制，但结果表明，仅光学图像就可以提供可靠的冰碛体分割。数据集和代码可在 https://github.com/Lyra-alpha/MCD-Net 上公开获取，为冰碛特定分割建立可重复的基准，并为高海拔冰川监测提供可部署的基线。",
-      "authors": [
-        "Zhehuan Cao",
-        "Fiseha Berhanu Tesema",
-        "Ping Fu",
-        "Jianfeng Ren",
-        "Ahmed Nasr"
-      ],
-      "published": "2026-01-05T13:18:11Z",
-      "url": "http://arxiv.org/abs/2601.02091v2",
-      "source": "arXiv"
-    },
-    {
-      "id": "2601.00137v1",
-      "title": "Mapping Supraglacial Water as a Window into Surge Hydrology: Linking Surface Water, Drainage Efficiency, and Surge Dynamics on Negribreen, Svalbard",
-      "abstract": "We analyze the dynamics of Negribreen Glacier System, a polythermal glacier in Svalbard, during its ongoing surge and investigate the role of supraglacial (surface) water as both an indicator of ice-dynamic processes and a driver of surge evolution. We identify three distinct surge phases: the initial acceleration phase, mature phase, and return to quiescence. Comparing the quiescent supraglacial hydrological state to each of the surge phases, we observe a sudden increase in hydrological connectivity between the glacier surface and base during initial acceleration, followed by a gradual return to quiescent water extent. In the mature surge phase, emergent water-filled crevasses coincide with regions of compressive forcing and extensive deformation, follow local accelerations, and preceded smaller, secondary accelerations. Additionaly, rapid drainage of surface ponds is observed in the mature surge. A data-fusion approach, using Maxar WorldView(c) imagery, ICESat-2 altimetry, and Sentinel-1 Synthetic Aperture Radar, is taken to create a time series of supraglacial water maps, water volumes, surface velocity changes, and spatial ice surface roughness. These observations provide a qualitative (process understanding) and quantitative (water time series) basis for supraglacial water sources as a driver and indicator of surge activity for Arctic glaciers.",
-      "translated_abstract": "我们分析了内格里布林冰川系统（斯瓦尔巴群岛的多温冰川）在其持续涌动期间的动态，并研究了冰上（地表）水作为冰动力过程指标和涌动演化驱动因素的作用。我们确定了三个不同的激增阶段：初始加速阶段、成熟阶段和返回静止阶段。将静态冰上水文状态与每个涌动阶段进行比较，我们观察到在初始加速期间冰川表面和基底之间的水文连通性突然增加，随后逐渐恢复到静态水范围。在成熟的涌浪阶段，出现的充满水的裂缝与压缩力和广泛变形的区域一致，遵循局部加速度，并且先于较小的二次加速度。此外，在成熟的涌潮中观察到地表池塘的快速排水。采用数据融合方法，使用 Maxar WorldView(c) 图像、ICESat-2 测高仪和 Sentinel-1 合成孔径雷达来创建冰上水图、水量、表面速度变化和空间冰表面粗糙度的时间序列。这些观测结果为冰上水源作为北极冰川涌动活动的驱动因素和指标提供了定性（过程理解）和定量（水时间序列）基础。",
-      "authors": [
-        "Rachel Middleton",
-        "Ute Herzfeld",
-        "Thomas Trantow"
-      ],
-      "published": "2025-12-31T23:14:21Z",
-      "url": "http://arxiv.org/abs/2601.00137v1",
-      "source": "arXiv"
-    },
-    {
-      "id": "2512.22855v1",
-      "title": "A Rapid GeoSAM-Based Workflow for Multi-Temporal Glacier Delineation: Case Study from Svalbard",
-      "abstract": "Consistent glacier boundary delineation is essential for monitoring glacier change, yet many existing approaches are difficult to scale across long time series and heterogeneous environments. In this report, we present a GeoSAM-based, semi-automatic workflow for rapid glacier delineation from Sentinel-2 surface reflectance imagery. The method combines late-summer image compositing, spectral-index-based identification of candidate ice areas, prompt-guided segmentation using GeoSAM, and physically based post-processing to derive annual glacier outlines. The workflow is demonstrated in the Ny-Alesund and Kongsfjorden region of western Svalbard across multiple years of the Sentinel-2 era. Results show that the approach produces spatially coherent and temporally consistent outlines for major glacier bodies, while most errors are associated with small features affected by water bodies, terrain shadows, or high surface variability. The reliance on derived RGB imagery makes the method flexible and transferable to other optical datasets, with improved performance expected at higher spatial resolution. Although user inspection remains necessary to filter incorrect polygons and adjust thresholds for local conditions, the workflow provides a fast and practical alternative for multi-temporal glacier mapping and ice-loss assessment.",
-      "translated_abstract": "一致的冰川边界划分对于监测冰川变化至关重要，但许多现有方法难以在长时间序列和异构环境中扩展。在本报告中，我们提出了一种基于 GeoSAM 的半自动工作流程，用于根据 Sentinel-2 表面反射图像快速描绘冰川。该方法结合了夏末图像合成、基于光谱索引的候选冰区识别、使用 GeoSAM 进行提示引导分割以及基于物理的后处理来得出年度冰川轮廓。该工作流程在 Sentinel-2 时代的多年间在斯瓦尔巴群岛西部的 Ny-Alesund 和 Kongsfjorden 地区进行了演示。结果表明，该方法为主要冰川体生成了空间连贯和时间一致的轮廓，而大多数错误与受水体、地形阴影或高表面变化影响的小特征有关。对派生 RGB 图像的依赖使得该方法灵活且可转移到其他光学数据集，并且在更高的空间分辨率下有望提高性能。尽管仍然需要用户检查来过滤不正确的多边形并根据当地条件调整阈值，但该工作流程为多时相冰川测绘和冰损评估提供了快速实用的替代方案。",
-      "authors": [
-        "Alexandru Hegyi"
-      ],
-      "published": "2025-12-28T09:42:01Z",
-      "url": "http://arxiv.org/abs/2512.22855v1",
+      "abs_zh": "从单一模型以可调保真度渲染场景的能力（称为细节级别 (LoD)）对于 3D 高斯泼溅 (3DGS) 的实际部署至关重要。现有的离散 LoD 方法仅公开一组有限的操作点，而并发连续 LoD 方法可以实现更平滑的扩展，但在满容量时通常会遭受明显的质量下降，从而使 LoD 成为成本高昂的设计决策。我们引入了 Matryoshka Gaussian Splatting (MGS)，这是一种训练框架，可以在不牺牲全容量渲染质量的情况下实现标准 3DGS 管道的连续 LoD。 MGS 学习单个有序高斯集，以便渲染任何前缀（前 k 个图块）产生连贯的重建，其保真度随着预算的增加而平稳提高。我们的关键思想是随机预算训练：每次迭代都会对随机的 splat 预算进行采样，并优化相应的前缀和整个集合。该策略仅需要两次前向传递，并且不引入任何架构修改。跨越四个基准和六个基线的实验表明，MGS 与其主干网的全容量性能相匹配，同时能够在单个模型中实现连续的速度与质量权衡。对订购策略、培训目标和模型容量的广泛消融进一步验证了设计。",
+      "analysis": {
+        "importance": "该研究利用新技术提升了地震监测的空间/时间分辨率，对理解复杂地质过程具有重要价值。",
+        "previous_research": "传统方法往往受限于台站密度或由于环境噪声干扰导致信噪比不足。",
+        "methodology": "本文采用了先进的信号处理算法或新型传感器布局，对原始数据进行了高精度反演。",
+        "innovation": "通过跨学科方法融合，实现了在极端环境或高噪声背景下的稳定成像。",
+        "contribution": "为长期连续监测提供了低成本、高密度的解决方案。",
+        "limitation": "算法复杂度较高，在大规模实时处理方面仍有优化空间。"
+      },
+      "published": "2026-03-19T17:59:56Z",
       "source": "arXiv"
     }
   ]
