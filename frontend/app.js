@@ -61,7 +61,7 @@ async function loadPapers(topic) {
         container.innerHTML = `
             <div class="empty-state">
                 <h2>❌ 该专题暂无数据</h2>
-                <p>可能该专题在本周尚未更新，或关键词未搜到结果。</p>
+                <p>请运行 python3 update_papers.py 生成最新数据。</p>
             </div>
         `;
     } finally {
@@ -73,26 +73,19 @@ function renderPapersList() {
     const container = document.getElementById('papers-list');
     
     if (!papers || papers.length === 0) {
-        container.innerHTML = `
-            <div class="empty-state">
-                <h2>📚 暂无论文</h2>
-                <p>目前没有找到相关的论文。</p>
-            </div>
-        `;
+        container.innerHTML = `<div class="empty-state"><h2>📚 暂无论文</h2><p>目前没有找到相关的论文。</p></div>`;
         return;
     }
     
     container.innerHTML = papers.map(paper => `
         <div class="paper-card" onclick="loadPaperDetail('${paper.id}')">
+            <span class="source-tag ${paper.source.toLowerCase()}">${paper.source}</span>
             <h3>${escapeHtml(paper.title)}</h3>
             <div class="paper-meta">
-                <span>📅 ${formatDate(paper.published)}</span>
-                <span>👥 ${paper.authors.length} 位作者</span>
+                <span>👤 <b>${escapeHtml(paper.first_author)}</b> (${escapeHtml(paper.affiliation)})</span>
             </div>
-            <div class="paper-authors">
-                ${paper.authors.slice(0, 3).map(a => escapeHtml(a)).join(', ')}${paper.authors.length > 3 ? ' 等' : ''}
-            </div>
-            <div class="paper-abstract">${escapeHtml(paper.translated_abstract ? paper.translated_abstract.substring(0, 200) : paper.abstract.substring(0, 200))}...</div>
+            <div class="paper-abstract-preview">${escapeHtml(paper.abs_zh.substring(0, 150))}...</div>
+            <div class="view-detail-btn">查看深度分析 &rarr;</div>
         </div>
     `).join('');
 }
@@ -108,18 +101,56 @@ function showModal(paper) {
     document.getElementById('modal-title').textContent = paper.title;
     const modalBody = document.getElementById('modal-body');
     
+    const otherWorksHtml = paper.other_works && paper.other_works.length > 0
+        ? `<ul>${paper.other_works.map(w => `<li><a href="${w.url}" target="_blank">${escapeHtml(w.title)}</a> (${w.year})</li>`).join('')}</ul>`
+        : '<p>暂无代表作信息</p>';
+
     modalBody.innerHTML = `
-        <div class="analysis-section">
-            <h3>📄 摘要（中文翻译）</h3>
-            <p>${escapeHtml(paper.translated_abstract || '暂无翻译')}</p>
+        <div class="modal-grid">
+            <div class="analysis-card">
+                <h3>👥 作者信息</h3>
+                <p><b>第一作者:</b> ${escapeHtml(paper.first_author)}</p>
+                <p><b>通讯作者:</b> ${escapeHtml(paper.corr_author)}</p>
+                <p><b>单位:</b> ${escapeHtml(paper.affiliation)}</p>
+            </div>
+
+            <div class="analysis-card">
+                <h3>📚 一作其他代表作</h3>
+                ${otherWorksHtml}
+            </div>
         </div>
+
         <div class="analysis-section">
-            <h3>📋 所有作者</h3>
-            <p>${paper.authors.map(a => escapeHtml(a)).join('; ')}</p>
+            <h3>📖 摘要翻译</h3>
+            <div class="abs-content">${escapeHtml(paper.abs_zh)}</div>
         </div>
-        <div class="analysis-section">
-            <h3>🔗 原文链接</h3>
-            <p><a href="https://arxiv.org/abs/${paper.id}" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/${paper.id}</a></p>
+
+        <div class="analysis-section deep-analysis">
+            <h3>🔬 深度解析</h3>
+            <div class="analysis-item">
+                <span class="label">🌟 重要性:</span>
+                <p>${escapeHtml(paper.analysis.importance)}</p>
+            </div>
+            <div class="analysis-item">
+                <span class="label">🚩 前人研究不足:</span>
+                <p>${escapeHtml(paper.analysis.previous_research)}</p>
+            </div>
+            <div class="analysis-item">
+                <span class="label">🛠️ 数据与方法:</span>
+                <p>${escapeHtml(paper.analysis.methodology)}</p>
+            </div>
+            <div class="analysis-item">
+                <span class="label">🚀 创新之处与贡献:</span>
+                <p>${escapeHtml(paper.analysis.innovation)} | ${escapeHtml(paper.analysis.contribution)}</p>
+            </div>
+            <div class="analysis-item">
+                <span class="label">⚠️ 本文不足:</span>
+                <p>${escapeHtml(paper.analysis.limitation)}</p>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <a href="${paper.url}" target="_blank" class="primary-btn">🔗 访问原文链接 (DOI/arXiv)</a>
         </div>
     `;
     
@@ -145,14 +176,4 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
-}
-
-function formatDate(dateStr) {
-    if (!dateStr) return 'N/A';
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
 }

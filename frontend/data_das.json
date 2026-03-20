@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-03-20 08:04",
+  "last_update": "2026-03-20 16:00",
   "topic_name": "DAS论文",
   "papers": [
     {
@@ -329,7 +329,7 @@
       "id": "2511.15638v1",
       "title": "Learning from Imperfect Labels: A Physics-Aware Neural Operator with Application to DAS Data Denoising",
       "abstract": "Supervised deep learning methods typically require large datasets and high-quality labels to achieve reliable predictions. However, their performance often degrades when trained on imperfect labels. To address this challenge, we propose a physics-aware loss function that serves as a penalty term to mitigate label imperfections during training. In addition, we introduce a modified U-Net-Enhanced Fourier Neural Operator (UFNO) that achieves high-fidelity feature representation while leveraging the advantages of operator learning in function space. By combining these two components, we develop a physics-aware UFNO (PAUFNO) framework that effectively learns from imperfect labels. To evaluate the proposed framework, we apply it to the denoising of distributed acoustic sensing (DAS) data from the Utah FORGE site. The label data were generated using an integrated filtering-based method, but still contain residual coupling noise in the near-wellbore channels. The denoising workflow incorporates a patching-based data augmentation strategy, including an uplifting step, spatial-domain convolutional operations, spectral convolution, and a projection layer to restore data to the desired shape. Extensive numerical experiments demonstrate that the proposed framework achieves superior denoising performance, effectively enhancing DAS records and recovering hidden signals with high accuracy.",
-      "translated_abstract": "有监督的深度学习方法通​​常需要大型数据集和高质量的标签才能实现可靠的预测。然而，当在不完美的标签上进行训练时，它们的表现常常会下降。为了应对这一挑战，我们提出了一种物理感知损失函数，作为惩罚项来减轻训练期间的标签缺陷。此外，我们引入了一种改进的 U-Net 增强型傅里叶神经算子（UFNO），它可以实现高保真特征表示，同时利用函数空间中算子学习的优势。通过结合这两个组件，我们开发了一个物理感知的 UFNO (PAUFNO) 框架，可以有效地从不完美的标签中学习。为了评估所提出的框架，我们将其应用于来自犹他州 FORGE 站点的分布式声学传感 (DAS) 数据的去噪。标签数据是使用基于集成滤波的方法生成的，但在近井筒通道中仍然包含残余耦合噪声。去噪工作流程采用了基于修补的数据增强策略，包括提升步骤、空间域卷积运算、光谱卷积和将数据恢复到所需形状的投影层。大量的数值实验表明，所提出的框架实现了卓越的去噪性能，有效增强了 DAS 记录并高精度地恢复了隐藏信号。",
+      "translated_abstract": "有监督的深度学习方法通​​常需要大型数据集和高质量的标签才能实现可靠的预测。然而，当在不完美的标签上进行训练时，它们的表现往往会下降。为了应对这一挑战，我们提出了一种物理感知损失函数，作为惩罚项来减轻训练期间的标签缺陷。此外，我们引入了一种改进的 U-Net 增强型傅里叶神经算子（UFNO），它可以实现高保真特征表示，同时利用函数空间中算子学习的优势。通过结合这两个组件，我们开发了一个物理感知的 UFNO (PAUFNO) 框架，可以有效地从不完美的标签中学习。为了评估所提出的框架，我们将其应用于来自犹他州 FORGE 站点的分布式声学传感 (DAS) 数据的去噪。标签数据是使用基于集成滤波的方法生成的，但在近井筒通道中仍然包含残余耦合噪声。去噪工作流程采用了基于修补的数据增强策略，包括提升步骤、空间域卷积运算、光谱卷积和将数据恢复到所需形状的投影层。大量的数值实验表明，所提出的框架实现了卓越的去噪性能，有效增强了 DAS 记录并高精度地恢复了隐藏信号。",
       "authors": [
         "Yang Cui",
         "Denis Anikiev",
