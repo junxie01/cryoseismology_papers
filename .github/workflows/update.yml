@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser deep-translator
+          pip install requests feedparser deep-translator fpdf
 
       - name: Run update script
         run: python update_papers.py
@@ -32,10 +32,11 @@ jobs:
           secure: true
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: "冰川地震学周报更新通知"
+          subject: "冰川地震学周报更新通知 (附 PDF)"
           to: ${{ secrets.MAIL_TO }}
           from: "Cryoseismology Bot <${{ secrets.MAIL_USERNAME }}>"
           body: file://email_body.txt
+          attachments: report.pdf
 
       - name: Commit and Push changes
         run: |

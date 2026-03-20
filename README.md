@@ -18,9 +18,18 @@
 ## 🛠️ 必须完成的配置 (Secrets)
 
 在 GitHub 仓库 **Settings > Secrets and variables > Actions** 中添加：
-- `MAIL_USERNAME`: 您的发送邮箱 (如 QQ 邮箱)。
-- `MAIL_PASSWORD`: 邮箱 SMTP 授权码。
+- `MAIL_USERNAME`: 您的 Gmail 地址 (如 `xxx@gmail.com`)。
+- `MAIL_PASSWORD`: Google 账号生成的 **16 位应用专用密码** (删除空格)。
 - `MAIL_TO`: 您的接收邮箱。
+
+## 🔍 故障排查 (邮件发送失败)
+
+如果 GitHub Actions 报 `535 Login fail`：
+1. **本地测试**：运行 `python3 test_email.py` 验证账号密码。
+2. **两步验证**：确保 Google 账号已开启 2-Step Verification。
+3. **YAML 配置**：确保 `.github/workflows/update.yml` 中：
+   - `server_port: 465`
+   - `secure: true`
 
 ## 📂 仓库结构
 - `update_papers.py`: 抓取与翻译脚本。
