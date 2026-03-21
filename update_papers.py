@@ -4,7 +4,7 @@ import json
 import os
 import urllib.parse
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from deep_translator import GoogleTranslator
 
 # ==========================================
@@ -107,9 +107,24 @@ def search_arxiv(topic_config, max_results=5):
 if __name__ == "__main__":
     target_dir = 'frontend'
     os.makedirs(target_dir, exist_ok=True)
+    
+    # 计算日期范围（过去7天）
+    now = datetime.now()
+    seven_days_ago = (now - timedelta(days=7)).strftime('%Y-%m-%d')
+    today_str = now.strftime('%Y-%m-%d')
+    date_range_str = f"{seven_days_ago} 至 {today_str}"
+    update_time_only = now.strftime('%H:%M')
+
     for tid, config in TOPICS.items():
+        print(f"\n--- 正在更新: {config['name_zh']} ---")
         results = search_crossref(config) + search_arxiv(config)
         results.sort(key=lambda x: str(x.get('published', '')), reverse=True)
+        
         with open(os.path.join(target_dir, config['file']), 'w', encoding='utf-8') as f:
-            json.dump({'last_update': datetime.now().strftime('%Y-%m-%d %H:%M'), 'topic_name': config['name_zh'], 'papers': results}, f, ensure_ascii=False, indent=2)
-    print("\n✅ 简洁版数据更新完成！")
+            json.dump({
+                'last_update': f"{date_range_str} {update_time_only}", 
+                'topic_name': config['name_zh'], 
+                'papers': results
+            }, f, ensure_ascii=False, indent=2)
+            
+    print(f"\n✅ 地震学周报更新完成！范围: {date_range_str}")
