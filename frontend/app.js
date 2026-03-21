@@ -84,8 +84,8 @@ function renderPapersList() {
             <div class="paper-meta">
                 <span>👤 <b>${escapeHtml(paper.first_author)}</b> (${escapeHtml(paper.affiliation)})</span>
             </div>
-            <div class="paper-abstract-preview">${escapeHtml(paper.abs_zh.substring(0, 150))}...</div>
-            <div class="view-detail-btn">查看深度分析 &rarr;</div>
+            <div class="paper-abstract-preview">${escapeHtml(paper.abs_zh ? paper.abs_zh.substring(0, 150) : "无摘要预览")}...</div>
+            <div class="view-detail-btn">查看详细信息 &rarr;</div>
         </div>
     `).join('');
 }
@@ -101,10 +101,6 @@ function showModal(paper) {
     document.getElementById('modal-title').textContent = paper.title;
     const modalBody = document.getElementById('modal-body');
     
-    const otherWorksHtml = paper.other_works && paper.other_works.length > 0
-        ? `<ul>${paper.other_works.map(w => `<li><a href="${w.url}" target="_blank">${escapeHtml(w.title)}</a> (${w.year})</li>`).join('')}</ul>`
-        : '<p>暂无代表作信息</p>';
-
     modalBody.innerHTML = `
         <div class="modal-grid">
             <div class="analysis-card">
@@ -113,40 +109,11 @@ function showModal(paper) {
                 <p><b>通讯作者:</b> ${escapeHtml(paper.corr_author)}</p>
                 <p><b>单位:</b> ${escapeHtml(paper.affiliation)}</p>
             </div>
-
-            <div class="analysis-card">
-                <h3>📚 一作其他代表作</h3>
-                ${otherWorksHtml}
-            </div>
         </div>
 
         <div class="analysis-section">
             <h3>📖 摘要翻译</h3>
-            <div class="abs-content">${escapeHtml(paper.abs_zh)}</div>
-        </div>
-
-        <div class="analysis-section deep-analysis">
-            <h3>🔬 深度解析</h3>
-            <div class="analysis-item">
-                <span class="label">🌟 重要性:</span>
-                <p>${escapeHtml(paper.analysis.importance)}</p>
-            </div>
-            <div class="analysis-item">
-                <span class="label">🚩 前人研究不足:</span>
-                <p>${escapeHtml(paper.analysis.previous_research)}</p>
-            </div>
-            <div class="analysis-item">
-                <span class="label">🛠️ 数据与方法:</span>
-                <p>${escapeHtml(paper.analysis.methodology)}</p>
-            </div>
-            <div class="analysis-item">
-                <span class="label">🚀 创新之处与贡献:</span>
-                <p>${escapeHtml(paper.analysis.innovation)} | ${escapeHtml(paper.analysis.contribution)}</p>
-            </div>
-            <div class="analysis-item">
-                <span class="label">⚠️ 本文不足:</span>
-                <p>${escapeHtml(paper.analysis.limitation)}</p>
-            </div>
+            <div class="abs-content">${escapeHtml(paper.abs_zh || "暂无翻译内容")}</div>
         </div>
 
         <div class="modal-footer">

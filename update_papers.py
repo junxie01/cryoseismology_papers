@@ -4,6 +4,7 @@ import json
 import os
 import urllib.parse
 import time
+import re
 from datetime import datetime, timedelta
 from deep_translator import GoogleTranslator
 
@@ -45,11 +46,22 @@ JOURNALS = [
     'Seismological Research Letters', 'The Cryosphere', 'Bulletin of the Seismological Society of America'
 ]
 
+def clean_abstract(text):
+    """清洗摘要中的 XML 标签和特定词汇"""
+    if not text: return ""
+    # 移除 <jats:title>Abstract</jats:title> 等标签
+    text = re.sub(r'<[^>]+>', '', text)
+    # 移除开头或特定位置的 "Abstract", "摘要", "抽象的。"
+    text = re.sub(r'^(Abstract|摘要|抽象的。|抽象的)\s*', '', text, flags=re.IGNORECASE)
+    return text.strip()
+
 def translate_text(text, max_len=2000):
     if not text or len(text) < 10: return "无摘要详情"
     try:
         translator = GoogleTranslator(source='auto', target='zh-CN')
-        return translator.translate(text[:max_len])
+        translated = translator.translate(text[:max_len])
+        # 二次清洗翻译结果中的“抽象的。”
+        return clean_abstract(translated)
     except: return "翻译失败"
 
 def search_crossref(topic_config, max_results=10):
@@ -67,7 +79,9 @@ def search_crossref(topic_config, max_results=10):
             corr_author = f"{authors[-1].get('given', '')} {authors[-1].get('family', '')}".strip() if authors else "N/A"
             affiliation = authors[0].get('affiliation', [{}])[0].get('name', '未知机构') if (authors and authors[0].get('affiliation')) else "未知机构"
 
-            abs_raw = item.get('abstract', '点击链接查看原文。').replace('<jats:p>', '').replace('</jats:p>', '')
+            abs_raw = clean_abstract(item.get('abstract', ''))
+            if not abs_raw: abs_raw = "点击链接查看原文。"
+            
             papers.append({
                 'id': item.get('DOI', ''),
                 'title': item.get('title', ['No Title'])[0],
@@ -97,7 +111,7 @@ def search_arxiv(topic_config, max_results=5):
                 'first_author': entry.authors[0].name if entry.authors else "N/A",
                 'corr_author': "N/A",
                 'affiliation': "arXiv Preprint",
-                'abs_zh': translate_text(entry.summary),
+                'abs_zh': translate_text(clean_abstract(entry.summary)),
                 'source': 'arXiv',
                 'published': entry.published[:10]
             })
@@ -108,7 +122,7 @@ if __name__ == "__main__":
     target_dir = 'frontend'
     os.makedirs(target_dir, exist_ok=True)
     
-    # 计算日期范围（过去7天）
+    # 计算日期范围
     now = datetime.now()
     seven_days_ago = (now - timedelta(days=7)).strftime('%Y-%m-%d')
     today_str = now.strftime('%Y-%m-%d')
