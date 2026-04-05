@@ -1,7 +1,106 @@
 {
-  "last_update": "2026-03-22 至 2026-03-29 02:35",
+  "last_update": "2026-03-29 至 2026-04-05 02:38",
   "topic_name": "分布式光纤传感",
   "papers": [
+    {
+      "id": "2604.02211v1",
+      "title": "Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges",
+      "url": "http://arxiv.org/abs/2604.02211v1",
+      "first_author": "Srivaths Ranganathan",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "视频推荐系统是最流行和最有影响力的人工智能应用之一，它影响着数十亿用户的内容消费和文化。传统的单模型推荐器优化静态参与度指标，但在满足现代平台的动态要求方面越来越受到限制。作为回应，多代理架构正在重新定义视频推荐系统如何服务、学习和适应用户和数据集。这些基于代理的系统协调负责视频理解、推理、记忆和反馈的专门代理，以提供精确、可解释的建议。在本次调查中，我们追踪了多智能体视频推荐系统（MAVRS）的演变。我们结合了多智能体推荐系统、基础模型和对话式 AI 的想法，最终形成了由大语言模型 (LLM) 驱动的 MAVRS 新兴领域。我们提出了协作模式的分类，并分析了从短片到教育平台的不同视频领域的协调机制。我们讨论代表性框架，包括早期的多智能体强化学习 (MARL) 系统（例如 MMRF）和最近的 LLM 驱动架构（例如 MACRec 和 Agent4Rec），以说明这些模式。我们还概述了可扩展性、多模式理解、激励调整方面的开放挑战，并确定了混合强化学习-法学硕士系统、终身个性化和自我改进推荐系统等研究方向。",
+      "source": "arXiv",
+      "published": "2026-04-02"
+    },
+    {
+      "id": "2604.02199v1",
+      "title": "A unified framework for synchronization optimization in directed multiplex networks",
+      "url": "http://arxiv.org/abs/2604.02199v1",
+      "first_author": "Anath Bandhu Das",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "多重网络范式有助于揭示复杂交互系统中的许多意想不到的现象和动态机制。然而，当前大多数研究都集中在无向多重结构上，而现实世界的系统主要涉及有向交互。在这里，我们提出了一个分析框架，用于在由相位振荡器组成的定向复用网络中实现最佳同步，同时考虑受挫和非受挫状态。为此引入了多重同步对准函数（MSAF），其公式集成了各个定向层的结构特性和动态特性。使用此函数，我们得出两类频率分布：一类在存在相位滞后的情况下以规定的耦合强度产生完美的同步，另一类在广泛的耦合强度上优化同步。对各种定向双工拓扑的数值模拟表明，两种频率集的性能均明显优于传统分布。我们还通过旨在最小化 MSAF 的定向链路重新布线策略以及用于在给定定向双工网络的两层上最佳分配固定频率的交换算法来探索网络优化。对同步优化有向网络的检查揭示了三个显着的相关性：频率和出度之间的正相关性、相邻频率之间的负相关性以及跨有向层的镜像节点频率之间的反相关性。",
+      "source": "arXiv",
+      "published": "2026-04-02"
+    },
+    {
+      "id": "2604.01986v1",
+      "title": "Resetting optimized competitive first-passage outcomes in non-Markovian systems",
+      "url": "http://arxiv.org/abs/2604.01986v1",
+      "first_author": "Suvam Pal",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "我们研究了随机重置在非马尔可夫系统中的作用，在非马尔可夫系统中，记忆效应是由于缓慢放松、崎岖的能量景观、无序的环境和分子拥挤而产生的。使用著名的连续时间随机游走（CTRW）框架，我们分析具有多个竞争结果的首次传代过程，并研究重置如何选择性地增强期望的事件。我们通过条件平均首次通过时间（MFPT）来描述重置的效率，并证明其影响对基础等待时间统计数据高度敏感。此外，我们推导了一个不等式，该不等式量化了重置如何控制条件首次通过时间（FPT）的波动，揭示了变异性被显着抑制的机制。我们的结果提供了对长期记忆如何影响竞争性首次传代结果的系统性理解，并将重置确立为超越传统马尔可夫设置的强大控制机制。",
+      "source": "arXiv",
+      "published": "2026-04-02"
+    },
+    {
+      "id": "2604.01572v1",
+      "title": "AI-Assisted Hardware Security Verification: A Survey and AI Accelerator Case Study",
+      "url": "http://arxiv.org/abs/2604.01572v1",
+      "first_author": "Khan Thamid Hasan",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "随着硬件系统变得越来越复杂，安全验证也必须跟上。最近，人工智能 (AI) 和大型语言模型 (LLM) 已开始在自动化验证工作流程的多个阶段中发挥重要作用，帮助工程师分析设计、推理潜在威胁并生成验证工件。这项调查综合了人工智能辅助硬件安全验证的最新进展，并按照工作流程的关键阶段组织了文献：资产识别、威胁建模、安全测试计划生成、模拟驱动分析、形式验证和对策推理。为了说明如何在实践中应用这些技术，我们使用开源 NVIDIA 深度学习加速器 (NVDLA)（一种具有代表性的现代硬件设计）进行案例研究。在整个研究中，我们强调，虽然基于 AI/LLM 的自动化可以显着加速验证任务，但其输出必须保持基于模拟证据、形式推理和基准驱动的评估，以确保值得信赖的硬件安全保证。",
+      "source": "arXiv",
+      "published": "2026-04-02"
+    },
+    {
+      "id": "2604.01532v1",
+      "title": "PHMForge: A Scenario-Driven Agentic Benchmark for Industrial Asset Lifecycle Maintenance",
+      "url": "http://arxiv.org/abs/2604.01532v1",
+      "first_author": "Ayan Das",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "大型语言模型 (LLM) 代理越来越多地部署用于复杂的工具编排任务，但现有基准无法满足工业领域的严格要求，在工业领域，错误的决策会带来严重的安全和财务后果。为了解决这一关键差距，我们推出了 PHMForge，这是第一个综合基准测试，专门设计用于通过与特定领域的 MCP 服务器的实际交互来评估预测和健康管理 (PHM) 任务上的 LLM 代理。我们的基准测试涵盖 75 个专家策划的场景，涵盖 7 个工业资产类别（涡轮风扇发动机、轴承、电动机、变速箱、航空发动机），涉及 5 个核心任务类别：剩余使用寿命 (RUL) 预测、故障分类、发动机健康分析、成本效益分析和安全/政策评估。为了实现严格的评估，我们在两个 MCP 服务器上构建了 65 个专用工具，并使用与任务相称的指标实现基于执行的评估器：用于回归的 MAE/RMSE、用于分类的 F1 分数以及用于健康评估的分类匹配。通过对领先框架（ReAct、Cursor Agent、Claude Code）与前沿 LLM（Claude Sonnet 4.0、GPT-4o、Granite-3.0-8B）的广泛评估，我们发现即使是性能最佳的配置也只能完成 68% 的任务，在工具编排（23% 错误排序）、多资产推理（降级 14.9 个百分点）和跨设备方面存在系统性失败泛化（在保留数据集上为 42.7%）。我们开源完整的基准测试，包括场景规范、地面实况模板、工具实现和评估脚本，以促进代理工业人工智能的研究。",
+      "source": "arXiv",
+      "published": "2026-04-02"
+    },
+    {
+      "id": "10.1029/2025gl120111",
+      "title": "Characterization of Near‐Surface Velocity Structure at Haast, New Zealand, Using Distributed Acoustic Sensing (DAS) Measurements of Seismicity",
+      "url": "https://doi.org/10.1029/2025gl120111",
+      "first_author": "Allan Raudsepp",
+      "corr_author": "John Townend",
+      "affiliation": "School of Geography, Environment, and Earth Sciences Victoria University of Wellington  Wellington New Zealand",
+      "abs_zh": "沿着哈斯特附近跨越阿尔卑斯断层的 30 公里长电信光纤收集的分布式声学传感 (DAS) 数据可以分析河流冰川和地震构造过程之间的相互作用。在这里，我们使用 25 次地震的 DAS 记录来探测哈斯特河谷下方的近地表结构。对于每次地震，在常见位置都会观察到与区域速度模型不兼容的延迟 P 波和 S 波到达。我们使用平面板模型表明，这些延迟到达与下方低速结构的厚度成正比。 3D 射线追踪揭示了宽度约为 ∼1-4 km、深度为 200-650 m 的盆地状低速特征，与沿部分共定位线收集的独立地震和重力测量结果一致。我们推断这些低速结构是充满沉积物的侵蚀盆地，可能会加剧大地震中的地面震动。这里开发的方法是通用的，强调了密集 DAS 测量提供高分辨率地下表征的潜力。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl120114",
+      "title": "Observing Broadband Tsunamis in Deep Water Via Distributed Acoustic Sensing",
+      "url": "https://doi.org/10.1029/2025gl120114",
+      "first_author": "T. Tonegawa",
+      "corr_author": "E. Araki",
+      "affiliation": "Japan Agency for Marine‐Earth Science and Technology (JAMSTEC)  Yokosuka Japan",
+      "abs_zh": "通过分布式声学传感 (DAS)，海啸可以通过海底电缆光纤的应变变化来检测。然而，海啸期间应变变化对于早期预警的有用性仍不清楚。在这里，我们比较了鸟岛事件（2023 年 10 月）和堪察加半岛事件（2025 年 7 月）引发的环境噪声和海啸中的次重力波的纤维应变和海平面变化，并证明了它们在频率 > 5 mHz 时的经验关系。为了进行比较，我们使用 DAS 检测了日本西南部室户市的一条海底电缆，并在电缆附近安装了绝对压力计。在<5 mHz，堪察加海啸的 DAS 信号在 1,000-2,000 m 水深处观测到，可能归因于海啸激发的内波引起的温度变化。我们的结果表明，高频海啸应变可能有助于估计海啸波高，而低频 DAS 信号可用于早期海啸检测。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1785/0220250354",
+      "title": "Evaluation of Distributed Acoustic Sensing Phase Pick Quality and Performance for Operational Earthquake Monitoring",
+      "url": "https://doi.org/10.1785/0220250354",
+      "first_author": "Gabrielle Tepp",
+      "corr_author": "Ettore Biondi",
+      "affiliation": "1Seismological Laboratory, Caltech, Pasadena, California, U.S.A.",
+      "abs_zh": "在过去的几年里，分布式声学传感（DAS）在地震学研究甚至地震监测中得到了越来越多的应用。南加州地震台网最近开始将来自加利福尼亚州里奇克莱斯特的 DAS 数据纳入常规区域地震监测作业中。我们对将 DAS 数据添加到监测中的预期效果和观察到的效果进行了分析。在将 DAS 数据添加到实时 (RT) 操作之前，我们对 2023 年 5 月 28 日至 8 月 1 日的 228 个事件进行了测试，以评估 DAS 数据中相位选取的数量和质量以及这些附加选取对地震位置的潜在影响。我们还将机器学习选择器 PhaseNet-DAS 的自动选择与分析师的选择进行了比较，以评估其准确性，尽管它尚未在运营中使用。在 RT 系统中添加了 7 个 DAS 通道后，我们对 2025 年 5 月 6 日至 7 月 8 日期间的 331 个事件重复了这一分析，以评估性能是否符合预期。 PhaseNet-DAS 产生的选择数量大约是分析师的两倍。当比较到达时间时，PhaseNet-DAS 与分析师的误差大多在 ∼0.5 秒之内，其中 P 选择比 S 选择更相似。 RT 系统中的短期平均/长期平均选择器产生的 P 选择数量大约是分析师的一半，尽管它们通常是准确的。 PhaseNet-DAS 的检测阈值比分析师的检测阈值要好一些。对于事件位置和深度，我们发现与包含或不包含 DAS 镐的参考震源相比，准确性几乎没有差异。总体而言，我们发现将 DAS 添加到我们的监测系统中可以提供更多选择，尤其是在地震台覆盖较差的地区，对地震参数质量有潜在好处。 PhaseNet-DAS 或许能够提供准确的自动选择，以减少额外工作站的额外分析工作。",
+      "source": "Seismological Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1785/0220250208",
+      "title": "Real-Time Processing of Distributed Acoustic Sensing Data for Earthquake Monitoring Operations",
+      "url": "https://doi.org/10.1785/0220250208",
+      "first_author": "Ettore Biondi",
+      "corr_author": "Allen L. Husker",
+      "affiliation": "1California Institute of Technology, Seismological Laboratory, Pasadena, California, U.S.A.",
+      "abs_zh": "我们引入了一个模块化软件框架，旨在将分布式声学传感（DAS）数据集成到可操作的地震监测系统中。我们的解决方案以先进国家地震系统 (ANSS) 和南加州地震台网的基础设施为基础，采用 ANSS 地震监测软件 (AQMS)，支持实时 DAS 波形流和基于机器学习的走时选取，以利用 DAS 阵列的密集空间采样。为了实现与 AQMS 的无缝兼容，我们的方法使用标准化地震数据格式来合并预定的 DAS 通道。我们演示了部署在加利福尼亚州里奇克莱斯特的 100 公里长 DAS 阵列的数据集成，并提供了软件组件和部署策略的详细描述。这项工作代表了将 DAS 纳入常规地震监测中的一步，并为使用光纤网络进行实时灾害评估开辟了新的可能性。",
+      "source": "Seismological Research Letters",
+      "published": "2026"
+    },
     {
       "id": "10.1785/0220250331",
       "title": "Typhoon Wind Speed Estimation via Microseismic Noise Recorded by Submarine Optical-Fiber Distributed Acoustic Sensing",
@@ -67,50 +166,6 @@
       "abs_zh": "血流监测对于评估心血管健康和识别血管并发症至关重要。传统的多普勒超声方法需要笨重的设备和专业知识，而最近的热传感方法由于皮肤下血管深度的变化而面临限制。我们提出了一个软电子平台，它将多层热传感与深度学习算法相结合，以同时测量血流量和血管深度。该设备使用带有热传感模块的无线系统，在不同的层中战略性地放置热敏电阻，以捕获距离皮肤表面不同高度的热梯度。深度学习处理多层热模式以实时提取这两个参数。通过台式测试、有限元分析和人体试验进行的验证证明了相关流速和容器深度的准确测量。与传统方法相比，与光电体积描记法的集成提高了连续血压监测的准确性，特别是在动态生理变化期间。该技术为个性化心血管监测、血流动力学事件的早期检测和皮肤移植监测提供了潜力。",
       "source": "Science Advances",
       "published": "2026"
-    },
-    {
-      "id": "10.1093/gji/ggag058",
-      "title": "Single and multi-objective optimization of distributed acoustic sensing cable layouts for geophysical applications",
-      "url": "https://doi.org/10.1093/gji/ggag058",
-      "first_author": "Dominik Strutz",
-      "corr_author": "Andrew Curtis",
-      "affiliation": "School of Geosciences, University of Edinburgh , Edinburgh EH93FE ,",
-      "abs_zh": "我们提出了一种使用全局优化技术来优化分布式声学传感 (DAS) 光纤电缆布局的系统方法。我们的方法使用样条线表示电缆几何形状，从而能够有效地探索布局，同时尊重物理部署约束。进化算法的使用可以实现单目标和多目标优化，同时考虑复杂的设计约束，例如地形、可达性、禁区、电缆长度以及耦合相关或局部场地效应，同时允许优化过程的高效并行化。我们在实际案例研究中展示了该方法，优化了用于监测瑞士 Cuolm da Vi 地区边坡稳定性的 DAS 电缆的布局。我们调整震源定位问题和环境噪声表面波层析成像的设计标准，以考虑 DAS 的独特特性，例如方向灵敏度模式。结果表明，通过优化电缆布局，可以显着提高源定位精度和表面波层析成像分辨率，凸显了这种方法在各种地球物理应用中优化 DAS 部署的潜力。",
-      "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
-      "id": "10.1029/2025jb032142",
-      "title": "Submarine Fiber‐Optic Sensing Revels Monterey Paleocanyon Evolution With Multi‐Scale Ambient Noise Imaging",
-      "url": "https://doi.org/10.1029/2025jb032142",
-      "first_author": "Jianbo Guan",
-      "corr_author": "Jianghai Xia",
-      "affiliation": "State Key Laboratory of Ocean Sensing &amp; School of Earth Sciences Zhejiang University  Hangzhou China",
-      "abs_zh": "蒙特利峡谷是世界上最具代表性的海底峡谷之一，由于复杂海洋环境中的观测覆盖范围和成像分辨率有限，其进化历史仍然存在争议。在这里，我们提出了一种具有自适应分辨率的先进地震速度模型，从蒙特利峡谷的顶端向海延伸约 20 公里，穿过大陆架，深度为 1.5 公里。该模型是使用一种新颖的多尺度环境噪声成像框架构建的，该框架将海底光缆的跨尺度分布式声学传感观测与基于 Voronoi 曲面细分的自适应剪切波速度反演相结合。我们的结果揭示了多个空间尺度上的低速区——从接近 0.1 公里的浅层异常到接近 1.5 公里的深层结构——定义了嵌套的古峡谷几何形状，包括被较年轻的断层引导管道覆盖的深切沉积物路径。通过结合现有的地球物理观测和峡谷演化模型，我们认为这些古峡谷记录了一个多阶段的演化过程：最初受到深层构造活动的调节，随后受到气候调节的地表动力学的重塑，并最终受到连续的沉积物输送和断层活动的影响而得以保存。这项工作为活跃大陆边缘的景观演化提供了新的见解，并使人们能够更深入地了解地球对气候和构造强迫的多层响应。它还强调了将海底通信电缆重新利用为密集、长期地震阵列的变革潜力，为海洋地球科学的新时代铺平了道路。",
-      "source": "Journal of Geophysical Research: Solid Earth",
-      "published": "2026"
-    },
-    {
-      "id": "10.1126/sciadv.adz5930",
-      "title": "Frog vocal sacs-inspired soft acoustic system with continuously tunable resonance for sound emission and stethoscopic sensing",
-      "url": "https://doi.org/10.1126/sciadv.adz5930",
-      "first_author": "Chuting Liu",
-      "corr_author": "Yancong Qiao",
-      "affiliation": "School of Biomedical Engineering, Shenzhen Campus of Sun Yat-sen University, No. 66, Gongchang Road, Guangming District, Shenzhen, Guangdong 518107, China.",
-      "abs_zh": "为了克服柔性热声装置在低频发射和传感方面的局限性，我们提出了一种受青蛙声囊启发的共振可调石墨烯声音装置（RAGSD）。 RAGSD 将激光诱导石墨烯 (LIG) 与可变形腔集成在一起，可提供 922.12 至 1762.90 赫兹的连续调谐。动态、连续可调的机电声模型解释了该机制并预测频率\n                    \n                      \n                        \n                          \n                            右\n                            2\n                          \n                          =\n                          0.990\n                        \n                      \n                    \n                     。在发射过程中，在共振时观察到 25.34 分贝的声压级增益，从而实现可控、频率选择性的语音放大，从而实现个性化输出。在传感方面，LIG 压阻式读数可提供灵敏的换能，而共振匹配则可放大微弱的高频心音。对健康志愿者和患者的可穿戴测试记录了清晰的 S1/S2 和病理性杂音。该系统与专为心音分类而设计的深度学习算法 AuscNet-H 集成，在四个临床类别中实现了 99.375% 的准确率。在通货膨胀的情况下，不会出现假阴性，并且类似疾病之间的错误分类比商用电子听诊器要少。这些结果展示了一条通往智能、可穿戴听诊的实用道路。",
-      "source": "Science Advances",
-      "published": "2025"
-    },
-    {
-      "id": "10.1785/0120250099",
-      "title": "Moment Tensor Inversion of Microseismic Events Using Strain Waveforms Recorded by Multi-Well-Distributed Acoustic Sensing",
-      "url": "https://doi.org/10.1785/0120250099",
-      "first_author": "Avinash Nayak",
-      "corr_author": "Sireesh Dadi",
-      "affiliation": "1Earth and Environmental Science Area, Lawrence Berkeley National Laboratory, Berkeley, California, U.S.A.",
-      "abs_zh": "现在，分布式声学传感（DAS）阵列地震数据通常通过井中的光纤电缆采集，用于地热和石油和天然气作业期间的微地震事件的井下监测。在内华达州蓝山进行的增强型地热系统实验中，始终在三个不同井中运行的井下 DAS 阵列对微震事件的位置和源辐射模式提供了前所未有的限制。我们开发了一个简单的框架，用于使用使用频率波数积分为一维速度模型计算的轴向应变格林函数，对 DAS 记录的点源力矩张量的低频（~4 至 16 Hz）完整轴向应变波形进行反演。我们拟合了两到三个井中记录的应变波形，方差减少了约 36% 到 74%。我们将最适合的源类型限制为强烈偏差；假设双偶机制，我们在西北至北西北走向的断层上获得了主要的正断层和右旋走滑断层机制，这与研究区的地质知识和内华达州普遍存在的伸展盆地和山脉构造相一致。我们通过将远场体波的低频应变谱振幅与源自矩张量的幅度进行比较，进一步验证了源自远场体波的低频应变谱幅度的幅度。最后，对于两个较大的事件，我们发现从 DAS 数据导出的走滑震源机制与根据表面地震仪稀疏网络记录的低频垂直分量位移波形估计的一致。应用于井下 DAS 阵列的力矩张量反演有助于表征与诱发地震活动相关的微震事件的大小，以及地热、压裂以及石油和天然气作业期间地下的应力状态。反演框架通用，具有足够准确的速度模型和良好的频率信噪比",
-      "source": "Bulletin of the Seismological Society of America",
-      "published": "2025"
     }
   ]
 }
