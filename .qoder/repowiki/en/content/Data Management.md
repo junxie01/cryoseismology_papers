@@ -5,6 +5,10 @@
 - [data.json](file://data.json)
 - [data_cryo.json](file://data_cryo.json)
 - [data_imaging.json](file://data_imaging.json)
+- [data_ai.json](file://data_ai.json)
+- [data_das.json](file://data_das.json)
+- [data_surface.json](file://data_surface.json)
+- [data_earthquake.json](file://data_earthquake.json)
 - [backend/app.py](file://backend/app.py)
 - [update_papers.py](file://update_papers.py)
 - [app.js](file://app.js)
@@ -14,6 +18,13 @@
 - [README.md](file://README.md)
 - [new.py](file://new.py)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Enhanced timestamp management with improved date range formatting showing 'YYYY-MM-DD 至 YYYY-MM-DD HH:MM' format
+- Updated all topic data files with consistent timestamp entries
+- Refined data organization with better error handling and timeout management across all topic areas
+- Improved timestamp consistency across all JSON data files
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -149,7 +160,7 @@ FE-->>FE : Render list and detail
 
 ### JSON File Structure and Schema
 Each topic JSON file follows a consistent structure:
-- last_update: Human-readable timestamp range indicating the update window and time.
+- last_update: Human-readable timestamp range indicating the update window and time in 'YYYY-MM-DD 至 YYYY-MM-DD HH:MM' format.
 - topic_name: Chinese topic label for display.
 - papers: Array of paper objects.
 
@@ -157,8 +168,8 @@ Paper object schema (topic JSON files):
 - id: Unique identifier (DOI or arXiv ID).
 - title: Paper title.
 - url: Link to the paper (DOI or arXiv).
-- first_author: First author’s name.
-- corr_author: Corresponding author’s name.
+- first_author: First author's name.
+- corr_author: Corresponding author's name.
 - affiliation: Institution or source label.
 - abs_zh: Translated abstract (Chinese).
 - source: Journal or source platform (e.g., arXiv, Earth and Planetary Science Letters).
@@ -171,9 +182,12 @@ Examples:
 Notes:
 - Some entries may include additional fields (e.g., analysis blocks) depending on the generator used. See [new.py:119-128](file://new.py#L119-L128).
 
+**Updated** Enhanced timestamp formatting now shows consistent 'YYYY-MM-DD 至 YYYY-MM-DD HH:MM' format across all topic data files, providing clearer date range information and precise update times.
+
 **Section sources**
 - [data_cryo.json:1-5](file://data_cryo.json#L1-L5)
 - [data_imaging.json:1-171](file://data_imaging.json#L1-L171)
+- [update_papers.py:197-216](file://update_papers.py#L197-L216)
 - [new.py:119-128](file://new.py#L119-L128)
 
 ### Data Processing Pipeline
@@ -187,7 +201,7 @@ End-to-end flow:
    - Translate abstracts to Chinese using a translator library.
 4. Sorting and writing:
    - Sort by published date descending.
-   - Write topic JSON files with last_update and topic_name.
+   - Write topic JSON files with last_update and topic_name in enhanced timestamp format.
 
 ```mermaid
 flowchart TD
@@ -197,17 +211,20 @@ Fetch2 --> Clean["Clean abstracts<br/>remove tags, normalize"]
 Clean --> Translate["Translate to Chinese"]
 Translate --> Merge["Merge results"]
 Merge --> Sort["Sort by published desc"]
-Sort --> Write["Write topic JSON files"]
+Sort --> Timestamp["Format timestamp<br/>YYYY-MM-DD 至 YYYY-MM-DD HH:MM"]
+Timestamp --> Write["Write topic JSON files"]
 Write --> End(["End"])
 ```
 
 **Diagram sources**
 - [update_papers.py:72-124](file://update_papers.py#L72-L124)
 - [update_papers.py:136-146](file://update_papers.py#L136-L146)
+- [update_papers.py:197-216](file://update_papers.py#L197-L216)
 
 **Section sources**
 - [update_papers.py:54-124](file://update_papers.py#L54-L124)
 - [update_papers.py:136-146](file://update_papers.py#L136-L146)
+- [update_papers.py:197-216](file://update_papers.py#L197-L216)
 
 ### Backend API and Database Integration
 The Flask backend:
@@ -275,10 +292,12 @@ Query patterns:
   - Automated weekly via GitHub Actions cron job at midnight UTC every Sunday. See [.github/workflows/update.yml:4-5](file://.github/workflows/update.yml#L4-L5).
   - Manual trigger available in the Actions UI.
 - Retention:
-  - Topic JSON files are committed and pushed to the repository; last_update indicates the update window. See [update_papers.py:136-146](file://update_papers.py#L136-L146).
+  - Topic JSON files are committed and pushed to the repository; last_update indicates the update window in enhanced timestamp format. See [update_papers.py:136-146](file://update_papers.py#L136-L146).
 - Cleanup:
   - The generator overwrites topic JSON files each week; older entries are not retained in the JSON files.
   - The Flask backend maintains a SQLite database of arXiv entries; no explicit cleanup policy is defined in the code.
+
+**Updated** Enhanced timestamp format now provides clearer date range information with consistent 'YYYY-MM-DD 至 YYYY-MM-DD HH:MM' format across all topic data files.
 
 **Section sources**
 - [.github/workflows/update.yml:4-5](file://.github/workflows/update.yml#L4-L5)
@@ -348,8 +367,6 @@ UP --> AX
 - Sorting and I/O: Sorting by published date and writing JSON files is lightweight; ensure sufficient disk space for topic files.
 - Frontend rendering: Large topic files increase client-side parsing time; consider pagination or lazy loading if needed.
 
-[No sources needed since this section provides general guidance]
-
 ## Troubleshooting Guide
 Common issues and remedies:
 - Translation failures:
@@ -361,7 +378,7 @@ Common issues and remedies:
   - Cause: No results from Crossref/arXiv or network issues.
   - Fix: Manually run the generator script locally; check logs.
 - Frontend empty state:
-  - Symptom: “该专题暂无数据” message.
+  - Symptom: "该专题暂无数据" message.
   - Cause: JSON file not found or malformed.
   - Fix: Ensure the file exists and is served by the web server.
 - GitHub Actions email failures:
@@ -375,9 +392,7 @@ Common issues and remedies:
 - [README.md:26-32](file://README.md#L26-L32)
 
 ## Conclusion
-The paper_weekly system cleanly separates data ingestion, processing, and presentation. Topic-specific JSON files provide a simple, durable persistence layer for weekly reports. The Flask backend complements this with database-backed search and on-demand translation. Automation ensures timely updates, and version control serves as a basic backup strategy. Extending the system can involve adding more topics, refining translation quality, or introducing database retention policies.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The paper_weekly system cleanly separates data ingestion, processing, and presentation. Topic-specific JSON files provide a simple, durable persistence layer for weekly reports with enhanced timestamp management. The Flask backend complements this with database-backed search and on-demand translation. Automation ensures timely updates, and version control serves as a basic backup strategy. Extending the system can involve adding more topics, refining translation quality, or introducing database retention policies.
 
 ## Appendices
 
@@ -386,7 +401,7 @@ The paper_weekly system cleanly separates data ingestion, processing, and presen
   - JSON files validated by the frontend loader; malformed files trigger empty-state UI.
   - Backend DB schema defines required fields; inserts use INSERT OR REPLACE to handle duplicates.
 - Error handling:
-  - API calls wrap exceptions and return safe fallbacks (e.g., “翻译失败”, empty arrays).
+  - API calls wrap exceptions and return safe fallbacks (e.g., "翻译失败", empty arrays).
   - Frontend gracefully handles network errors and missing files.
 
 **Section sources**
@@ -406,3 +421,30 @@ The paper_weekly system cleanly separates data ingestion, processing, and presen
 - [app.js:27-40](file://app.js#L27-L40)
 - [app.js:42-71](file://app.js#L42-L71)
 - [app.js:101-127](file://app.js#L101-L127)
+
+### Appendix C: Enhanced Timestamp Management
+The system now implements consistent timestamp formatting across all data files:
+
+**Timestamp Format**: 'YYYY-MM-DD 至 YYYY-MM-DD HH:MM'
+
+**Implementation Details**:
+- Date range calculation: Seven days ago to today with time component
+- Consistent formatting across all topic files
+- Enhanced readability for users and automated systems
+
+**Examples from Current Data Files**:
+- [data_cryo.json:2](file://data_cryo.json#L2): "2026-04-01 至 2026-04-08 10:02"
+- [data_imaging.json:2](file://data_imaging.json#L2): "2026-04-01 至 2026-04-08 10:02"
+- [data_ai.json:2](file://data_ai.json#L2): "2026-04-01 至 2026-04-08 10:02"
+- [data_das.json:2](file://data_das.json#L2): "2026-04-01 至 2026-04-08 10:02"
+- [data_surface.json:2](file://data_surface.json#L2): "2026-04-01 至 2026-04-08 10:02"
+- [data_earthquake.json:2](file://data_earthquake.json#L2): "2026-04-01 至 2026-04-08 10:02"
+
+**Section sources**
+- [update_papers.py:197-216](file://update_papers.py#L197-L216)
+- [data_cryo.json:2](file://data_cryo.json#L2)
+- [data_imaging.json:2](file://data_imaging.json#L2)
+- [data_ai.json:2](file://data_ai.json#L2)
+- [data_das.json:2](file://data_das.json#L2)
+- [data_surface.json:2](file://data_surface.json#L2)
+- [data_earthquake.json:2](file://data_earthquake.json#L2)

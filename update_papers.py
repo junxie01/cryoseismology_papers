@@ -66,7 +66,7 @@ TOPICS = {
         'file': 'data_earthquake.json'
     },
     'ai': {
-        'name_zh': '人工智能与地震学',
+        'name_zh': '人工智能',
         'keywords': [
             'machine learning seismic',
             'deep learning earthquake',
