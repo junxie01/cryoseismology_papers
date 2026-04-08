@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-01 至 2026-04-08 02:41",
+  "last_update": "2026-04-01 至 2026-04-08 06:05",
   "topic_name": "地震成像",
   "papers": [
     {
@@ -102,6 +102,17 @@
       "published": "2026"
     },
     {
+      "id": "10.1093/gji/ggag130",
+      "title": "P-wave velocity and azimuthal anisotropy of the crust and uppermost mantle beneath Northeast China",
+      "url": "https://doi.org/10.1093/gji/ggag130",
+      "first_author": "Dazhi Song",
+      "corr_author": "Wenshuai Wang",
+      "affiliation": "National Institute of Natural Hazards, Ministry of Emergency Management of China , Beijing 100085 ,",
+      "abs_zh": "总结\n                  中国东北地区是最大的板内新生代火山省之一，经历了古生代的多次碰撞、晚侏罗世-早白垩世的伸展和上新世的挤压。中生代以来，中国东北地区的构造作用很大程度上受西太平洋板块俯冲的控制，其典型特征是形成多个板内火山群和沉积盆地。该地区的构造机制，特别是新生代板内火山的起源和松辽表层沉积盆地的演化仍然存在争议。为了解决这些问题，我们进行了地震层析成像，对中国东北地区地壳和上地幔的纵波速度和方位各向异性进行了成像。在本研究中，我们采用基于程函方程的走时层析成像方法来反演高质量的P波初至。我们从 426 个宽带地震台记录的 890 个区域地震中手动选取了 21,006 个 P 波初至。层析反演揭示了四个显着特征。首先，结果揭示了长白山火山上地幔存在显着的低速异常，且具有强的方位各向异性，快速度方向沿低速异常分布，呈东西向。这一特征表明长白山火山下方最上地幔的水平流动。其次，长白山火山下方中下地壳存在明显的低速异常，暗示存在岩浆室。第三，五大连池火山地壳具有近正速度结构和较强的方位各向异性，快速度方向为南北向，表明岩浆活动对地壳结构影响不大。第四，松辽盆地下方中下地壳广泛存在的明显低速异常反映了",
+      "source": "Geophysical Journal International",
+      "published": "2026"
+    },
+    {
       "id": "10.1093/gji/ggag129",
       "title": "CapsNet-Enhanced Seismic Event Classification: Benchmarking and System Deployment on the DiTing 2.0 Dataset",
       "url": "https://doi.org/10.1093/gji/ggag129",
@@ -109,17 +120,6 @@
       "corr_author": "Ke Jia",
       "affiliation": "School of Automation, Northwestern Polytechnical University , Xi’an 710129 ,",
       "abs_zh": "总结\n                  自动地震事件分类是现代地震监测和网络操作的关键组成部分，但之前的许多研究受到小数据集或二进制任务的限制。这项工作在大规模 DiTing 2.0 AI 地震数据集上提出了主流深度学习模型的第一个系统基准，包括卷积神经网络 (CNN)、基于 Transformer 的架构和胶囊网络 (CapsNet)，该数据集包含跨越三个类别（自然地震、采石场爆炸和矿井塌陷）的 19,384 个标记的三分量波形。因此，我们为地震事件分类提供了可重复的基线。评估了针对 DiTing 2.0 优化的几种 CapsNet 变体，我们的结果表明，使用 MFCC 表示和数据增强的 CapsNet+Res 模型在保留测试集上实现了 91.08% 的准确率（加权 F1 = 91.10%）。多站投票进一步将事件级准确率提高到 97.52%，而配套的噪声事件分类器则达到 98.47% 的准确率。对演示连续记录的功能测试证实了可转移且用户友好的系统内可靠的端到端操作，强调了其地震台网应用的可行性。总体而言，这项研究通过提供稳健的基线、对输入特征和架构相互作用的洞察以及用于自动分类的实用平台，将方法开发和操作应用联系起来；大规模连续数据评估、跨区域迁移验证和自适应学习策略仍然是未来研究的重要方向。",
-      "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
-      "id": "10.1093/gji/ggag130",
-      "title": "P-wave velocity and azimuthal anisotropy of the crust and uppermost mantle beneath Northeast China",
-      "url": "https://doi.org/10.1093/gji/ggag130",
-      "first_author": "Dazhi Song",
-      "corr_author": "Wenshuai Wang",
-      "affiliation": "National Institute of Natural Hazards, Ministry of Emergency Management of China , Beijing 100085 ,",
-      "abs_zh": "总结\n                  中国东北地区是最大的板内新生代火山省之一，经历了古生代的多次碰撞、晚侏罗世-早白垩世的伸展和上新世的挤压。中生代以来，中国东北地区的构造作用很大程度上受西太平洋板块俯冲的控制，其典型特征是形成多个板内火山群和沉积盆地。该地区的构造机制，特别是新生代板内火山的起源和松辽表层沉积盆地的演化仍然存在争议。为了解决这些问题，我们进行了地震层析成像，对中国东北地区地壳和上地幔的纵波速度和方位各向异性进行了成像。在本研究中，我们采用基于程函方程的走时层析成像方法来反演高质量的P波初至。我们从 426 个宽带地震台记录的 890 个区域地震中手动选取了 21,006 个 P 波初至。层析反演揭示了四个显着特征。首先，结果揭示了长白山火山上地幔存在显着的低速异常，且具有强的方位各向异性，快速度方向沿低速异常分布，呈东西向。这一特征表明长白山火山下方最上地幔的水平流动。其次，长白山火山下方中下地壳存在明显的低速异常，暗示存在岩浆房。第三，五大连池火山地壳具有近正速度结构和较强的方位各向异性，快速度方向为南北向，表明岩浆活动对地壳结构影响不大。第四，松辽盆地下方中下地壳广泛存在的明显低速异常反映了",
       "source": "Geophysical Journal International",
       "published": "2026"
     },
