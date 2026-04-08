@@ -16,11 +16,11 @@
 
 ## Update Summary
 **Changes Made**
-- Enhanced proxy configuration management with explicit HTTP_PROXY/HTTPS_PROXY environment variable handling
-- Implemented session-based requests with trust_env=False to bypass system proxy settings
-- Added comprehensive retry strategy with exponential backoff for Crossref API integration
-- Improved error handling and timeout management for Crossref API calls
-- Added SSL verification fallback mechanism for enhanced reliability
+- Enhanced API reliability with robust retry mechanisms using urllib3 Retry
+- Implemented SSL verification fallback for Crossref API integration
+- Added comprehensive error handling with graceful degradation strategies
+- Improved proxy configuration management with explicit environment variable handling
+- Enhanced session-based requests with exponential backoff for better API resilience
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -37,7 +37,7 @@
 ## Introduction
 This document provides comprehensive documentation for the paper collection engine implemented in update_papers.py. The engine automatically collects recent papers across six specialized topics (cryoseismology, DAS, surface wave, seismic imaging, earthquake research, and AI) from two major academic APIs: arXiv and CrossRef. It integrates translation via Google Translate API, cleans abstracts, filters journals, sorts results by publication date, and writes JSON files consumed by a frontend web interface. The system is scheduled to run weekly via GitHub Actions and can be manually triggered.
 
-**Updated** Enhanced with robust proxy configuration management and improved error handling for reliable API integration in various network environments.
+**Updated** Enhanced with robust API reliability improvements featuring comprehensive retry mechanisms, SSL fallback capabilities, and improved error handling strategies for production-grade resilience.
 
 ## Project Structure
 The repository is organized into:
@@ -94,31 +94,33 @@ CSS --> HTML
 - API integrations:
   - arXiv: Searches by keyword OR logic, sorted by submission date descending.
   - CrossRef: Filters by journal list and article type, sorted by publication date descending.
+- **Enhanced API Reliability**: Comprehensive retry mechanisms with exponential backoff using urllib3 Retry for robust Crossref API integration.
+- **SSL Verification Fallback**: Graceful degradation when SSL certificate verification fails, ensuring API calls succeed even in restrictive network environments.
+- **Improved Error Handling**: Comprehensive try-catch blocks with fallback mechanisms for production-grade resilience.
 - **Enhanced Proxy Management**: Explicit HTTP_PROXY/HTTPS_PROXY environment variable handling and session-based requests with trust_env=False.
-- **Improved Error Handling**: Comprehensive retry strategy with exponential backoff and SSL verification fallback for Crossref API integration.
 - Date range calculation: Computes a weekly window (last 7 days) and formats a human-readable range string.
 - Sorting and output: Sorts results by publication year/date, then writes JSON with metadata.
 
 Key implementation references:
-- Topic configuration and journal list: [update_papers.py:14-52](file://update_papers.py#L14-L52)
-- Abstract cleaning: [update_papers.py:54-61](file://update_papers.py#L54-L61)
-- Translation wrapper: [update_papers.py:63-70](file://update_papers.py#L63-L70)
-- CrossRef search: [update_papers.py:72-102](file://update_papers.py#L72-L102)
-- arXiv search: [update_papers.py:104-124](file://update_papers.py#L104-L124)
-- Date range and JSON write: [update_papers.py:129-148](file://update_papers.py#L129-L148)
+- Topic configuration and journal list: [update_papers.py:42-84](file://update_papers.py#L42-L84)
+- Abstract cleaning: [update_papers.py:93-101](file://update_papers.py#L93-L101)
+- Translation wrapper: [update_papers.py:102-110](file://update_papers.py#L102-L110)
+- Enhanced Crossref search with retry: [update_papers.py:111-170](file://update_papers.py#L111-L170)
+- arXiv search: [update_papers.py:172-192](file://update_papers.py#L172-L192)
+- Date range and JSON write: [update_papers.py:197-217](file://update_papers.py#L197-L217)
 
 **Section sources**
-- [update_papers.py:14-52](file://update_papers.py#L14-L52)
-- [update_papers.py:54-70](file://update_papers.py#L54-L70)
-- [update_papers.py:72-124](file://update_papers.py#L72-L124)
-- [update_papers.py:129-148](file://update_papers.py#L129-L148)
+- [update_papers.py:42-84](file://update_papers.py#L42-L84)
+- [update_papers.py:93-110](file://update_papers.py#L93-L110)
+- [update_papers.py:111-192](file://update_papers.py#L111-L192)
+- [update_papers.py:197-217](file://update_papers.py#L197-L217)
 
 ## Architecture Overview
-The engine follows a straightforward pipeline with enhanced reliability:
+The engine follows a robust pipeline with enhanced reliability and error handling:
 - Initialize topic list and journal filter.
-- Configure robust proxy management and session-based requests.
+- Configure enhanced proxy management and session-based requests with retry strategy.
 - For each topic:
-  - Query arXiv and CrossRef with improved error handling.
+  - Query arXiv and CrossRef with comprehensive error handling and SSL fallback.
   - Merge results.
   - Clean and translate abstracts.
   - Sort by publication date.
@@ -139,6 +141,7 @@ Script->>Script : Compute date range
 Script->>Proxy : Initialize session with trust_env=False
 Script->>CrossRef : search_crossref(topic) with retry
 CrossRef-->>Script : List of journal articles
+Script->>Script : Handle SSL fallback if verification fails
 Script->>Arxiv : search_arxiv(topic)
 Arxiv-->>Script : List of preprints
 Script->>Script : Merge results
@@ -153,36 +156,56 @@ Script-->>Scheduler : Done
 **Diagram sources**
 - [.github/workflows/update.yml:24-25](file://.github/workflows/update.yml#L24-L25)
 - [update_papers.py:18-37](file://update_papers.py#L18-L37)
-- [update_papers.py:72-124](file://update_papers.py#L72-L124)
-- [update_papers.py:63-70](file://update_papers.py#L63-L70)
-- [update_papers.py:129-148](file://update_papers.py#L129-L148)
+- [update_papers.py:111-170](file://update_papers.py#L111-L170)
+- [update_papers.py:102-110](file://update_papers.py#L102-L110)
+- [update_papers.py:197-217](file://update_papers.py#L197-L217)
 
 ## Detailed Component Analysis
 
-### Enhanced Proxy Configuration Management
-The system now implements comprehensive proxy management to ensure reliable operation in various network environments:
+### Enhanced API Reliability Framework
+The system now implements a comprehensive reliability framework featuring retry mechanisms and SSL fallback capabilities:
 
 ```mermaid
 flowchart TD
-ProxyConfig["Proxy Configuration"] --> ClearEnv["Clear HTTP_PROXY/HTTPS_PROXY env vars"]
+APIFramework["API Reliability Framework"] --> ProxyConfig["Proxy Configuration"]
+ProxyConfig --> ClearEnv["Clear HTTP_PROXY/HTTPS_PROXY env vars"]
 ClearEnv --> CreateSession["Create requests.Session()"]
 CreateSession --> TrustEnvFalse["Set trust_env=False"]
-TrustEnvFalse --> MountAdapters["Mount HTTPAdapter with retry strategy"]
+TrustEnvFalse --> MountAdapters["Mount HTTPAdapter with Retry strategy"]
 MountAdapters --> Ready["Ready for API calls"]
+APIFramework --> RetryStrategy["Retry Strategy"]
+RetryStrategy --> MaxRetries["3 retries"]
+MaxRetries --> BackoffFactor["Backoff factor 1"]
+BackoffFactor --> StatusList["Status codes: 429, 500, 502, 503, 504"]
+StatusList --> AllowedMethods["Allowed methods: HEAD, GET, OPTIONS"]
+APIFramework --> SSLFallback["SSL Verification Fallback"]
+SSLFallback --> VerifyTrue["Primary request with verify=True"]
+VerifyTrue --> SSLSuccess{"SSL verification success?"}
+SSLSuccess --> |Yes| ProcessResults["Process results normally"]
+SSLSuccess --> |No| VerifyFalse["Retry with verify=False"]
+VerifyFalse --> FallbackSuccess{"Fallback success?"}
+FallbackSuccess --> |Yes| ProcessResults
+FallbackSuccess --> |No| ReturnEmpty["Return empty results"]
 ```
 
 **Diagram sources**
 - [update_papers.py:18-37](file://update_papers.py#L18-L37)
+- [update_papers.py:29-37](file://update_papers.py#L29-L37)
+- [update_papers.py:142-170](file://update_papers.py#L142-L170)
 
 **Section sources**
 - [update_papers.py:18-37](file://update_papers.py#L18-L37)
+- [update_papers.py:29-37](file://update_papers.py#L29-L37)
+- [update_papers.py:142-170](file://update_papers.py#L142-L170)
 
-### Improved Error Handling and Retry Strategy
-The Crossref API integration now includes comprehensive error handling with exponential backoff:
+### Enhanced Crossref Search with Robust Error Handling
+The Crossref API integration now includes comprehensive error handling with exponential backoff and SSL verification fallback:
 
 ```mermaid
 flowchart TD
-CrossRefCall["search_crossref()"] --> NormalRequest["Normal request attempt"]
+CrossRefCall["search_crossref()"] --> ClearEnv["Clear environment proxies"]
+ClearEnv --> CreateSession["Create session with retry strategy"]
+CreateSession --> NormalRequest["Normal request attempt with verify=True"]
 NormalRequest --> Success{"Request successful?"}
 Success --> |Yes| ProcessResults["Process JSON results"]
 Success --> |No| LogError["Log error and try SSL fallback"]
@@ -216,10 +239,10 @@ Topics --> T6["ai<br/>name_zh, keywords, file"]
 ```
 
 **Diagram sources**
-- [update_papers.py:14-45](file://update_papers.py#L14-L45)
+- [update_papers.py:42-84](file://update_papers.py#L42-L84)
 
 **Section sources**
-- [update_papers.py:14-45](file://update_papers.py#L14-L45)
+- [update_papers.py:42-84](file://update_papers.py#L42-L84)
 
 ### Journal Filtering Mechanism
 The journal list constrains CrossRef results to high-quality venues. The search builds a filter string combining container titles and article type.
@@ -232,12 +255,12 @@ CrossRefCall --> Items["Items with authors, abstract, title, DOI, published date
 ```
 
 **Diagram sources**
-- [update_papers.py:47-52](file://update_papers.py#L47-L52)
-- [update_papers.py:75-76](file://update_papers.py#L75-L76)
+- [update_papers.py:86-91](file://update_papers.py#L86-L91)
+- [update_papers.py:114](file://update_papers.py#L114)
 
 **Section sources**
-- [update_papers.py:47-52](file://update_papers.py#L47-L52)
-- [update_papers.py:75-76](file://update_papers.py#L75-L76)
+- [update_papers.py:86-91](file://update_papers.py#L86-L91)
+- [update_papers.py:114](file://update_papers.py#L114)
 
 ### Abstract Cleaning Algorithm
 Removes XML tags and common prefixes ("Abstract", "摘要", "抽象的"。, "抽象的") to normalize raw text before translation.
@@ -253,10 +276,10 @@ Trim --> End(["Return cleaned text"])
 ```
 
 **Diagram sources**
-- [update_papers.py:54-61](file://update_papers.py#L54-L61)
+- [update_papers.py:93-101](file://update_papers.py#L93-L101)
 
 **Section sources**
-- [update_papers.py:54-61](file://update_papers.py#L54-L61)
+- [update_papers.py:93-101](file://update_papers.py#L93-L101)
 
 ### Translation Service Integration
 Uses deep-translator GoogleTranslator to translate abstracts. Implements a safety guard for short texts and handles exceptions by returning a fallback message.
@@ -273,18 +296,18 @@ TryTranslate -.->|Exception| Fallback2["Return '翻译失败'"]
 ```
 
 **Diagram sources**
-- [update_papers.py:63-70](file://update_papers.py#L63-L70)
+- [update_papers.py:102-110](file://update_papers.py#L102-L110)
 
 **Section sources**
-- [update_papers.py:63-70](file://update_papers.py#L63-L70)
+- [update_papers.py:102-110](file://update_papers.py#L102-L110)
 
 ### API Integration Details
 
-#### Enhanced CrossRef Search
+#### Enhanced Crossref Search with Retry Strategy
 - Constructs a query from topic keywords.
 - Applies journal filters and article type filter.
 - Sorts by published date descending.
-- **Enhanced Error Handling**: Implements retry strategy with exponential backoff and SSL verification fallback.
+- **Enhanced Error Handling**: Implements retry strategy with exponential backoff (3 retries, backoff factor 1) and SSL verification fallback.
 - Extracts author, affiliation, title, DOI, URL, and abstract; translates abstract; records source and published year.
 
 ```mermaid
@@ -295,8 +318,8 @@ participant CrossRef as "CrossRef API"
 Script->>Session : Initialize with trust_env=False
 Session->>CrossRef : GET works?query=...&filter=...&sort=published&order=desc&rows=N
 CrossRef-->>Session : JSON items or error
-Session->>Session : Retry on 429/500/502/503/504
-Session->>Script : Process results
+Session->>Session : Retry on 429/500/502/503/504 with exponential backoff
+Session->>Script : Process results with SSL verification
 Script->>Script : Build author info, affiliation
 Script->>Script : Clean abstract
 Script->>Script : Translate abstract
@@ -305,7 +328,7 @@ Script-->>Script : Append to results
 
 **Diagram sources**
 - [update_papers.py:111-170](file://update_papers.py#L111-L170)
-- [update_papers.py:24-37](file://update_papers.py#L24-L37)
+- [update_papers.py:29-37](file://update_papers.py#L29-L37)
 
 **Section sources**
 - [update_papers.py:111-170](file://update_papers.py#L111-L170)
@@ -346,10 +369,10 @@ BuildMeta --> Write["Write JSON file per topic"]
 ```
 
 **Diagram sources**
-- [update_papers.py:138-148](file://update_papers.py#L138-L148)
+- [update_papers.py:206-217](file://update_papers.py#L206-L217)
 
 **Section sources**
-- [update_papers.py:138-148](file://update_papers.py#L138-L148)
+- [update_papers.py:206-217](file://update_papers.py#L206-L217)
 
 ### Date Range Calculation and Result Sorting
 - Calculates a 7-day window centered on the current date.
@@ -365,10 +388,10 @@ Meta --> Sort["Sort results by published desc"]
 ```
 
 **Diagram sources**
-- [update_papers.py:129-139](file://update_papers.py#L129-L139)
+- [update_papers.py:197-207](file://update_papers.py#L197-L207)
 
 **Section sources**
-- [update_papers.py:129-139](file://update_papers.py#L129-L139)
+- [update_papers.py:197-207](file://update_papers.py#L197-L207)
 
 ### JSON File Generation Process
 - Writes a JSON object per topic containing:
@@ -383,10 +406,10 @@ Dump --> Close["Close file"]
 ```
 
 **Diagram sources**
-- [update_papers.py:141-146](file://update_papers.py#L141-L146)
+- [update_papers.py:209-214](file://update_papers.py#L209-L214)
 
 **Section sources**
-- [update_papers.py:141-146](file://update_papers.py#L141-L146)
+- [update_papers.py:209-214](file://update_papers.py#L209-L214)
 
 ### Frontend Consumption of JSON
 - The frontend loads data_cryo.json, data_imaging.json, and others based on the selected topic.
@@ -421,12 +444,12 @@ App-->>Browser : Render cards and modal
 
 ## Dependency Analysis
 External libraries used:
-- requests: HTTP client for API calls with enhanced session management.
+- requests: HTTP client for API calls with enhanced session management and retry strategy.
 - feedparser: Parses arXiv Atom feeds.
 - deep-translator: Google Translate integration.
 - datetime, timedelta: Date/time utilities.
 - re: Regular expressions for abstract cleaning.
-- urllib3: Provides retry strategy and SSL handling.
+- urllib3: Provides comprehensive retry strategy and SSL handling.
 
 ```mermaid
 graph TB
@@ -447,9 +470,10 @@ UP --> URLLib3["urllib3 (Retry, HTTPAdapter)"]
 - [update_papers.py:1-12](file://update_papers.py#L1-L12)
 
 ## Performance Considerations
-- **Enhanced API Reliability**: The new proxy configuration and retry strategy significantly improve API call reliability across different network environments.
+- **Enhanced API Reliability**: The new retry mechanism with exponential backoff (3 retries, backoff factor 1) significantly improves API call reliability across different network environments.
+- **Improved Network Resilience**: SSL verification fallback ensures API calls succeed even when SSL certificates fail verification.
 - API rate limits: arXiv and CrossRef impose rate limits. The enhanced retry strategy with exponential backoff helps mitigate rate limiting issues.
-- **Improved Timeout Handling**: Session-based requests with configurable timeouts provide better control over network operations.
+- **Enhanced Timeout Handling**: Session-based requests with configurable timeouts (30 seconds) provide better control over network operations.
 - Translation limits: Google Translate has quotas; monitor usage and consider batching or caching translations.
 - Sorting complexity: Sorting is O(n log n) per topic; acceptable for typical result sizes.
 - I/O overhead: Writing JSON per topic; ensure filesystem performance is adequate for frequent updates.
@@ -466,15 +490,20 @@ Common issues and remedies:
 - **Network timeouts**:
   - Both Crossref and arXiv requests now use 30-second timeouts.
   - The SSL verification fallback mechanism provides an alternative when SSL certificate verification fails.
+- **Enhanced Error Handling**:
+  - Crossref API calls now include comprehensive error logging with detailed exception messages.
+  - The fallback mechanism attempts SSL verification without certificate validation as a last resort.
+  - All API calls are wrapped in try-catch blocks with graceful degradation.
 - Translation failures:
   - The translation function returns a fallback message on exceptions.
   - Consider caching translated results to reduce repeated calls.
 - Empty or missing data:
   - Verify topic keywords and journal filters.
   - Ensure JSON files are written and readable by the frontend.
-- **Enhanced Error Logging**:
-  - Crossref API calls now include detailed error logging with exception messages.
-  - The fallback mechanism attempts SSL verification without certificate validation as a last resort.
+- **Production-Grade Resilience**:
+  - The system now handles network interruptions gracefully with automatic retry mechanisms.
+  - SSL verification failures are handled with fallback to unverified connections.
+  - All API operations include comprehensive error handling and logging.
 - Frontend loading errors:
   - Confirm file paths match topic mapping in the frontend.
   - Check CORS and file serving configuration if hosted externally.
@@ -486,7 +515,7 @@ Common issues and remedies:
 - [app.js:42-71](file://app.js#L42-L71)
 
 ## Conclusion
-The paper collection engine automates weekly discovery of relevant papers across six specialized topics by integrating arXiv and CrossRef, translating abstracts, filtering journals, and publishing JSON consumed by a lightweight frontend. The enhanced proxy configuration management and improved error handling make the system more robust and reliable across different network environments. The modular design allows easy extension of topics, keywords, and filters. With continued enhancements to error handling, translation caching, and robust error logging, the system can become even more resilient and production-ready.
+The paper collection engine automates weekly discovery of relevant papers across six specialized topics by integrating arXiv and CrossRef, translating abstracts, filtering journals, and publishing JSON consumed by a lightweight frontend. The enhanced API reliability improvements with robust retry mechanisms, SSL fallback capabilities, and comprehensive error handling make the system highly resilient and production-ready across diverse network environments. The modular design allows easy extension of topics, keywords, and filters. With continued enhancements to error handling, translation caching, and robust error logging, the system can become even more resilient and production-grade.
 
 ## Appendices
 
@@ -499,8 +528,8 @@ The paper collection engine automates weekly discovery of relevant papers across
 - [update_papers.py:194-217](file://update_papers.py#L194-L217)
 - [.github/workflows/update.yml:4-6](file://.github/workflows/update.yml#L4-L6)
 
-### Enhanced Proxy Configuration Implementation
-The system now includes comprehensive proxy management:
+### Enhanced API Reliability Implementation
+The system now includes comprehensive reliability mechanisms:
 
 ```python
 # 禁用代理设置
@@ -523,7 +552,24 @@ retry_strategy = Retry(
 adapter = HTTPAdapter(max_retries=retry_strategy)
 session.mount("https://", adapter)
 session.mount("http://", adapter)
+
+# Enhanced Crossref search with SSL fallback
+def search_crossref(topic_config, max_results=10):
+    # ... API call with verify=True ...
+    try:
+        response = session.get(url, timeout=30)
+        # Process results normally
+    except Exception as e:
+        # SSL verification failed, try fallback
+        try:
+            response = session.get(url, timeout=30, verify=False)
+            # Process fallback results
+        except Exception as e2:
+            # All attempts failed, return empty results
+            return []
 ```
 
 **Section sources**
 - [update_papers.py:18-37](file://update_papers.py#L18-L37)
+- [update_papers.py:29-37](file://update_papers.py#L29-L37)
+- [update_papers.py:142-170](file://update_papers.py#L142-L170)
