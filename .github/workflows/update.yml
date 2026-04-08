@@ -46,15 +46,15 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "${{ steps.date_range.outputs.display_date }}，论文周报更新，请查收。"
           to: ${{ secrets.MAIL_TO }}
-          from: "Seismology Bot <${{ secrets.MAIL_USERNAME }}>"
-          body: file://email_body.txt
+          from: "Seismology Bot"
+          body: "${{ steps.date_range.outputs.display_date }}，论文周报更新，请查收。"
           attachments: paper_report_${{ steps.date_range.outputs.start_date }}_${{ steps.date_range.outputs.end_date }}.pdf
 
       - name: Commit and Push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.json email_body.txt
+          git add *.json
           git commit -m "Auto-update papers: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git pull --rebase origin main || echo "No remote changes to pull"
           git push
