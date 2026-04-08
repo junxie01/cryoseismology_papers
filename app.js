@@ -6,7 +6,8 @@ const topicFiles = {
     'das': 'data_das.json',
     'surface': 'data_surface.json',
     'imaging': 'data_imaging.json',
-    'earthquake': 'data_earthquake.json'
+    'earthquake': 'data_earthquake.json',
+    'ai': 'data_ai.json'
 };
 
 document.addEventListener('DOMContentLoaded', () => {

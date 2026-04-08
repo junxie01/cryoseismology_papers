@@ -36,6 +36,22 @@ TOPICS = {
         'name_zh': '地震研究',
         'keywords': ['earthquake source', 'microseismic monitoring', 'focal mechanism', 'source mechanism inversion', 'seismic source location'],
         'file': 'data_earthquake.json'
+    },
+    'ai': {
+        'name_zh': '人工智能与地震学',
+        'keywords': [
+            'machine learning seismic',
+            'deep learning earthquake',
+            'neural network seismology',
+            'AI earthquake prediction',
+            'machine learning wave',
+            'deep learning geophysics',
+            'neural network seismic detection',
+            'AI seismic imaging',
+            'machine learning tremor',
+            'deep learning fault'
+        ],
+        'file': 'data_ai.json'
     }
 }
 
