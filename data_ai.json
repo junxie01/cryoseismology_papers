@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-01 至 2026-04-08 06:05",
+  "last_update": "2026-04-05 至 2026-04-12 02:44",
   "topic_name": "人工智能",
   "papers": [
     {
@@ -36,6 +36,39 @@
       "published": "2026"
     },
     {
+      "id": "10.1126/sciadv.aeb1397",
+      "title": "Experimental data reuploading with provable enhanced learning capabilities",
+      "url": "https://doi.org/10.1126/sciadv.aeb1397",
+      "first_author": "Martin F. X. Mauser",
+      "corr_author": "Philip Walther",
+      "affiliation": "University of Vienna, Faculty of Physics, Vienna Center for Quantum Science and Technology (VCQ), Boltzmanngasse 5, Vienna 1090, Austria.",
+      "abs_zh": "过去几十年见证了量子机器学习的发展，源于量子计算和机器学习的交叉。该领域对于替代量子（或量子启发）计算范式的设计特别有前途，与标准计算范式相比，这些计算范式可能需要更少的资源，例如在能源消耗方面。在这种情况下，我们提出了在光子集成处理器上实现数据重新上传方案，在多个图像分类任务中实现了高精度。我们彻底研究了这个看似简单的模型的功能，该模型依赖于单量子位状态的演化，通过提供分析证明来证明我们的实现是一个通用分类器和有效的学习器，能够泛化到新的未知数据。因此，我们的结果不仅证明了在潜在的资源高效光学实现中的数据重新上传，而且还提供了对该算法、其可训练性和通用性属性的理论见解。这为开发资源效率更高的机器学习算法奠定了基础，利用我们的方案作为子程序。",
+      "source": "Science Advances",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl120062",
+      "title": "Observation‐Informed Machine Learning Convective Scheme: A New Training Strategy",
+      "url": "https://doi.org/10.1029/2025gl120062",
+      "first_author": "Junjie Huang",
+      "corr_author": "Gaoping Liu",
+      "affiliation": "State Key Laboratory of Earth System Numerical Modeling and Application (LabESM) Institute of Atmospheric Physics (IAP) Chinese Academy of Sciences  Beijing China",
+      "abs_zh": "由于长期集成过程中累积的错误，基于机器学习（ML）的方案面临在线稳定性和偏差的挑战。在这里，我们提出了一种新的对流过程 ML 训练策略，以更系统的方式提供趋势在线校正，并显着提高稳定性和偏差。新的训练策略采用重新分析动态场的模拟作为目标，而非推动模拟作为输入。低分辨率混合机器学习物理模型的结果表明，新的机器学习方案的性能要好得多，因为它增强了重层状和总降水量，并减少了温度偏差，成为有效的在线偏差校正机制。此外，由此产生的混合模型缓解了长期以来对热带对流与总降水比率的高估。最后，混合模型可以稳定运行一年以上，凸显了新训练策略的有效性和普适性。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1038/s41586-026-10326-9",
+      "title": "Multiomics and deep learning dissect regulatory syntax in human development",
+      "url": "https://doi.org/10.1038/s41586-026-10326-9",
+      "first_author": "Betty B. Liu",
+      "corr_author": "William J. Greenleaf",
+      "affiliation": "未知机构",
+      "abs_zh": "转录因子在发育过程中通过以序列特异性方式结合调节 DNA 来建立细胞身份，通常促进局部染色质可及性并调节基因表达\n                    1\n                    。绘制可及的染色质图谱为转录控制提供了重要的见解，但人类发育的可用数据集仅限于大块组织、单个器官或单一模式\n                    2\n                    。在这里，我们展示了人类发育多组学图谱，这是一个单细胞图谱，包含来自 12 个器官的 817,740 个胎儿细胞的染色质可及性和基因表达，涵盖 203 种细胞类型和超过 100 万个候选细胞\n                    顺式\n                    -调节元件，其中许多表现出器官特异性的体内增强子活性。经过训练的深度学习模型可以根据本地 DNA 序列预测可访问性，从而揭示了影响可访问性的综合主题词汇，包括表现出不同句法限制的复合主题，预计这些限制可以介导转录因子的协同性。我们确定了需要精确的主题间距和方向的“硬”句法规则，允许灵活的主题排列的“软”规则，以及抑制可访问性的普遍存在的主题。基于模型的遗传变异解释表明，具有积极和消极影响的基序的破坏与对基因表达的一致影响有关。我们的工作描述了主题语法如何控制细胞类型特异性染色质可及性，并为解码提供了基础资源\n                    顺式\n                    -人类发育过程中的调控逻辑和遗传变异的解释。",
+      "source": "Nature",
+      "published": "2026"
+    },
+    {
       "id": "10.1785/0220250303",
       "title": "Revealing Hidden\n                    <i>T</i>\n                    -Wave Sources in the South China Sea from an Island Seismometer Using Deep Metric Learning",
       "url": "https://doi.org/10.1785/0220250303",
@@ -53,7 +86,7 @@
       "first_author": "Guihong Mao",
       "corr_author": "Laifa Shen",
       "affiliation": "Jiangsu Key Laboratory of Materials and Technologies for Energy Storage, College of Materials Science and Technology, Nanjing University of Aeronautics and Astronautics, Nanjing 210016, China.",
-      "abs_zh": "与钴基材料相比，富镍氧化物由于比能量高、成本更低且可持续性更高，已成为锂离子电池的主要阴极候选材料。然而，富镍阴极会因各向异性晶格应变和界面重建而导致电压和容量下降。在这里，我们报告了一种高性能富镍阴极，具有强大的由外而内的架构，通过机器学习辅助识别铝来实现\n                    3+\n                    和锡\n                    4+\n                    掺杂剂。通过竞争性掺杂机制，这些掺杂剂形成富锡岩盐表面层和均匀的铝掺杂块体。这种高质量的由外而内的结构通过减轻阴极/电解质界面退化和减轻与 H2/H3 相共存相关的各向异性晶格应变来增强界面稳定性和结构可逆性。此外，非磁性铝\n                    3+\n                    和锡\n                    4+\n                    削弱超交换相互作用并抑制Li─Ni紊乱。因此，阴极在 200 次循环后仍保留 96.9% 的容量，且电压衰减最小。这些发现为高性能富镍阴极的开发提供了见解。",
+      "abs_zh": "与钴基材料相比，富镍氧化物由于比能量高、成本更低且可持续性更高，已成为锂离子电池的主要阴极候选材料。然而，富镍阴极会因各向异性晶格应变和界面重建而导致电压和容量下降。在这里，我们报告了一种高性能富镍阴极，具有强大的由外而内的架构，通过机器学习辅助识别铝来实现\n                    3+\n                    和锡\n                    4+\n                    掺杂剂。通过竞争性掺杂机制，这些掺杂剂形成富锡岩盐表面层和均匀的铝掺杂块体。这种高质量的由外而内的结构通过减轻阴极/电解质界面退化和减轻与 H2/H3 相共存相关的各向异性晶格应变来增强界面稳定性和结构可逆性。此外，非磁性铝\n                    3+\n                    和锡\n                    4+\n                    削弱超交换相互作用并抑制Li─Ni紊乱。结果，阴极在 200 次循环后保留了 96.9% 的容量，电压衰减最小。这些发现为高性能富镍阴极的开发提供了见解。",
       "source": "Science Advances",
       "published": "2026"
     },
@@ -80,6 +113,17 @@
       "published": "2026"
     },
     {
+      "id": "10.1029/2025jb032618",
+      "title": "Three‐Dimensional Crustal Deformation Analysis Using Physics‐Informed Deep Learning",
+      "url": "https://doi.org/10.1029/2025jb032618",
+      "first_author": "Tomohisa Okazaki",
+      "corr_author": "Naonori Ueda",
+      "affiliation": "Disaster Prevention Research Institute Kyoto University  Uji Japan",
+      "abs_zh": "地震波和地壳变形等与地震相关的现象影响广泛的区域，需要大规模 3D 建模并仔细处理模型域的边界。一种被称为物理信息神经网络（PINN）的深度学习方法具有解决涉及观测数据的大规模问题的潜力。 PINN 已被研究用于模拟二维结构中的同震地壳变形。在本研究中，使用 PINN 分析了 3D 结构中的地壳变形。为了提高建模精度，构建了四个神经网络来表示由断层表面及其延伸划分的两个子域中的位移和应力场。正向模拟显示了内部变形的高精度，但产生了刚性运动的误差，这凸显了在远处约束静态变形的固有困难。此外，还结合地表地形和弹性非均质结构估算了2008年岩手宫城内陆地震的断层滑动分布。结果显示断层滑动与之前的研究一致，尽管其程度被低估。因此，我们展示了 PINN 模拟 3D 地壳变形的能力，从而为使用真实世界观测和地壳结构进行大规模地震建模提供了一种灵活的方法。",
+      "source": "Journal of Geophysical Research: Solid Earth",
+      "published": "2026"
+    },
+    {
       "id": "10.5194/tc-20-1867-2026",
       "title": "Past and future changes in avalanche problems in northern Norway estimated with machine-learning models",
       "url": "https://doi.org/10.5194/tc-20-1867-2026",
@@ -88,50 +132,6 @@
       "affiliation": "未知机构",
       "abs_zh": "。由于气候变化，山区雪崩灾害的频率和严重程度可能会发生变化，特别是在挪威北部等北极地区，温度变化加剧。我们扩展了早期工作，利用动态缩小的再分析数据（包括积雪模拟）训练机器学习 (ML) 模型，以预测挪威北部特罗姆斯郡的雪崩危险。与早期的工作相比，经过训练的机器学习模型可以区分雪崩类型，特别是干雪和湿雪。由于雪崩观测不足，我们根据挪威雪崩公报中发布的雪崩危险警告构建了二元指标（雪崩日/非雪崩日）。 ML 模型提供了 1970 年至 2024 年期间雪崩发生频率的后报（基于重新分析）以及对 21 世纪未来的预测（基于气候模型模拟）。在历史时期，结果证实了早期的研究表明，虽然数十年的线性趋势是微不足道的，但雪崩日频率的年际变化与北极涛动有关。预计的未来变化表明雪崩危险总体下降，尤其是干雪雪崩。相比之下，湿雪雪崩危险表现出取决于海拔的变化，直到本世纪中叶在所有海拔地区都增加，但此后仅在较高海拔地区继续增加，而在较低海拔地区则反转为减少。我们的研究结果与21世纪雪崩危险总体下降以及雪崩特征向干雪雪崩减少和湿雪雪崩增加的转变这一新兴共识一致。这种转变对于容易发生雪崩的人群来说可能具有挑战性，因为当前对当地雪崩状况的了解可能变得不太重要，并且越来越无法提供针对雪崩危险的保护。",
       "source": "The Cryosphere",
-      "published": "2026"
-    },
-    {
-      "id": "10.1029/2026jb034262",
-      "title": "Fine‐Scale Segmentation and Spatiotemporal Variability of the 2010\n                    <i>M</i>\n                    <sub>w</sub>\n                    8.8 Maule Aftershock Sequence Revealed by a Deep‐Learning‐Based Earthquake Catalog",
-      "url": "https://doi.org/10.1029/2026jb034262",
-      "first_author": "Rodrigo Flores‐Allende",
-      "corr_author": "Claudio Satriano",
-      "affiliation": "Institut de Physique du Globe de Paris Université Paris Cité UMR 7154  Paris France",
-      "abs_zh": "我们重新审视此次余震序列\n                    中号\n                    w\n                    智利中南部 8.8 马乌莱地震，了解地震活动、震级频率分布和断层结构如何沿破裂带变化。使用国际马乌莱余震部署 (IMAD) 数据集，我们分析了来自大约 156 个临时站的 10 个月的连续数据，并为马乌莱破裂带建立了高分辨率余震目录。我们应用反投影和匹配过滤（BPMF）工作流程，它将深度学习相位选择器与基于反投影的关联、相对重定位和模板匹配集成在一起。我们最初检测并重新定位了 130,575 次地震，然后使用高质量事件的子集作为模板来识别初始检测遗漏的较小地震。最终目录包含 537,387 次地震，比之前的研究多了近 13 倍，完整性震级为 ≈\n                    中号\n                    w\n                    1.8，震级范围为\n                    中号\n                    w\n                    0.2 至\n                    中号\n                    w\n                    6.2.本地震级 () 校准提供了整个网络的均匀震级标度。密集的目录揭示了沿着破裂的详细地震构造特征。在皮奇勒姆地区，余震描绘出具有 L 形几何形状的浅正断层系统，而康塞普西翁地区则包含地震斑块。使用经典的最大似然和更不完全的方法，我们发现序列早期的时间值范围在 1.2 到 1.6 之间，并向 ≈1.0 收敛。同时，值沿走向变化很大，北部的值较高，南部的值较低。这些对比与板块界面上有效应力和孔隙流体压力的沿走向变化一致，与之前的研究一致。",
-      "source": "Journal of Geophysical Research: Solid Earth",
-      "published": "2026"
-    },
-    {
-      "id": "10.5194/tc-20-1841-2026",
-      "title": "Physics-constrained generative machine learning-based high-resolution downscaling of Greenland's surface mass balance and surface temperature",
-      "url": "https://doi.org/10.5194/tc-20-1841-2026",
-      "first_author": "Nils Bochow",
-      "corr_author": "Alexander Robinson",
-      "affiliation": "未知机构",
-      "abs_zh": "。格陵兰冰盖表面质量平衡（SMB）和表面温度的准确、高分辨率预测对于了解未来海平面上升至关重要，但目前的方法要么计算量要求高，要么仅限于粗略的空间尺度。在这里，我们引入了一种基于一致性模型 (CM) 的新型物理约束生成建模框架，可在几个采样步骤中将低分辨率 SMB 和表面温度场缩小高达 32 倍（从 160 公里到 5 公里网格间距）。 CM 根据区域气候模型 MARv3.12 的每月输出进行培训，并以冰盖地形和日照为条件。通过在推理过程中强制执行硬守恒约束，我们确保了粗空间尺度上 SMB 和温度总和的近似保存，以及对极端气候状态的稳健泛化，而无需重新训练。在测试集上，我们的约束 CM 获得了 5.37 mmw.e 的连续排名概率分数。 SMB 每月一次，表面温度为 0.1 K，优于基于插值的降尺度。与空间功率谱分析一起，我们证明了 CM 忠实地再现了空间尺度上的变化。我们进一步应用 NorESM2 地球系统模型和社区地球系统模型 CESM2-WACCM 的偏差校正输出作为我们 CM 的输入，以证明我们的模型直接缩小 ESM 场规模的潜力。我们的方法通过快速推理为冰盖模拟提供真实、高分辨率的气候强迫，并且可以轻松集成到地球系统和冰盖模型工作流程中，以改进对格陵兰岛以及可能的其他冰盖和冰川未来对海平面上升的贡献的预测。",
-      "source": "The Cryosphere",
-      "published": "2026"
-    },
-    {
-      "id": "10.1029/2025gl120355",
-      "title": "A Machine Learning‐Based High‐Resolution Inventory of Soil Inorganic Carbon Across the Contiguous United States",
-      "url": "https://doi.org/10.1029/2025gl120355",
-      "first_author": "Zahra Ghahremani",
-      "corr_author": "Jennifer Pierce",
-      "affiliation": "Department of Geosciences Boise State University  Boise ID USA",
-      "abs_zh": "土壤无机碳（SIC）对于碳固存、渗透和气候建模至关重要，但量化其在大陆尺度上的精确空间分布仍然具有挑战性。我们使用在 ISRIC 世界土壤信息服务 (WoSIS) 数据库上训练的机器学习 (ML) 模型引入高分辨率 (30 m) CONUS SIC 地图。与之前基于多边形的清单相比，将基于点的土壤数据与高分辨率气候和地表变量相结合，可以增强预测并减少未采样区域的不确定性。我们的 SIC 随机森林回归 (RFR) 得出的均方根误差 (RMSE) 为 15 kg/m\n                    2\n                    ，多类分类器的准确率为 0.56。我们的模型估计，美国本土土壤表层 1 m 储存了 77 ± 1.8 Pg SIC，这比之前的库存显着增加了 SIC 储存量。我们区分了两种 SIC 储存类型：在潮湿地区持续存在的岩质碳酸盐和通常在干旱土壤中形成的成土碳酸盐。",
-      "source": "Geophysical Research Letters",
-      "published": "2026"
-    },
-    {
-      "id": "10.1126/sciadv.aeg8830",
-      "title": "Amygdala transcranial ultrasound stimulation disrupts threat acquisition and extinction learning",
-      "url": "https://doi.org/10.1126/sciadv.aeg8830",
-      "first_author": "Gregory A. Fonzo",
-      "corr_author": "Kevin S. LaBar",
-      "affiliation": "Department of Psychiatry and Behavioral Sciences, The University of Texas at Austin Dell Medical School, Austin, TX, USA.",
-      "abs_zh": "应用于人类杏仁核的经颅超声刺激选择性地影响威胁学习的初始阶段及其随后的消退。",
-      "source": "Science Advances",
       "published": "2026"
     },
     {

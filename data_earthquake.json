@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-01 至 2026-04-08 06:05",
+  "last_update": "2026-04-05 至 2026-04-12 02:44",
   "topic_name": "地震研究",
   "papers": [
     {
@@ -69,6 +69,17 @@
       "published": "2026"
     },
     {
+      "id": "10.1016/j.epsl.2026.120032",
+      "title": "Crustal differential thickening and incomplete mechanical decoupling in the eastern Qilian Shan, NE Tibetan Plateau: Insights from a dense seismic profile",
+      "url": "https://doi.org/10.1016/j.epsl.2026.120032",
+      "first_author": "Ruizhi Jin",
+      "corr_author": "Peizhen Zhang",
+      "affiliation": "未知机构",
+      "abs_zh": "无摘要详情",
+      "source": "Earth and Planetary Science Letters",
+      "published": "2026"
+    },
+    {
       "id": "10.1016/j.epsl.2026.119933",
       "title": "Implications of long lasting post-seismic deformation following the 2005 Mw 7.6 Kashmir earthquake inferred from GNSS &amp; InSAR data",
       "url": "https://doi.org/10.1016/j.epsl.2026.119933",
@@ -88,6 +99,28 @@
       "affiliation": "未知机构",
       "abs_zh": "无摘要详情",
       "source": "Earth and Planetary Science Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl119981",
+      "title": "DMS Uplift by Tropical Cyclones as a Source of SO\n                    <sub>2</sub>\n                    in the Upper Troposphere",
+      "url": "https://doi.org/10.1029/2025gl119981",
+      "first_author": "Guanjie Jiao",
+      "corr_author": "Aijun Ding",
+      "affiliation": "State Key Laboratory of Severe Weather Meteorological Science and Technology Nanjing University  Nanjing China",
+      "abs_zh": "2022 年 8 月 2 日 ACCLIP 的机载观测结果与拉格朗日粒子扩散模型反向轨迹相结合，揭示了 SO\n                    2\n                    在受热带气旋 (TC) 影响的地区，14-16 公里处的混合比提高了 4-6 倍。这些增强与海洋二甲硫醚（DMS）快速进入对流层上层（UT）有关。 GEOS-Chem 模拟表明，2022 年 7 月 31 日，TC 规模的环流在数小时内将 DMS 注入 UT，平均通量为 9.4 kg·hr\n                    −1\n                    0.5-12 公里范围内的排放量和 12 公里以上排放量的 8.4%，与相同高度下 DMS 升高的观测结果一致。由于其低溶解度和较长的 UT 寿命（在地表为 59.2 小时 vs. 5.7 小时），DMS 可以维持 SO\n                    2\n                    生产在很大程度上耐湿法清除。这种 TC 驱动的途径提供了重要的天然 SO\n                    2\n                    来源在UT，对气溶胶-云-气候相互作用有影响。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1126/sciadv.aed2420",
+      "title": "Secure quantum key distribution against correlated leakage source",
+      "url": "https://doi.org/10.1126/sciadv.aed2420",
+      "first_author": "Jia-Xuan Li",
+      "corr_author": "Zheng-Fu Han",
+      "affiliation": "Laboratory of Quantum Information, University of Science and Technology of China, Hefei, Anhui 230026, P. R. China.",
+      "abs_zh": "量子密钥分发（QKD）提供基于量子力学的信息论安全性，但其实现受到源缺陷的阻碍。其中，传输脉冲之间的相关性对 QKD 的理论安全性构成了严重但尚未充分研究的威胁。我们提出了一个相关源下的 QKD 安全通用框架，通过使用广义链规则扩展和重组 QKD 轮次来实现第一个有限密钥分析。受侧通道安全 QKD 的启发，我们设计了一种针对相关泄漏源的安全协议，仅需要准备状态真空分量的相关范围和下限。我们的框架也适用于其他 QKD 协议，提供了解决相关性引发的漏洞的通用方法。模拟证明了我们的协议的有效性以及与现有协议相比其对缺陷的明显优越的容忍度。这项工作为弥补 QKD 的安全漏洞、增强其实用性以及确保现实世界约束下的长距离、高性能安全通信迈出了关键一步。",
+      "source": "Science Advances",
       "published": "2026"
     },
     {
@@ -132,39 +165,6 @@
       "affiliation": "Department of Earth and Environmental Sciences Michigan State University  East Lansing MI USA",
       "abs_zh": "由地球材料的滞弹性引起的地震衰减提供了有关地球内部的热和成分特征的关键信息。准确测量地震波传播过程中的能量损失和进行地震衰减具有挑战性，因为测量衰减的传统方法面临估计震源特征和沿路径能量衰减之间以及线性层析成像反演中的阻尼和平滑之间的权衡。在本研究中，我们首先结合独立约束的源参数来反演路径平均衰减 ，从而最大限度地减少路径和源项之间的权衡。然后，基于精炼的数据集，我们应用跨维贝叶斯马尔可夫链蒙特卡罗 (MCMC) 方法通过鲁棒的不确定性估计对 3D 衰减结构进行成像。我们将这些方法应用于汤加俯冲带及其邻近的劳弧后盆地的一年两栖地震台阵。新的测量结果与数据吻合良好，新的 3D 断层扫描结果揭示了 Tonga-Lau 地幔楔中的高 P 波衰减异常，其中在 50 公里深度的 East Lau 传播中心或下方衰减最高。此外，在地幔过渡区成像有轻微升高的衰减异常。通过将我们的新模型与已发布的 SV 波速度模型相结合，我们定量估计了弧后扩张中心下方 50 公里处的熔体孔隙度，显示从中央 Lau 扩张中心下方向南减少到 Valu Fa 海脊下方的 0 左右。",
       "source": "Journal of Geophysical Research: Solid Earth",
-      "published": "2026"
-    },
-    {
-      "id": "10.1038/d41586-026-01001-0",
-      "title": "These advanced solar cells have an antique source: old bullets",
-      "url": "https://doi.org/10.1038/d41586-026-01001-0",
-      "first_author": "N/A",
-      "corr_author": "N/A",
-      "affiliation": "未知机构",
-      "abs_zh": "无摘要详情",
-      "source": "Nature",
-      "published": "2026"
-    },
-    {
-      "id": "10.1126/sciadv.adz5711",
-      "title": "Seismic rhythms: Earthquake response to tectonic, hydrological, and tidal forcing in California",
-      "url": "https://doi.org/10.1126/sciadv.adz5711",
-      "first_author": "Krittanon Sirorattanakul",
-      "corr_author": "Jean-Philippe Avouac",
-      "affiliation": "Seismological Laboratory, Division of Geological and Planetary Sciences, California Institute of Technology, Pasadena, CA, USA.",
-      "abs_zh": "地震活动主要由构造驱动，但自然或人为来源的应力变化可以引起可检测的调制，从而为地震物理学提供见解。在这里，我们确定了加利福尼亚州的一些区域，这些区域表现出与水文表面负荷相关的地震活动率的显着季节性调制，但没有显着的半日潮汐调制。地震活动峰值速率比应力峰值滞后半个月。假设瞬时成核大大高估了响应，而由速率和状态摩擦控制的时间相关成核则通过摩擦应力参数准确捕获振幅和时间延迟\n                    一个\n                    σ ~ 1 至 10 千帕 (kPa) 和特征弛豫时间\n                    t\n                    \n                      一个\n                    \n                    ~ 0.05 至 1 年。对潮汐和季节性应力扰动的地震活动响应使我们能够探测断层力学特性，从而提供改进地震灾害评估的方法。",
-      "source": "Science Advances",
-      "published": "2026"
-    },
-    {
-      "id": "10.1126/sciadv.aec5067",
-      "title": "Mechanism of ribosome stalling by the AMD1 C-terminal tail arrest peptide",
-      "url": "https://doi.org/10.1126/sciadv.aec5067",
-      "first_author": "Emir Maldosevic",
-      "corr_author": "Ahmad Jomaa",
-      "affiliation": "Department of Molecular Physiology and Biological Physics, University of Virginia, Charlottesville, VA 22903, USA.",
-      "abs_zh": "AMD1\n                    编码腺苷甲硫氨酸脱羧酶 1 (AMD1)，这是多胺生物合成中的关键酶。核糖体的一个子集，翻译\n                    AMD1\n                    编码序列读取终止密码子并在下游 384 个核苷酸的第二个框内终止处暂停，产生保守的 C 末端延伸（C 尾）。尽管越来越多的证据表明此类顺式作用元件调节其基因的翻译，但 C 尾介导核糖体停滞的分子机制仍不清楚。在这里，我们确定了由 AMD1 C 尾暂停的核糖体新生链复合物的结构，该复合物捕获真核释放因子 1 (eRF1) 与 ATP 结合盒亚家族 E 成员 1 (ABCE1)。新生链形成分子夹，将精氨酸钩定位在肽基转移酶中心，阻断 eRF1 GGQ 基序的容纳，从而阻碍翻译终止。对聚合核糖体分析数据的分析揭示了几个具有终止密码子通读模式的基因，随后核糖体在特定位置停滞，这表明监管通读停滞机制可能不仅限于\n                    AMD1\n                    。",
-      "source": "Science Advances",
       "published": "2026"
     }
   ]

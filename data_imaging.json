@@ -1,7 +1,18 @@
 {
-  "last_update": "2026-04-01 至 2026-04-08 06:05",
+  "last_update": "2026-04-05 至 2026-04-12 02:44",
   "topic_name": "地震成像",
   "papers": [
+    {
+      "id": "2604.07421v1",
+      "title": "SPAMoE: Spectrum-Aware Hybrid Operator Framework for Full-Waveform Inversion",
+      "url": "http://arxiv.org/abs/2604.07421v1",
+      "first_author": "Zhenyu Wang",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "全波形反演（FWI）对于重建高分辨率地下速度模型至关重要，但仍然计算密集且不适定。虽然深度学习方法保证了效率，但现有的卷积神经网络 (CNN) 和单范式神经算子 (NO) 都在努力解决一个基本问题：多尺度地质特征的频率纠缠。为了应对这一挑战，我们提出了频谱保留自适应 MoE (SPAMoE)，这是一种新颖的频谱感知框架，用于解决复杂多尺度结构的逆问题。我们的方法引入了频谱保留 DINO 编码器，该编码器强制编码表示的高低频能量比的下限，减轻高频崩溃并稳定后续的频域建模。此外，我们设计了一种新颖的频谱分解和路由机制，可以动态地将频段分配给由 FNO、MNO 和 LNO 组成的专家混合 (MoE) 系综。在 OpenFWI 的 10 个子数据集上，实验表明，SPAMoE 相对于官方报告的最佳 OpenFWI 基线，平均 MAE 降低了 54.1%，从而为基于学习的全波形反演建立了新的架构框架。",
+      "source": "arXiv",
+      "published": "2026-04-08"
+    },
     {
       "id": "2604.00307v1",
       "title": "SAGE: Subsurface AI-driven Geostatistical Extraction with proxy posterior",
@@ -47,17 +58,6 @@
       "published": "2026-03-25"
     },
     {
-      "id": "2603.23439v1",
-      "title": "SIGMA: A Physics-Based Benchmark for Gas Chimney Understanding in Seismic Images",
-      "url": "http://arxiv.org/abs/2603.23439v1",
-      "first_author": "Bao Truong",
-      "corr_author": "N/A",
-      "affiliation": "arXiv Preprint",
-      "abs_zh": "地震图像根据现场记录重建地下反射率，指导勘探和储层监测。气烟囱是由地下流体运移引起的垂直异常现象。了解这些现象对于评估碳氢化合物潜力和避免钻井危险至关重要。然而，由于强烈的地震衰减和散射，准确检测具有挑战性。传统的基于物理的方法计算成本昂贵且对模型错误敏感，而深度学习提供了有效的替代方案，但缺乏标记数据集。在这项工作中，我们引入了 \\textbf{SIGMA}，这是一种新的基于物理的数据集，用于理解地震图像中的气体烟囱，其特征是（i）用于检测的像素级气体烟囱掩模和（ii）用于增强的配对退化图像和地面实况图像。我们采用了基于物理的方法，涵盖了广泛的地质环境和数据采集条件。综合实验表明，SIGMA 可以作为气烟囱解释的具有挑战性的基准，并有利于一般地震理解。",
-      "source": "arXiv",
-      "published": "2026-03-24"
-    },
-    {
       "id": "10.1016/j.epsl.2026.119963",
       "title": "Detection of the mushy region at the surface of the Earth’s inner core by an antipodal seismic wave",
       "url": "https://doi.org/10.1016/j.epsl.2026.119963",
@@ -80,6 +80,17 @@
       "published": "2026"
     },
     {
+      "id": "10.1016/j.epsl.2026.120032",
+      "title": "Crustal differential thickening and incomplete mechanical decoupling in the eastern Qilian Shan, NE Tibetan Plateau: Insights from a dense seismic profile",
+      "url": "https://doi.org/10.1016/j.epsl.2026.120032",
+      "first_author": "Ruizhi Jin",
+      "corr_author": "Peizhen Zhang",
+      "affiliation": "未知机构",
+      "abs_zh": "无摘要详情",
+      "source": "Earth and Planetary Science Letters",
+      "published": "2026"
+    },
+    {
       "id": "10.1016/j.epsl.2026.119933",
       "title": "Implications of long lasting post-seismic deformation following the 2005 Mw 7.6 Kashmir earthquake inferred from GNSS &amp; InSAR data",
       "url": "https://doi.org/10.1016/j.epsl.2026.119933",
@@ -88,6 +99,39 @@
       "affiliation": "未知机构",
       "abs_zh": "无摘要详情",
       "source": "Earth and Planetary Science Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl119526",
+      "title": "Mesoscale Eddy Currents Reshape the Spatial Distribution of Wave Height in the Southern Ocean",
+      "url": "https://doi.org/10.1029/2025gl119526",
+      "first_author": "Tianyi Cheng",
+      "corr_author": "Alexander V. Babanin",
+      "affiliation": "Frontier Science Center for Deep Ocean Multispheres and Earth System (FDOMES) and Physical Oceanography Laboratory Ocean University of China  Qingdao China",
+      "abs_zh": "中尺度涡流影响海洋表面波浪，但它们对波高的影响仍然很难通过观测描述。在这里，我们使用沿轨 Jason-3 高度计测量结果检查了与南大洋 42,000 多个中尺度涡流相关的显着波高 (SWH) 变化。高度计复合材料显示出明显的子午偶极子，其中波传播与涡流一致的 SWH 降低，而相反侧的 SWH 增强。典型涡流（半径约 45 公里，地转速度异常约 0.15 米·秒）\n                    −1\n                    ）与 ∼5 cm 的 SWH 异常相关。再分析数据和理想化模拟进一步表明，与涡流相关的风异常、相对风效应和直流效应都对观测到的 SWH 模式有贡献，其中折射起着关键作用。这些结果强调了中尺度水流在重新分配波浪能量和塑造波高空间分布中的作用。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl121541",
+      "title": "Decomposing Earthquake Moment Tensors Using P‐Wave First Motion: Insights Into Global Events With Significant Non‐Double‐Couple Components",
+      "url": "https://doi.org/10.1029/2025gl121541",
+      "first_author": "Zhifeng Wang",
+      "corr_author": "Yuyang Peng",
+      "affiliation": "School of Earth Sciences China University of Geosciences  Wuhan China",
+      "abs_zh": "将地震矩张量分解为各向同性和偏向分量是地震学中的标准。偏差部分进一步分为双耦合 (DC) 和非双耦合 (NDC) 分量，其中 NDC 提供了对源复杂性的洞察。然而，现有方法经常会因不同的物理解释而产生不一致的结果。我们提出了一种新颖的分解方法，将地震建模为两个直流子事件，其中第一个子事件由纵波初动数据确定，第二个子事件通过矩守恒分析得出。该方法简单、高效且可物理解释。我们评估其稳定性并将其应用于全球八个\n                    中号\n                    \n                      w\n                    \n                     ≥ 7.5 次地震（2000 年至 2023 年），NDC 成分大于 40%。结果与之前的研究非常吻合，证明了稳健性。当附加约束（例如余震机制）可用时，此方法可以扩展到多个子事件。它为探索复杂的破裂过程和了解大地震的物理机制提供了强大的工具。",
+      "source": "Geophysical Research Letters",
+      "published": "2026"
+    },
+    {
+      "id": "10.1093/gji/ggag132",
+      "title": "TTI Reflection waveform inversion based on the modified gradient sampling algorithm",
+      "url": "https://doi.org/10.1093/gji/ggag132",
+      "first_author": "Hengli Song",
+      "corr_author": "Jianming Zhang",
+      "affiliation": "State Key Laboratory of Marine Geology, Tongji University , Shanghai, 200092 ,",
+      "abs_zh": "总结\n                  反射波形反演（RWI）是重建中低波数地下参数的有效方法。随着各向异性对地震资料的影响越来越显着，RWI应扩展到倾斜横观各向同性(TTI)介质(TTI-RWI)以提高反演精度。与传统的各向同性或垂直横向各向同性 (VTI) 假设不同，TTI 模型提供了具有强烈构造活动的地质结构的更真实的表示。然而，TTI-RWI 的实际实施面临两个挑战。首先，由于它依赖于波形匹配，不准确的初始模型可能会导致周期跳跃和收敛到局部最小值。其次，速度和各向异性参数之间的固有耦合导致显着的参数串扰。当先验信息有限时，这些问题通常会同时存在。为了解决第一个挑战，我们提出了一种改进的梯度采样算法（GSA），该算法结合了全局优化信息，以在不增加计算成本的情况下减少周期跳跃。对于第二个挑战，我们设计了一种两阶段反演策略，其中首先使用 GSA 反演垂直纵波速度 vp0，然后通过高斯-牛顿优化联合反演 vp0 和各向异性参数 ε。所提出的 TTI-RWI 方法的有效性通过 Overthrust 模型的数值实验和现场海洋拖缆数据的应用得到了验证。",
+      "source": "Geophysical Journal International",
       "published": "2026"
     },
     {
@@ -102,17 +146,6 @@
       "published": "2026"
     },
     {
-      "id": "10.1093/gji/ggag130",
-      "title": "P-wave velocity and azimuthal anisotropy of the crust and uppermost mantle beneath Northeast China",
-      "url": "https://doi.org/10.1093/gji/ggag130",
-      "first_author": "Dazhi Song",
-      "corr_author": "Wenshuai Wang",
-      "affiliation": "National Institute of Natural Hazards, Ministry of Emergency Management of China , Beijing 100085 ,",
-      "abs_zh": "总结\n                  中国东北地区是最大的板内新生代火山省之一，经历了古生代的多次碰撞、晚侏罗世-早白垩世的伸展和上新世的挤压。中生代以来，中国东北地区的构造作用很大程度上受西太平洋板块俯冲的控制，其典型特征是形成多个板内火山群和沉积盆地。该地区的构造机制，特别是新生代板内火山的起源和松辽表层沉积盆地的演化仍然存在争议。为了解决这些问题，我们进行了地震层析成像，对中国东北地区地壳和上地幔的纵波速度和方位各向异性进行了成像。在本研究中，我们采用基于程函方程的走时层析成像方法来反演高质量的P波初至。我们从 426 个宽带地震台记录的 890 个区域地震中手动选取了 21,006 个 P 波初至。层析反演揭示了四个显着特征。首先，结果揭示了长白山火山上地幔存在显着的低速异常，且具有强的方位各向异性，快速度方向沿低速异常分布，呈东西向。这一特征表明长白山火山下方最上地幔的水平流动。其次，长白山火山下方中下地壳存在明显的低速异常，暗示存在岩浆室。第三，五大连池火山地壳具有近正速度结构和较强的方位各向异性，快速度方向为南北向，表明岩浆活动对地壳结构影响不大。第四，松辽盆地下方中下地壳广泛存在的明显低速异常反映了",
-      "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
       "id": "10.1093/gji/ggag129",
       "title": "CapsNet-Enhanced Seismic Event Classification: Benchmarking and System Deployment on the DiTing 2.0 Dataset",
       "url": "https://doi.org/10.1093/gji/ggag129",
@@ -124,46 +157,13 @@
       "published": "2026"
     },
     {
-      "id": "10.1785/0220250409",
-      "title": "Dual-Branch Adaptive Joint Decision-Making: Intelligent Identification of Seismic Events Supported by Single-Component Waveform Data from Multiple Global Regions",
-      "url": "https://doi.org/10.1785/0220250409",
-      "first_author": "Zhao Binghui",
-      "corr_author": "Han Liguo",
-      "affiliation": "1Institute of Geophysics, China Earthquake Administration, Beijing, China",
-      "abs_zh": "地震事件类型分类是可靠监测地震活动、科学评估地震危险性的基本前提。然而，基于台站地震观测数据有效、准确地区分天然地震和人工爆炸事件仍然是地震学和信号处理领域的一个关键研究课题，具有挑战性和价值。针对这一问题，本文提出一种基于深度学习网络的地震事件分类与预测算法。该算法采用双分支联合决策策略，以经过简单预处理的单通道波形数据作为输入。在模型推理过程中，对波形数据及其对应的时频矩阵分别进行特征提取和预测。此外，设计了权重学习子网络，自适应调整两个分支的预测结果在整体决策中的权重比例，从而保证分类和预测结果的稳定性和准确性。实验测试结果表明，该算法应用过程简单，无需依赖大量的人工调参，在不同观测仪器、不同地区的地震数据集中表现出良好的泛化性能。",
-      "source": "Seismological Research Letters",
-      "published": "2026"
-    },
-    {
-      "id": "10.1029/2025gl120419",
-      "title": "Wave‐Based Quantification of Ion Composition in the Earth's Magnetosphere‐Ionosphere‐Coupling Region",
-      "url": "https://doi.org/10.1029/2025gl120419",
-      "first_author": "Zhijie Qin",
-      "corr_author": "Zhenghao She",
-      "affiliation": "Institute of Frontier and Interdisciplinary Science Shandong University  Shandong China",
-      "abs_zh": "离子组成关键决定等离子体的基本动力学特性并影响磁层的能量传输。然而，它随着海拔、纬度、当地时间、经度以及地磁和太阳活动的变化而表现出显着的变化。赤道噪声（EN）发射是内磁层中经常观察到的电磁波，穿过磁场线传播，因此可以到达磁赤道附近的磁层-电离层耦合（MIC）区域，其演化取决于局部离子组成。在这里，我们利用范艾伦探测器近地点附近观察到的 EN 发射的极化反转来导出氦离子和氧离子的成分，并通过 EN 发射的统计分析提供全面的离子成分分布。与国际参考电离层模型和原位等离子体测量的比较验证了估计结果的可靠性。这些发现推进了 MIC 等离子体模型，我们的方法为其他行星上的等离子体诊断提供了间接工具。",
-      "source": "Geophysical Research Letters",
-      "published": "2026"
-    },
-    {
-      "id": "10.1785/0120250269",
-      "title": "Waveform-Based Probabilistic Seismic Hazard Analysis Using Ground-Motion Generative Models",
-      "url": "https://doi.org/10.1785/0120250269",
-      "first_author": "Yuma Matsumoto",
-      "corr_author": "Tatsuya Itoi",
-      "affiliation": "1Research Division for Earthquake, Tsunami and Multi-disasters, Department of Catastrophic Geohazard Research, National Research Institute for Earth Science and Disaster Resilience, Ibaraki, Japan",
-      "abs_zh": "在概率地震危险分析 (PSHA) 中，通常会评估地震动强度测量 (IM) 的超出概率。然而，近年来，使用地震动时程作为输入的动力响应分析在地震设计和风险评估中越来越普遍，因此用地震动波形表示地震危险性的需求不断增长。在本研究中，我们提出了一种新颖的PSHA框架，称为基于波形的PSHA，通过将基于深度生成模型（地面运动生成模型[GMGMs]）的地面运动模型（GMM）引入PSHA框架中，可以直接评估地面运动波形的概率分布。在基于波形的 PSHA 中，地震灾害在蒙特卡罗意义上被表示为一组地面运动波形。我们提出了这样一个 PSHA 框架的制定以及执行所需蒙特卡洛模拟的算法。构建了三种不同的基于生成对抗网络的 GMGM。在验证每个 GMGM 的性能后，使用所提出的方法对两个数值示例进行危险评估：一个假设假设的区域源，另一个假设日本的实际地点和源断层。我们证明，地震灾害可以表示为一组地面运动波形，并且从这些波形获得的基于 IM 的灾害与使用 GMM 的传统 PSHA 结果一致。最后，使用评估的地震危险作为输入对建筑模型进行非线性动力响应分析，结果表明，工程需求参数（EDP）的超出概率以及关于 EDP 的危险分解可以在所提出的框架内以简单的方式进行。",
-      "source": "Bulletin of the Seismological Society of America",
-      "published": "2026"
-    },
-    {
-      "id": "10.1093/gji/ggag128",
-      "title": "Characterization of the crust and uppermost mantle beneath the São Francisco Craton (Brazil) and adjacent areas from Rayleigh wave tomography",
-      "url": "https://doi.org/10.1093/gji/ggag128",
-      "first_author": "Estevão Vasconcello Campos Tadeu",
-      "corr_author": "Guilherme Manno Penna Crepaldi Affonso",
-      "affiliation": "University of Brasilia, Institute of Geosciences, Graduate Program in Geology ,",
-      "abs_zh": "总结\n                  本研究通过瑞利波层析成像技术，整合了环境噪声（周期为 6-50 秒）和地震衍生的（周期为 9-180 秒）频散曲线，研究了圣弗朗西斯科克拉通 (SFC) 下方的地壳和上地幔结构，该克拉通构成了更广泛的圣弗朗西斯科古大陆 (SFP) 的核心及其周围的构造省。使用自适应参数化对二维相位和群速度图进行区域化，并通过棋盘测试评估分辨率。生成了深度达 70 公里的伪 3D 剪切波速度 (VS) 模型，并使用最大速度梯度法从中得出了地壳厚度。浅层深度（2-10 公里）的结果将巴拉那盆地、帕尔纳伊巴盆地和图卡诺-贾托巴盆地识别为低速异常，而圣方济各盆地尚未完全解析，因为尽管其表面范围广阔，但其厚度减少低于模型的分辨率极限。在 SFC 内部的中下地壳（20-40 公里）中，帕拉米林奥拉戈根 (Paramirim Aulacogen) 具有低 VS 走廊的特征，突出了继承性裂谷结构和随后克拉通内部热再造的作用。在更深的地方（60-70 公里），Borborema 省表现出较低的速度，这与稳定的 SFC 根部的较高速度形成鲜明对比。来自断层扫描的莫霍面图表明巴拉那盆地和帕尔纳伊巴盆地以及巴西利亚带下方的地壳增厚，与接收函数的估计非常一致。总体而言，SFC 邻近区域的 VS 异常和莫霍面几何揭示了地壳相对较薄（32-36 公里）的高速走廊，延伸穿过托坎廷斯省、曼蒂凯拉省和博尔博雷马省，并向西北突出到帕纳伊巴盆地下方。这些结果表明，圣弗朗西斯科古大陆的边界大大超出了地壳和上地幔内暴露的表面界限。这些边界",
+      "id": "10.1093/gji/ggag130",
+      "title": "P-wave velocity and azimuthal anisotropy of the crust and uppermost mantle beneath Northeast China",
+      "url": "https://doi.org/10.1093/gji/ggag130",
+      "first_author": "Dazhi Song",
+      "corr_author": "Wenshuai Wang",
+      "affiliation": "National Institute of Natural Hazards, Ministry of Emergency Management of China , Beijing 100085 ,",
+      "abs_zh": "总结\n                  中国东北地区是最大的板内新生代火山省之一，经历了古生代的多次碰撞、晚侏罗世-早白垩世的伸展和上新世的挤压。中生代以来，中国东北地区的构造作用很大程度上受西太平洋板块俯冲的控制，其典型特征是形成多个板内火山群和沉积盆地。该地区的构造机制，特别是新生代板内火山的起源和松辽表层沉积盆地的演化仍然存在争议。为了解决这些问题，我们进行了地震层析成像，对中国东北地区地壳和上地幔的纵波速度和方位各向异性进行了成像。在本研究中，我们采用基于程函方程的走时层析成像方法来反演高质量的P波初至。我们从 426 个宽带地震台记录的 890 个区域地震中手动选取了 21,006 个 P 波初至。层析反演揭示了四个显着特征。首先，结果揭示了长白山火山上地幔存在显着的低速异常，且具有强的方位各向异性，快速度方向沿低速异常分布，呈东西向。这一特征表明长白山火山下方最上地幔的水平流动。其次，长白山火山下方中下地壳存在明显的低速异常，暗示存在岩浆房。第三，五大连池火山地壳具有近正速度结构和较强的方位各向异性，快速度方向为南北向，表明岩浆活动对地壳结构影响不大。第四，松辽盆地下方中下地壳广泛存在的明显低速异常反映了",
       "source": "Geophysical Journal International",
       "published": "2026"
     }
