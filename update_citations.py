@@ -239,352 +239,303 @@ MY_PAPERS = [
     },
 ]
 
-# Seismology / geophysics journals to scan in Crossref
+# Seismology journals for Crossref fallback scan
 SEISMO_JOURNALS = [
-    'Nature',
-    'Science',
-    'Nature Geoscience',
-    'Nature Communications',
-    'Science Advances',
-    'Geophysical Research Letters',
+    'Nature', 'Science', 'Nature Geoscience', 'Nature Communications',
+    'Science Advances', 'Geophysical Research Letters',
     'Journal of Geophysical Research: Solid Earth',
-    'Earth and Planetary Science Letters',
-    'Geophysical Journal International',
+    'Earth and Planetary Science Letters', 'Geophysical Journal International',
     'Seismological Research Letters',
     'Bulletin of the Seismological Society of America',
-    'Journal of Seismology',
-    'Tectonophysics',
-    'Solid Earth',
-    'Communications Earth & Environment',
+    'Journal of Seismology', 'Tectonophysics', 'Solid Earth',
+    'Communications Earth & Environment', 'The Cryosphere',
+    'Earth and Space Science', 'Earthquake Research Advances',
 ]
 
-# How far back to scan (days) — use 30 to catch papers with indexing lag
-SCAN_DAYS = 30
+SCAN_DAYS = 7  # past week
 
 
-# ── helpers ──────────────────────────────────────────────────────────────────
+# ── date helpers ──────────────────────────────────────────────────────────────
 
-def _ref_text(ref: dict) -> str:
-    return (
-        ref.get('DOI', '') + ' ' +
-        ref.get('unstructured', '') + ' ' +
-        ref.get('article-title', '')
-    ).lower()
-
-
-def _ref_matches(ref: dict, paper: dict) -> bool:
-    text = _ref_text(ref)
-    for fp in paper['fingerprints']:
-        if fp.lower() in text:
-            return True
-    return False
+def _parse_date(s: str) -> datetime:
+    """Parse YYYY-MM-DD or YYYY-MM or YYYY into a datetime."""
+    if not s:
+        return datetime.min
+    for fmt in ('%Y-%m-%d', '%Y-%m', '%Y'):
+        try:
+            return datetime.strptime(s[:len(fmt)], fmt)
+        except ValueError:
+            continue
+    return datetime.min
 
 
-def _make_entry(item: dict, paper: dict, source_tag: str) -> dict:
-    authors = item.get('author', [])
-    first_author = (
-        f"{authors[0].get('given', '')} {authors[0].get('family', '')}".strip()
-        if authors else 'N/A'
-    )
-    corr_author = (
-        f"{authors[-1].get('given', '')} {authors[-1].get('family', '')}".strip()
-        if len(authors) > 1 else first_author
-    )
-    doi = item.get('DOI', '')
-    date_parts = (
-        item.get('issued', item.get('created', {}))
-        .get('date-parts', [[datetime.now().year]])
-    )
-    published = '-'.join(str(p) for p in date_parts[0]) if date_parts and date_parts[0] else str(datetime.now().year)
+def _in_window(published: str, since: datetime) -> bool:
+    """Return True if the publication date is within the scan window."""
+    d = _parse_date(published)
+    if d == datetime.min:
+        return False  # unknown date → skip
+    return d >= since
+
+
+# ── Semantic Scholar ───────────────────────────────────────────────────────────
+
+def _s2_entry(cp: dict, paper: dict) -> dict:
+    authors = cp.get('authors', [])
+    first = authors[0].get('name', 'N/A') if authors else 'N/A'
+    corr  = authors[-1].get('name', 'N/A') if len(authors) > 1 else first
+    ext   = cp.get('externalIds') or {}
+    doi   = ext.get('DOI', '') or ''
+    url   = f'https://doi.org/{doi}' if doi else ''
+    pub   = cp.get('publicationDate', '') or str(cp.get('year', ''))
+    journal = cp.get('journal') or {}
+    source  = cp.get('venue') or (journal.get('name', 'Unknown') if isinstance(journal, dict) else 'Unknown')
     return {
-        'id': doi,
-        'title': (item.get('title') or ['No Title'])[0],
-        'url': f'https://doi.org/{doi}' if doi else '',
-        'first_author': first_author,
-        'corr_author': corr_author,
-        'affiliation': (
-            authors[0].get('affiliation', [{}])[0].get('name', 'N/A')
-            if authors and authors[0].get('affiliation') else 'N/A'
-        ),
-        'abs_zh': f'This paper cited: {paper["title"]}',
-        'source': (item.get('container-title') or ['Unknown'])[0],
-        'published': published,
-        'cited_paper': paper['title'],
-        '_source_tag': source_tag,
+        'id':           doi or cp.get('paperId', ''),
+        'title':        cp.get('title', 'No Title'),
+        'url':          url,
+        'first_author': first,
+        'corr_author':  corr,
+        'affiliation':  'N/A',
+        'abs_zh':       f'This paper cited: {paper["title"]}',
+        'source':       source,
+        'published':    pub,
+        'cited_paper':  paper['title'],
     }
 
 
-def fetch_known_citing_dois() -> list:
-    return []  # removed — replaced by Semantic Scholar
-
-
-# ── Strategy 1: Semantic Scholar (primary, fastest index) ────────────────────
-
-def _s2_entry(citing_paper: dict, paper: dict) -> dict:
-    """Build a result dict from a Semantic Scholar citingPaper object."""
-    authors = citing_paper.get('authors', [])
-    first_author = authors[0].get('name', 'N/A') if authors else 'N/A'
-    corr_author = authors[-1].get('name', 'N/A') if len(authors) > 1 else first_author
-    ext_ids = citing_paper.get('externalIds', {}) or {}
-    doi = ext_ids.get('DOI', '') or ''
-    url = f'https://doi.org/{doi}' if doi else citing_paper.get('url', '')
-    published = citing_paper.get('publicationDate', '') or str(citing_paper.get('year', ''))
-    return {
-        'id': doi or citing_paper.get('paperId', ''),
-        'title': citing_paper.get('title', 'No Title'),
-        'url': url,
-        'first_author': first_author,
-        'corr_author': corr_author,
-        'affiliation': 'N/A',
-        'abs_zh': f'This paper cited: {paper["title"]}',
-        'source': (citing_paper.get('venue') or citing_paper.get('journal', {}).get('name', 'Unknown') if isinstance(citing_paper.get('journal'), dict) else 'Unknown'),
-        'published': published,
-        'cited_paper': paper['title'],
-        '_source_tag': 'S2',
-    }
-
-
-def fetch_semantic_scholar(paper: dict) -> list:
-    """
-    Use Semantic Scholar Graph API to get all papers citing this paper.
-    Paginates through all results (500 per page).
-    No API key required (free tier: 1 req/s).
-    """
+def fetch_semantic_scholar(paper: dict, since: datetime) -> list:
+    """Get papers that cite `paper` and were published within the scan window."""
     results = []
     doi = paper.get('doi', '')
     if not doi:
         return results
 
     fields = 'title,authors,year,publicationDate,externalIds,venue,journal'
-    base = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}/citations'
+    base   = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}/citations'
     offset = 0
-    limit = 500
-    total_fetched = 0
+    limit  = 500
 
     while True:
         url = f'{base}?fields={fields}&limit={limit}&offset={offset}'
         try:
             r = session.get(url, timeout=30, headers={'User-Agent': 'paper-weekly-bot/1.0'})
             if r.status_code == 404:
-                print(f'  [S2] Paper not found: {doi}')
                 break
             if r.status_code == 429:
-                print(f'  [S2] Rate limited, waiting 10s...')
-                time.sleep(10)
+                time.sleep(15)
                 continue
             data = r.json()
         except Exception as e:
-            print(f'  [S2] Request error for {doi}: {e}')
+            print(f'  [S2] Error for {doi}: {e}')
             break
 
         items = data.get('data', [])
+        found_in_page = 0
         for item in items:
             cp = item.get('citingPaper', {})
-            if cp:
+            if not cp:
+                continue
+            pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
+            if _in_window(pub, since):
                 results.append(_s2_entry(cp, paper))
-        total_fetched += len(items)
+                found_in_page += 1
 
-        # Check if more pages exist
-        next_offset = data.get('next', None)
+        # S2 returns newest first — stop early if all items are older than window
+        oldest_in_page = ''
+        for item in reversed(items):
+            cp = item.get('citingPaper', {})
+            oldest_in_page = cp.get('publicationDate', '') or str(cp.get('year', ''))
+            if oldest_in_page:
+                break
+        if oldest_in_page and not _in_window(oldest_in_page, since):
+            break  # nothing older will be in the window
+
+        next_offset = data.get('next')
         if next_offset is None or len(items) < limit:
             break
         offset = next_offset
-        time.sleep(1)  # respect rate limit
+        time.sleep(1)
 
-    if total_fetched:
-        print(f'  [S2] {total_fetched} citation(s) for {doi}')
+    if results:
+        print(f'  [S2] {len(results)} new citation(s) in window for {doi}')
     return results
 
 
-# ── Strategy 2: OpenCitations
+# ── OpenCitations ─────────────────────────────────────────────────────────────
 
-def fetch_opencitations(paper: dict) -> list:
-    """Query OpenCitations COCI for confirmed citations of a DOI."""
+def fetch_opencitations(paper: dict, since: datetime) -> list:
+    """Get citations from OpenCitations that fall within the scan window."""
     results = []
     doi = paper.get('doi', '')
     if not doi:
         return results
-    url = f'https://opencitations.net/index/coci/api/v1/citations/{doi}'
     try:
-        r = session.get(url, timeout=20, headers={'Accept': 'application/json'})
+        r = session.get(
+            f'https://opencitations.net/index/coci/api/v1/citations/{doi}',
+            timeout=20, headers={'Accept': 'application/json'}
+        )
         if r.status_code != 200:
             return results
-        citations = r.json()
-        print(f'  [OpenCitations] {len(citations)} citation(s) found for {doi}')
-        for cit in citations:
+        for cit in r.json():
+            creation = cit.get('creation', '')
+            if not _in_window(creation, since):
+                continue
             citing_doi = cit.get('citing', '')
             if not citing_doi:
                 continue
-            # Fetch metadata for the citing paper
-            meta_url = f'https://api.crossref.org/works/{citing_doi}?select=DOI,title,author,container-title,issued,created'
             try:
-                meta = session.get(meta_url, timeout=15).json().get('message', {})
-                entry = _make_entry(meta, paper, 'OpenCitations')
-                results.append(entry)
-                print(f'    -> {entry["title"][:70]}')
-            except Exception as e:
-                print(f'    Metadata fetch error for {citing_doi}: {e}')
-                # Still add a minimal entry
+                meta = session.get(
+                    f'https://api.crossref.org/works/{citing_doi}',
+                    timeout=15
+                ).json().get('message', {})
+                if not isinstance(meta, dict):
+                    continue
+                authors = meta.get('author', [])
+                first = (f"{authors[0].get('given','')} {authors[0].get('family','')}".strip()
+                         if authors else 'N/A')
+                corr  = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
+                         if len(authors) > 1 else first)
+                date_parts = (meta.get('issued') or meta.get('created') or {}).get('date-parts', [['']])
+                pub = '-'.join(str(x) for x in (date_parts[0] if date_parts else [])) or creation[:4]
                 results.append({
-                    'id': citing_doi,
-                    'title': citing_doi,
-                    'url': f'https://doi.org/{citing_doi}',
-                    'first_author': 'N/A', 'corr_author': 'N/A', 'affiliation': 'N/A',
-                    'abs_zh': f'This paper cited: {paper["title"]}',
-                    'source': 'Unknown', 'published': cit.get('creation', '')[:4],
-                    'cited_paper': paper['title'], '_source_tag': 'OpenCitations',
+                    'id':           citing_doi,
+                    'title':        (meta.get('title') or ['No Title'])[0],
+                    'url':          f'https://doi.org/{citing_doi}',
+                    'first_author': first,
+                    'corr_author':  corr,
+                    'affiliation':  'N/A',
+                    'abs_zh':       f'This paper cited: {paper["title"]}',
+                    'source':       (meta.get('container-title') or ['Unknown'])[0],
+                    'published':    pub,
+                    'cited_paper':  paper['title'],
                 })
+                print(f'  [OC] {(meta.get("title") or [""])[0][:65]}')
+            except Exception:
+                pass
     except Exception as e:
-        print(f'  [OpenCitations] Error: {e}')
+        print(f'  [OC] Error for {doi}: {e}')
     return results
 
 
-# ── Strategy 3: Crossref journal scan ───────────────────────────────────────
+# ── Crossref journal scan (fallback) ─────────────────────────────────────────
 
-def fetch_crossref_scan(paper: dict, since: str) -> list:
+def _ref_matches(ref: dict, paper: dict) -> bool:
+    text = (ref.get('DOI', '') + ' ' +
+            ref.get('unstructured', '') + ' ' +
+            ref.get('article-title', '')).lower()
+    return any(fp.lower() in text for fp in paper['fingerprints'])
+
+
+def _crossref_entry(item: dict, paper: dict) -> dict:
+    authors = item.get('author', [])
+    first = (f"{authors[0].get('given','')} {authors[0].get('family','')}".strip()
+             if authors else 'N/A')
+    corr  = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
+             if len(authors) > 1 else first)
+    doi = item.get('DOI', '')
+    dp  = (item.get('issued') or item.get('created') or {}).get('date-parts', [['']])
+    pub = '-'.join(str(x) for x in (dp[0] if dp else [])) or ''
+    return {
+        'id':           doi,
+        'title':        (item.get('title') or ['No Title'])[0],
+        'url':          f'https://doi.org/{doi}' if doi else '',
+        'first_author': first,
+        'corr_author':  corr,
+        'affiliation':  (authors[0].get('affiliation', [{}])[0].get('name', 'N/A')
+                         if authors and authors[0].get('affiliation') else 'N/A'),
+        'abs_zh':       f'This paper cited: {paper["title"]}',
+        'source':       (item.get('container-title') or ['Unknown'])[0],
+        'published':    pub,
+        'cited_paper':  paper['title'],
+    }
+
+
+def fetch_crossref_scan(paper: dict, since_str: str) -> list:
     """
-    Scan recently deposited papers from key seismology journals and check
-    each paper's reference list for fingerprints of our paper.
-    Uses cursor-based pagination to get up to 500 papers per journal.
+    Scan recently indexed papers in key journals and check reference lists.
+    Only used as fallback when S2 and OC return nothing.
     """
     results = []
-    doi = paper.get('doi', '')
+    own_doi = paper.get('doi', '').lower()
 
     for journal in SEISMO_JOURNALS:
-        j_encoded = urllib.parse.quote(journal)
-        base_url = (
-            f'https://api.crossref.org/works'
-            f'?filter=container-title:{j_encoded},type:journal-article,from-index-date:{since}'
-            f'&select=DOI,title,author,container-title,issued,created,reference'
-            f'&rows=100&cursor=*'
-        )
+        j_enc  = urllib.parse.quote(journal)
         cursor = '*'
-        page = 0
-        max_pages = 5  # up to 500 papers per journal
-
-        while page < max_pages:
-            url = (
-                f'https://api.crossref.org/works'
-                f'?filter=container-title:{j_encoded},type:journal-article,from-index-date:{since}'
-                f'&select=DOI,title,author,container-title,issued,created,reference'
-                f'&rows=100&cursor={urllib.parse.quote(cursor)}'
-            )
+        pages  = 0
+        while pages < 3:  # max 300 papers per journal
+            url = (f'https://api.crossref.org/works'
+                   f'?filter=container-title:{j_enc},type:journal-article,from-index-date:{since_str}'
+                   f'&select=DOI,title,author,container-title,issued,created,reference'
+                   f'&rows=100&cursor={urllib.parse.quote(cursor)}')
             try:
                 resp = session.get(url, timeout=30)
-                data = resp.json().get('message', {})
-                items = data.get('items', [])
-                next_cursor = data.get('next-cursor', '')
-
+                msg  = resp.json().get('message', {})
+                items = msg.get('items', [])
                 for item in items:
-                    item_doi = item.get('DOI', '')
-                    if doi and item_doi.lower() == doi.lower():
+                    if item.get('DOI', '').lower() == own_doi:
                         continue
-                    references = item.get('reference', [])
-                    if references and any(_ref_matches(ref, paper) for ref in references):
-                        entry = _make_entry(item, paper, 'Crossref')
-                        results.append(entry)
-                        print(f'    [Crossref/{journal}] {entry["title"][:70]}')
-
+                    refs = item.get('reference', [])
+                    if refs and any(_ref_matches(ref, paper) for ref in refs):
+                        e = _crossref_entry(item, paper)
+                        results.append(e)
+                        print(f'  [Crossref] {e["title"][:65]}')
+                next_cursor = msg.get('next-cursor', '')
                 if not items or not next_cursor or next_cursor == cursor:
                     break
                 cursor = next_cursor
-                page += 1
+                pages += 1
                 time.sleep(0.5)
-
             except Exception as e:
                 print(f'  [Crossref] Error scanning {journal}: {e}')
                 break
-
-    return results
-
-
-# ── Strategy 4: scholarly (Google Scholar) ───────────────────────────────────
-
-def fetch_scholarly(paper: dict) -> list:
-    """Fallback: Google Scholar 'Cited by' via scholarly library."""
-    results = []
-    try:
-        from scholarly import scholarly as sch
-        pubs = sch.search_pubs(paper['title'])
-        pub = next(pubs, None)
-        if not pub:
-            print(f'  [scholarly] Not found on Google Scholar: {paper["title"][:50]}')
-            return results
-        sch.fill(pub)
-        print(f'  [scholarly] Scanning citedby...')
-        for citer in sch.citedby(pub):
-            try:
-                bib = citer.get('bib', {})
-                authors_raw = bib.get('author', 'N/A')
-                first_author = authors_raw.split(' and ')[0].strip() if authors_raw != 'N/A' else 'N/A'
-                results.append({
-                    'id': citer.get('author_pub_id', '') or bib.get('title', '')[:40],
-                    'title': bib.get('title', 'No Title'),
-                    'url': citer.get('pub_url', ''),
-                    'first_author': first_author,
-                    'corr_author': 'N/A',
-                    'affiliation': 'N/A',
-                    'abs_zh': f'This paper cited: {paper["title"]}',
-                    'source': bib.get('venue', 'Unknown'),
-                    'published': str(bib.get('pub_year', '')),
-                    'cited_paper': paper['title'],
-                    '_source_tag': 'scholarly',
-                })
-                print(f'    [scholarly] {bib.get("title", "")[:70]}')
-            except Exception:
-                continue
-    except ImportError:
-        print('  [scholarly] Library not installed, skipping.')
-    except Exception as e:
-        print(f'  [scholarly] Error: {e}')
     return results
 
 
 # ── main ─────────────────────────────────────────────────────────────────────
 
 def fetch_citing_papers():
-    now = datetime.now()
-    since = (now - timedelta(days=SCAN_DAYS)).strftime('%Y-%m-%d')
+    now       = datetime.now()
+    since_dt  = now - timedelta(days=SCAN_DAYS)
+    since_str = since_dt.strftime('%Y-%m-%d')
     all_results = []
 
-    for paper in MY_PAPERS:
-        print(f'\n=== Citations for: {paper["title"][:65]}...')
+    print(f'Scanning for citations published since {since_str}\n')
 
-        # 1. Semantic Scholar — fastest, most up-to-date citation index
-        r1 = fetch_semantic_scholar(paper)
+    for paper in MY_PAPERS:
+        print(f'--- {paper["title"][:70]}')
+
+        # 1. Semantic Scholar — primary (fastest, most comprehensive)
+        r1 = fetch_semantic_scholar(paper, since_dt)
         all_results.extend(r1)
         time.sleep(1)
 
-        # 2. OpenCitations — confirmed citation graph (may lag weeks)
-        r2 = fetch_opencitations(paper)
-        all_results.extend(r2)
+        # 2. OpenCitations — supplement (confirmed citation graph)
+        r2 = fetch_opencitations(paper, since_dt)
+        # Add only if not already found by S2
+        s2_ids = {x['id'].lower() for x in r1}
+        for x in r2:
+            if x['id'].lower() not in s2_ids:
+                all_results.append(x)
         time.sleep(0.5)
 
-        # 3. Crossref journal scan — catches papers not yet in S2/OC
-        #    Only run this for papers where S2 returned 0 results
-        if not r1:
-            print(f'  [Crossref] S2 had no results, scanning journals since {since}...')
-            r3 = fetch_crossref_scan(paper, since)
+        # 3. Crossref scan — fallback only when both S2 and OC are empty
+        if not r1 and not r2:
+            r3 = fetch_crossref_scan(paper, since_str)
             all_results.extend(r3)
             time.sleep(0.5)
 
-        # 4. scholarly — slowest, skip unless specifically needed
-        # (disabled by default to avoid rate limiting in CI)
-
-    # Deduplicate by id (lowercased)
-    seen = set()
-    unique = []
+    # Deduplicate by id
+    seen, unique = set(), []
     for r in all_results:
         key = (r.get('id') or r.get('title', '')[:60]).lower()
         if key and key not in seen:
             seen.add(key)
-            r.pop('_source_tag', None)
             unique.append(r)
 
     # Sort newest first
     unique.sort(key=lambda x: x.get('published', ''), reverse=True)
 
-    print(f'\nTotal unique citing papers found: {len(unique)}')
+    print(f'\nDone. {len(unique)} unique citing paper(s) in the past {SCAN_DAYS} days.')
     save_results(unique, now)
 
 
@@ -595,8 +546,9 @@ def save_results(papers, now):
             'topic_name': '文章引用',
             'papers': papers,
         }, f, ensure_ascii=False, indent=2)
-    print(f'Saved {len(papers)} entries to {OUTPUT_FILE}')
+    print(f'Saved to {OUTPUT_FILE}')
 
 
 if __name__ == '__main__':
     fetch_citing_papers()
+
