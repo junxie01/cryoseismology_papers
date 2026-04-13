@@ -37,26 +37,206 @@ OUTPUT_FILE = 'data_citations.json'
 # Add all your papers here.  fingerprints = distinctive text snippets that
 # appear literally in citation records (journal article ID, short title, etc.)
 MY_PAPERS = [
+    # ── 2010 ──────────────────────────────────────────────────────────────
     {
-        'title': (
-            'Generation mechanism of the 26 s and 28 s tremors in the Gulf of Guinea '
-            'from statistical analysis of magnitudes and event intervals'
-        ),
+        'title': 'The M5.0 Suining-Tongnan (China) earthquake of 31 January 2010: A destructive earthquake occurring in sedimentary cover',
+        'doi': '10.1007/s11434-010-4276-2',
+        'fingerprints': ['10.1007/s11434-010-4276-2', 's11434-010-4276', 'Suining-Tongnan'],
+    },
+    {
+        'title': 'Comparison of ground truth location of earthquake from InSAR and from ambient seismic noise: A case study of the 1998 Zhangbei earthquake',
+        'doi': '10.1007/s11589-010-0788-5',
+        'fingerprints': ['10.1007/s11589-010-0788-5', 's11589-010-0788', 'Zhangbei earthquake'],
+    },
+    {
+        'title': 'Effects of sedimentary layer on earthquake source modelling from geodetic inversion',
+        'doi': '10.1007/s11589-010-0786-7',
+        'fingerprints': ['10.1007/s11589-010-0786-7', 's11589-010-0786'],
+    },
+    # ── 2014 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Validating Accuracy of Rayleigh Wave Dispersion Extracted from Ambient Seismic Noise via Comparison with Data from a Ground-Truth Earthquake',
+        'doi': '10.1785/0120130279',
+        'fingerprints': ['10.1785/0120130279', '0120130279'],
+    },
+    {
+        'title': 'Ground Truth Location of Earthquakes by Use of Ambient Seismic Noise From a Sparse Seismic Network: A Case Study in Western Australia',
+        'doi': '10.1007/s00024-014-0993-6',
+        'fingerprints': ['10.1007/s00024-014-0993-6', 's00024-014-0993', 'Western Australia'],
+    },
+    # ── 2015 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Synchronizing Intercontinental Seismic Networks Using the 26 s Persistent Localized Microseismic Source',
+        'doi': '10.1785/0120140252',
+        'fingerprints': ['10.1785/0120140252', '0120140252', '26 s persistent localized microseismic'],
+    },
+    {
+        'title': 'Measurement of Rayleigh wave ellipticity and its application to the joint inversion of high-resolution S-wave velocity structure beneath northeast China',
+        'doi': '10.1002/2015jb012459',
+        'fingerprints': ['10.1002/2015jb012459', '2015jb012459'],
+    },
+    # ── 2016 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'On the accuracy of long-period Rayleigh waves extracted from ambient noise',
+        'doi': '10.1093/gji/ggw137',
+        'fingerprints': ['10.1093/gji/ggw137', 'gji/ggw137'],
+    },
+    {
+        'title': 'An investigation of time-frequency domain phase-weighted stacking and its application to phase-velocity extraction from ambient noise empirical Green\'s functions',
+        'doi': '10.1093/gji/ggx448',
+        'fingerprints': ['10.1093/gji/ggx448', 'gji/ggx448', 'phase-weighted stacking'],
+    },
+    # ── 2017 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Broad-band Rayleigh wave phase velocity maps (10-150 s) across the United States from ambient noise data',
+        'doi': '10.1093/gji/ggw460',
+        'fingerprints': ['10.1093/gji/ggw460', 'gji/ggw460'],
+    },
+    # ── 2018 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Assessing the short-term clock drift of early broadband stations with burst events of the 26 s persistent and localized microseism',
+        'doi': '10.1093/gji/ggx401',
+        'fingerprints': ['10.1093/gji/ggx401', 'gji/ggx401', 'clock drift', '26 s persistent'],
+    },
+    {
+        'title': 'Nonlinear inversion of resistivity sounding data for 1-D earth models using the Neighbourhood Algorithm',
+        'doi': '10.1016/j.jafrearsci.2017.09.003',
+        'fingerprints': ['10.1016/j.jafrearsci.2017.09.003', 'jafrearsci.2017.09.003'],
+    },
+    {
+        'title': 'Crust-mantle coupling mechanism in Cameroon, West Africa, revealed by 3D S-wave velocity and azimuthal anisotropy',
+        'doi': '10.1016/j.pepi.2017.12.006',
+        'fingerprints': ['10.1016/j.pepi.2017.12.006', 'pepi.2017.12.006', 'Cameroon'],
+    },
+    {
+        'title': '3D upper-mantle shear velocity model beneath the contiguous United States based on broadband surface wave from ambient seismic noise',
+        'doi': '10.1007/s00024-018-1881-2',
+        'fingerprints': ['10.1007/s00024-018-1881-2', 's00024-018-1881'],
+    },
+    # ── 2019 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Imaging 3D upper-mantle structure with autocorrelation of seismic noise recorded on a transportable single station',
+        'doi': '10.1785/0220180260',
+        'fingerprints': ['10.1785/0220180260', '0220180260'],
+    },
+    {
+        'title': 'Further constraints on the shear wave velocity structure of Cameroon from joint inversion of receiver function, Rayleigh wave dispersion and ellipticity measurements',
+        'doi': '10.1093/gji/ggz008',
+        'fingerprints': ['10.1093/gji/ggz008', 'gji/ggz008'],
+    },
+    {
+        'title': 'Millimeter-level ultra-long period multiple Earth-circling surface waves retrieved from dense high-rate GPS network',
+        'doi': '10.1016/j.epsl.2019.07.007',
+        'fingerprints': ['10.1016/j.epsl.2019.07.007', 'epsl.2019.07.007', 'earth-circling surface waves'],
+    },
+    # ── 2020 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Enhancing Signal-to-Noise Ratios of High-Frequency Rayleigh Waves Extracted from Ambient Seismic Noises in Topographic Region',
+        'doi': '10.1785/0120190177',
+        'fingerprints': ['10.1785/0120190177', '0120190177'],
+    },
+    {
+        'title': 'Relocation of the June 17th, 2017 Nuugaatsiaq (Greenland) landslide based on Green\'s functions from ambient seismic noise',
+        'doi': '10.1029/2019jb018947',
+        'fingerprints': ['10.1029/2019jb018947', '2019jb018947', 'Nuugaatsiaq'],
+    },
+    {
+        'title': 'Validity of Resolving the 785 km Discontinuity in the Lower Mantle with P\'P\' Precursors',
+        'doi': '10.1785/0220200210',
+        'fingerprints': ['10.1785/0220200210', '0220200210', '785 km discontinuity'],
+    },
+    {
+        'title': 'Coseismic Slip Distribution of the 24 January 2020 Mw 6.7 Doganyol Earthquake and in Relation to the Foreshock and Aftershock Activities',
+        'doi': '10.1785/0220200152',
+        'fingerprints': ['10.1785/0220200152', '0220200152', 'Doganyol'],
+    },
+    {
+        'title': 'Crust and upper mantle structure of the South China Sea and adjacent areas from the joint inversion of ambient noise and earthquake surface wave dispersions',
+        'doi': '10.1029/2020gc009356',
+        'fingerprints': ['10.1029/2020gc009356', '2020gc009356'],
+    },
+    # ── 2021 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Evaluating global tomography models with antipodal ambient noise cross correlation functions',
+        'doi': '10.1029/2020jb020444',
+        'fingerprints': ['10.1029/2020jb020444', '2020jb020444', 'antipodal ambient noise'],
+    },
+    {
+        'title': 'Sedimentary structure of the Sichuan Basin derived from seismic ambient noise tomography',
+        'doi': '10.1093/gji/ggaa578',
+        'fingerprints': ['10.1093/gji/ggaa578', 'gji/ggaa578', 'Sichuan Basin'],
+    },
+    {
+        'title': 'Sensing shallow structure and traffic noise with fiber-optic internet cables in an urban area',
+        'doi': '10.1007/s10712-021-09678-w',
+        'fingerprints': ['10.1007/s10712-021-09678-w', 's10712-021-09678', 'fiber-optic internet cables'],
+    },
+    # ── 2022 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Generation mechanism of the 26 s and 28 s tremors in the Gulf of Guinea from statistical analysis of magnitudes and event intervals',
         'doi': '10.1016/j.epsl.2021.117334',
         'fingerprints': [
-            '10.1016/j.epsl.2021.117334',   # DOI string
-            'j.epsl.2021.117334',            # shorter DOI form
+            '10.1016/j.epsl.2021.117334',
+            'j.epsl.2021.117334',
             '26 s and 28 s tremors in the gulf',
             '26 s and 28 s tremors of the gulf',
             'epsl.2021.117334',
         ],
     },
-    # ── add more papers here ──────────────────────────────────────────────
-    # {
-    #     'title': 'Your next paper title',
-    #     'doi': '10.xxxx/xxxxxxx',
-    #     'fingerprints': ['10.xxxx/xxxxxxx', 'short distinctive phrase'],
-    # },
+    {
+        'title': 'ADE-Net: A deep neural network for DAS earthquake detection trained with a limited number of positive samples',
+        'doi': '10.1109/tgrs.2022.3143120',
+        'fingerprints': ['10.1109/tgrs.2022.3143120', 'tgrs.2022.3143120', 'ADE-Net'],
+    },
+    {
+        'title': 'Crustal structure in the Weiyuan shale gas field, China, and its tectonic implications',
+        'doi': '10.1016/j.tecto.2022.229449',
+        'fingerprints': ['10.1016/j.tecto.2022.229449', 'tecto.2022.229449', 'Weiyuan'],
+    },
+    # ── 2023 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Seismometer orientation correction via teleseismic receiver function measurements in West Africa and adjacent Islands',
+        'doi': '10.1785/0220220316',
+        'fingerprints': ['10.1785/0220220316', '0220220316'],
+    },
+    {
+        'title': 'Topography effect on ambient noise tomography: a case study for the Longmen Shan area, eastern Tibetan Plateau',
+        'doi': '10.1093/gji/ggac435',
+        'fingerprints': ['10.1093/gji/ggac435', 'gji/ggac435', 'Longmen Shan'],
+    },
+    # ── 2024 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Ice plate deformation and cracking revealed by an in situ-distributed acoustic sensing array',
+        'doi': '10.5194/tc-18-837-2024',
+        'fingerprints': ['10.5194/tc-18-837-2024', 'tc-18-837', 'ice plate deformation'],
+    },
+    {
+        'title': 'Near real-time in situ monitoring of nearshore ocean currents using distributed acoustic sensing on submarine fiber-optic cable',
+        'doi': '10.1029/2024ea003572',
+        'fingerprints': ['10.1029/2024ea003572', '2024ea003572', 'nearshore ocean currents'],
+    },
+    # ── 2025 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Seismotectonics of Ghana and adjacent regions in western Africa: a review',
+        'doi': '10.1016/j.eqrea.2025.100442',
+        'fingerprints': ['10.1016/j.eqrea.2025.100442', 'eqrea.2025.100442', 'Ghana'],
+    },
+    {
+        'title': 'Complex seismogenic fault system for the 2022 Ms6.0 Maerkang (China) earthquake sequence resolved with reliable seismic source parameters',
+        'doi': '10.1016/j.tecto.2025.230718',
+        'fingerprints': ['10.1016/j.tecto.2025.230718', 'tecto.2025.230718', 'Maerkang'],
+    },
+    {
+        'title': 'High resolution shallow structure of Ebao basin revealed with DAS ambient noise tomography and its relation to earthquake ground motion',
+        'doi': '10.1029/2024jb029874',
+        'fingerprints': ['10.1029/2024jb029874', '2024jb029874', 'Ebao basin'],
+    },
+    # ── 2026 ──────────────────────────────────────────────────────────────
+    {
+        'title': 'Fault Intersections Control the Extremely Shallow 2020 Mw 5.1 Sparta, North Carolina, Earthquake Sequence',
+        'doi': '10.1785/0220250313',
+        'fingerprints': ['10.1785/0220250313', '0220250313', 'Sparta', 'North Carolina'],
+    },
 ]
 
 # ── manually known citing papers ─────────────────────────────────────────────
