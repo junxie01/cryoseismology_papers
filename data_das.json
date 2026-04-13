@@ -1,7 +1,62 @@
 {
-  "last_update": "2026-04-06 至 2026-04-13 01:10",
+  "last_update": "2026-04-06 至 2026-04-13 02:42",
   "topic_name": "分布式光纤传感",
   "papers": [
+    {
+      "id": "2604.09423v1",
+      "title": "Offline Local Search for Online Stochastic Bandits",
+      "url": "http://arxiv.org/abs/2604.09423v1",
+      "first_author": "Gerdus Benadè",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "组合多臂老虎机提供了一个基本的在线决策环境，决策者在 $T$ 时间步长内与环境进行交互，每次选择一个操作并了解该操作的成本。目标是最大限度地减少后悔，后悔的定义是在充分信息下事后看来与最佳固定行动相比的损失。人们对在这种在线环境中利用离线算法设计的已知知识产生了浓厚的兴趣。离线贪婪和线性优化算法（精确和近似）已被证明在在线部署时可以提供有用的保证。我们研究局部搜索方法，这是在理论和实践中广泛使用的一类算法，迄今为止在这方面尚未得到充分探索。我们关注离线局部搜索在近似最优解中终止的问题，并给出一种通用方法，将这种离线算法转换为具有 $O(\\log^3 T)$ （近似）遗憾的在线随机组合老虎机算法。相比之下，现有的离线到在线框架会产生遗憾（和近似遗憾），它次线性地但多项式地依赖于 $T$。我们通过将框架应用于三个在线随机组合优化问题来展示框架的灵活性：调度以最小化总完成时间、找到拟阵的最小成本基础和不确定聚类。",
+      "source": "arXiv",
+      "published": "2026-04-10"
+    },
+    {
+      "id": "2604.09358v1",
+      "title": "Drift-Aware Online Dynamic Learning for Nonstationary Multivariate Time Series: Application to Sintering Quality Prediction",
+      "url": "http://arxiv.org/abs/2604.09358v1",
+      "first_author": "Yumeng Zhao",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "非平稳多元时间序列的准确预测仍然是铁矿石烧结等复杂工业系统中的关键挑战。在实践中，明显的概念漂移加上显着的标签验证延迟会迅速降低离线训练模型的性能。基于静态架构或被动更新策略的现有方法很难在没有立即监督的情况下同时提取多尺度时空特征并克服稳定性-可塑性困境。为了解决这些限制，提出了一种漂移感知多尺度动态学习（DA-MSDL）框架，通过非平稳数据流的在线自适应机制来保持鲁棒的多输出预测性能。该框架采用多尺度双分支卷积网络作为骨干，将局部波动与长期趋势分开，从而增强复杂动态模式的表示能力。为了规避标签延迟瓶颈，DA-MSDL 利用最大平均差异 (MMD) 进行无监督漂移检测。通过量化特征分布的在线统计偏差，DA-MSDL 在推理之前主动触发模型适应。此外，还开发了一种漂移严重性引导的分层微调策略。在动态内存队列的优先经验重播的支持下，这种方法实现了快速分布对齐，同时有效地减轻了灾难性遗忘。对现实世界工业烧结数据和公共基准数据集的长期实验表明，在严重的概念漂移下，DA-MSDL 始终优于代表性基线。所提出的框架表现出强大的跨域泛化性和预测稳定性，为非平稳环境中的质量监控提供了有效的在线动态学习范例。",
+      "source": "arXiv",
+      "published": "2026-04-10"
+    },
+    {
+      "id": "2604.09336v1",
+      "title": "Hierarchical Flow Decomposition for Turning Movement Prediction at Signalized Intersections",
+      "url": "http://arxiv.org/abs/2604.09336v1",
+      "first_author": "Md Atiqur Rahman Mallick",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "准确预测交叉口转弯运动对于自适应信号控制至关重要，但由于方向流的高波动性，仍然很困难。本研究提出了 HFD-TM（转弯运动预测的分层流分解），这是一种分层深度学习框架，它通过首先预测走廊穿过运动，然后将这些预测扩展到各个转弯流来预测转弯运动。该设计受到经验交通结构的启发，其中走廊流量占总流量的 65.1%，表现出比转弯运动更低的波动性，并解释了 35.5% 的转弯运动方差。基于物理的损失函数强制流量守恒以保持结构的一致性。对田纳西州纳什维尔六个交叉口走廊的六个月间隔 15 分钟的 LiDAR（光探测和测距）数据进行评估，HFD-TM 的平均绝对误差为每个间隔 2.49 辆车，与 Transformer 相比，MAE 降低了 5.7%，与 GRU（门控循环单元）相比，MAE 降低了 27.0%。消融结果表明，分层分解提供了最大的性能增益，而训练时间比 DCRNN（扩散卷积循环神经网络）低 12.8 倍，证明了对实时流量应用的适用性。",
+      "source": "arXiv",
+      "published": "2026-04-10"
+    },
+    {
+      "id": "2604.09223v1",
+      "title": "Favorable half-Heusler structure of synthesized TiCoSb alloy: a theoretical and experimental study",
+      "url": "http://arxiv.org/abs/2604.09223v1",
+      "first_author": "Pallabi Sardar",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "从理论上和实验上探索了合成的 TiCoSb half-Heusler 合金的最有利结构，并报道了热电转换的最佳结构。采用 HH 合金的四种可能结构对 X 射线衍射数据进行 Rietveld 精修，以获得最佳拟合并识别结晶结构。然而，使用能量色散 X 射线光谱和透射电子显微镜进行微观结构表征，揭示了合成的 TiCoSb HH 合金多晶晶格结构的化学计量和布拉格反射面。理论研究是通过使用 Quantum Espresso 软件包中的全势线性化增强平面波方法实施第一原理计算来进行的。通过估计所考虑的四种可能结构的 TiCoSb half-Heusler 合金的平衡体积和电子结构的最小能量来探索最可能的结构。理论和实验数据得到证实，并确定了结晶 TiCoSb HH 合金最可能的结构。估计最可能的结构的热电特性。",
+      "source": "arXiv",
+      "published": "2026-04-10"
+    },
+    {
+      "id": "2604.09051v1",
+      "title": "Fine-Grained Action Segmentation for Renorrhaphy in Robot-Assisted Partial Nephrectomy",
+      "url": "http://arxiv.org/abs/2604.09051v1",
+      "first_author": "Jiaheng Dai",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "机器人辅助肾部分切除术中肾修补过程中的细粒度动作分割需要对视觉上相似的缝合手势进行帧级识别，这些缝合手势具有可变的持续时间和严重的类别不平衡。 SIA-RAPN 基准在使用 da Vinci Xi 系统采集的 50 个临床视频上定义了这个问题，并用 12 个帧级标签进行了注释。该基准测试比较了基于 I3D 功能构建的四种时间模型：MS-TCN++、AsFormer、TUT 和 DiffAct。评估使用平衡准确度、编辑得分、重叠阈值 10、25 和 50 处的分段 F1、逐帧准确度和逐帧平均准确度。除了对 SIA-RAPN 上五个已发布的拆分配置进行主要评估之外，该基准测试还报告了单独的单端口 RAPN 数据集上的跨域结果。在主要数据集上的这五次运行中的最强报告值中，DiffAct 实现了最高的 F1、逐帧准确度、编辑得分和帧 mAP，而 MS-TCN++ 获得了最高的平衡准确度。",
+      "source": "arXiv",
+      "published": "2026-04-10"
+    },
     {
       "id": "10.1029/2025gl120111",
       "title": "Characterization of Near‐Surface Velocity Structure at Haast, New Zealand, Using Distributed Acoustic Sensing (DAS) Measurements of Seismicity",
@@ -42,7 +97,7 @@
       "first_author": "Ettore Biondi",
       "corr_author": "Allen L. Husker",
       "affiliation": "1California Institute of Technology, Seismological Laboratory, Pasadena, California, U.S.A.",
-      "abs_zh": "我们引入了一个模块化软件框架，旨在将分布式声学传感（DAS）数据集成到可操作的地震监测系统中。我们的解决方案以先进国家地震系统 (ANSS) 和南加州地震网络的基础设施为基础，采用 ANSS 地震监测软件 (AQMS)，支持实时 DAS 波形流和基于机器学习的走时拾取，以利用 DAS 阵列的密集空间采样。为了实现与 AQMS 的无缝兼容，我们的方法使用标准化地震数据格式来合并预定的 DAS 通道。我们演示了部署在加利福尼亚州里奇克莱斯特的 100 公里长 DAS 阵列的数据集成，并提供了软件组件和部署策略的详细描述。这项工作代表了将 DAS 纳入常规地震监测中的一步，并为使用光纤网络进行实时灾害评估开辟了新的可能性。",
+      "abs_zh": "我们引入了一个模块化软件框架，旨在将分布式声学传感（DAS）数据集成到可操作的地震监测系统中。我们的解决方案以先进国家地震系统 (ANSS) 和南加州地震台网的基础设施为基础，采用 ANSS 地震监测软件 (AQMS)，支持实时 DAS 波形流和基于机器学习的走时选取，以利用 DAS 阵列的密集空间采样。为了实现与 AQMS 的无缝兼容，我们的方法使用标准化地震数据格式来合并预定的 DAS 通道。我们演示了部署在加利福尼亚州里奇克莱斯特的 100 公里长 DAS 阵列的数据集成，并提供了软件组件和部署策略的详细描述。这项工作代表了将 DAS 纳入常规地震监测中的一步，并为使用光纤网络进行实时灾害评估开辟了新的可能性。",
       "source": "Seismological Research Letters",
       "published": "2026"
     },
@@ -108,7 +163,7 @@
       "first_author": "Youngmin Sim",
       "corr_author": "Kyeongha Kwon",
       "affiliation": "School of Electrical Engineering, Korea Advanced Institute of Science and Technology, Daejeon, Republic of Korea.",
-      "abs_zh": "血流监测对于评估心血管健康和识别血管并发症至关重要。传统的多普勒超声方法需要笨重的设备和专业知识，而最近的热传感方法由于皮肤下血管深度的变化而面临限制。我们提出了一个软电子平台，它将多层热传感与深度学习算法相结合，以同时测量血流量和血管深度。该设备使用带有热传感模块的无线系统，在不同的层中战略性地放置热敏电阻，以捕获距离皮肤表面不同高度的热梯度。深度学习处理多层热模式以实时提取这两个参数。通过台式测试、有限元分析和人体试验进行的验证证明了相关流速和容器深度的准确测量。与传统方法相比，与光电体积描记法的集成提高了连续血压监测的准确性，特别是在动态生理变化期间。该技术为个性化心血管监测、血流动力学事件的早期检测和皮肤移植监测提供了潜力。",
+      "abs_zh": "血流监测对于评估心血管健康和识别血管并发症至关重要。传统的多普勒超声方法需要笨重的设备和专业知识，而最近的热传感方法由于皮肤下血管深度的变化而面临限制。我们提出了一个软电子平台，它将多层热传感与深度学习算法相结合，以同时测量血流速率和血管深度。该设备使用带有热传感模块的无线系统，在不同的层中战略性地放置热敏电阻，以捕获距皮肤表面不同高度的热梯度。深度学习处理多层热模式以实时提取这两个参数。通过台式测试、有限元分析和人体试验进行的验证证明了相关流速和容器深度的准确测量。与传统方法相比，与光电体积描记法的集成提高了连续血压监测的准确性，特别是在动态生理变化期间。该技术为个性化心血管监测、血流动力学事件的早期检测和皮肤移植监测提供了潜力。",
       "source": "Science Advances",
       "published": "2026"
     }
