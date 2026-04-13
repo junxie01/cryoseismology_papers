@@ -420,10 +420,30 @@ def fetch_opencitations(paper: dict, since: datetime) -> list:
 # ── Crossref journal scan (fallback) ─────────────────────────────────────────
 
 def _ref_matches(ref: dict, paper: dict) -> bool:
+    """
+    Check if a Crossref reference matches our paper.
+    Requires DOI match OR multiple specific fingerprints to avoid false positives.
+    """
     text = (ref.get('DOI', '') + ' ' +
             ref.get('unstructured', '') + ' ' +
             ref.get('article-title', '')).lower()
-    return any(fp.lower() in text for fp in paper['fingerprints'])
+    
+    doi = paper.get('doi', '').lower()
+    fps = [fp.lower() for fp in paper['fingerprints']]
+    
+    # If DOI matches, it's a definite citation
+    if doi and doi in text:
+        return True
+    
+    # Otherwise require at least 2 fingerprint matches (or 1 if it's a long specific phrase)
+    match_count = sum(1 for fp in fps if fp in text)
+    if match_count >= 2:
+        return True
+    # Single long fingerprint (>20 chars) is also acceptable
+    for fp in fps:
+        if len(fp) > 20 and fp in text:
+            return True
+    return False
 
 
 def _crossref_entry(item: dict, paper: dict) -> dict:
@@ -450,19 +470,21 @@ def _crossref_entry(item: dict, paper: dict) -> dict:
     }
 
 
-def fetch_crossref_scan(paper: dict, since_str: str) -> list:
+def fetch_crossref_scan(paper: dict, since_dt: datetime) -> list:
     """
     Scan recently indexed papers in key journals and check reference lists.
     Only used as fallback when S2 and OC return nothing.
+    Filters results by actual publication date (not index date).
     """
     results = []
     own_doi = paper.get('doi', '').lower()
+    since_str = since_dt.strftime('%Y-%m-%d')
 
     for journal in SEISMO_JOURNALS:
         j_enc  = urllib.parse.quote(journal)
         cursor = '*'
         pages  = 0
-        while pages < 3:  # max 300 papers per journal
+        while pages < 2:  # max 200 papers per journal
             url = (f'https://api.crossref.org/works'
                    f'?filter=container-title:{j_enc},type:journal-article,from-index-date:{since_str}'
                    f'&select=DOI,title,author,container-title,issued,created,reference'
@@ -473,6 +495,11 @@ def fetch_crossref_scan(paper: dict, since_str: str) -> list:
                 items = msg.get('items', [])
                 for item in items:
                     if item.get('DOI', '').lower() == own_doi:
+                        continue
+                    # Check publication date is within window
+                    dp = (item.get('issued') or item.get('created') or {}).get('date-parts', [[]])
+                    pub_str = '-'.join(str(x) for x in (dp[0] if dp and dp[0] else []))
+                    if not _in_window(pub_str, since_dt):
                         continue
                     refs = item.get('reference', [])
                     if refs and any(_ref_matches(ref, paper) for ref in refs):
@@ -520,13 +547,23 @@ def fetch_citing_papers():
 
         # 3. Crossref scan — fallback only when both S2 and OC are empty
         if not r1 and not r2:
-            r3 = fetch_crossref_scan(paper, since_str)
+            r3 = fetch_crossref_scan(paper, since_dt)
             all_results.extend(r3)
             time.sleep(0.5)
 
+    # Final filter: ensure all results are within the date window
+    # (protects against any API returning out-of-window results)
+    filtered = []
+    for r in all_results:
+        pub = r.get('published', '')
+        if _in_window(pub, since_dt):
+            filtered.append(r)
+        else:
+            print(f'  [FILTERED] Out of window: {pub} {r.get("title", "")[:50]}')
+
     # Deduplicate by id
     seen, unique = set(), []
-    for r in all_results:
+    for r in filtered:
         key = (r.get('id') or r.get('title', '')[:60]).lower()
         if key and key not in seen:
             seen.add(key)
