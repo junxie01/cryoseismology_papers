@@ -1,25 +1,32 @@
 #!/usr/bin/env python3
 """
-Fetch papers that cited the user's publications.
+Fetch papers that cited the user's publications and generate citation statistics with map data.
 
 Strategy (in order, results merged and deduplicated):
-  1. OpenCitations COCI API  — confirmed citation index (may lag ~weeks)
-  2. Crossref journal scan   — scan ALL recent papers from key seismo journals,
+  1. Fetch user's publication list from about page
+  2. OpenCitations COCI API  — confirmed citation index (may lag ~weeks)
+  3. Crossref journal scan   — scan ALL recent papers from key seismo journals,
                                check each reference list for our fingerprints
                                (catches papers immediately after deposit)
-  3. scholarly (fallback)    — Google Scholar "Cited by" list
+  4. Semantic Scholar (fallback) — Get full citation graph
+
+Features:
+  - Geocode author affiliations to lat/lon coordinates
+  - Track weekly vs total citations
+  - Generate map-ready JSON data
 """
 
 import json
 import os
 import time
+import re
 import urllib.parse
 import requests
 from datetime import datetime, timedelta
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+from bs4 import BeautifulSoup
 
-# ── proxy bypass ────────────────────────────────────────────────────────────
 os.environ['HTTP_PROXY'] = ''
 os.environ['HTTPS_PROXY'] = ''
 os.environ['http_proxy'] = ''
@@ -32,214 +39,8 @@ session.mount('https://', HTTPAdapter(max_retries=_retry))
 session.mount('http://', HTTPAdapter(max_retries=_retry))
 
 OUTPUT_FILE = 'data_citations.json'
-
-# ── your publications ────────────────────────────────────────────────────────
-# Add all your papers here.  fingerprints = distinctive text snippets that
-# appear literally in citation records (journal article ID, short title, etc.)
-MY_PAPERS = [
-    # ── 2010 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'The M5.0 Suining-Tongnan (China) earthquake of 31 January 2010: A destructive earthquake occurring in sedimentary cover',
-        'doi': '10.1007/s11434-010-4276-2',
-        'fingerprints': ['10.1007/s11434-010-4276-2', 's11434-010-4276', 'Suining-Tongnan'],
-    },
-    {
-        'title': 'Comparison of ground truth location of earthquake from InSAR and from ambient seismic noise: A case study of the 1998 Zhangbei earthquake',
-        'doi': '10.1007/s11589-010-0788-5',
-        'fingerprints': ['10.1007/s11589-010-0788-5', 's11589-010-0788', 'Zhangbei earthquake'],
-    },
-    {
-        'title': 'Effects of sedimentary layer on earthquake source modelling from geodetic inversion',
-        'doi': '10.1007/s11589-010-0786-7',
-        'fingerprints': ['10.1007/s11589-010-0786-7', 's11589-010-0786'],
-    },
-    # ── 2014 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Validating Accuracy of Rayleigh Wave Dispersion Extracted from Ambient Seismic Noise via Comparison with Data from a Ground-Truth Earthquake',
-        'doi': '10.1785/0120130279',
-        'fingerprints': ['10.1785/0120130279', '0120130279'],
-    },
-    {
-        'title': 'Ground Truth Location of Earthquakes by Use of Ambient Seismic Noise From a Sparse Seismic Network: A Case Study in Western Australia',
-        'doi': '10.1007/s00024-014-0993-6',
-        'fingerprints': ['10.1007/s00024-014-0993-6', 's00024-014-0993', 'Western Australia'],
-    },
-    # ── 2015 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Synchronizing Intercontinental Seismic Networks Using the 26 s Persistent Localized Microseismic Source',
-        'doi': '10.1785/0120140252',
-        'fingerprints': ['10.1785/0120140252', '0120140252', '26 s persistent localized microseismic'],
-    },
-    {
-        'title': 'Measurement of Rayleigh wave ellipticity and its application to the joint inversion of high-resolution S-wave velocity structure beneath northeast China',
-        'doi': '10.1002/2015jb012459',
-        'fingerprints': ['10.1002/2015jb012459', '2015jb012459'],
-    },
-    # ── 2016 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'On the accuracy of long-period Rayleigh waves extracted from ambient noise',
-        'doi': '10.1093/gji/ggw137',
-        'fingerprints': ['10.1093/gji/ggw137', 'gji/ggw137'],
-    },
-    {
-        'title': 'An investigation of time-frequency domain phase-weighted stacking and its application to phase-velocity extraction from ambient noise empirical Green\'s functions',
-        'doi': '10.1093/gji/ggx448',
-        'fingerprints': ['10.1093/gji/ggx448', 'gji/ggx448', 'phase-weighted stacking'],
-    },
-    # ── 2017 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Broad-band Rayleigh wave phase velocity maps (10-150 s) across the United States from ambient noise data',
-        'doi': '10.1093/gji/ggw460',
-        'fingerprints': ['10.1093/gji/ggw460', 'gji/ggw460'],
-    },
-    # ── 2018 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Assessing the short-term clock drift of early broadband stations with burst events of the 26 s persistent and localized microseism',
-        'doi': '10.1093/gji/ggx401',
-        'fingerprints': ['10.1093/gji/ggx401', 'gji/ggx401', 'clock drift', '26 s persistent'],
-    },
-    {
-        'title': 'Nonlinear inversion of resistivity sounding data for 1-D earth models using the Neighbourhood Algorithm',
-        'doi': '10.1016/j.jafrearsci.2017.09.003',
-        'fingerprints': ['10.1016/j.jafrearsci.2017.09.003', 'jafrearsci.2017.09.003'],
-    },
-    {
-        'title': 'Crust-mantle coupling mechanism in Cameroon, West Africa, revealed by 3D S-wave velocity and azimuthal anisotropy',
-        'doi': '10.1016/j.pepi.2017.12.006',
-        'fingerprints': ['10.1016/j.pepi.2017.12.006', 'pepi.2017.12.006', 'Cameroon'],
-    },
-    {
-        'title': '3D upper-mantle shear velocity model beneath the contiguous United States based on broadband surface wave from ambient seismic noise',
-        'doi': '10.1007/s00024-018-1881-2',
-        'fingerprints': ['10.1007/s00024-018-1881-2', 's00024-018-1881'],
-    },
-    # ── 2019 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Imaging 3D upper-mantle structure with autocorrelation of seismic noise recorded on a transportable single station',
-        'doi': '10.1785/0220180260',
-        'fingerprints': ['10.1785/0220180260', '0220180260'],
-    },
-    {
-        'title': 'Further constraints on the shear wave velocity structure of Cameroon from joint inversion of receiver function, Rayleigh wave dispersion and ellipticity measurements',
-        'doi': '10.1093/gji/ggz008',
-        'fingerprints': ['10.1093/gji/ggz008', 'gji/ggz008'],
-    },
-    {
-        'title': 'Millimeter-level ultra-long period multiple Earth-circling surface waves retrieved from dense high-rate GPS network',
-        'doi': '10.1016/j.epsl.2019.07.007',
-        'fingerprints': ['10.1016/j.epsl.2019.07.007', 'epsl.2019.07.007', 'earth-circling surface waves'],
-    },
-    # ── 2020 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Enhancing Signal-to-Noise Ratios of High-Frequency Rayleigh Waves Extracted from Ambient Seismic Noises in Topographic Region',
-        'doi': '10.1785/0120190177',
-        'fingerprints': ['10.1785/0120190177', '0120190177'],
-    },
-    {
-        'title': 'Relocation of the June 17th, 2017 Nuugaatsiaq (Greenland) landslide based on Green\'s functions from ambient seismic noise',
-        'doi': '10.1029/2019jb018947',
-        'fingerprints': ['10.1029/2019jb018947', '2019jb018947', 'Nuugaatsiaq'],
-    },
-    {
-        'title': 'Validity of Resolving the 785 km Discontinuity in the Lower Mantle with P\'P\' Precursors',
-        'doi': '10.1785/0220200210',
-        'fingerprints': ['10.1785/0220200210', '0220200210', '785 km discontinuity'],
-    },
-    {
-        'title': 'Coseismic Slip Distribution of the 24 January 2020 Mw 6.7 Doganyol Earthquake and in Relation to the Foreshock and Aftershock Activities',
-        'doi': '10.1785/0220200152',
-        'fingerprints': ['10.1785/0220200152', '0220200152', 'Doganyol'],
-    },
-    {
-        'title': 'Crust and upper mantle structure of the South China Sea and adjacent areas from the joint inversion of ambient noise and earthquake surface wave dispersions',
-        'doi': '10.1029/2020gc009356',
-        'fingerprints': ['10.1029/2020gc009356', '2020gc009356'],
-    },
-    # ── 2021 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Evaluating global tomography models with antipodal ambient noise cross correlation functions',
-        'doi': '10.1029/2020jb020444',
-        'fingerprints': ['10.1029/2020jb020444', '2020jb020444', 'antipodal ambient noise'],
-    },
-    {
-        'title': 'Sedimentary structure of the Sichuan Basin derived from seismic ambient noise tomography',
-        'doi': '10.1093/gji/ggaa578',
-        'fingerprints': ['10.1093/gji/ggaa578', 'gji/ggaa578', 'Sichuan Basin'],
-    },
-    {
-        'title': 'Sensing shallow structure and traffic noise with fiber-optic internet cables in an urban area',
-        'doi': '10.1007/s10712-021-09678-w',
-        'fingerprints': ['10.1007/s10712-021-09678-w', 's10712-021-09678', 'fiber-optic internet cables'],
-    },
-    # ── 2022 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Generation mechanism of the 26 s and 28 s tremors in the Gulf of Guinea from statistical analysis of magnitudes and event intervals',
-        'doi': '10.1016/j.epsl.2021.117334',
-        'fingerprints': [
-            '10.1016/j.epsl.2021.117334',
-            'j.epsl.2021.117334',
-            '26 s and 28 s tremors in the gulf',
-            '26 s and 28 s tremors of the gulf',
-            'epsl.2021.117334',
-        ],
-    },
-    {
-        'title': 'ADE-Net: A deep neural network for DAS earthquake detection trained with a limited number of positive samples',
-        'doi': '10.1109/tgrs.2022.3143120',
-        'fingerprints': ['10.1109/tgrs.2022.3143120', 'tgrs.2022.3143120', 'ADE-Net'],
-    },
-    {
-        'title': 'Crustal structure in the Weiyuan shale gas field, China, and its tectonic implications',
-        'doi': '10.1016/j.tecto.2022.229449',
-        'fingerprints': ['10.1016/j.tecto.2022.229449', 'tecto.2022.229449', 'Weiyuan'],
-    },
-    # ── 2023 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Seismometer orientation correction via teleseismic receiver function measurements in West Africa and adjacent Islands',
-        'doi': '10.1785/0220220316',
-        'fingerprints': ['10.1785/0220220316', '0220220316'],
-    },
-    {
-        'title': 'Topography effect on ambient noise tomography: a case study for the Longmen Shan area, eastern Tibetan Plateau',
-        'doi': '10.1093/gji/ggac435',
-        'fingerprints': ['10.1093/gji/ggac435', 'gji/ggac435', 'Longmen Shan'],
-    },
-    # ── 2024 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Ice plate deformation and cracking revealed by an in situ-distributed acoustic sensing array',
-        'doi': '10.5194/tc-18-837-2024',
-        'fingerprints': ['10.5194/tc-18-837-2024', 'tc-18-837', 'ice plate deformation'],
-    },
-    {
-        'title': 'Near real-time in situ monitoring of nearshore ocean currents using distributed acoustic sensing on submarine fiber-optic cable',
-        'doi': '10.1029/2024ea003572',
-        'fingerprints': ['10.1029/2024ea003572', '2024ea003572', 'nearshore ocean currents'],
-    },
-    # ── 2025 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Seismotectonics of Ghana and adjacent regions in western Africa: a review',
-        'doi': '10.1016/j.eqrea.2025.100442',
-        'fingerprints': ['10.1016/j.eqrea.2025.100442', 'eqrea.2025.100442', 'Ghana'],
-    },
-    {
-        'title': 'Complex seismogenic fault system for the 2022 Ms6.0 Maerkang (China) earthquake sequence resolved with reliable seismic source parameters',
-        'doi': '10.1016/j.tecto.2025.230718',
-        'fingerprints': ['10.1016/j.tecto.2025.230718', 'tecto.2025.230718', 'Maerkang'],
-    },
-    {
-        'title': 'High resolution shallow structure of Ebao basin revealed with DAS ambient noise tomography and its relation to earthquake ground motion',
-        'doi': '10.1029/2024jb029874',
-        'fingerprints': ['10.1029/2024jb029874', '2024jb029874', 'Ebao basin'],
-    },
-    # ── 2026 ──────────────────────────────────────────────────────────────
-    {
-        'title': 'Fault Intersections Control the Extremely Shallow 2020 Mw 5.1 Sparta, North Carolina, Earthquake Sequence',
-        'doi': '10.1785/0220250313',
-        'fingerprints': ['10.1785/0220250313', '0220250313', 'Sparta', 'North Carolina'],
-    },
-]
-
-# Seismology journals for Crossref fallback scan
+MY_PAPERS_FILE = 'my_papers.json'
+SCAN_DAYS = 7
 SEISMO_JOURNALS = [
     'Nature', 'Science', 'Nature Geoscience', 'Nature Communications',
     'Science Advances', 'Geophysical Research Letters',
@@ -252,69 +53,228 @@ SEISMO_JOURNALS = [
     'Earth and Space Science', 'Earthquake Research Advances',
 ]
 
-SCAN_DAYS = 7  # past week
+def fetch_user_publications():
+    """Fetch user's publication list from local about.md by parsing paper titles and querying Crossref."""
+    local_file = 'about.md'
+    try:
+        print(f'Fetching publications from local {local_file}')
+        with open(local_file, 'r', encoding='utf-8') as f:
+            content = f.read()
 
+        print(f'File size: {len(content)} characters')
+        print(f'Looking for Publications section...')
 
-# ── date helpers ──────────────────────────────────────────────────────────────
+        publications = []
+        paper_blocks = []
 
-def _parse_date(s: str) -> datetime:
-    """Parse YYYY-MM-DD or YYYY-MM or YYYY into a datetime."""
-    if not s:
-        return datetime.min
-    for fmt in ('%Y-%m-%d', '%Y-%m', '%Y'):
+        lines = content.split('\n')
+        in_publications = False
+        current_block = ""
+
+        for i, line in enumerate(lines):
+            if 'Publications' in line and ('##' in line or '# ' in line):
+                in_publications = True
+                print(f'Found Publications at line {i}: {line[:50]}')
+                continue
+            if in_publications:
+                if line.strip().startswith('## ') and 'Publications' not in line:
+                    print(f'Exiting Publications section at line {i}')
+                    break
+                if re.match(r'^\d+\.', line.strip()):
+                    if current_block:
+                        paper_blocks.append(current_block)
+                    current_block = line
+                elif current_block:
+                    current_block += " " + line
+
+        if current_block:
+            paper_blocks.append(current_block)
+
+        print(f'Found {len(paper_blocks)} paper blocks')
+
+        for i, block in enumerate(paper_blocks[:3]):
+            print(f'\nFirst block preview:')
+            print(f'  {block[:200]}...')
+
+        for i, block in enumerate(paper_blocks):
+            title_match = re.search(r'\[([^\]]+)\]\(https?://[^\)]+\)', block)
+            if not title_match:
+                print(f'Block {i+1}: No title match found')
+                continue
+
+            title = title_match.group(1).strip()
+
+            year_match = re.search(r'\((\d{4})\)', block)
+            year = year_match.group(1) if year_match else ""
+
+            print(f'\nPaper {i+1}: {title[:60]}...')
+
+            try:
+                query = urllib.parse.quote(f'{title}')
+                search_url = f'https://api.crossref.org/works?query={query}&rows=3'
+                resp = session.get(search_url, timeout=15)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    items = data.get('message', {}).get('items', [])
+                    doi_found = False
+                    for item in items:
+                        item_title = (item.get('title') or [''])[0].lower()
+                        if title.lower() in item_title or item_title in title.lower():
+                            doi = item.get('DOI', '')
+                            authors = item.get('author', [])
+                            first = 'N/A'
+                            if authors:
+                                author = authors[0]
+                                first = ' '.join([author.get('given', ''), author.get('family', '')]).strip()
+                            publications.append({
+                                'doi': doi,
+                                'title': item.get('title', [title])[0],
+                                'first_author': first,
+                                'year': year
+                            })
+                            print(f'    -> DOI: {doi}')
+                            doi_found = True
+                            break
+                    if not doi_found and items:
+                        item = items[0]
+                        doi = item.get('DOI', '')
+                        authors = item.get('author', [])
+                        first = 'N/A'
+                        if authors:
+                            author = authors[0]
+                            first = ' '.join([author.get('given', ''), author.get('family', '')]).strip()
+                        publications.append({
+                            'doi': doi,
+                            'title': item.get('title', [title])[0],
+                            'first_author': first,
+                            'year': year
+                        })
+                        print(f'    -> Using first result DOI: {doi}')
+                time.sleep(0.5)
+            except Exception as e:
+                print(f'    -> Error: {e}')
+
+        with open(MY_PAPERS_FILE, 'w', encoding='utf-8') as f:
+            json.dump({'papers': publications, 'last_update': datetime.now().isoformat()}, f, ensure_ascii=False, indent=2)
+        print(f'\n=== Total publications found: {len(publications)} ===')
+        return publications
+    except Exception as e:
+        print(f'Error fetching user publications: {e}')
+        import traceback
+        traceback.print_exc()
+        return []
+
+def load_user_papers():
+    """Load user papers from cached file or fetch fresh."""
+    if os.path.exists(MY_PAPERS_FILE):
         try:
-            return datetime.strptime(s[:len(fmt)], fmt)
-        except ValueError:
+            with open(MY_PAPERS_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return [p for p in data.get('papers', []) if p.get('doi')]
+        except:
+            pass
+    papers = fetch_user_publications()
+    return [p for p in papers if p.get('doi')]
+
+def geocode_affiliation(affiliation_name):
+    """Geocode an affiliation name to lat/lon coordinates using Nominatim."""
+    if not affiliation_name or affiliation_name == 'N/A':
+        return None
+    cache_file = 'geocode_cache.json'
+    cache = {}
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                cache = json.load(f)
+        except:
+            pass
+    if affiliation_name in cache:
+        return cache[affiliation_name]
+    try:
+        query = urllib.parse.quote(affiliation_name + ', world')
+        url = f'https://nominatim.openstreetmap.org/search?q={query}&format=json&limit=1'
+        response = session.get(url, timeout=10, headers={'User-Agent': 'paper-weekly-bot/1.0'})
+        if response.status_code == 200:
+            data = response.json()
+            if data:
+                lat = float(data[0].get('lat', 0))
+                lon = float(data[0].get('lon', 0))
+                if lat and lon:
+                    result = {'lat': lat, 'lon': lon, 'display_name': data[0].get('display_name', '')}
+                    cache[affiliation_name] = result
+                    with open(cache_file, 'w', encoding='utf-8') as f:
+                        json.dump(cache, f, ensure_ascii=False)
+                    print(f'  [Geo] {affiliation_name[:50]} -> ({lat:.2f}, {lon:.2f})')
+                    return result
+    except Exception as e:
+        print(f'  [Geo] Error geocoding {affiliation_name[:30]}: {e}')
+    cache[affiliation_name] = None
+    with open(cache_file, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, ensure_ascii=False)
+    return None
+
+def _in_window(pub_date_str, since_dt):
+    if not pub_date_str:
+        return False
+    try:
+        for fmt in ('%Y-%m-%d', '%Y-%m', '%Y'):
+            try:
+                dt = datetime.strptime(pub_date_str[:len('%Y-%m-%d' if len(pub_date_str) >= 10 else '%Y-%m')], fmt)
+                return dt >= since_dt
+            except:
+                continue
+        year = int(pub_date_str[:4])
+        return year >= since_dt.year
+    except:
+        return False
+
+def _ref_matches(ref, paper):
+    ref_doi = (ref.get('DOI') or '').lower().strip()
+    if ref_doi and ref_doi == paper.get('doi', '').lower():
+        return True
+    for fp in paper.get('fingerprints', []):
+        if not fp:
             continue
-    return datetime.min
+        if fp.lower() in (ref.get('unstructured', '') or '').lower():
+            return True
+        if fp.lower() in (ref.get('articleTitle', '') or '').lower():
+            return True
+    return False
 
-
-def _in_window(published: str, since: datetime) -> bool:
-    """Return True if the publication date is within the scan window."""
-    d = _parse_date(published)
-    if d == datetime.min:
-        return False  # unknown date → skip
-    return d >= since
-
-
-# ── Semantic Scholar ───────────────────────────────────────────────────────────
-
-def _s2_entry(cp: dict, paper: dict) -> dict:
+def _s2_entry(cp, paper):
     authors = cp.get('authors', [])
     first = authors[0].get('name', 'N/A') if authors else 'N/A'
-    corr  = authors[-1].get('name', 'N/A') if len(authors) > 1 else first
-    ext   = cp.get('externalIds') or {}
-    doi   = ext.get('DOI', '') or ''
-    url   = f'https://doi.org/{doi}' if doi else ''
-    pub   = cp.get('publicationDate', '') or str(cp.get('year', ''))
+    corr = authors[-1].get('name', 'N/A') if len(authors) > 1 else first
+    ext = cp.get('externalIds') or {}
+    doi = ext.get('DOI', '') or ''
+    url = f'https://doi.org/{doi}' if doi else ''
+    pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
     journal = cp.get('journal') or {}
-    source  = cp.get('venue') or (journal.get('name', 'Unknown') if isinstance(journal, dict) else 'Unknown')
+    source = cp.get('venue') or (journal.get('name', 'Unknown') if isinstance(journal, dict) else 'Unknown')
+    aff = cp.get('authors', [{}])[0].get('affiliation', '') if cp.get('authors') else ''
     return {
-        'id':           doi or cp.get('paperId', ''),
-        'title':        cp.get('title', 'No Title'),
-        'url':          url,
+        'id': doi or cp.get('paperId', ''),
+        'title': cp.get('title', 'No Title'),
+        'url': url,
         'first_author': first,
-        'corr_author':  corr,
-        'affiliation':  'N/A',
-        'abs_zh':       f'This paper cited: {paper["title"]}',
-        'source':       source,
-        'published':    pub,
-        'cited_paper':  paper['title'],
+        'corr_author': corr,
+        'affiliation': aff or 'N/A',
+        'abs_zh': f'This paper cited: {paper["title"]}',
+        'source': source,
+        'published': pub,
+        'cited_paper': paper['title'],
     }
 
-
-def fetch_semantic_scholar(paper: dict, since: datetime) -> list:
-    """Get papers that cite `paper` and were published within the scan window."""
+def fetch_semantic_scholar(paper_doi, since_dt, paper=None):
+    if paper is None:
+        paper = {'doi': paper_doi, 'title': paper_doi}
     results = []
-    doi = paper.get('doi', '')
-    if not doi:
+    if not paper_doi:
         return results
-
     fields = 'title,authors,year,publicationDate,externalIds,venue,journal'
-    base   = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}/citations'
+    base = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{paper_doi}/citations'
     offset = 0
-    limit  = 500
-
+    limit = 500
     while True:
         url = f'{base}?fields={fields}&limit={limit}&offset={offset}'
         try:
@@ -326,9 +286,8 @@ def fetch_semantic_scholar(paper: dict, since: datetime) -> list:
                 continue
             data = r.json()
         except Exception as e:
-            print(f'  [S2] Error for {doi}: {e}')
+            print(f'  [S2] Error for {paper_doi}: {e}')
             break
-
         items = data.get('data', [])
         found_in_page = 0
         for item in items:
@@ -336,49 +295,43 @@ def fetch_semantic_scholar(paper: dict, since: datetime) -> list:
             if not cp:
                 continue
             pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
-            if _in_window(pub, since):
+            if _in_window(pub, since_dt):
                 results.append(_s2_entry(cp, paper))
                 found_in_page += 1
-
-        # S2 returns newest first — stop early if all items are older than window
         oldest_in_page = ''
         for item in reversed(items):
             cp = item.get('citingPaper', {})
             oldest_in_page = cp.get('publicationDate', '') or str(cp.get('year', ''))
             if oldest_in_page:
                 break
-        if oldest_in_page and not _in_window(oldest_in_page, since):
-            break  # nothing older will be in the window
-
+        if oldest_in_page and not _in_window(oldest_in_page, since_dt):
+            break
         next_offset = data.get('next')
         if next_offset is None or len(items) < limit:
             break
         offset = next_offset
         time.sleep(1)
-
     if results:
-        print(f'  [S2] {len(results)} new citation(s) in window for {doi}')
+        print(f'  [S2] {len(results)} new citation(s) in window for {paper_doi}')
     return results
 
-
-# ── OpenCitations ─────────────────────────────────────────────────────────────
-
-def fetch_opencitations(paper: dict, since: datetime) -> list:
-    """Get citations from OpenCitations that fall within the scan window."""
+def fetch_opencitations(paper_doi, since_dt, paper=None):
+    if paper is None:
+        paper = {'doi': paper_doi, 'title': paper_doi}
     results = []
-    doi = paper.get('doi', '')
-    if not doi:
+    if not paper_doi:
         return results
+    paper_title = paper.get('title', paper_doi)
     try:
         r = session.get(
-            f'https://opencitations.net/index/coci/api/v1/citations/{doi}',
+            f'https://opencitations.net/index/coci/api/v1/citations/{paper_doi}',
             timeout=20, headers={'Accept': 'application/json'}
         )
         if r.status_code != 200:
             return results
         for cit in r.json():
             creation = cit.get('creation', '')
-            if not _in_window(creation, since):
+            if not _in_window(creation, since_dt):
                 continue
             citing_doi = cit.get('citing', '')
             if not citing_doi:
@@ -393,119 +346,91 @@ def fetch_opencitations(paper: dict, since: datetime) -> list:
                 authors = meta.get('author', [])
                 first = (f"{authors[0].get('given','')} {authors[0].get('family','')}".strip()
                          if authors else 'N/A')
-                corr  = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
+                corr = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
                          if len(authors) > 1 else first)
+                aff = (authors[0].get('affiliation', [{}])[0].get('name', 'N/A')
+                       if authors and authors[0].get('affiliation') else 'N/A')
                 date_parts = (meta.get('issued') or meta.get('created') or {}).get('date-parts', [['']])
                 pub = '-'.join(str(x) for x in (date_parts[0] if date_parts else [])) or creation[:4]
                 results.append({
-                    'id':           citing_doi,
-                    'title':        (meta.get('title') or ['No Title'])[0],
-                    'url':          f'https://doi.org/{citing_doi}',
+                    'id': citing_doi,
+                    'title': (meta.get('title') or ['No Title'])[0],
+                    'url': f'https://doi.org/{citing_doi}',
                     'first_author': first,
-                    'corr_author':  corr,
-                    'affiliation':  'N/A',
-                    'abs_zh':       f'This paper cited: {paper["title"]}',
-                    'source':       (meta.get('container-title') or ['Unknown'])[0],
-                    'published':    pub,
-                    'cited_paper':  paper['title'],
+                    'corr_author': corr,
+                    'affiliation': aff,
+                    'abs_zh': f'This paper cited: {paper_title}',
+                    'source': (meta.get('container-title') or ['Unknown'])[0],
+                    'published': pub,
+                    'cited_paper': paper_title,
                 })
                 print(f'  [OC] {(meta.get("title") or [""])[0][:65]}')
             except Exception:
                 pass
     except Exception as e:
-        print(f'  [OC] Error for {doi}: {e}')
+        print(f'  [OC] Error for {paper_doi}: {e}')
     return results
 
-
-# ── Crossref journal scan (fallback) ─────────────────────────────────────────
-
-def _ref_matches(ref: dict, paper: dict) -> bool:
-    """
-    Check if a Crossref reference matches our paper.
-    Requires DOI match OR multiple specific fingerprints to avoid false positives.
-    """
-    text = (ref.get('DOI', '') + ' ' +
-            ref.get('unstructured', '') + ' ' +
-            ref.get('article-title', '')).lower()
-    
-    doi = paper.get('doi', '').lower()
-    fps = [fp.lower() for fp in paper['fingerprints']]
-    
-    # If DOI matches, it's a definite citation
-    if doi and doi in text:
-        return True
-    
-    # Otherwise require at least 2 fingerprint matches (or 1 if it's a long specific phrase)
-    match_count = sum(1 for fp in fps if fp in text)
-    if match_count >= 2:
-        return True
-    # Single long fingerprint (>20 chars) is also acceptable
-    for fp in fps:
-        if len(fp) > 20 and fp in text:
-            return True
-    return False
-
-
-def _crossref_entry(item: dict, paper: dict) -> dict:
+def _crossref_entry(item, paper_title):
     authors = item.get('author', [])
     first = (f"{authors[0].get('given','')} {authors[0].get('family','')}".strip()
              if authors else 'N/A')
-    corr  = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
+    corr = (f"{authors[-1].get('given','')} {authors[-1].get('family','')}".strip()
              if len(authors) > 1 else first)
     doi = item.get('DOI', '')
-    dp  = (item.get('issued') or item.get('created') or {}).get('date-parts', [['']])
+    dp = (item.get('issued') or item.get('created') or {}).get('date-parts', [['']])
     pub = '-'.join(str(x) for x in (dp[0] if dp else [])) or ''
+    aff = (authors[0].get('affiliation', [{}])[0].get('name', 'N/A')
+           if authors and authors[0].get('affiliation') else 'N/A')
     return {
-        'id':           doi,
-        'title':        (item.get('title') or ['No Title'])[0],
-        'url':          f'https://doi.org/{doi}' if doi else '',
+        'id': doi,
+        'title': (item.get('title') or ['No Title'])[0],
+        'url': f'https://doi.org/{doi}' if doi else '',
         'first_author': first,
-        'corr_author':  corr,
-        'affiliation':  (authors[0].get('affiliation', [{}])[0].get('name', 'N/A')
-                         if authors and authors[0].get('affiliation') else 'N/A'),
-        'abs_zh':       f'This paper cited: {paper["title"]}',
-        'source':       (item.get('container-title') or ['Unknown'])[0],
-        'published':    pub,
-        'cited_paper':  paper['title'],
+        'corr_author': corr,
+        'affiliation': aff,
+        'abs_zh': f'This paper cited: {paper_title}',
+        'source': (item.get('container-title') or ['Unknown'])[0],
+        'published': pub,
+        'cited_paper': paper_title,
     }
 
-
-def fetch_crossref_scan(paper: dict, since_dt: datetime) -> list:
-    """
-    Scan recently indexed papers in key journals and check reference lists.
-    Only used as fallback when S2 and OC return nothing.
-    Filters results by actual publication date (not index date).
-    """
+def fetch_crossref_scan(paper_doi, since_dt, paper=None):
+    if paper is None:
+        paper = {'doi': paper_doi, 'title': paper_doi}
+    paper_title = paper.get('title', paper_doi)
     results = []
-    own_doi = paper.get('doi', '').lower()
+    own_doi = paper_doi.lower()
     since_str = since_dt.strftime('%Y-%m-%d')
-
     for journal in SEISMO_JOURNALS:
-        j_enc  = urllib.parse.quote(journal)
+        j_enc = urllib.parse.quote(journal)
         cursor = '*'
-        pages  = 0
-        while pages < 2:  # max 200 papers per journal
+        pages = 0
+        while pages < 2:
             url = (f'https://api.crossref.org/works'
                    f'?filter=container-title:{j_enc},type:journal-article,from-index-date:{since_str}'
                    f'&select=DOI,title,author,container-title,issued,created,reference'
                    f'&rows=100&cursor={urllib.parse.quote(cursor)}')
             try:
                 resp = session.get(url, timeout=30)
-                msg  = resp.json().get('message', {})
+                msg = resp.json().get('message', {})
                 items = msg.get('items', [])
                 for item in items:
                     if item.get('DOI', '').lower() == own_doi:
                         continue
-                    # Check publication date is within window
                     dp = (item.get('issued') or item.get('created') or {}).get('date-parts', [[]])
                     pub_str = '-'.join(str(x) for x in (dp[0] if dp and dp[0] else []))
                     if not _in_window(pub_str, since_dt):
                         continue
                     refs = item.get('reference', [])
-                    if refs and any(_ref_matches(ref, paper) for ref in refs):
-                        e = _crossref_entry(item, paper)
-                        results.append(e)
-                        print(f'  [Crossref] {e["title"][:65]}')
+                    if refs:
+                        for ref in refs:
+                            ref_doi = (ref.get('DOI') or '').lower().strip()
+                            if ref_doi and ref_doi == own_doi:
+                                e = _crossref_entry(item, paper_title)
+                                results.append(e)
+                                print(f'  [Crossref] {e["title"][:65]}')
+                                break
                 next_cursor = msg.get('next-cursor', '')
                 if not items or not next_cursor or next_cursor == cursor:
                     break
@@ -517,75 +442,161 @@ def fetch_crossref_scan(paper: dict, since_dt: datetime) -> list:
                 break
     return results
 
+def fetch_all_citations(paper_doi, since_dt, paper=None):
+    if paper is None:
+        paper = {'doi': paper_doi, 'title': paper_doi}
+    all_results = []
+    r1 = fetch_semantic_scholar(paper_doi, since_dt, paper)
+    all_results.extend(r1)
+    time.sleep(1)
+    r2 = fetch_opencitations(paper_doi, since_dt, paper)
+    s2_ids = {x['id'].lower() for x in r1}
+    for x in r2:
+        if x['id'].lower() not in s2_ids:
+            all_results.append(x)
+    time.sleep(0.5)
+    if not r1 and not r2:
+        r3 = fetch_crossref_scan(paper_doi, since_dt, paper)
+        all_results.extend(r3)
+        time.sleep(0.5)
+    return all_results
 
-# ── main ─────────────────────────────────────────────────────────────────────
+def fetch_full_citations(paper_doi):
+    """Fetch all historical citations for a paper (not just recent)."""
+    results = []
+    if not paper_doi:
+        return results
+    fields = 'title,authors,year,publicationDate,externalIds,venue,journal'
+    base = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{paper_doi}/citations'
+    offset = 0
+    limit = 500
+    while True:
+        url = f'{base}?fields={fields}&limit={limit}&offset={offset}'
+        try:
+            r = session.get(url, timeout=30, headers={'User-Agent': 'paper-weekly-bot/1.0'})
+            if r.status_code == 404:
+                break
+            if r.status_code == 429:
+                time.sleep(15)
+                continue
+            data = r.json()
+        except Exception as e:
+            print(f'  [S2 Full] Error for {paper_doi}: {e}')
+            break
+        items = data.get('data', [])
+        for item in items:
+            cp = item.get('citingPaper', {})
+            if not cp:
+                continue
+            pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
+            entry = _s2_entry(cp, {'title': paper_doi})
+            entry['published'] = pub
+            results.append(entry)
+        next_offset = data.get('next')
+        if next_offset is None or len(items) < limit:
+            break
+        offset = next_offset
+        time.sleep(1)
+    if not results:
+        r2 = fetch_opencitations(paper_doi, datetime(1900, 1, 1))
+        for x in r2:
+            x['abs_zh'] = f'This paper cited: {paper_doi}'
+            results.append(x)
+    print(f'  [S2 Full] Total {len(results)} citations for {paper_doi}')
+    return results
+
+def save_results(papers, now):
+    weekly_papers = []
+    all_papers = []
+    now_str = now.strftime('%Y-%m-%d')
+    since_dt = now - timedelta(days=SCAN_DAYS)
+    for r in papers:
+        r['is_new_this_week'] = _in_window(r.get('published', ''), since_dt)
+        if r['is_new_this_week']:
+            weekly_papers.append(r)
+        all_papers.append(r)
+    unique_by_id = {}
+    for r in all_papers:
+        key = r.get('id') or r.get('title', '')[:60]
+        if key.lower() not in unique_by_id:
+            unique_by_id[key.lower()] = r
+    all_papers = list(unique_by_id.values())
+    unique_weekly = {}
+    for r in weekly_papers:
+        key = r.get('id') or r.get('title', '')[:60]
+        if key.lower() not in unique_weekly:
+            unique_weekly[key.lower()] = r
+    weekly_papers = list(unique_weekly.values())
+    all_papers.sort(key=lambda x: x.get('published', ''), reverse=True)
+    weekly_papers.sort(key=lambda x: x.get('published', ''), reverse=True)
+    for paper in all_papers:
+        if 'coordinates' not in paper or paper['coordinates'] is None:
+            coords = geocode_affiliation(paper.get('affiliation', ''))
+            paper['coordinates'] = coords
+            time.sleep(1)
+    map_data = []
+    for paper in all_papers:
+        if paper.get('coordinates'):
+            map_data.append({
+                'lat': paper['coordinates']['lat'],
+                'lon': paper['coordinates']['lon'],
+                'title': paper['title'],
+                'author': paper['first_author'],
+                'affiliation': paper['affiliation'],
+                'published': paper['published'],
+                'url': paper['url'],
+                'is_new_this_week': paper.get('is_new_this_week', False)
+            })
+    result = {
+        'last_update': now.strftime('%Y-%m-%d %H:%M'),
+        'topic_name': '文章引用',
+        'total_citations': len(all_papers),
+        'weekly_citations': len(weekly_papers),
+        'papers': all_papers,
+        'weekly_papers': weekly_papers,
+        'map_data': map_data
+    }
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+    print(f'\nSaved to {OUTPUT_FILE}')
+    print(f'Total citations: {len(all_papers)}')
+    print(f'This week: {len(weekly_papers)}')
 
 def fetch_citing_papers():
-    now       = datetime.now()
-    since_dt  = now - timedelta(days=SCAN_DAYS)
+    now = datetime.now()
+    since_dt = now - timedelta(days=SCAN_DAYS)
     since_str = since_dt.strftime('%Y-%m-%d')
-    all_results = []
-
     print(f'Scanning for citations published since {since_str}\n')
+    my_papers = load_user_papers()
+    if not my_papers:
+        print('No DOIs found. Please check your about page.')
+        return
 
-    for paper in MY_PAPERS:
-        print(f'--- {paper["title"][:70]}')
+    test_mode = os.environ.get('TEST_MODE', 'false').lower() == 'true'
+    if test_mode:
+        my_papers = my_papers[:3]
+        print(f'TEST MODE: Only processing first {len(my_papers)} papers')
 
-        # 1. Semantic Scholar — primary (fastest, most comprehensive)
-        r1 = fetch_semantic_scholar(paper, since_dt)
-        all_results.extend(r1)
+    all_results = []
+    for i, paper in enumerate(my_papers, 1):
+        doi = paper['doi']
+        print(f'[{i}/{len(my_papers)}] Processing {doi} ({paper.get("title", "")[:40]}...)')
+        results = fetch_all_citations(doi, since_dt, paper)
+        all_results.extend(results)
         time.sleep(1)
-
-        # 2. OpenCitations — supplement (confirmed citation graph)
-        r2 = fetch_opencitations(paper, since_dt)
-        # Add only if not already found by S2
-        s2_ids = {x['id'].lower() for x in r1}
-        for x in r2:
-            if x['id'].lower() not in s2_ids:
-                all_results.append(x)
-        time.sleep(0.5)
-
-        # 3. Crossref scan — fallback only when both S2 and OC are empty
-        if not r1 and not r2:
-            r3 = fetch_crossref_scan(paper, since_dt)
-            all_results.extend(r3)
-            time.sleep(0.5)
-
-    # Final filter: ensure all results are within the date window
-    # (protects against any API returning out-of-window results)
     filtered = []
+    seen = set()
     for r in all_results:
         pub = r.get('published', '')
-        if _in_window(pub, since_dt):
-            filtered.append(r)
-        else:
-            print(f'  [FILTERED] Out of window: {pub} {r.get("title", "")[:50]}')
-
-    # Deduplicate by id
-    seen, unique = set(), []
-    for r in filtered:
+        if not _in_window(pub, since_dt):
+            continue
         key = (r.get('id') or r.get('title', '')[:60]).lower()
         if key and key not in seen:
             seen.add(key)
-            unique.append(r)
-
-    # Sort newest first
-    unique.sort(key=lambda x: x.get('published', ''), reverse=True)
-
-    print(f'\nDone. {len(unique)} unique citing paper(s) in the past {SCAN_DAYS} days.')
-    save_results(unique, now)
-
-
-def save_results(papers, now):
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump({
-            'last_update': now.strftime('%Y-%m-%d %H:%M'),
-            'topic_name': '文章引用',
-            'papers': papers,
-        }, f, ensure_ascii=False, indent=2)
-    print(f'Saved to {OUTPUT_FILE}')
-
+            filtered.append(r)
+    filtered.sort(key=lambda x: x.get('published', ''), reverse=True)
+    print(f'\nDone. {len(filtered)} unique citing paper(s) in the past {SCAN_DAYS} days.')
+    save_results(filtered, now)
 
 if __name__ == '__main__':
     fetch_citing_papers()
-

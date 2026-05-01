@@ -1,0 +1,347 @@
+{
+  "papers": [
+    {
+      "doi": "10.1007/s11434-010-4276-2",
+      "title": "The M5.0 Suining-Tongnan (China) earthquake of 31 January 2010: A destructive earthquake occurring in sedimentary cover",
+      "first_author": "Yan Luo",
+      "year": "2011"
+    },
+    {
+      "doi": "10.1007/s11589-010-0788-5",
+      "title": "Comparison of ground truth location of earthquake from InSAR and from ambient seismic noise: A case study of the 1998 Zhangbei earthquake",
+      "first_author": "Jun Xie",
+      "year": "2011"
+    },
+    {
+      "doi": "10.1007/s11589-010-0786-7",
+      "title": "Effects of sedimentary layer on earthquake source modeling from geodetic inversion",
+      "first_author": "Weiwen Chen",
+      "year": "2011"
+    },
+    {
+      "doi": "10.32469/10355/44219",
+      "title": "Upper mantle shear wave velocity structure of the east Anatolian-Caucasus region||Upper mantle shear wave velocity structure of the east Anatolian-Caucasus region",
+      "first_author": "Gleb Anatolyevich Skobeltsyn",
+      "year": "2012"
+    },
+    {
+      "doi": "10.1007/s11589-013-0016-1",
+      "title": "Crustal S-wave velocity structure of the Yellowstone region using a seismic ambient noise method",
+      "first_author": "Yan Lü",
+      "year": "2013"
+    },
+    {
+      "doi": "10.1007/s11589-010-0788-5",
+      "title": "Comparison of ground truth location of earthquake from InSAR and from ambient seismic noise: A case study of the 1998 Zhangbei earthquake",
+      "first_author": "Jun Xie",
+      "year": "2013"
+    },
+    {
+      "doi": "10.1785/0120130279",
+      "title": "Validating Accuracy of Rayleigh-Wave Dispersion Extracted from Ambient Seismic Noise Via Comparison with Data from a Ground-Truth Earthquake",
+      "first_author": "F. Bao",
+      "year": "2014"
+    },
+    {
+      "doi": "10.1785/0120140252",
+      "title": "Synchronizing Intercontinental Seismic Networks Using the 26 s Persistent Localized Microseismic Source",
+      "first_author": "Yingjie Xia",
+      "year": "2015"
+    },
+    {
+      "doi": "10.1007/s00024-014-0993-6",
+      "title": "Ground Truth Location of Earthquakes by Use of Ambient Seismic Noise From a Sparse Seismic Network: A Case Study in Western Australia",
+      "first_author": "Xiangfang Zeng",
+      "year": "2015"
+    },
+    {
+      "doi": "10.1002/2015jb012459",
+      "title": "Measurement of Rayleigh wave ellipticity and its application to the joint inversion of high‐resolution <i>S</i> wave velocity structure beneath northeast China",
+      "first_author": "Guoliang Li",
+      "year": "2016"
+    },
+    {
+      "doi": "10.1093/gji/ggw137",
+      "title": "On the accuracy of long-period Rayleigh waves extracted from ambient noise",
+      "first_author": "Jun Xie",
+      "year": "2016"
+    },
+    {
+      "doi": "10.1093/gji/ggw460",
+      "title": "Broad-band Rayleigh wave phase velocity maps (10–150 s) across the United States from ambient noise data",
+      "first_author": "Kaifeng Zhao",
+      "year": "2017"
+    },
+    {
+      "doi": "10.1093/gji/ggx448",
+      "title": "An investigation of time–frequency domain phase-weighted stacking and its application to phase-velocity extraction from ambient noise's empirical Green's functions",
+      "first_author": "Guoliang Li",
+      "year": "2017"
+    },
+    {
+      "doi": "10.1016/j.jafrearsci.2017.09.003",
+      "title": "Nonlinear inversion of resistivity sounding data for 1-D earth models using the Neighbourhood Algorithm",
+      "first_author": "A.O. Ojo",
+      "year": "2018"
+    },
+    {
+      "doi": "10.1093/gji/ggx401",
+      "title": "Assessing the short-term clock drift of early broadband stations with burst events of the 26 s persistent and localized microseism",
+      "first_author": "Jun Xie",
+      "year": "2018"
+    },
+    {
+      "doi": "10.1016/j.pepi.2017.12.006",
+      "title": "Crust-mantle coupling mechanism in Cameroon, West Africa, revealed by 3D S-wave velocity and azimuthal anisotropy",
+      "first_author": "Adebayo Oluwaseun Ojo",
+      "year": "2018"
+    },
+    {
+      "doi": "10.1360/sste-2022-0179",
+      "title": "接收函数和重力联合反演中国东北地区高精度莫霍面和波速比分布及地质意义",
+      "first_author": "奥伟 郝",
+      "year": ""
+    },
+    {
+      "doi": "10.1360/sste-2025-0210",
+      "title": "川西地区地壳三维速度结构与各向异性特征及其构造意义",
+      "first_author": "雪源 黄",
+      "year": ""
+    },
+    {
+      "doi": "10.1007/s00024-018-1881-2",
+      "title": "3-D Upper-Mantle Shear Velocity Model Beneath the Contiguous United States Based on Broadband Surface Wave from Ambient Seismic Noise",
+      "first_author": "Jun Xie",
+      "year": "2018"
+    },
+    {
+      "doi": "10.1785/0220180260",
+      "title": "Imaging 3D Upper‐Mantle Structure with Autocorrelation of Seismic Noise Recorded on a Transportable Single Station",
+      "first_author": "Jun Xie",
+      "year": "2019"
+    },
+    {
+      "doi": "10.1093/gji/ggz008",
+      "title": "Further constraints on the shear wave velocity structure of Cameroon from joint inversion of receiver function, Rayleigh wave dispersion and ellipticity measurements",
+      "first_author": "Adebayo Oluwaseun Ojo",
+      "year": "2019"
+    },
+    {
+      "doi": "10.1360/zd-2013-43-6-1027",
+      "title": "芦山与汶川地震震区地壳上地幔结构及深部孕震环境",
+      "first_author": "祖军 谢",
+      "year": "2019"
+    },
+    {
+      "doi": "10.37155/2811-0595-0408-35",
+      "title": "InSAR技术应用于银川盆地地震活动性监测的研究",
+      "first_author": "杨慧慧",
+      "year": "2019"
+    },
+    {
+      "doi": "10.1360/n072024-0360",
+      "title": "基于背景噪声层析成像研究云南省宾川盆地浅层横波速度与径向各向异性结构",
+      "first_author": "凯锋 赵",
+      "year": "2019"
+    },
+    {
+      "doi": "10.1016/j.epsl.2019.07.007",
+      "title": "Millimeter-level ultra-long period multiple Earth-circling surface waves retrieved from dense high-rate GPS network",
+      "first_author": "Aizhi Guo",
+      "year": "2019"
+    },
+    {
+      "doi": "10.1785/0120190177",
+      "title": "Enhancing Signal-to-Noise Ratios of High-Frequency Rayleigh Waves Extracted from Ambient Seismic Noises in Topographic Region",
+      "first_author": "Ping Ping",
+      "year": "2020"
+    },
+    {
+      "doi": "10.1029/2019jb018947",
+      "title": "Relocation of the 17 June 2017 Nuugaatsiaq (Greenland) Landslide Based on Green's Functions From Ambient Seismic Noises",
+      "first_author": "Jun Xie",
+      "year": "2020"
+    },
+    {
+      "doi": "10.1785/0220200210",
+      "title": "Validity of Resolving the 785 km Discontinuity in the Lower Mantle with P′P′ Precursors?",
+      "first_author": "Baolong Zhang",
+      "year": "2020"
+    },
+    {
+      "doi": "10.1785/0220200152",
+      "title": "Coseismic Slip Distribution of the 24 January 2020 Mw 6.7 Doganyol Earthquake and in Relation to the Foreshock and Aftershock Activities",
+      "first_author": "Xin Lin",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1029/2020gc009356",
+      "title": "Crust and Upper Mantle Structure of the South China Sea and Adjacent Areas From the Joint Inversion of Ambient Noise and Earthquake Surface Wave Dispersions",
+      "first_author": "Haopeng Chen",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1029/2020jb020444",
+      "title": "Evaluating Global Tomography Models With Antipodal Ambient Noise Cross‐Correlation Functions",
+      "first_author": "Jun Xie",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1093/gji/ggaa578",
+      "title": "Sedimentary structure of the Sichuan Basin derived from seismic ambient noise tomography",
+      "first_author": "Xin Xia",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1007/s10712-021-09678-w",
+      "title": "Sensing Shallow Structure and Traffic Noise with Fiber-optic Internet Cables in an Urban Area",
+      "first_author": "Zhenghong Song",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1109/tgrs.2022.3143120",
+      "title": "ADE-Net: A Deep Neural Network for DAS Earthquake Detection Trained With a Limited Number of Positive Samples",
+      "first_author": "Hao Lv",
+      "year": "2022"
+    },
+    {
+      "doi": "10.1016/j.epsl.2021.117334",
+      "title": "Generation mechanism of the 26 s and 28 s tremors in the Gulf of Guinea from statistical analysis of magnitudes and event intervals",
+      "first_author": "Yongyan Chen",
+      "year": "2022"
+    },
+    {
+      "doi": "10.32629/gmsm.v1i3.46",
+      "title": "基于图像分析的航道水尺自动水位记录",
+      "first_author": "波 夏",
+      "year": "2022"
+    },
+    {
+      "doi": "10.1360/csb2005-50-4-348",
+      "title": "首都圈地区地壳三维P波速度细结构与强震孕育的深部构造环境",
+      "first_author": "大鹏 赵",
+      "year": "2022"
+    },
+    {
+      "doi": "10.32629/ej.v3i1.365",
+      "title": "家庭社会经济地位与创业意愿─基于CGSS数据的经验分析",
+      "first_author": "晓华 王",
+      "year": "2022"
+    },
+    {
+      "doi": "10.1016/j.tecto.2022.229449",
+      "title": "Crustal structure in the Weiyuan shale gas field, China, and its tectonic implications",
+      "first_author": "Zigen Wei",
+      "year": "2022"
+    },
+    {
+      "doi": "10.61369/eptsm.9051",
+      "title": "分布式能源与微电网发展对电网建设方向的影响分析",
+      "first_author": "鹏英 朱",
+      "year": "2022"
+    },
+    {
+      "doi": "10.36012/etr.v2i7.2191",
+      "title": "分析分布式光纤传感技术在油气管线泄漏检测中的应用",
+      "first_author": "十三 七",
+      "year": "2023"
+    },
+    {
+      "doi": "10.1360/csb2005-50-4-348",
+      "title": "首都圈地区地壳三维P波速度细结构与强震孕育的深部构造环境",
+      "first_author": "大鹏 赵",
+      "year": "2023"
+    },
+    {
+      "doi": "10.1093/gji/ggac435",
+      "title": "Topography effect on ambient noise tomography: a case study for the Longmen Shan area, eastern Tibetan Plateau",
+      "first_author": "Ruizhi Jin",
+      "year": "2023"
+    },
+    {
+      "doi": "10.1785/0220220316",
+      "title": "Seismometer Orientation Correction via Teleseismic Receiver Function Measurements in West Africa and Adjacent Islands",
+      "first_author": "Abayomi Gaius Osotuyi",
+      "year": "2023"
+    },
+    {
+      "doi": "10.5194/tc-18-837-2024",
+      "title": "Ice plate deformation and cracking revealed by an in situ-distributed acoustic sensing array",
+      "first_author": "Jun Xie",
+      "year": "2024"
+    },
+    {
+      "doi": "10.1360/n072016-00368",
+      "title": "大陆地壳结构的气枪震源探测及其应用",
+      "first_author": "华建 姚",
+      "year": "2024"
+    },
+    {
+      "doi": "10.1029/2024ea003572",
+      "title": "Near Real‐Time In Situ Monitoring of Nearshore Ocean Currents Using Distributed Acoustic Sensing on Submarine Fiber‐Optic Cable",
+      "first_author": "Zhenghong Song",
+      "year": "2024"
+    },
+    {
+      "doi": "10.32629/gmsm.v3i3.669",
+      "title": "大数据背景下矿山测绘地理信息检测探析",
+      "first_author": "棚举 韩",
+      "year": "2024"
+    },
+    {
+      "doi": "10.1360/zd-2013-43-7-1096",
+      "title": "地震滑坡的动力学机制研究",
+      "first_author": "鸣 陆",
+      "year": "2024"
+    },
+    {
+      "doi": "10.37155/2811-0609-0503-75",
+      "title": "分布式光纤传感技术在水利隧洞结构健康监测中的应用",
+      "first_author": "勇 严",
+      "year": "2025"
+    },
+    {
+      "doi": "10.1360/sste-2023-0080",
+      "title": "秭归盆地下侏罗统火山碎屑沉积物源分析及其对东秦岭造山带晚三叠世地壳增厚的启示",
+      "first_author": "嵘 柴",
+      "year": "2025"
+    },
+    {
+      "doi": "10.3799/dqkx.2023.165",
+      "title": "新疆伽师地区地壳三维速度结构及中强震震源机制揭示的区域孕震环境",
+      "first_author": "Shanshan Liang",
+      "year": "2025"
+    },
+    {
+      "doi": "10.1016/j.tecto.2025.230718",
+      "title": "Complex seismogenic fault system for the 2022 <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si2.svg\"><mml:msub><mml:mi>M</mml:mi><mml:mi>s</mml:mi></mml:msub></mml:math>6.0 Maerkang (China) earthquake sequence resolved with reliable seismic source parameters",
+      "first_author": "Lihua Mo",
+      "year": "2025"
+    },
+    {
+      "doi": "10.1029/2024jb029874",
+      "title": "High Resolution Shallow Structure of Ebao Basin Revealed With DAS Ambient Noise Tomography and Its Relation to Earthquake Ground Motion",
+      "first_author": "Song Wang",
+      "year": "2025"
+    },
+    {
+      "doi": "10.12677/jogt.2016.382010",
+      "title": "Study on the Sedimentary Facies of Yan 9 Reservoirs in Yanwu Area of Ordos Basin",
+      "first_author": "雨轩 孙",
+      "year": "2025"
+    },
+    {
+      "doi": "10.1016/j.eqrea.2025.100442",
+      "title": "SEISMOTECTONICS OF GHANA AND ADJACENT REGIONS IN WESTERN AFRICA: A REVIEW",
+      "first_author": "John Somiah",
+      "year": "2025"
+    },
+    {
+      "doi": "10.1785/0220250313",
+      "title": "Fault Intersections Control the Extremely Shallow 2020 Mw 5.1 Sparta, North Carolina, Earthquake Sequence",
+      "first_author": "Kaiteng Huang",
+      "year": "2026"
+    }
+  ],
+  "last_update": "2026-05-01T14:58:03.840025"
+}

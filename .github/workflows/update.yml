@@ -19,12 +19,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser deep-translator fpdf scholarly
+          pip install requests feedparser deep-translator fpdf beautifulsoup4
 
       - name: Run update script
         run: python update_papers.py
 
-      - name: Fetch citations
+      - name: Run citations update
         run: python update_citations.py
 
       - name: Generate report
@@ -57,7 +57,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.json
+          git add *.json citations.html citations_map.js citations_map.css
           git commit -m "Auto-update papers: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git pull --rebase origin main || echo "No remote changes to pull"
           git push

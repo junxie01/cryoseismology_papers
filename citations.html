@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章引用 - 地震学周报</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="citations_map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 地震学周报</h1>
+            <p>自动追踪、翻译并汇总最新地震学研究成果</p>
+        </header>
+
+        <nav class="topic-nav">
+            <button class="topic-btn" onclick="switchTopic('cryo')">🧊 冰川地震</button>
+            <button class="topic-btn" onclick="switchTopic('das')">📡 光纤传感</button>
+            <button class="topic-btn" onclick="switchTopic('surface')">🌊 面波研究</button>
+            <button class="topic-btn" onclick="switchTopic('imaging')">🔍 地震成像</button>
+            <button class="topic-btn" onclick="switchTopic('earthquake')">🏠 地震研究</button>
+            <button class="topic-btn" onclick="switchTopic('ai')">🤖 人工智能</button>
+            <button class="topic-btn active" onclick="switchTopic('citations')">📎 文章引用</button>
+        </nav>
+
+        <div class="search-section text-center">
+            <p style="color: #666; font-size: 0.9rem;">🔄 每周自动更新 | 当前查看: <span id="current-topic-name">文章引用</span> | 数据范围: <span id="last-update">-</span></p>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>正在加载数据...</p>
+        </div>
+
+        <div id="citation-stats" class="citation-stats hidden">
+            <div class="stat-card">
+                <h3>📊 总引用次数</h3>
+                <p class="stat-number" id="total-citations">-</p>
+            </div>
+            <div class="stat-card highlight">
+                <h3>🆕 本周新增</h3>
+                <p class="stat-number" id="weekly-citations">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>🌍 覆盖国家</h3>
+                <p class="stat-number" id="country-count">-</p>
+            </div>
+        </div>
+
+        <div id="map-container" class="map-container hidden">
+            <div id="citation-map"></div>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <span class="legend-dot yellow"></span>
+                    <span>历史引用</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot red pulse"></span>
+                    <span>本周新增</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="papers-list" class="papers-list"></div>
+
+        <div id="paper-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title"></h2>
+                    <button id="close-modal" class="close-btn">&times;</button>
+                </div>
+                <div id="modal-body" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="citations_map.js"></script>
+</body>
+</html>
