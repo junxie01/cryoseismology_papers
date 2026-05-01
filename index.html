@@ -20,7 +20,7 @@
             <button class="topic-btn" onclick="switchTopic('imaging')">🔍 地震成像</button>
             <button class="topic-btn" onclick="switchTopic('earthquake')">🏠 地震研究</button>
             <button class="topic-btn" onclick="switchTopic('ai')">🤖 人工智能</button>
-            <button class="topic-btn" onclick="window.location.href='citations.html'">📎 文章引用</button>
+            <button class="topic-btn" onclick="switchTopic('citations')">📎 文章引用</button>
         </nav>
 
         <div class="search-section text-center">
@@ -30,6 +30,17 @@
         <div id="loading" class="loading hidden">
             <div class="spinner"></div>
             <p>正在加载数据...</p>
+        </div>
+
+        <div id="citation-stats" class="citation-stats hidden">
+            <div class="stat-card">
+                <h3>📊 总引用次数</h3>
+                <p class="stat-number" id="total-citations">-</p>
+            </div>
+            <div class="stat-card highlight">
+                <h3>🆕 本周新增</h3>
+                <p class="stat-number" id="weekly-citations">-</p>
+            </div>
         </div>
 
         <div id="papers-list" class="papers-list"></div>

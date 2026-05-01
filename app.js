@@ -56,6 +56,16 @@ async function loadPapers(topic) {
         document.getElementById('last-update').textContent = data.last_update || '未知';
         document.getElementById('current-topic-name').textContent = data.topic_name || '专题';
 
+        // 处理 citations 的特殊显示
+        const citationStats = document.getElementById('citation-stats');
+        if (topic === 'citations') {
+            citationStats.classList.remove('hidden');
+            document.getElementById('total-citations').textContent = data.total_citations || 0;
+            document.getElementById('weekly-citations').textContent = data.weekly_citations || 0;
+        } else {
+            citationStats.classList.add('hidden');
+        }
+
         renderPapersList();
     } catch (error) {
         console.error('加载论文失败:', error);
