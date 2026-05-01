@@ -295,7 +295,7 @@ def fetch_semantic_scholar(paper_doi, since_dt, paper=None):
             if not cp:
                 continue
             pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
-            if _in_window(pub, since_dt):
+            if since_dt is None or _in_window(pub, since_dt):
                 results.append(_s2_entry(cp, paper))
                 found_in_page += 1
         oldest_in_page = ''
@@ -304,7 +304,7 @@ def fetch_semantic_scholar(paper_doi, since_dt, paper=None):
             oldest_in_page = cp.get('publicationDate', '') or str(cp.get('year', ''))
             if oldest_in_page:
                 break
-        if oldest_in_page and not _in_window(oldest_in_page, since_dt):
+        if since_dt is not None and oldest_in_page and not _in_window(oldest_in_page, since_dt):
             break
         next_offset = data.get('next')
         if next_offset is None or len(items) < limit:
@@ -331,7 +331,7 @@ def fetch_opencitations(paper_doi, since_dt, paper=None):
             return results
         for cit in r.json():
             creation = cit.get('creation', '')
-            if not _in_window(creation, since_dt):
+            if since_dt is not None and not _in_window(creation, since_dt):
                 continue
             citing_doi = cit.get('citing', '')
             if not citing_doi:
@@ -401,12 +401,16 @@ def fetch_crossref_scan(paper_doi, since_dt, paper=None):
     paper_title = paper.get('title', paper_doi)
     results = []
     own_doi = paper_doi.lower()
-    since_str = since_dt.strftime('%Y-%m-%d')
+    if since_dt is not None:
+        since_str = since_dt.strftime('%Y-%m-%d')
+    else:
+        since_str = '1900-01-01'
     for journal in SEISMO_JOURNALS:
         j_enc = urllib.parse.quote(journal)
         cursor = '*'
         pages = 0
-        while pages < 2:
+        max_pages = 5 if since_dt is None else 2
+        while pages < max_pages:
             url = (f'https://api.crossref.org/works'
                    f'?filter=container-title:{j_enc},type:journal-article,from-index-date:{since_str}'
                    f'&select=DOI,title,author,container-title,issued,created,reference'
@@ -420,7 +424,7 @@ def fetch_crossref_scan(paper_doi, since_dt, paper=None):
                         continue
                     dp = (item.get('issued') or item.get('created') or {}).get('date-parts', [[]])
                     pub_str = '-'.join(str(x) for x in (dp[0] if dp and dp[0] else []))
-                    if not _in_window(pub_str, since_dt):
+                    if since_dt is not None and not _in_window(pub_str, since_dt):
                         continue
                     refs = item.get('reference', [])
                     if refs:
@@ -564,9 +568,17 @@ def save_results(papers, now):
 
 def fetch_citing_papers():
     now = datetime.now()
-    since_dt = now - timedelta(days=SCAN_DAYS)
-    since_str = since_dt.strftime('%Y-%m-%d')
-    print(f'Scanning for citations published since {since_str}\n')
+    
+    full_scan = os.environ.get('FULL_SCAN', 'false').lower() == 'true'
+    
+    if full_scan:
+        since_dt = None
+        print('MODE: FULL HISTORICAL SCAN - Fetching all citations\n')
+    else:
+        since_dt = now - timedelta(days=SCAN_DAYS)
+        since_str = since_dt.strftime('%Y-%m-%d')
+        print(f'MODE: WEEKLY UPDATE - Scanning for citations since {since_str}\n')
+    
     my_papers = load_user_papers()
     if not my_papers:
         print('No DOIs found. Please check your about page.')
@@ -575,7 +587,7 @@ def fetch_citing_papers():
     test_mode = os.environ.get('TEST_MODE', 'false').lower() == 'true'
     if test_mode:
         my_papers = my_papers[:3]
-        print(f'TEST MODE: Only processing first {len(my_papers)} papers')
+        print(f'TEST MODE: Only processing first {len(my_papers)} papers\n')
 
     all_results = []
     for i, paper in enumerate(my_papers, 1):
@@ -584,19 +596,28 @@ def fetch_citing_papers():
         results = fetch_all_citations(doi, since_dt, paper)
         all_results.extend(results)
         time.sleep(1)
-    filtered = []
+    
     seen = set()
+    unique_results = []
     for r in all_results:
-        pub = r.get('published', '')
-        if not _in_window(pub, since_dt):
-            continue
         key = (r.get('id') or r.get('title', '')[:60]).lower()
         if key and key not in seen:
             seen.add(key)
-            filtered.append(r)
-    filtered.sort(key=lambda x: x.get('published', ''), reverse=True)
-    print(f'\nDone. {len(filtered)} unique citing paper(s) in the past {SCAN_DAYS} days.')
-    save_results(filtered, now)
+            unique_results.append(r)
+    
+    if since_dt is not None:
+        filtered = []
+        for r in unique_results:
+            pub = r.get('published', '')
+            if _in_window(pub, since_dt):
+                filtered.append(r)
+        filtered.sort(key=lambda x: x.get('published', ''), reverse=True)
+        print(f'\nDone. {len(filtered)} unique citing paper(s) in the past {SCAN_DAYS} days.')
+        save_results(filtered, now)
+    else:
+        unique_results.sort(key=lambda x: x.get('published', ''), reverse=True)
+        print(f'\nDone. {len(unique_results)} total unique citing paper(s) found.')
+        save_results(unique_results, now)
 
 if __name__ == '__main__':
     fetch_citing_papers()
