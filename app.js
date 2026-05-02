@@ -175,6 +175,7 @@ function escapeHtml(text) {
 }
 
 function renderCitationMap(allPapers, weeklyPapers) {
+    console.log('renderCitationMap called', { allPapersCount: allPapers.length, weeklyPapersCount: weeklyPapers.length });
     const mapContainer = document.getElementById('citation-map');
     const weeklyIds = new Set(weeklyPapers.map(p => p.id));
 
@@ -191,6 +192,7 @@ function renderCitationMap(allPapers, weeklyPapers) {
     }).addTo(map);
 
     const hasCoords = allPapers.filter(p => p.coordinates && p.coordinates.lat && p.coordinates.lon);
+    console.log('hasCoords count:', hasCoords.length);
 
     if (hasCoords.length === 0) {
         mapContainer.innerHTML = '<div style="height:400px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:12px;color:#666;">暂无地理坐标数据</div>';
