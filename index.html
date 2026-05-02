@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地震学周报</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #citation-map {
+            height: 400px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+        }
+        #citation-map.visible {
+            display: block;
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+        .citation-popup {
+            max-width: 250px;
+        }
+        .citation-popup h4 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .citation-popup p {
+            margin: 4px 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .blink-animation {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -43,6 +79,8 @@
             </div>
         </div>
 
+        <div id="citation-map"></div>
+
         <div id="papers-list" class="papers-list"></div>
 
         <div id="paper-modal" class="modal hidden">
@@ -56,6 +94,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

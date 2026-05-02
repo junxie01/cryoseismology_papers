@@ -1,0 +1,984 @@
+MODE: FULL HISTORICAL SCAN - Fetching all citations
+
+[1/57] Processing 10.1007/s11434-010-4276-2 (The M5.0 Suining-Tongnan (China) earthqu...)
+  [OC] Growing seismicity in the Sichuan Basin and its association with 
+  [OC] Kinematic Slip Evolution During the 2022 Ms 6.8 Luding, China, Ea
+  [OC] Detecting aftershocks of the &amp;lt;italic&amp;gt;M&amp;lt;/ital
+  [OC] An Extremely Shallow <i>M</i><sub><i>w</i></sub>4.1 Thrust Earthq
+  [OC] Source Parameters of Three Moderate Size Earthquakes in Weiyuan, 
+  [OC] Source characteristics of the mainshock and aftershocks of the 20
+  [OC] Focal mechanisms of the Lushan earthquake sequence and spatial va
+  [OC] The 2021 Mw 5.2 Baicheng Earthquake: Implications for the Hazards
+  [OC] The April 24, 2013 Changning Ms4.8 earthquake: a felt earthquake 
+  [OC] Rupture directivity of the August 3rd, 2014 Ludian earthquake (Yu
+  [OC] Shallow microearthquakes near Chongqing, China triggered by the R
+  [OC] Differential strain transfer, Longmen Shan thrust belt, eastern T
+[2/57] Processing 10.1007/s11589-010-0788-5 (Comparison of ground truth location of e...)
+  [OC] On the accuracy of long-period Rayleigh waves extracted from ambi
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Relocation of the 17 June 2017 Nuugaatsiaq (Greenland) Landslide 
+  [OC] Ground Truth Location of Earthquakes by Use of Ambient Seismic No
+[3/57] Processing 10.1007/s11589-010-0786-7 (Effects of sedimentary layer on earthqua...)
+[4/57] Processing 10.32469/10355/44219 (Upper mantle shear wave velocity structu...)
+[5/57] Processing 10.1007/s11589-013-0016-1 (Crustal S-wave velocity structure of the...)
+  [OC] Dynamics of the Yellowstone hydrothermal system
+[6/57] Processing 10.1007/s11589-010-0788-5 (Comparison of ground truth location of e...)
+  [OC] On the accuracy of long-period Rayleigh waves extracted from ambi
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Relocation of the 17 June 2017 Nuugaatsiaq (Greenland) Landslide 
+  [OC] Ground Truth Location of Earthquakes by Use of Ambient Seismic No
+[7/57] Processing 10.1785/0120130279 (Validating Accuracy of Rayleigh-Wave Dis...)
+  [OC] Multipathing Rayleigh Waves From Long‐Distance Noise Cross Correl
+  [OC] Influence of the off-great-circle propagation of Rayleigh waves o
+  [OC] VALIDATION OF THE GREEN’S FUNCTIONS RETRIEVED FROM AMBIENT NOISE 
+  [OC] Shallow structure of the Tangshan fault zone unveiled by dense se
+  [OC] Seismic Imaging of Crust Beneath the Western Tibet‐Pamir and West
+  [OC] Sedimentary structure of the Sichuan Basin derived from seismic a
+[8/57] Processing 10.1785/0120140252 (Synchronizing Intercontinental Seismic N...)
+  [OC] Correction of OBS clock errors using Scholte waves retrieved from
+  [OC] Clock errors in land and ocean bottom seismograms: high-accuracy 
+  [OC] Assessing the short-term clock drift of early broadband stations 
+  [OC] On the accuracy of long-period Rayleigh waves extracted from ambi
+  [OC] A Review of Timing Accuracy across the Global Seismographic Netwo
+  [OC] Assessing Short‐Term Clock Errors and Drifts of Temporary Seismic
+  [OC] Shear-wave velocity structure of the shallow sediments in the Boh
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Clock Error Detection for Decade-Long Seismic Monitoring Network 
+  [OC] On estimating time offsets in the ambient noise correlation funct
+  [OC] An Evaluation of the Timing Accuracy of Global and Regional Seism
+  [OC] Estimation of seismometer clock time offsets using Kalman Filter 
+  [OC] Time Correction of Ocean-Bottom Seismometers Using Improved Ambie
+[9/57] Processing 10.1007/s00024-014-0993-6 (Ground Truth Location of Earthquakes by ...)
+  [OC] Resolving Horizontal Rupture Directivity of Moderate Crustal Eart
+  [OC] Multipathing Rayleigh Waves From Long‐Distance Noise Cross Correl
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Source Parameters of Three Moderate Size Earthquakes in Weiyuan, 
+  [OC] Relocation of the 17 June 2017 Nuugaatsiaq (Greenland) Landslide 
+  [OC] 3-D Upper-Mantle Shear Velocity Model Beneath the Contiguous Unit
+[10/57] Processing 10.1002/2015jb012459 (Measurement of Rayleigh wave ellipticity...)
+  [OC] Assessing the effects of model parameter assumptions on surface-w
+  [OC] Assessment of shear wave velocity models in the Southeast Qinghai
+  [OC] Sedimentary and crustal structure of the US Gulf Coast revealed b
+  [OC] Further constraints on the shear wave velocity structure of Camer
+  [OC] Sedimentary and crustal structure of eastern North China from joi
+  [OC] 2-D sedimentary structures at the southeast margin of the Tarim B
+  [OC] Multi‐Scale Seismic Imaging of the Ridgecrest, CA, Region With Wa
+  [OC] EARA2024: a new radially anisotropic seismic velocity model for t
+  [OC] The Origin and Mantle Dynamics of Quaternary Intraplate Volcanism
+  [OC] Constraints for the Martian Crustal Structure From Rayleigh Waves
+  [OC] Rayleigh wave ellipticity from ambient noise: A practical method 
+  [OC] Geophysical‐petrological modelling of the crust and upper mantle 
+  [OC] Rayleigh-wave H/V ratio measurement from ambient noise cross-corr
+  [OC] Constraining Sedimentary Structure Using Frequency‐Dependent <i>P
+  [OC] Rayleigh‐Wave H/V via Noise Cross Correlation in Southern Califor
+  [OC] The Frequency‐Bessel Spectrograms of Multicomponent Cross‐Correla
+  [OC] Prediction of Terrestrial Heat Flow in Songliao Basin Based on De
+  [OC] 3D Shear Wave Velocity Model of Salt Lake Valley via Rayleigh Wav
+  [OC] Estimations of Sensor Misorientation for Broadband Seismic Statio
+  [OC] Frequency-dependent Lg attenuation in Northeast China and its imp
+  [OC] Joint Inversion of Rayleigh Wave Phase Velocity, Particle Motion,
+  [OC] Sedimentary and crustal velocity structure of Trans-North China O
+  [OC] Crustal structure beneath Portugal from teleseismic Rayleigh Wave
+  [OC] A two-step multi-frequency receiver function inversion method for
+  [OC] 地壳浅部&amp;lt;bold&amp;gt;S&amp;lt;/bold&amp;gt;波速度结构的多频接收函数两步反演法及其
+  [OC] Shallow Damage Zone Structure of the Wasatch Fault in Salt Lake C
+  [OC] Determination of near-surface shear-velocity structure based on t
+  [OC] Rayleigh wave attenuation tomography based on ambient noise inter
+  [OC] Shear Wave Velocity Structure beneath Maitri station in Dronning 
+  [OC] JointNet: A Multimodal Deep Learning-Based Approach for Joint Inv
+  [OC] Stepwise joint inversion of surface wave dispersion, Rayleigh wav
+  [OC] Shallow seismic structure beneath the continental China revealed 
+  [OC] Measurements of Seismometer Orientation of the First Phase CHINAr
+  [OC] High‐Resolution 3‐D Shear Wave Velocity Model of Northern Taiwan 
+  [OC] Full‐Waveform Sensitivity Kernels of Component‐Differential Trave
+  [OC] 3‐D Sedimentary Structures Beneath Southeastern Australia Constra
+  [OC] Three‐Dimensional Crustal Structures of the Shanxi Rift Construct
+  [OC] Observations and Modeling of Long‐Period Ground‐Motion Amplificat
+  [OC] Sensor Misorientation of CHINArray-II in Northeastern Tibetan Pla
+  [OC] 3-D crustal and uppermost mantle structure beneath NE China revea
+  [OC] Shear Wave Velocities in the San Gabriel and San Bernardino Basin
+  [OC] Sedimentary and Crustal Structure of the Western United States Fr
+  [OC] Pronounced Seismic Anisotropy in Kanto Sedimentary Basin: A Case 
+  [OC] Seismic Evidence of Basin Development in NE Tibetan Plateau in Re
+  [OC] Insights on Formation of the Gulf of Mexico by Rayleigh Surface W
+  [OC] A 3‐D Shear Wave Velocity Model for Myanmar Region
+  [OC] 3D Shear Velocity Structure of the Caribbean—Northwestern South A
+  [OC] An adaptive Bayesian inversion for upper-mantle structure using s
+[11/57] Processing 10.1093/gji/ggw137 (On the accuracy of long-period Rayleigh ...)
+  [OC] Evolution of the lithosphere in the Indian Ocean from combined ea
+  [OC] Resolving Horizontal Rupture Directivity of Moderate Crustal Eart
+  [OC] Multipathing Rayleigh Waves From Long‐Distance Noise Cross Correl
+  [OC] Broadband Finite Frequency Ambient Noise Tomography: A Case Study
+  [OC] Broadband Love Wave Phase Velocity Maps Based on Modified Double‐
+  [OC] On the Accuracy of Surface-Wave Dispersion Measurements from Hori
+  [OC] Broad-band Rayleigh wave phase velocity maps (10–150 s) across th
+  [OC] 3-D Upper-Mantle Shear Velocity Model Beneath the Contiguous Unit
+[12/57] Processing 10.1093/gji/ggw460 (Broad-band Rayleigh wave phase velocity ...)
+  [OC] High-resolution lithospheric structures of the Qinling-Dabie orog
+  [OC] Ambient noise surface wave tomography of Quaternary structures de
+  [OC] Extracting Long-Period Love Waves (&amp;gt;40 s) from Ambient Noi
+  [OC] Short-Period Surface-Wave Tomography in the Continental United St
+  [OC] Shallow Shear-Wave Velocity Structure in Oklahoma Based on the Jo
+  [OC] NoisePy: A New High-Performance Python Tool for Ambient-Noise Sei
+  [OC] Improving cross-correlations of ambient noise using an rms-ratio 
+  [OC] Rayleigh Wave Phase Velocity Maps at Regional Scale Inferring fro
+  [OC] Broadband Finite Frequency Ambient Noise Tomography: A Case Study
+  [OC] Evaluating Uncertainties of Phase Velocity Measurements from Cros
+  [OC] Broadband Love Wave Phase Velocity Maps Based on Modified Double‐
+  [OC] The relative roles of inheritance and long-term passive margin li
+  [OC] Continental Tectonics Inferred From High‐Resolution Imaging of th
+  [OC] Deep Vs structure under the city of PATRAS, Greece – Application 
+  [OC] DisperPy: A machine learning based tool to automatically pick gro
+  [OC] On the Accuracy of Surface-Wave Dispersion Measurements from Hori
+  [OC] The influences of large earthquake signals on the recovery of sur
+  [OC] One‐Fit‐All Transformer for Multimodal Geophysical Inversion: Met
+  [OC] Constraints on S-wave velocity structures of the lithosphere in m
+  [OC] Extracting surface waves, hum and normal modes: time-scale phase-
+  [OC] Long Period Rayleigh Wave Focal Spot Imaging Applied to USArray D
+  [OC] Array‐Based Teleseismic Love Wave Tomography
+  [OC] 3-D Upper-Mantle Shear Velocity Model Beneath the Contiguous Unit
+  [OC] Separation of Fundamental- and Higher-Mode Surface Waves in Ambie
+  [OC] Pronounced Seismic Anisotropy in Kanto Sedimentary Basin: A Case 
+  [OC] Extracting surface wave dispersion curves from asynchronous seism
+  [OC] A phase unwrapping approach in measuring surface wave phase veloc
+[13/57] Processing 10.1093/gji/ggx448 (An investigation of time–frequency domai...)
+  [OC] High-resolution lithospheric structures of the Qinling-Dabie orog
+  [OC] Phase-weighted slant stacking for surface wave dispersion measure
+  [OC] Sedimentary and crustal structure of the US Gulf Coast revealed b
+  [OC] Shallow shear wave velocity and radial anisotropy structure in th
+  [OC] Improving the retrieval of high-frequency surface waves from ambi
+  [OC] Dispersion measurement from ultra-short ambient noise using phase
+  [OC] Multi‐Scale Seismic Imaging of the Ridgecrest, CA, Region With Wa
+  [OC] Improving the quality of high-frequency surface waves retrieved f
+  [OC] Observation of Higher-Mode Rayleigh Waves from Ambient Noise in t
+  [OC] Radial Anisotropy and Sediment Thickness of West and Central Anta
+  [OC] Broadband Love Wave Phase Velocity Maps Based on Modified Double‐
+  [OC] Crustal and Upper Mantle Velocity Structure of SE Tibet From Join
+  [OC] Deformation of the Crust and Upper Mantle beneath the North China
+  [OC] Autocorrelation R<sub>2</sub> on Mars
+  [OC] 3D Crustal and Upper Mantle Model of East‐Central China From a Jo
+  [OC] Sedimentary and crustal velocity structure of Trans-North China O
+  [OC] Constraints on S-wave velocity structures of the lithosphere in m
+  [OC] Thermochemical structure and evolution of cratonic lithosphere in
+  [OC] Ambient Noise Array Tomography Using Regionalized Phase Velocitie
+  [OC] Upper crustal structure beneath the Qin-Hang and Wuyishan metallo
+  [OC] Lithosphere‐Asthenosphere Interaction Beneath the Southeastern Ti
+  [OC] Optimal Stacking of Noise Cross-Correlation Functions
+  [OC] Improving signal-to-noise ratios of ambient noise cross-correlati
+  [OC] 3‐D Sedimentary Structures Beneath Southeastern Australia Constra
+  [OC] Capturing seismic velocity changes in receiver functions with opt
+  [OC] Optimal stacking of noise cross-correlation functions
+  [OC] Improving the quality of empirical Green's functions, obtained by
+  [OC] Planetary analogue study using microseismic analysis for near-sur
+  [OC] High-performance CPU-GPU heterogeneous computing method for 9-com
+  [OC] <i>S</i>-Wave Velocity Structure of the Crust and Upper Mantle be
+  [OC] 基于背景噪声层析成像研究云南省宾川盆地浅层横波速度与径向各向异性结构
+  [OC] 3D Shear Velocity Structure of the Caribbean—Northwestern South A
+[14/57] Processing 10.1016/j.jafrearsci.2017.09.003 (Nonlinear inversion of resistivity sound...)
+  [OC] Further constraints on the shear wave velocity structure of Camer
+  [OC] Memory Based Hybrid Dragonfly Algorithm (MHDA): a New Technique f
+  [OC] A systematic approach to tuning a neural network model and its ap
+  [OC] Sedimentary structure of the Sichuan Basin derived from seismic a
+[15/57] Processing 10.1093/gji/ggx401 (Assessing the short-term clock drift of ...)
+  [OC] Clock errors in land and ocean bottom seismograms: high-accuracy 
+  [OC] Using high-precision travel time extraction to detect time deviat
+  [OC] A Review of Timing Accuracy across the Global Seismographic Netwo
+  [OC] Assessing Short‐Term Clock Errors and Drifts of Temporary Seismic
+  [OC] Clock Error Detection for Decade-Long Seismic Monitoring Network 
+  [OC] An Evaluation of the Timing Accuracy of Global and Regional Seism
+  [OC] Evaluating and correcting short-term clock drift in data from tem
+  [OC] Analysis of clock drift based on a three‐dimensional controlled‐s
+  [OC] Estimation of seismometer clock time offsets using Kalman Filter 
+  [OC] Time Correction of Ocean-Bottom Seismometers Using Improved Ambie
+[16/57] Processing 10.1016/j.pepi.2017.12.006 (Crust-mantle coupling mechanism in Camer...)
+  [OC] Gravity investigation of the Cameroon Volcanic Line in Adamawa re
+  [OC] Further constraints on the shear wave velocity structure of Camer
+  [OC] High-Resolution Three-dimensional Azimuthal Velocity Anisotropy o
+  [OC] Multistage tectonic evolution of the Tanlu fault: Insights from u
+  [OC] Crust and upper mantle structure of East Asia from ambient noise 
+  [OC] Anisotropic Rayleigh wave tomography revealed lithospheric modifi
+  [OC] Complex deformation mechanisms of the crust in eastern and northe
+  [OC] Depth dependent azimuthal anisotropy in Madagascar island from am
+  [OC] Azimuthally anisotropic seismic ambient noise tomography of South
+  [OC] Insights Into the Source of Magmatic Hot-Lines: Forty Years of Ge
+  [OC] A High-resolution 3-D Shear Velocity Model for Cameroon using Amb
+  [OC] High-resolution three-dimensional azimuthal velocity anisotropy o
+  [OC] Multiscale regionalised Rayleigh-wave group and phase velocity ma
+  [OC] Lithospheric structure of Hubei Province, central China, from Ray
+  [OC] Identification of Cameroon's geological structures through a grav
+  [OC] 3D Shear‐Wave Velocity and Density Modeling of the Northern Casca
+  [OC] Upper Mantle Earth Structure in Africa From Full‐Wave Ambient Noi
+  [OC] Complex deformation within the crust and upper mantle beneath SE 
+  [OC] The Western Cameroon Highland margin: Is there any geomorphometri
+[17/57] Processing 10.1360/sste-2022-0179 (接收函数和重力联合反演中国东北地区高精度莫霍面和波速比分布及地质意义...)
+  [OC] 川滇主要地震空区危险性的研究现状及思考
+[18/57] Processing 10.1360/sste-2025-0210 (川西地区地壳三维速度结构与各向异性特征及其构造意义...)
+[19/57] Processing 10.1007/s00024-018-1881-2 (3-D Upper-Mantle Shear Velocity Model Be...)
+  [OC] Evidence for Stress Localization Caused by Lithospheric Heterogen
+  [OC] Evaluating Global Tomography Models With Antipodal Ambient Noise 
+  [OC] Extracting Long-Period Love Waves (&amp;gt;40 s) from Ambient Noi
+  [OC] Shallow Shear-Wave Velocity Structure in Oklahoma Based on the Jo
+  [OC] Seismic Architecture of the Lithosphere-Asthenosphere System in t
+  [OC] Adjoint Tomography of Ambient Noise Data and Teleseismic P Waves:
+  [OC] Multi-scale imaging of 3-D electrical conductivity structure unde
+  [OC] Crustal Structure of the Western U.S. From Rayleigh and Love Wave
+  [OC] Broadband Finite Frequency Ambient Noise Tomography: A Case Study
+  [OC] Evaluating Models for Lithospheric Loss and Intraplate Volcanism 
+  [OC] Tomography of crust and lithosphere in the western Indian Ocean f
+  [OC] Shallow crustal velocity structure beneath the Xiangshan and Yuhu
+[20/57] Processing 10.1785/0220180260 (Imaging 3D Upper‐Mantle Structure with A...)
+  [OC] Template-matching-based data selection for passive seismic surfac
+  [OC] Extracting Long-Period Surface Waves and Free Oscillations Using 
+  [OC] Autocorrelation R<sub>2</sub> on Mars
+  [OC] A seismic meteor strike on Mars
+  [OC] Failure analysis on a heavy rainfall-induced landslide in Huay Kh
+[21/57] Processing 10.1093/gji/ggz008 (Further constraints on the shear wave ve...)
+  [OC] Gravity investigation of the Cameroon Volcanic Line in Adamawa re
+  [OC] Estimation of radiogenic heat production of the Adamawa region in
+  [OC] 3D S-wave velocity structure of the Ningdu basin in Jiangxi provi
+  [OC] Shallow Crustal Shear Velocity and Vp/Vs Across Southern Californ
+  [OC] Insights Into the Source of Magmatic Hot-Lines: Forty Years of Ge
+  [OC] Shallow seismic structure beneath the continental China revealed 
+  [OC] A High-resolution 3-D Shear Velocity Model for Cameroon using Amb
+  [OC] Crustal Thickness Variations and Tectonic Settings in the Southwe
+  [OC] The crustal configuration of the West and Central African Rift Sy
+  [OC] 3D Shear‐Wave Velocity and Density Modeling of the Northern Casca
+  [OC] Subsurface Tectonic Inferences of the Adamawa Region of Cameroon 
+[22/57] Processing 10.1360/zd-2013-43-6-1027 (芦山与汶川地震震区地壳上地幔结构及深部孕震环境...)
+  [Crossref] Error scanning Nature Communications: ("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read))
+  [Crossref] Error scanning Geophysical Journal International: 'list' object has no attribute 'get'
+[23/57] Processing 10.37155/2811-0595-0408-35 (InSAR技术应用于银川盆地地震活动性监测的研究...)
+  [Crossref] Error scanning Science: 'list' object has no attribute 'get'
+  [Crossref] Error scanning Seismological Research Letters: 'list' object has no attribute 'get'
+[24/57] Processing 10.1360/n072024-0360 (基于背景噪声层析成像研究云南省宾川盆地浅层横波速度与径向各向异性结构...)
+  [Crossref] Error scanning Nature: 'list' object has no attribute 'get'
+[25/57] Processing 10.1016/j.epsl.2019.07.007 (Millimeter-level ultra-long period multi...)
+  [OC] PPP-ARISEN: an open-source precise point positioning software wit
+  [OC] Focal mechanism inversion of the 2018 MW7.1 Anchorage earthquake 
+  [OC] Common-mode error and multipath mitigation for subdaily crustal d
+  [OC] Extended differential CAP method for earthquake source parameter 
+[26/57] Processing 10.1785/0120190177 (Enhancing Signal-to-Noise Ratios of High...)
+  [OC] Poisson’s ratios and S-wave velocities of the Xishancun landslide
+  [OC] Analysis on the dispersion characteristics of surface waves in a 
+  [OC] Seismic Ambient Noise Analyses Reveal Changing Temperature and Wa
+  [OC] Temporal Variation in Cultural Seismic Noise and Noise Correlatio
+  [OC] Fireworks: A Potential Artificial Source for Imaging Near-Surface
+[27/57] Processing 10.1029/2019jb018947 (Relocation of the 17 June 2017 Nuugaatsi...)
+  [OC] Error for 10.1029/2019jb018947: HTTPSConnectionPool(host='api.opencitations.net', port=443): Max retries exceeded with url: /index/v1/citations/10.1029/2019jb018947 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)')))
+  [Crossref] Error scanning Nature: HTTPSConnectionPool(host='api.crossref.org', port=443): Read timed out.
+  [Crossref] Error scanning Bulletin of the Seismological Society of America: 'list' object has no attribute 'get'
+[28/57] Processing 10.1785/0220200210 (Validity of Resolving the 785 km Discont...)
+  [Crossref] Error scanning The Cryosphere: 'list' object has no attribute 'get'
+[29/57] Processing 10.1785/0220200152 (Coseismic Slip Distribution of the 24 Ja...)
+  [OC] Multiple segmentation and seismogenic evolution of the 6th Februa
+  [OC] AI‐PAL: Self‐Supervised AI Phase Picking via Rule‐Based Algorithm
+  [OC] &amp;lt;bold&amp;gt;2023&amp;lt;/bold&amp;gt;年土耳其双重地震不同破裂过程与地震结构的
+  [OC] Source Model of the 2023 Turkey Earthquake Sequence Imaged by Sen
+  [OC] Early Report of the Source Characteristics, Ground Motions, and C
+  [OC] Complex multi-fault rupture and triggering during the 2023 earthq
+  [OC] Revisiting the 2020 Mw 6.8 Elaziğ, Türkiye Earthquake with Physic
+  [OC] Relationship between seismic structures and the diverse rupture p
+  [OC] Impact of soil conditions and seismic codes on collapsed structur
+  [OC] Fault Coalescence, Slip Distribution, and Stress Drop of the Febr
+[30/57] Processing 10.1029/2020gc009356 (Crust and Upper Mantle Structure of the ...)
+  [OC] Geodynamic Characteristics in the Southwest Margin of South China
+  [OC] Dynamic analysis of geophysical characteristics of Una-Una Volcan
+  [OC] Magmatism-Related Thermal Simulation of Volcanic Arcs in the Molu
+  [OC] Focused Mantle Upwelling Beneath the Southeastern Asian Basalt Pr
+  [OC] Lithospheric velocity structure of South China Sea basin from oce
+  [OC] Pn Anisotropic Tomography of Hainan Island and Surrounding Areas:
+  [OC] The 3D Density Structure of the South China Sea Based on Wavelet 
+  [OC] The causal mechanism of the Sangihe Forearc Thrust, Molucca Sea, 
+  [OC] Crustal Structure of the Indochina Peninsula From Ambient Noise T
+  [OC] Mantle heterogeneity caused by trapped water in the Southwest Bas
+  [OC] Multilayer Densities of the Crust and Upper Mantle in the South C
+  [OC] Pn Velocity Structure and Anisotropy of the Uppermost Mantle Bene
+  [OC] Crust and Upper Mantle of the South China Sea (Probabilistic-Dete
+  [OC] The 3D lithospheric structure of China Seas and adjacent areas: C
+  [OC] Crust and Upper Mantle of the South China Sea (probabilistic-dete
+  [OC] Simultaneous Inversion for Surface Wave Phase Velocity and Earthq
+  [OC] The upper mantle beneath Asia from seismic tomography, with infer
+  [OC] Magmatic System of the Hainan Plume Revealed by Ambient Noise Tom
+  [OC] Subsurface anatomy of the Irazú–Turrialba volcanic complex, infer
+  [OC] Adjoint‐State Teleseismic Traveltime Tomography: Method and Appli
+  [OC] Lithospheric Velocity Structure Beneath the Northern Margin of th
+  [OC] Lithospheric Structures of Marginal Sea Basins in and Around the 
+[31/57] Processing 10.1029/2020jb020444 (Evaluating Global Tomography Models With...)
+  [OC] GEOSCOPE Network: 40 Yr of Global Broadband Seismic Data
+[32/57] Processing 10.1093/gji/ggaa578 (Sedimentary structure of the Sichuan Bas...)
+  [OC] Two Unconnected Low-Velocity Zones in the Eastern Boundary of the
+  [OC] Research on sedimentary facies of Guantao Formation in Shanjiasi 
+  [OC] Investigation of Amplification Effect Using Ambient Seismic Noise
+  [OC] Three-dimensional shear-wave velocity structure of the Adana–Iske
+  [OC] A Generalized Strategy From S‐Wave Receiver Functions Reveals Dis
+  [OC] New Seismic Imaging of the Crustal Structure beneath the Eastern 
+  [OC] A study of site response in the Longmen Shan and adjacent regions
+  [OC] A Frequency Domain Methodology for Quantitative Evaluation of Dif
+  [OC] Amplification and Attenuation Due to Geologic Conditions in the S
+  [OC] Causative fault and seismogenic mechanism of the 2010 Suining M5.
+  [OC] The P-wave velocity and azimuthal anisotropy structure of southea
+  [OC] 基于伴随走时成像的青藏高原东南缘P波速度和方位各向异性研究
+  [OC] Joint tomographic inversion of crustal structure beneath the east
+  [OC] 基于地震波和&amp;lt;bold&amp;gt;InSAR&amp;lt;/bold&amp;gt;资料的&amp;lt;bo
+[33/57] Processing 10.1007/s10712-021-09678-w (Sensing Shallow Structure and Traffic No...)
+  [OC] Urban site characterization using DAS dark fibers on the MIT camp
+  [OC] Estimation of shallow structure along the hinagu fault by applyin
+  [OC] Shallow shear wave velocity and radial anisotropy structure in th
+  [OC] Typhoon-Induced Ocean Wave Noise as a Natural Source for Passive 
+  [OC] Using the three-station interferometry method to improve urban DA
+  [OC] Estimation of shallow structure along the Hinagu Fault by applyin
+  [OC] Seismic Monitoring of Machinery through Noise Interferometry of D
+  [OC] Detecting aftershocks of the &amp;lt;italic&amp;gt;M&amp;lt;/ital
+  [OC] Subsurface Imaging Using Interferometry of Distributed Acoustic S
+  [OC] Surface Wave Dispersion Measurement with Polarization Analysis Us
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Spatiotemporal evaluation of Rayleigh surface wave estimated from
+  [OC] Characterization of shallow karst zones using distributed acousti
+  [OC] 川滇主要地震空区危险性的研究现状及思考
+  [OC] Robust Retrieval of Surface Waves From Vehicle Signals for Near-S
+  [OC] Combining DAS Ambient Seismic Noise Interferometry and Unsupervis
+  [OC] Ambient noise imaging for municipal solid waste landfill structur
+  [OC] Constraining the shallow S-wave velocity structure by surface wav
+  [OC] Distributed Acoustic Sensing: A New Tool or a New Paradigm
+  [OC] Railway traffic monitoring with trackside fiber-optic cable by di
+  [OC] Improvement of Frequency–Bessel Phase-Velocity Spectra of Multico
+  [OC] Earthquake location based on Distributed Acoustic Sensing (DAS) a
+  [OC] Improving the Retrieval of High-Frequency Surface Waves Using Con
+  [OC] Multimode Rayleigh wave dispersion spectrum inversion using Wasse
+  [OC] Enhancing subsurface seismic profiling with distributed acoustic 
+  [OC] Urban subsurface exploration improved by denoising of virtual sho
+  [OC] Using Dark Fiber and Distributed Acoustic Sensing to Characterize
+  [OC] Near-Surface Characterization Using High-Speed Train Seismic Data
+  [OC] Near-surface characterization using urban traffic noise recorded 
+  [OC] Chirped-Pulse $\Phi$-OTDR and Seismic Noise Interferometry: Enhan
+  [OC] Rural Alaska Towards Internet Access and Equity
+  [OC] Urban dark fiber distributed acoustic sensing for bridge monitori
+  [OC] High-Frequency Surface-Wave Imaging from Traffic-Induced Noise by
+  [OC] 基于背景噪声层析成像研究云南省宾川盆地浅层横波速度与径向各向异性结构
+  [OC] Present status and prospective on the seismic hazard studies of m
+  [OC] Near-Surface Structure Investigation Using Ambient Noise in the W
+[34/57] Processing 10.1109/tgrs.2022.3143120 (ADE-Net: A Deep Neural Network for DAS E...)
+  [OC] DAS Vehicle Signal Extraction Using Machine Learning in Urban Tra
+  [OC] Advances in Earthquake Prevention and Reduction Based on Machine 
+  [OC] Deploying an Integrated Fiber Optic Sensing System for Seismo-Aco
+  [OC] DAShip: A Large-Scale Annotated Dataset for Ship Detection Using 
+  [OC] Detecting aftershocks of the &amp;lt;italic&amp;gt;M&amp;lt;/ital
+  [OC] Application of Machine Learning to Determine Earthquake Hypocente
+  [OC] Local Ocean Wave Field Estimation Using a Deep Generative Model o
+  [OC] Advancements in Disaster Prediction: A Systematic Review of Earth
+  [OC] Downhole Microseismic Detection Using Fiber-Optic Distributed Aco
+  [OC] Microseismic source location based on full waveform inversion dri
+  [OC] HD-TMA: A New Fast Template Matching Algorithm Implementation for
+  [OC] Distributed Acoustic Sensing: A New Tool or a New Paradigm
+  [OC] Comprehensive Dataset for Event Classification Using Distributed 
+  [OC] Railway traffic monitoring with trackside fiber-optic cable by di
+  [OC] Fractal Slope-Based Seismic Wave Detection Method
+  [OC] Machine Learning for Emergency Management: A Survey and Future Ou
+  [OC] Fast earthquake recognition method based on DAS and one dimension
+  [OC] The DAS With Deep Neural Network Based on DSR-Net for Fast Earthq
+  [OC] Deep-Learning-Based Seismic-Signal P-Wave First-Arrival Picking D
+  [OC] ZSN2N-DAS: Zero-Shot Noise2Noise Denoising for Distributed Acoust
+[35/57] Processing 10.1016/j.epsl.2021.117334 (Generation mechanism of the 26 s and 28 ...)
+  [OC] Sequencing Seismic Noise Correlations for Improving Surface Wave 
+  [OC] Gliding tremors associated with the 26 second microseism in the G
+  [OC] Unravelling the excitation mechanism of very long-period (VLP) tr
+[36/57] Processing 10.32629/gmsm.v1i3.46 (基于图像分析的航道水尺自动水位记录...)
+[37/57] Processing 10.1360/csb2005-50-4-348 (首都圈地区地壳三维P波速度细结构与强震孕育的深部构造环境...)
+  [OC] Improved 3D Shallow‐Deep Vs Structure in Tongzhou, Beijing (China
+  [OC] Shear-wave splitting in the crust beneath the southeast Capital a
+  [OC] Quasi-waveform seismic tomography of crustal structures in the ca
+  [OC] Melt/fluid migration and the 2022 Luding &amp;lt;italic&amp;gt;M&
+  [OC] Crustal seismic anisotropy in southeastern Capital area, China
+  [OC] Tomographic imaging of P wave velocity structure beneath the regi
+[38/57] Processing 10.32629/ej.v3i1.365 (家庭社会经济地位与创业意愿─基于CGSS数据的经验分析...)
+  [OC] Research on Legal Regulation of Age Discrimination in New Employm
+  [OC] The Theoretical Mechanism and Empirical Study of the Influence of
+  [OC] Entrepreneurial Spirit: Research Review and Prospects
+  [OC] Advancements in Wind-Induced Response Analysis and Fatigue Life R
+  [OC] The Triple Meaning of Division of Labor in “The German Ideology”
+  [OC] Carbon Emission Characteristics and Emission Reduction Scenario A
+  [OC] Digital Inclusive Finance, Rural Revitalisation and High-Quality 
+  [OC] The Development Process, Historical Role and Contemporary Enlight
+  [OC] The Effect of Education Level on Fertility Intention—An Empirical
+  [OC] The Effect of an Individual’s Subjective Socioeconomic Status on 
+  [OC] New Quality Productivity, Environmental Regulation, and Carbon Em
+  [OC] Research on the Influencing Factors of Tourism Consumption Intent
+  [OC] THE CHAIN MEDIATING ROLE OF PERCEIVED FAMILY SUPPORT FOR FORMAL A
+  [OC] The Influence of Family Capital and Social Security Satisfaction 
+  [OC] The Research Review and Prospect of Digital Finance
+  [OC] Digital Economy and Urbanization of Floating Population
+  [OC] Effect of poverty alleviation relocation on non-farm employment o
+  [OC] Digital Financial Inclusion, Family Entrepreneurship and Income D
+  [OC] Analysis of Influencing Factors of Fertility Intention in Differe
+  [OC] Analysis of the Impact of Digital Inclusive on the Real Economy i
+  [OC] Imaging Research Progress on COPD and Osteosarcopenia
+  [OC] How Do Cognitive Social Capital and Subjective Social Class Affec
+  [OC] Design and Research of Urban Shared Study Room Based on the Conce
+  [OC] Managerial Power, Innovation Involvement and Green Total Factor P
+  [OC] Research on the Relationship between Personal Growth Initiative a
+  [OC] Balanced characteristics and obstacle factors of high-quality gre
+  [OC] The Revision of Chinese Version of the Family Belonging Scale and
+  [OC] The Influence of Family Socioeconomic Status on Intergenerational
+  [OC] Research on the Impact of Digital Economy on the High-Quality Dev
+  [OC] The Legal Mechanism, Realistic Dilemma and Solutions of Public Da
+  [OC] Research the Influence of Social Justice and Political Efficacy o
+  [OC] Research on Social Work Intervention in Rural Grassroots Governan
+  [OC] Influence of Social Interaction and Number of Children on Subject
+  [OC] Study on the Modern Transformation of Traditional Livelihoods in 
+  [OC] Engels’ Women’s Liberation Theory and Its Contemporary Enlightenm
+  [OC] From “Being Involved” to “Being Able to Integrate”: A Study on So
+  [OC] An analysis of the relationship between land finance and economic
+[39/57] Processing 10.1016/j.tecto.2022.229449 (Crustal structure in the Weiyuan shale g...)
+  [OC] InSAR- and PCA-Based Inversion Reveals the Surface Deformation an
+  [OC] Monitoring induced seismicity in the Weiyuan shale gas field util
+  [OC] Structure and Fractal Characteristics of Organic Matter Pores in 
+  [OC] Structural constraints of induced earthquakes in the Weiyuan Shal
+[40/57] Processing 10.61369/eptsm.9051 (分布式能源与微电网发展对电网建设方向的影响分析...)
+[41/57] Processing 10.36012/etr.v2i7.2191 (分析分布式光纤传感技术在油气管线泄漏检测中的应用...)
+[42/57] Processing 10.1360/csb2005-50-4-348 (首都圈地区地壳三维P波速度细结构与强震孕育的深部构造环境...)
+  [OC] Improved 3D Shallow‐Deep Vs Structure in Tongzhou, Beijing (China
+  [OC] Shear-wave splitting in the crust beneath the southeast Capital a
+  [OC] Quasi-waveform seismic tomography of crustal structures in the ca
+  [OC] Melt/fluid migration and the 2022 Luding &amp;lt;italic&amp;gt;M&
+  [OC] Crustal seismic anisotropy in southeastern Capital area, China
+  [OC] Tomographic imaging of P wave velocity structure beneath the regi
+[43/57] Processing 10.1093/gji/ggac435 (Topography effect on ambient noise tomog...)
+  [OC] Salt Mine Water Injection-Induced Seismicity in the Changning (Ch
+  [OC] Application of active MASW study on irregular and undulated slopi
+  [OC] Ambient Noise Interferometry Using Ocean Bottom Seismometer Data 
+  [OC] High-resolution velocity structure in the Bomi area, Eastern Hima
+  [OC] Incorporating topographic effects in surface wave tomography base
+  [OC] Crustal Structure of the Yunnan Region, China Revealed by Adjoint
+  [OC] Shallow crustal structure of the northern Longmen Shan fault zone
+  [OC] Topography‐Incorporated Adjoint‐State Surface Wave Traveltime Tom
+  [OC] Seismicity Induced by Salt Mine Water Injection in the Changning 
+  [OC] Ambient noise tomography reveals deep ore-forming structures of s
+  [OC] Topography effect on seismic waveform tomography: a quantitative 
+  [OC] Seismic Evidence of Basin Development in NE Tibetan Plateau in Re
+  [OC] Apparent Low‐Velocity Belt in the Shallow Anninghe Fault Zone in 
+[44/57] Processing 10.1785/0220220316 (Seismometer Orientation Correction via T...)
+  [OC] Sensor Misorientation of CHINArray-II in Northeastern Tibetan Pla
+  [OC] Satellite-Enhanced Groundwater Prospect Assessment in a Crystalli
+[45/57] Processing 10.5194/tc-18-837-2024 (Ice plate deformation and cracking revea...)
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] Freshwater Thin Ice Sheet Monitoring and Imaging with Fiber Optic
+  [OC] Modeling of acoustic waveguides in floating ice sheets with verti
+  [OC] Research Advances on Distributed Acoustic Sensing Technology for 
+[46/57] Processing 10.1360/n072016-00368 (大陆地壳结构的气枪震源探测及其应用...)
+  [OC] Study on the pressure wave characteristics of bubbles in low freq
+  [OC] Simplified traditional bubble-motion equation and air-gun wavelet
+[47/57] Processing 10.1029/2024ea003572 (Near Real‐Time In Situ Monitoring of Nea...)
+  [OC] 分布式光纤地震传感技术在被动源成像中的应用(特邀)
+  [OC] A review of structural health monitoring for fixed offshore wind 
+[48/57] Processing 10.32629/gmsm.v3i3.669 (大数据背景下矿山测绘地理信息检测探析...)
+[49/57] Processing 10.1360/zd-2013-43-7-1096 (地震滑坡的动力学机制研究...)
+  [OC] Experimental Study on Failure Characteristics of Rock-Like Materi
+[50/57] Processing 10.37155/2811-0609-0503-75 (分布式光纤传感技术在水利隧洞结构健康监测中的应用...)
+[51/57] Processing 10.1360/sste-2023-0080 (秭归盆地下侏罗统火山碎屑沉积物源分析及其对东秦岭造山带晚三叠世地壳增厚的启示...)
+[52/57] Processing 10.3799/dqkx.2023.165 (新疆伽师地区地壳三维速度结构及中强震震源机制揭示的区域孕震环境...)
+[53/57] Processing 10.1016/j.tecto.2025.230718 (Complex seismogenic fault system for the...)
+[54/57] Processing 10.1029/2024jb029874 (High Resolution Shallow Structure of Eba...)
+[55/57] Processing 10.12677/jogt.2016.382010 (Study on the Sedimentary Facies of Yan 9...)
+[56/57] Processing 10.1016/j.eqrea.2025.100442 (SEISMOTECTONICS OF GHANA AND ADJACENT RE...)
+[57/57] Processing 10.1785/0220250313 (Fault Intersections Control the Extremel...)
+
+Done. 352 total unique citing paper(s) found.
+  [Geo] Key Laboratory of Ocean Observation and Forecastin -> (36.07, 120.38) [Qingdao, China]
+  [Geo] Key Laboratory of Ocean Observation and Forecastin -> (36.07, 120.38)
+  [Aff] Fetching affiliation for 10.1007/s11430-024-1659-9...
+  [Aff] Fetching affiliation for 10.1360/n072024-0360...
+  [Geo] College of Engineering, Ocean University of China, -> (36.07, 120.38)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2025.230862...
+  [Geo] School of Earth and Space Sciences Peking Universi -> (39.99, 116.30) [University Beijing China]
+  [Geo] School of Earth and Space Sciences Peking Universi -> (39.99, 116.30)
+  [Geo] 1Earth Observatory of Singapore, Nanyang Technolog -> (1.36, 103.82) [Singapore, Singapore]
+  [Geo] 1Earth Observatory of Singapore, Nanyang Technolog -> (1.36, 103.82)
+  [Aff] Fetching affiliation for 10.1016/j.gr.2025.04.008...
+  [Aff] Fetching affiliation for 10.1016/j.enggeo.2025.108223...
+  [Aff] Fetching affiliation for 10.1016/j.eqrea.2024.100357...
+  [Geo] National Institute of Natural Hazards Ministry of  -> (39.91, 116.39) [Beijing, China]
+  [Geo] National Institute of Natural Hazards Ministry of  -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1016/j.oregeorev.2025.106623...
+  [Geo] College of Energy, Chengdu University of Technolog -> (30.66, 104.06) [Chengdu 610059, China]
+  [Geo] College of Energy, Chengdu University of Technolog -> (30.66, 104.06)
+  [Geo] 1Helmholtz Centre for Geosciences (GFZ), Potsdam,  -> (52.40, 13.06) [Potsdam, Germany]
+  [Geo] 1Helmholtz Centre for Geosciences (GFZ), Potsdam,  -> (52.40, 13.06)
+  [Geo] Universidad de Zaragoza,Zaragoza,Spain,50009 -> (41.64, -0.90) [Spain, 50009]
+  [Geo] Universidad de Zaragoza,Zaragoza,Spain,50009 -> (41.64, -0.90)
+  [Geo] Cold Regions Research and Engineering Laboratory,  -> (43.67, -72.24) [NH 03755, USA]
+  [Geo] Cold Regions Research and Engineering Laboratory,  -> (43.67, -72.24)
+  [Geo] EarthByte Group, School of Geosciences,The Univers -> (-33.88, 151.20) [Sydney NSW 2006,]
+  [Geo] EarthByte Group, School of Geosciences,The Univers -> (-33.88, 151.20)
+  [Geo] Southern University of Science and Technology 1 ,  -> (34.02, -118.29) [Southern University]
+  [Geo] Southern University of Science and Technology 1 ,  -> (34.02, -118.29)
+  [Aff] Fetching affiliation for 10.1016/j.eqs.2025.01.007...
+  [Aff] Fetching affiliation for 10.1016/j.polar.2025.101208...
+  [Aff] Fetching affiliation for 10.1007/s10950-025-10298-9...
+  [Geo] School of Geophysics and Information Technology Ch -> (39.99, 116.34) [University of Geosciences Beij]
+  [Geo] School of Geophysics and Information Technology Ch -> (39.99, 116.34)
+  [Aff] Fetching affiliation for 10.1016/j.jrmge.2024.08.007...
+  [Geo] Northeast Petroleum University -> (22.41, 114.21) [University]
+  [Geo] Northeast Petroleum University -> (22.41, 114.21)
+  [Geo] 1Hubei Subsurface Multi–scale Imaging Key Laborato -> (30.58, 114.29) [Wuhan, China]
+  [Geo] 1Hubei Subsurface Multi–scale Imaging Key Laborato -> (30.58, 114.29)
+  [Aff] Fetching affiliation for 10.1038/s41597-025-05088-4...
+  [Geo] Department of Artificial Intelligence, Chengdu Uni -> (30.66, 104.06) [Chengdu, China]
+  [Geo] Department of Artificial Intelligence, Chengdu Uni -> (30.66, 104.06)
+  [Geo] School of Marine Science and Technology, Northwest -> (40.76, 72.36) [710000,]
+  [Geo] School of Marine Science and Technology, Northwest -> (40.76, 72.36)
+  [Aff] Fetching affiliation for 10.1016/j.oregeorev.2025.106551...
+  [Geo] State Key Laboratory of Precision Geodesy, Innovat -> (30.57, 114.36) [Wuhan 430077,]
+  [Geo] State Key Laboratory of Precision Geodesy, Innovat -> (30.57, 114.36)
+  [Geo] 1Geophysical Exploration Center, China Earthquake  -> (34.00, 114.00) [Henan, China]
+  [Geo] 1Geophysical Exploration Center, China Earthquake  -> (34.00, 114.00)
+  [Geo] Department of Earth and Planetary Sciences Univers -> (33.96, -117.34) [University of California River]
+  [Geo] Department of Earth and Planetary Sciences Univers -> (33.96, -117.34)
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.53, 114.39) [University of Geosciences Wuha]
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.53, 114.39)
+  [Geo] Department of Earth Science University of Western  -> (43.01, -81.27) [University of Western Ontario ]
+  [Geo] Department of Earth Science University of Western  -> (43.01, -81.27)
+  [Aff] Fetching affiliation for 10.1016/j.soildyn.2024.109119...
+  [Aff] Fetching affiliation for 10.1016/j.jseaes.2024.106462...
+  [Geo] Centre for Subsurface Imaging, Universiti Teknolog -> (4.81, 100.98) [Perak, Malaysia]
+  [Geo] Centre for Subsurface Imaging, Universiti Teknolog -> (4.81, 100.98)
+  [Geo] Department of Earth and Space Sciences, Southern U -> (22.54, 114.05) [Shenzhen 518055, China]
+  [Geo] Department of Earth and Space Sciences, Southern U -> (22.54, 114.05)
+  [Geo] Southern Marine Science and Engineering Guangdong  -> (22.76, 113.56) [Guangzhou 511458, China]
+  [Geo] Southern Marine Science and Engineering Guangdong  -> (22.76, 113.56)
+  [Geo] 1Hubei Subsurface Multi-Scale Imaging Lab (SMIL),  -> (39.00, 116.00) [Hubei, China]
+  [Geo] 1Hubei Subsurface Multi-Scale Imaging Lab (SMIL),  -> (39.00, 116.00)
+  [Aff] Fetching affiliation for 10.1007/s11430-024-1504-x...
+  [Aff] Fetching affiliation for 10.1360/sste-2024-0189...
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.53, 114.39)
+  [Aff] Fetching affiliation for 10.1016/j.jappgeo.2024.105606...
+  [Aff] Fetching affiliation for 10.1016/j.cageo.2025.106015...
+  [Geo] School of Mathematics Harbin Institute of Technolo -> (45.74, 126.63) [Institute of Technology Harbin]
+  [Geo] School of Mathematics Harbin Institute of Technolo -> (45.74, 126.63)
+  [Aff] Fetching affiliation for 10.3788/irla20250061...
+  [Aff] Fetching affiliation for 10.2139/ssrn.5495371...
+  [Geo] School of Earth and Space Sciences, University of  -> (32.00, 117.00) [Anhui, China]
+  [Geo] School of Earth and Space Sciences, University of  -> (32.00, 117.00)
+  [Geo] School of Electronics and Information Technology,  -> (23.13, 113.26) [Guangzhou, China]
+  [Geo] School of Electronics and Information Technology,  -> (23.13, 113.26)
+  [Geo] School of Mathematics and Statistics, Xi&#x2019;an -> (35.59, 109.30) [Shaanxi, China]
+  [Geo] School of Mathematics and Statistics, Xi&#x2019;an -> (35.59, 109.30)
+  [Aff] Fetching affiliation for 10.12677/hjce.2025.141010...
+  [Aff] Fetching affiliation for 10.12677/fin.2025.154079...
+  [Aff] Fetching affiliation for 10.12677/sa.2025.149257...
+  [Aff] Fetching affiliation for 10.12677/ass.2025.147595...
+  [Aff] Fetching affiliation for 10.12677/mm.2025.157195...
+  [Aff] Fetching affiliation for 10.12677/acm.2025.1571992...
+  [Geo] National Research Institute for Earth Science and  -> (36.12, 140.10) [305-0006, Japan]
+  [Geo] National Research Institute for Earth Science and  -> (36.12, 140.10)
+  [Geo] Department of Earth and Space Sciences, Southern U -> (22.59, 113.97) [Shenzhen 518055,]
+  [Geo] Department of Earth and Space Sciences, Southern U -> (22.59, 113.97)
+  [Geo] Department of Construction, Aksaray Technical Scie -> (38.35, 34.03) [68100 Aksaray,]
+  [Geo] Department of Construction, Aksaray Technical Scie -> (38.35, 34.03)
+  [Geo] Department of Ocean Science and Engineering Southe -> (22.60, 114.00) [University of Science and Tech]
+  [Geo] Department of Ocean Science and Engineering Southe -> (22.60, 114.00)
+  [Geo] Institute of Geophysics China Earthquake Administr -> (39.91, 116.39) [Beijing, China]
+  [Geo] Institute of Geophysics China Earthquake Administr -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1360/n072023-0181...
+  [Aff] Fetching affiliation for 10.1007/s11430-023-1324-y...
+  [Geo] Hubei Subsurface Multi–scale Imaging Key Laborator -> (22.55, 114.12) [Hubei 430074, China]
+  [Geo] Hubei Subsurface Multi–scale Imaging Key Laborator -> (22.55, 114.12)
+  [Geo] University of Alaska Anchorage,Anchorage,AK,USA,99 -> (61.19, -149.82) [USA, 99508]
+  [Geo] University of Alaska Anchorage,Anchorage,AK,USA,99 -> (61.19, -149.82)
+  [Aff] Fetching affiliation for 10.1007/s12040-024-02349-5...
+  [Geo] Department of Computational Mathematics, Science a -> (42.74, -84.51) [MI 48824, USA]
+  [Geo] Department of Computational Mathematics, Science a -> (42.74, -84.51)
+  [Geo] National Institute of Technology, Department of Ci -> (27.04, 93.46) [Jote, India]
+  [Geo] National Institute of Technology, Department of Ci -> (27.04, 93.46)
+  [Aff] Fetching affiliation for 10.1016/j.earscirev.2024.104841...
+  [Geo] Kyushu University Faculty of Sciences Graduate Sch -> (33.67, 130.44) [Kyushu University]
+  [Geo] Kyushu University Faculty of Sciences Graduate Sch -> (33.67, 130.44)
+  [Geo] Department of Sustainable Earth Systems Sciences,  -> (32.94, -96.75) [TX 75080, USA]
+  [Geo] Department of Sustainable Earth Systems Sciences,  -> (32.94, -96.75)
+  [Aff] Fetching affiliation for 10.21203/rs.3.rs-4674737/v1...
+  [Geo] Aksaray University, Aksaray Technical Sciences Voc -> (38.33, 33.99) [Aksaray University]
+  [Geo] Aksaray University, Aksaray Technical Sciences Voc -> (38.33, 33.99)
+  [Geo] Department of Earth Sciences Statewide California  -> (34.02, -118.29) [University of Southern Califor]
+  [Geo] Department of Earth Sciences Statewide California  -> (34.02, -118.29)
+  [Geo] National Key Laboratory of Deep Oil and Gas, China -> (36.07, 120.38) [Qingdao 266580, P. R. China]
+  [Geo] National Key Laboratory of Deep Oil and Gas, China -> (36.07, 120.38)
+  [Geo] School of Geosciences and Info-Physics, Central So -> (28.20, 112.97) [Changsha 410083, China]
+  [Geo] School of Geosciences and Info-Physics, Central So -> (28.20, 112.97)
+  [Geo] Department of Earth and Space Sciences Southern Un -> (22.60, 114.00) [University of Science and Tech]
+  [Geo] Department of Earth and Space Sciences Southern Un -> (22.60, 114.00)
+  [Aff] Fetching affiliation for 10.1016/j.optcom.2024.130382...
+  [Geo] German Research Centre for Geosciences (GFZ) , 144 -> (52.37, 13.05) [14473 Potsdam, Germany]
+  [Geo] German Research Centre for Geosciences (GFZ) , 144 -> (52.37, 13.05)
+  [Geo] 1Innovation Academy for Precision Measurement Scie -> (30.58, 114.29) [Wuhan, People’s Republic of Ch]
+  [Geo] 1Innovation Academy for Precision Measurement Scie -> (30.58, 114.29)
+  [Geo] Université Claude Bernard Lyon 1, Ecole Normale Su -> (45.77, 4.89) [Villeurbanne, France]
+  [Geo] Université Claude Bernard Lyon 1, Ecole Normale Su -> (45.77, 4.89)
+  [Geo] Department of Earth Science, University of Toronto -> (37.61, -82.32) [M5S3B1, Canada]
+  [Geo] Department of Earth Science, University of Toronto -> (37.61, -82.32)
+  [Geo] Guangdong Provincial Key Laboratory of Geophysical -> (22.54, 114.05) [Shenzhen 518055, China]
+  [Geo] Guangdong Provincial Key Laboratory of Geophysical -> (22.54, 114.05)
+  [Geo] School of Geodesy and Geomatics, Wuhan University  -> (30.52, 114.36) [Wuhan 430079,]
+  [Geo] School of Geodesy and Geomatics, Wuhan University  -> (30.52, 114.36)
+  [Geo] National University of Singapore 1 , Civil and Env -> (1.36, 103.82) [Singapore, Singapore]
+  [Geo] National University of Singapore 1 , Civil and Env -> (1.36, 103.82)
+  [Geo] Hubei Subsurface Multi‐Scale Imaging Key Laborator -> (30.53, 114.39) [University of Geosciences Wuha]
+  [Geo] Hubei Subsurface Multi‐Scale Imaging Key Laborator -> (30.53, 114.39)
+  [Geo] Key Laboratory of Ocean and Marginal Sea Geology S -> (23.18, 113.35) [Chinese Academy of Sciences, G]
+  [Geo] Key Laboratory of Ocean and Marginal Sea Geology S -> (23.18, 113.35)
+  [Aff] Fetching affiliation for 10.1007/s11430-023-1250-3...
+  [Aff] Fetching affiliation for 10.1360/sste-2023-0129...
+  [Aff] Fetching affiliation for 10.1088/1361-6501/ad282b...
+  [Geo] Department of Earth Sciences, University of Geneva -> (46.20, 6.15) [Geneva, Switzerland]
+  [Geo] Department of Earth Sciences, University of Geneva -> (46.20, 6.15)
+  [Geo] 1Department of Civil and Environmental Engineering -> (-34.61, -58.50) [Nevada, U.S.A.]
+  [Geo] 1Department of Civil and Environmental Engineering -> (-34.61, -58.50)
+  [Aff] Fetching affiliation for 10.1134/s0001437024010090...
+  [Aff] Fetching affiliation for 10.1016/j.eqs.2024.07.002...
+  [Aff] Fetching affiliation for 10.1016/j.enggeo.2024.107768...
+  [Geo] College of Physics, Donghua University, Shanghai,  -> (31.23, 121.47) [Shanghai, China]
+  [Geo] College of Physics, Donghua University, Shanghai,  -> (31.23, 121.47)
+  [Aff] Fetching affiliation for 10.1016/j.jseaes.2024.106338...
+  [Aff] Fetching affiliation for 10.1360/sspma-2024-0171...
+  [Aff] Fetching affiliation for 10.1186/s40623-024-02088-3...
+  [Geo] 1 Massachusetts Institute of Technology, Departmen -> (42.37, -71.10) [Cambridge, USA]
+  [Geo] 1 Massachusetts Institute of Technology, Departmen -> (42.37, -71.10)
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2024.107269...
+  [Aff] Fetching affiliation for 10.1360/sste-2024-0066...
+  [Aff] Fetching affiliation for 10.1007/s11430-024-1423-0...
+  [Geo] K.J Somaiya Institute of Technology,Department of  -> (19.57, 76.42) [Maharashtra, India]
+  [Geo] K.J Somaiya Institute of Technology,Department of  -> (19.57, 76.42)
+  [Geo] Department of Geodesy and Geomatics Engineering, S -> (23.04, 113.36) [Guangzhou 510006, China]
+  [Geo] Department of Geodesy and Geomatics Engineering, S -> (23.04, 113.36)
+  [Geo] Department of Fire and Disaster Prevention, Semyun -> (37.13, 128.19) [Jecheon-si 27136, Republic of ]
+  [Geo] Department of Fire and Disaster Prevention, Semyun -> (37.13, 128.19)
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.99, 116.30) [Beijing 100871, China]
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.99, 116.30)
+  [Geo] 1Department of Geophysics, Tel-Aviv University, Te -> (32.09, 34.78) [Tel Aviv, Israel]
+  [Geo] 1Department of Geophysics, Tel-Aviv University, Te -> (32.09, 34.78)
+  [Geo] 1Department of Ocean Science and Engineering, Sout -> (22.54, 114.05) [Shenzhen, China]
+  [Geo] 1Department of Ocean Science and Engineering, Sout -> (22.54, 114.05)
+  [Geo] Key Laboratory of Earth Exploration and Informatio -> (30.68, 104.14) [University of Technology Cheng]
+  [Geo] Key Laboratory of Earth Exploration and Informatio -> (30.68, 104.14)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2023.230161...
+  [Geo] Division of Mathematical Sciences School of Physic -> (1.30, 103.78) [University Singapore Singapore]
+  [Geo] Division of Mathematical Sciences School of Physic -> (1.30, 103.78)
+  [Geo] School of Earth Sciences, Zhejiang University, Han -> (30.25, 120.21) [Hangzhou, China]
+  [Geo] School of Earth Sciences, Zhejiang University, Han -> (30.25, 120.21)
+  [Geo] Yunnan Earthquake Administration, Kunming, Yunnan, -> (25.00, 102.00) [Yunnan, China]
+  [Geo] Yunnan Earthquake Administration, Kunming, Yunnan, -> (25.00, 102.00)
+  [Geo] School of Civil Engineering, Southwest Jiaotong Un -> (30.66, 104.06) [Chengdu, China]
+  [Geo] School of Civil Engineering, Southwest Jiaotong Un -> (30.66, 104.06)
+  [Aff] Fetching affiliation for 10.12677/ds.2024.104237...
+  [Aff] Fetching affiliation for 10.12677/ass.2024.13111068...
+  [Aff] Fetching affiliation for 10.12677/acpp.2024.138279...
+  [Aff] Fetching affiliation for 10.12677/mm.2024.144092...
+  [Aff] Fetching affiliation for 10.31497/zrzyxb.20240414...
+  [Aff] Fetching affiliation for 10.12677/ecl.2024.1341158...
+  [Aff] Fetching affiliation for 10.12677/design.2024.93307...
+  [Aff] Fetching affiliation for 10.12677/ass.2024.13111061...
+  [Aff] Fetching affiliation for 10.12677/ecl.2024.133723...
+  [Aff] Fetching affiliation for 10.12677/mm.2024.143056...
+  [Aff] Fetching affiliation for 10.12677/acpp.2024.133065...
+  [Aff] Fetching affiliation for 10.12677/orf.2024.142205...
+  [Aff] Fetching affiliation for 10.2139/ssrn.4690586...
+  [Aff] Fetching affiliation for 10.1038/s41467-023-41404-5...
+  [Geo] Key Laboratory of Geoscience Big Data and Deep Res -> (24.83, 105.05) [Zhejiang 310030, China]
+  [Geo] Key Laboratory of Geoscience Big Data and Deep Res -> (24.83, 105.05)
+  [Geo] State Key Laboratory of Isotope Geochemistry Guang -> (23.18, 113.35) [Chinese Academy of Sciences, G]
+  [Geo] State Key Laboratory of Isotope Geochemistry Guang -> (23.18, 113.35)
+  [Geo] 1Hubei Subsurface Multi-Scale Imaging Lab (SMIL),  -> (39.00, 116.00) [Hubei, China]
+  [Geo] 1Hubei Subsurface Multi-Scale Imaging Lab (SMIL),  -> (39.00, 116.00)
+  [Aff] Fetching affiliation for 10.26443/seismica.v2i2.272...
+  [Aff] Fetching affiliation for 10.26443/seismica.v2i2.247...
+  [Geo] Department of Earth Sciences Faculty of Mathematic -> (51.52, -0.13) [University College London Lond]
+  [Geo] Department of Earth Sciences Faculty of Mathematic -> (51.52, -0.13)
+  [Geo] 1Southwest Jiaotong University, Chengdu City, Sich -> (30.50, 102.50) [Sichuan Province, China]
+  [Geo] 1Southwest Jiaotong University, Chengdu City, Sich -> (30.50, 102.50)
+  [Aff] Fetching affiliation for 10.1007/s11802-023-5254-9...
+  [Aff] Fetching affiliation for 10.1007/s11430-022-1104-5...
+  [Aff] Fetching affiliation for 10.1360/sste-2022-0219...
+  [Geo] Seismological Laboratory California Institute of T -> (34.14, -118.13) [Institute of Technology Pasade]
+  [Geo] Seismological Laboratory California Institute of T -> (34.14, -118.13)
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.53, 114.39)
+  [Aff] Fetching affiliation for 10.1007/s12517-023-11533-8...
+  [Geo] Key Laboratory of Petroleum Resource Research, Ins -> (39.97, 116.42) [Beijing 100029, China]
+  [Geo] Key Laboratory of Petroleum Resource Research, Ins -> (39.97, 116.42)
+  [Geo] Guangzhou Marine Geological Survey, China Geologic -> (22.76, 113.56) [Guangzhou 511458, China]
+  [Geo] Guangzhou Marine Geological Survey, China Geologic -> (22.76, 113.56)
+  [Aff] Fetching affiliation for 10.1186/s40623-023-01855-y...
+  [Geo] Key Laboratory of Ocean and Marginal Sea Geology,  -> (23.18, 113.35) [Chinese Academy of Sciences, G]
+  [Geo] Key Laboratory of Ocean and Marginal Sea Geology,  -> (23.18, 113.35)
+  [Aff] Fetching affiliation for 10.1016/j.soildyn.2023.107820...
+  [Aff] Fetching affiliation for 10.1038/s43247-023-00837-y...
+  [Aff] Fetching affiliation for 10.1007/s00024-023-03266-2...
+  [Geo] School of Civil Engineering, Hefei University of T -> (31.87, 117.28) [Hefei 230009, China]
+  [Geo] School of Civil Engineering, Hefei University of T -> (31.87, 117.28)
+  [Aff] Fetching affiliation for 10.1038/s41467-023-38385-w...
+  [Geo] 1State Key Laboratory of Lithospheric Evolution, I -> (39.91, 116.39) [Beijing, China]
+  [Geo] 1State Key Laboratory of Lithospheric Evolution, I -> (39.91, 116.39)
+  [Geo] Institute of Geophysics China Earthquake Administr -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1007/s11430-022-1040-4...
+  [Geo] 1Xinjiang Pamir Intracontinental Subduction Nation -> (39.91, 116.39) [Beijing, China]
+  [Geo] 1Xinjiang Pamir Intracontinental Subduction Nation -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1007/s10712-023-09787-8...
+  [Geo] South China Normal University, People’s Republic o -> (23.14, 113.34) [South China Normal University]
+  [Geo] South China Normal University, People’s Republic o -> (23.14, 113.34)
+  [Aff] Fetching affiliation for 10.1016/j.eqrea.2022.100199...
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42) [Chinese Academy of Sciences, W]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Aff] Fetching affiliation for 10.1360/tb-2023-0015...
+  [Geo] Department of Earth, Atmospheric and Planetary Sci -> (42.36, -71.10) [MA 02139, USA]
+  [Geo] Department of Earth, Atmospheric and Planetary Sci -> (42.36, -71.10)
+  [Aff] Fetching affiliation for 10.1007/s12583-023-1316-6...
+  [Aff] Fetching affiliation for 10.1007/s00024-023-03245-7...
+  [Geo] School of Earth Sciences Zhejiang University  Hang -> (30.29, 119.82) [University Hangzhou China]
+  [Geo] School of Earth Sciences Zhejiang University  Hang -> (30.29, 119.82)
+  [Geo] Laboratory of Seismology and Physics of the Earth' -> (31.84, 117.26) [University of Science and Tech]
+  [Geo] Laboratory of Seismology and Physics of the Earth' -> (31.84, 117.26)
+  [Aff] Fetching affiliation for 10.1007/s12303-022-0033-y...
+  [Aff] Fetching affiliation for 10.1016/j.jappgeo.2022.104909...
+  [Aff] Fetching affiliation for 10.1007/s10712-023-09816-6...
+  [Geo] 1Institut de physique du globe de Paris, Universit -> (48.86, 2.32) [Paris, France]
+  [Geo] 1Institut de physique du globe de Paris, Universit -> (48.86, 2.32)
+  [Geo] 1Institute of Geophysics, China Earthquake Adminis -> (39.91, 116.39) [Beijing, China]
+  [Geo] 1Institute of Geophysics, China Earthquake Adminis -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2023.107114...
+  [Geo] Division of Mathematical Sciences School of Physic -> (1.30, 103.78)
+  [Geo] 1School of Earth Sciences and Engineering, Sun Yat -> (22.27, 113.57) [Zhuhai, China]
+  [Geo] 1School of Earth Sciences and Engineering, Sun Yat -> (22.27, 113.57)
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2023.107109...
+  [Geo] 1State Key Laboratory of Geodesy and Earth’s Dynam -> (39.00, 116.00) [Hubei, China]
+  [Geo] 1State Key Laboratory of Geodesy and Earth’s Dynam -> (39.00, 116.00)
+  [Geo] 1Chinese Academy of Geological Sciences, Beijing,  -> (39.91, 116.39) [Beijing, China]
+  [Geo] 1Chinese Academy of Geological Sciences, Beijing,  -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1016/j.jseaes.2023.105767...
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2023.230008...
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2023.230007...
+  [Aff] Fetching affiliation for 10.3389/feart.2022.1016096...
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2022.229680...
+  [Aff] Fetching affiliation for 10.1016/j.epsl.2022.117939...
+  [Aff] Fetching affiliation for 10.1016/j.eqrea.2022.100176...
+  [Geo] Electrical and Computer Engineering Department, KI -> (35.17, 33.36) [Nicosia, Cyprus]
+  [Geo] Electrical and Computer Engineering Department, KI -> (35.17, 33.36)
+  [Geo] Department of Ocean Operations and Civil Engineeri -> (62.47, 6.13) [Aalesund, Norway]
+  [Geo] Department of Ocean Operations and Civil Engineeri -> (62.47, 6.13)
+  [Aff] Fetching affiliation for 10.12677/sd.2023.134132...
+  [Aff] Fetching affiliation for 10.12677/orf.2023.134267...
+  [Aff] Fetching affiliation for 10.12677/fin.2023.134085...
+  [Aff] Fetching affiliation for 10.12677/orf.2023.132045...
+  [Aff] Fetching affiliation for 10.12677/ass.2023.128598...
+  [Aff] Fetching affiliation for 10.31497/zrzyxb.20230108...
+  [Aff] Fetching affiliation for 10.3389/feart.2022.952410...
+  [Aff] Fetching affiliation for 10.3103/s0747923922050085...
+  [Geo] Department of Quality Industrial Safety and Enviro -> (10.60, 14.33) [Maroua, Cameroon]
+  [Geo] Department of Quality Industrial Safety and Enviro -> (10.60, 14.33)
+  [Geo] 1School of Science, Jiangnan University, Wuxi, Jia -> (33.00, 120.00) [Jiangsu, China]
+  [Geo] 1School of Science, Jiangnan University, Wuxi, Jia -> (33.00, 120.00)
+  [Aff] Fetching affiliation for 10.3389/feart.2022.990837...
+  [Geo] Laboratory of Seismology and Physics of Earth's In -> (31.84, 117.26) [University of Science and Tech]
+  [Geo] Laboratory of Seismology and Physics of Earth's In -> (31.84, 117.26)
+  [Aff] Fetching affiliation for 10.3389/feart.2022.943424...
+  [Aff] Fetching affiliation for 10.1007/s10712-022-09723-2...
+  [Geo] State Key Laboratory of Lithospheric Evolution, In -> (39.97, 116.42) [Beijing 100029, China]
+  [Geo] State Key Laboratory of Lithospheric Evolution, In -> (39.97, 116.42)
+  [Geo] Department of Earth and Planetary Sciences Harvard -> (30.65, -88.16) [University Cambridge MA USA]
+  [Geo] Department of Earth and Planetary Sciences Harvard -> (30.65, -88.16)
+  [Geo] 1Laboratory of Seismology and Physics of the Earth -> (31.87, 117.28) [Hefei, China]
+  [Geo] 1Laboratory of Seismology and Physics of the Earth -> (31.87, 117.28)
+  [Geo] National Institute of Natural Hazards Ministry of  -> (39.91, 116.39)
+  [Geo] 1Institute of Geophysics, China Earthquake Adminis -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1360/tb-2022-0155...
+  [Aff] Fetching affiliation for 10.1016/j.icarus.2022.114912...
+  [Geo] Department of Earth Sciences University of Douala  -> (4.06, 9.73) [University of Douala Douala Ca]
+  [Geo] Department of Earth Sciences University of Douala  -> (4.06, 9.73)
+  [Geo] Shanghai Earthquake Administration  Shanghai China -> (31.23, 121.47) [Shanghai, China]
+  [Geo] Shanghai Earthquake Administration  Shanghai China -> (31.23, 121.47)
+  [Aff] Fetching affiliation for 10.3389/feart.2022.832744...
+  [Aff] Fetching affiliation for 10.1038/s41561-022-00929-y...
+  [Geo] 1Department of Geology and Geophysics, University  -> (-31.85, 151.98) [Utah, U.S.A.]
+  [Geo] 1Department of Geology and Geophysics, University  -> (-31.85, 151.98)
+  [Aff] Fetching affiliation for 10.1016/j.jappgeo.2022.104587...
+  [Aff] Fetching affiliation for 10.1016/j.eqs.2022.05.004...
+  [Geo] Southwest Jiaotong University 1 , Faculty of Geosc -> (30.66, 104.06) [Chengdu, China]
+  [Geo] Southwest Jiaotong University 1 , Faculty of Geosc -> (30.66, 104.06)
+  [Geo] Geodesy Research Laboratory, National Institute of -> (3.87, 11.52) [Yaoundé, Cameroon]
+  [Geo] Geodesy Research Laboratory, National Institute of -> (3.87, 11.52)
+  [Geo] Department of Earth and Planetary Sciences Washing -> (38.64, -90.46) [University in St Louis St Loui]
+  [Geo] Department of Earth and Planetary Sciences Washing -> (38.64, -90.46)
+  [Aff] Fetching affiliation for 10.3389/feart.2022.838993...
+  [Geo] Laboratory of Petroleum Resources and Prospecting, -> (39.91, 116.39) [Beijing, China]
+  [Geo] Laboratory of Petroleum Resources and Prospecting, -> (39.91, 116.39)
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.53, 114.39)
+  [Geo] Kyushu University - Ito Campus: Kyushu Daigaku -> (33.67, 130.44) [Kyushu University]
+  [Geo] Kyushu University - Ito Campus: Kyushu Daigaku -> (33.67, 130.44)
+  [Aff] Fetching affiliation for 10.1007/s10291-022-01380-7...
+  [Geo] 1Key Laboratory of Ocean and Marginal Sea Geology, -> (23.13, 113.26) [Guangzhou, China]
+  [Geo] 1Key Laboratory of Ocean and Marginal Sea Geology, -> (23.13, 113.26)
+  [Geo] State Key Laboratory of Isotope Geochemistry Guang -> (23.18, 113.35) [Chinese Academy of Sciences, G]
+  [Geo] State Key Laboratory of Isotope Geochemistry Guang -> (23.18, 113.35)
+  [Geo] Department of Earth and Space Sciences, Southern U -> (23.14, 113.20) [Guangdong, China.]
+  [Geo] Department of Earth and Space Sciences, Southern U -> (23.14, 113.20)
+  [Geo] Department of Earth and Planetary Sciences, Harvar -> (42.37, -71.15) [MA 02138, USA]
+  [Geo] Department of Earth and Planetary Sciences, Harvar -> (42.37, -71.15)
+  [Aff] Fetching affiliation for 10.1016/j.jseaes.2022.105350...
+  [Aff] Fetching affiliation for 10.1016/j.epsl.2021.117257...
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2021.229187...
+  [Geo] Key Laboratory of Petroleum Resource Research, Ins -> (39.91, 116.39) [Beijing, China]
+  [Geo] Key Laboratory of Petroleum Resource Research, Ins -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.12677/fin.2022.124034...
+  [Aff] Fetching affiliation for 10.12677/orf.2022.123100...
+  [Aff] Fetching affiliation for 10.12677/fin.2022.121001...
+  [Aff] Fetching affiliation for 10.12677/aam.2022.114186...
+  [Aff] Fetching affiliation for 10.12677/orf.2022.124134...
+  [Aff] Fetching affiliation for 10.31497/zrzyxb.20220612...
+  [Aff] Fetching affiliation for 10.12677/wer.2022.114037...
+  [Aff] Fetching affiliation for 10.12677/aam.2022.115255...
+  [Aff] Fetching affiliation for 10.12677/ass.2022.117375...
+  [Aff] Fetching affiliation for 10.12677/orf.2022.123094...
+  [Geo] Key Laboratory of Petroleum Resources Research, In -> (39.97, 116.42) [Beijing 100029, China]
+  [Geo] Key Laboratory of Petroleum Resources Research, In -> (39.97, 116.42)
+  [Geo] Department of Geology and Geophysics University of -> (40.76, -111.84) [University of Utah Salt Lake C]
+  [Geo] Department of Geology and Geophysics University of -> (40.76, -111.84)
+  [Geo] Key Laboratory of Geoscience Big Data and Deep Res -> (24.76, 105.26) [Zhejiang 310027, China]
+  [Geo] Key Laboratory of Geoscience Big Data and Deep Res -> (24.76, 105.26)
+  [Geo] Department of Earth and Atmospheric Sciences, Sain -> (37.16, -93.26) [Missouri, U.S.A.]
+  [Geo] Department of Earth and Atmospheric Sciences, Sain -> (37.16, -93.26)
+  [Aff] Fetching affiliation for 10.1007/s11430-020-9734-5...
+  [Geo] Department of Astronomy and Astrophysics, Tata Ins -> (18.93, 72.84) [Mumbai 400005, India]
+  [Geo] Department of Astronomy and Astrophysics, Tata Ins -> (18.93, 72.84)
+  [Geo] Department of Earth and Environmental Sciences Mac -> (-33.89, 151.19) [University Sydney Australia]
+  [Geo] Department of Earth and Environmental Sciences Mac -> (-33.89, 151.19)
+  [Geo] Institute of Earth Sciences Academia Sinica  Taipe -> (25.04, 121.56) [Taipei, Taiwan]
+  [Geo] Institute of Earth Sciences Academia Sinica  Taipe -> (25.04, 121.56)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2021.228799...
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2021.228795...
+  [Geo] School of Earth and Ocean Sciences, University of  -> (55.00, -125.00) [British Columbia, Canada]
+  [Geo] School of Earth and Ocean Sciences, University of  -> (55.00, -125.00)
+  [Geo] Hubei Subsurface Multi-Scale Imaging Lab (SMIL), I -> (22.55, 114.12) [Hubei 430074, China]
+  [Geo] Hubei Subsurface Multi-Scale Imaging Lab (SMIL), I -> (22.55, 114.12)
+  [Geo] U.S. Geological Survey, Albuquerque Seismological  -> (32.89, -80.08) [New Mexico, U.S.A.]
+  [Geo] U.S. Geological Survey, Albuquerque Seismological  -> (32.89, -80.08)
+  [Geo] Department of Earth, Environmental, and Planetary  -> (29.72, -95.50) [TX 77005, USA]
+  [Geo] Department of Earth, Environmental, and Planetary  -> (29.72, -95.50)
+  [Geo] Department of Geology and Geophysics, University o -> (-31.85, 151.98) [Utah, U.S.A.]
+  [Geo] Department of Geology and Geophysics, University o -> (-31.85, 151.98)
+  [Aff] Fetching affiliation for 10.1007/s10291-021-01095-1...
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42) [Chinese Academy of Sciences, W]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39) [Beijing, China]
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39)
+  [Geo] Institute of Geophysics, China Earthquake Administ -> (39.96, 116.31) [Beijing 100081, China]
+  [Geo] Institute of Geophysics, China Earthquake Administ -> (39.96, 116.31)
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.58, 114.29) [Wuhan, China]
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.58, 114.29)
+  [Aff] Fetching affiliation for 10.1007/s11770-021-0916-0...
+  [Geo] Institute of Theoretical and Applied Geophysics, P -> (39.91, 116.39) [Beijing, China]
+  [Geo] Institute of Theoretical and Applied Geophysics, P -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2021.229104...
+  [Aff] Fetching affiliation for 10.1016/j.geog.2021.09.004...
+  [Aff] Fetching affiliation for 10.1016/j.egyr.2021.09.191...
+  [Geo] School of Geosciences University of Oklahoma  Norm -> (35.20, -97.45) [University of Oklahoma Norman ]
+  [Geo] School of Geosciences University of Oklahoma  Norm -> (35.20, -97.45)
+  [Geo] Department of Earth and Planetary Sciences Yale Un -> (41.29, -72.96) [University New Haven CT USA]
+  [Geo] Department of Earth and Planetary Sciences Yale Un -> (41.29, -72.96)
+  [Aff] Fetching affiliation for 10.1007/s11629-021-6720-8...
+  [Geo] Laboratory of Seismology and Physics of Earth's In -> (31.87, 117.28) [Hefei, China]
+  [Geo] Laboratory of Seismology and Physics of Earth's In -> (31.87, 117.28)
+  [Geo] State Key Laboratory of Marine Geology, School of  -> (31.23, 121.47) [Shanghai, China]
+  [Geo] State Key Laboratory of Marine Geology, School of  -> (31.23, 121.47)
+  [Aff] Fetching affiliation for 10.1016/j.jafrearsci.2020.104027...
+  [Aff] Fetching affiliation for 10.12677/ass.2021.1011428...
+  [Aff] Fetching affiliation for 10.12677/ml.2021.91029...
+  [Aff] Fetching affiliation for 10.1007/s11430-020-9646-x...
+  [Geo] Hubei Subsurface Multi‐scale Imaging Laboratory, I -> (30.58, 114.29) [Wuhan, China]
+  [Geo] Hubei Subsurface Multi‐scale Imaging Laboratory, I -> (30.58, 114.29)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2020.228513...
+  [Aff] Fetching affiliation for 10.1007/s10706-020-01450-y...
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.58, 114.29) [Wuhan, China]
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.58, 114.29)
+  [Geo] State Key Laboratory of Geodesy and Earth’s Dynami -> (30.58, 114.29) [Wuhan, China]
+  [Geo] State Key Laboratory of Geodesy and Earth’s Dynami -> (30.58, 114.29)
+  [Geo] Hubei Subsurface Multi-Scale Imaging Lab (SMIL), C -> (22.55, 114.12) [Hubei 430074, China]
+  [Geo] Hubei Subsurface Multi-Scale Imaging Lab (SMIL), C -> (22.55, 114.12)
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42) [Chinese Academy of Sciences, W]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Aff] Fetching affiliation for 10.1016/j.jafrearsci.2020.103809...
+  [Geo] Department of Earth and Planetary Sciences, Harvar -> (42.53, -71.16) [Massachusetts, U.S.A.]
+  [Geo] Department of Earth and Planetary Sciences, Harvar -> (42.53, -71.16)
+  [Geo] State Key Laboratory of Geological Processes and M -> (39.00, 116.00) [Hubei, China]
+  [Geo] State Key Laboratory of Geological Processes and M -> (39.00, 116.00)
+  [Geo] State Key Laboratory of Water Resources and Hydrop -> (30.58, 114.29) [Wuhan, China]
+  [Geo] State Key Laboratory of Water Resources and Hydrop -> (30.58, 114.29)
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2019.106406...
+  [Geo] Key Laboratory of Petroleum Resources Research, In -> (39.97, 116.42)
+  [Geo] Center for Earthquake Research and Information, Un -> (-34.35, 150.55) [Tennessee, U.S.A.]
+  [Geo] Center for Earthquake Research and Information, Un -> (-34.35, 150.55)
+  [Aff] Fetching affiliation for 10.29382/eqs-2020-0221-01...
+  [Aff] Fetching affiliation for 10.1007/s11430-019-9663-4...
+  [Geo] Hubei Subsurface Multi‐scale Imaging Key Laborator -> (30.58, 114.29)
+  [Geo] State Key Laboratory of Geodesy and Earth’s Dynami -> (30.58, 114.29) [Wuhan, China]
+  [Geo] State Key Laboratory of Geodesy and Earth’s Dynami -> (30.58, 114.29)
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.91, 116.39) [Beijing, China]
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1088/1742-6596/1245/1/012020...
+  [Geo] Department of Earth- and Environmental Sciences, L -> (48.14, 11.58) [Munich, Germany]
+  [Geo] Department of Earth- and Environmental Sciences, L -> (48.14, 11.58)
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39) [Beijing, China]
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39)
+  [Geo] Department of Earth and Space Sciences Southern Un -> (22.60, 114.00)
+  [Aff] Fetching affiliation for 10.5194/se-10-1621-2019...
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.99, 116.30) [Beijing 100871, China]
+  [Geo] School of Earth and Space Sciences, Peking Univers -> (39.99, 116.30)
+  [Aff] Fetching affiliation for 10.1016/j.jseaes.2018.09.005...
+  [Geo] Earth Observatory of Singapore Nanyang Technologic -> (1.30, 103.78) [University Singapore Singapore]
+  [Geo] Earth Observatory of Singapore Nanyang Technologic -> (1.30, 103.78)
+  [Geo] Department of Geosciences Pennsylvania State Unive -> (40.81, -77.87) [University University Park PA ]
+  [Geo] Department of Geosciences Pennsylvania State Unive -> (40.81, -77.87)
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2018.12.002...
+  [Aff] Fetching affiliation for 10.1016/j.pepi.2018.05.004...
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.58, 114.29) [Wuhan, China]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.58, 114.29)
+  [Geo] Unconventional Natural Gas Institute and State Key -> (39.91, 116.39) [Beijing, China]
+  [Geo] Unconventional Natural Gas Institute and State Key -> (39.91, 116.39)
+  [Geo] Department of Earth and Environmental Sciences, Lu -> (48.15, 11.57) [80333 Munich, Germany]
+  [Geo] Department of Earth and Environmental Sciences, Lu -> (48.15, 11.57)
+  [Geo] Graduate School of Oceanography University of Rhod -> (41.49, -71.42) [University of Rhode Island Nar]
+  [Geo] Graduate School of Oceanography University of Rhod -> (41.49, -71.42)
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42) [Chinese Academy of Sciences, W]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Aff] Fetching affiliation for 10.1007/s00024-018-1881-2...
+  [Geo] Department of Terrestrial Magnetism, Carnegie Inst -> (38.90, -77.04) [D.C. 20015, USA]
+  [Geo] Department of Terrestrial Magnetism, Carnegie Inst -> (38.90, -77.04)
+  [Geo] Department of Earth, Environmental, and Planetary  -> (41.49, -71.31) [RI 02912, USA]
+  [Geo] Department of Earth, Environmental, and Planetary  -> (41.49, -71.31)
+  [Geo] Department of Ocean Science and Engineering Southe -> (22.60, 114.00)
+  [Aff] Fetching affiliation for 10.1007/s11600-018-0218-y...
+  [Geo] Guangdong Provincal Key Lab of Geodynamics and Geo -> (23.13, 113.26) [Guangzhou, China]
+  [Geo] Guangdong Provincal Key Lab of Geodynamics and Geo -> (23.13, 113.26)
+  [Aff] Fetching affiliation for 10.1785/0120170051...
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42) [Chinese Academy of Sciences, W]
+  [Geo] State Key Laboratory of Geodesy and Earth's Dynami -> (30.55, 114.42)
+  [Aff] Fetching affiliation for 10.1016/j.tecto.2017.06.001...
+  [Aff] Fetching affiliation for 10.1093/gji/ggx284...
+  [Aff] Fetching affiliation for 10.1016/j.epsl.2016.12.029...
+  [Aff] Fetching affiliation for 10.1093/gji/ggx522...
+  [Aff] Fetching affiliation for 10.1016/j.epsl.2017.09.024...
+  [Aff] Fetching affiliation for 10.1007/s11589-017-0197-0...
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39) [Beijing, China]
+  [Geo] State Key Laboratory of Petroleum Resource and Pro -> (39.91, 116.39)
+  [Aff] Fetching affiliation for 10.1093/gji/ggx449...
+  [Aff] Fetching affiliation for 10.1093/gji/ggw137...
+  [Geo] Chinese Academy of Sciences, Institute of Geology  -> (39.91, 116.33) [Chinese Academy of Sciences, B]
+  [Geo] Chinese Academy of Sciences, Institute of Geology  -> (39.91, 116.33)
+  [Aff] Fetching affiliation for 10.1093/gji/ggw460...
+  [Aff] Fetching affiliation for 10.1007/s11430-014-5017-y...
+  [Aff] Fetching affiliation for 10.1007/s11430-015-5053-2...
+  [Aff] Fetching affiliation for 10.1007/s00024-014-0993-6...
+  [Aff] Fetching affiliation for 10.1007/s11589-014-0062-3...
+  [Aff] Fetching affiliation for 10.1007/s11589-009-0403-9...
+  [Aff] Fetching affiliation for 10.1007/s10950-008-9127-x...
+  [Aff] Fetching affiliation for 10.1007/s11589-008-0001-2...
+
+Saved to data_citations.json
+Total citations: 352
+This week: 0

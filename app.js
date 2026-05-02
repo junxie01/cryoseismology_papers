@@ -1,5 +1,7 @@
 let papers = [];
 let currentTopic = 'cryo';
+let map = null;
+let markers = [];
 
 const topicFiles = {
     'cryo': 'data_cryo.json',
@@ -58,12 +60,18 @@ async function loadPapers(topic) {
 
         // 处理 citations 的特殊显示
         const citationStats = document.getElementById('citation-stats');
+        const citationMap = document.getElementById('citation-map');
         if (topic === 'citations') {
             citationStats.classList.remove('hidden');
+            citationMap.classList.add('visible');
             document.getElementById('total-citations').textContent = data.total_citations || 0;
             document.getElementById('weekly-citations').textContent = data.weekly_citations || 0;
+            renderCitationMap(data.papers || [], data.weekly_papers || []);
         } else {
             citationStats.classList.add('hidden');
+            citationMap.classList.remove('hidden');
+            citationMap.classList.remove('visible');
+            clearCitationMap();
         }
 
         renderPapersList();
@@ -164,4 +172,73 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function renderCitationMap(allPapers, weeklyPapers) {
+    const mapContainer = document.getElementById('citation-map');
+    const weeklyIds = new Set(weeklyPapers.map(p => p.id));
+
+    if (map) {
+        map.remove();
+        map = null;
+    }
+    markers = [];
+
+    map = L.map('citation-map').setView([20, 0], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const hasCoords = allPapers.filter(p => p.coordinates && p.coordinates.lat && p.coordinates.lon);
+
+    if (hasCoords.length === 0) {
+        mapContainer.innerHTML = '<div style="height:400px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:12px;color:#666;">暂无地理坐标数据</div>';
+        return;
+    }
+
+    hasCoords.forEach(paper => {
+        const isWeekly = weeklyIds.has(paper.id) || paper.is_new_this_week;
+        const color = isWeekly ? '#e74c3c' : '#f39c12';
+        const radius = isWeekly ? 10 : 6;
+
+        const circle = L.circleMarker([paper.coordinates.lat, paper.coordinates.lon], {
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.6,
+            radius: radius,
+            weight: 2
+        });
+
+        if (isWeekly) {
+            circle.setStyle({ className: 'blink-animation' });
+        }
+
+        const popupContent = `
+            <div class="citation-popup">
+                <h4>${escapeHtml(paper.title)}</h4>
+                <p><b>${escapeHtml(paper.first_author)}</b></p>
+                <p>${escapeHtml(paper.affiliation !== 'N/A' ? paper.affiliation : '未知单位')}</p>
+                <p>发表: ${paper.published || '未知'}</p>
+                ${isWeekly ? '<p style="color:#e74c3c;font-weight:bold;">🆕 本周新增</p>' : ''}
+            </div>
+        `;
+
+        circle.bindPopup(popupContent);
+        circle.addTo(map);
+        markers.push(circle);
+    });
+
+    const group = L.featureGroup(markers);
+    if (group.getBounds().isValid()) {
+        map.fitBounds(group.getBounds().pad(0.1));
+    }
+}
+
+function clearCitationMap() {
+    if (map) {
+        map.remove();
+        map = null;
+    }
+    markers = [];
 }

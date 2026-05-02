@@ -190,41 +190,104 @@ def geocode_affiliation(affiliation_name):
             pass
     if affiliation_name in cache:
         return cache[affiliation_name]
-    try:
-        query = urllib.parse.quote(affiliation_name + ', world')
-        url = f'https://nominatim.openstreetmap.org/search?q={query}&format=json&limit=1'
-        response = session.get(url, timeout=10, headers={'User-Agent': 'paper-weekly-bot/1.0'})
-        if response.status_code == 200:
-            data = response.json()
-            if data:
-                lat = float(data[0].get('lat', 0))
-                lon = float(data[0].get('lon', 0))
-                if lat and lon:
-                    result = {'lat': lat, 'lon': lon, 'display_name': data[0].get('display_name', '')}
-                    cache[affiliation_name] = result
-                    with open(cache_file, 'w', encoding='utf-8') as f:
-                        json.dump(cache, f, ensure_ascii=False)
-                    print(f'  [Geo] {affiliation_name[:50]} -> ({lat:.2f}, {lon:.2f})')
-                    return result
-    except Exception as e:
-        print(f'  [Geo] Error geocoding {affiliation_name[:30]}: {e}')
+
+    queries = [
+        affiliation_name,
+    ]
+
+    parts = [p.strip() for p in affiliation_name.split(',')]
+    if len(parts) >= 2:
+        queries.append(f"{parts[-2]}, {parts[-1]}".strip())
+        if len(parts) >= 3:
+            queries.append(f"{parts[-3]}, {parts[-1]}".strip())
+    else:
+        words = affiliation_name.split()
+        for i, w in enumerate(words):
+            if any(kw in w for kw in ['University', 'Institute', 'College']):
+                queries.append(' '.join(words[i:]))
+                if i > 0:
+                    queries.append(' '.join(words[i-1:]))
+                break
+
+    import re
+
+    city_match = re.search(r'\b(Beijing|Shanghai|Wuhan|Guangzhou|Chengdu|Xian|Nanjing|Tianjin|Chongqing|Qingdao|Hefei|Xian|Taipei|Seoul|Tokyo|Osaka|Kyoto|Potsdam|Munich|Berlin|Paris|London|Berkeley|Stanford|Cambridge|MIT|Harvard|New York|Los Angeles|Singapore)\b', affiliation_name)
+    country_match = re.search(r'\b(USA|US|United States|China|Germany|UK|Japan|Australia|Canada|France|Russia|Singapore|Switzerland|Netherlands|Brazil|India|Taiwan|Korea)\b', affiliation_name)
+
+    cas_match = re.search(r'Chinese Academy of Sciences', affiliation_name)
+    if cas_match and city_match:
+        queries.append(f"Chinese Academy of Sciences, {city_match.group(1)}")
+        if country_match:
+            queries.append(f"Chinese Academy of Sciences, {city_match.group(1)}, {country_match.group(1)}")
+
+    if city_match and country_match:
+        queries.append(f"{city_match.group(1)}, {country_match.group(1)}")
+    elif city_match:
+        queries.append(city_match.group(1))
+
+    kw_pattern = r'(?:Chinese Academy|Academy|Institute|University|College|Laboratory|Observatory)'
+    kw_matches = list(re.finditer(kw_pattern, affiliation_name))
+    if kw_matches:
+        last_kw = kw_matches[-1]
+        words_before = affiliation_name[:last_kw.start()].split()
+        if len(words_before) <= 5:
+            univ = affiliation_name[:last_kw.end()].strip()
+        else:
+            univ = ' '.join(words_before[-5:]) + ' ' + last_kw.group()
+        queries.append(univ)
+        if city_match:
+            queries.append(f"{univ}, {city_match.group(1)}")
+        if country_match:
+            queries.append(f"{univ}, {country_match.group(1)}")
+
+    seen = set()
+    unique_queries = []
+    for q in queries:
+        if q not in seen and q != affiliation_name:
+            seen.add(q)
+            unique_queries.append(q)
+
+    for query in unique_queries:
+        try:
+            encoded = urllib.parse.quote(query)
+            url = f'https://nominatim.openstreetmap.org/search?q={encoded}&format=json&limit=1'
+            response = session.get(url, timeout=10, headers={'User-Agent': 'paper-weekly-bot/1.0'})
+            if response.status_code == 200:
+                data = response.json()
+                if data:
+                    lat = float(data[0].get('lat', 0))
+                    lon = float(data[0].get('lon', 0))
+                    if lat and lon:
+                        result = {'lat': lat, 'lon': lon, 'display_name': data[0].get('display_name', '')}
+                        cache[affiliation_name] = result
+                        with open(cache_file, 'w', encoding='utf-8') as f:
+                            json.dump(cache, f, ensure_ascii=False)
+                        print(f'  [Geo] {affiliation_name[:50]} -> ({lat:.2f}, {lon:.2f}) [{query[:30]}]')
+                        return result
+            time.sleep(1)
+        except Exception as e:
+            print(f'  [Geo] Error geocoding {query[:30]}: {e}')
+            continue
+
     cache[affiliation_name] = None
     with open(cache_file, 'w', encoding='utf-8') as f:
         json.dump(cache, f, ensure_ascii=False)
     return None
 
-def _in_window(pub_date_str, since_dt):
+def _in_window(pub_date_str, since_dt, until_dt=None):
     if not pub_date_str:
         return False
+    if until_dt is None:
+        until_dt = datetime.now()
     try:
         for fmt in ('%Y-%m-%d', '%Y-%m', '%Y'):
             try:
                 dt = datetime.strptime(pub_date_str[:len('%Y-%m-%d' if len(pub_date_str) >= 10 else '%Y-%m')], fmt)
-                return dt >= since_dt
+                return since_dt <= dt <= until_dt
             except:
                 continue
         year = int(pub_date_str[:4])
-        return year >= since_dt.year
+        return since_dt.year <= year <= until_dt.year
     except:
         return False
 
@@ -251,7 +314,13 @@ def _s2_entry(cp, paper):
     pub = cp.get('publicationDate', '') or str(cp.get('year', ''))
     journal = cp.get('journal') or {}
     source = cp.get('venue') or (journal.get('name', 'Unknown') if isinstance(journal, dict) else 'Unknown')
-    aff = cp.get('authors', [{}])[0].get('affiliation', '') if cp.get('authors') else ''
+    authors_data = cp.get('authors', [])
+    aff = ''
+    if authors_data:
+        first_author = authors_data[0] if authors_data else {}
+        aff = first_author.get('affiliation', '')
+        if isinstance(aff, dict):
+            aff = aff.get('name', 'N/A')
     return {
         'id': doi or cp.get('paperId', ''),
         'title': cp.get('title', 'No Title'),
@@ -265,13 +334,30 @@ def _s2_entry(cp, paper):
         'cited_paper': paper['title'],
     }
 
+def fetch_paper_affiliation(paper_doi):
+    """Fetch author affiliation for a specific paper by DOI using Semantic Scholar."""
+    if not paper_doi:
+        return 'N/A'
+    fields = 'authors'
+    try:
+        url = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{paper_doi}?fields={fields}'
+        r = session.get(url, timeout=15, headers={'User-Agent': 'paper-weekly-bot/1.0'})
+        if r.status_code == 200:
+            data = r.json()
+            authors = data.get('authors', [])
+            if authors and authors[0].get('affiliation'):
+                return authors[0].get('affiliation')
+    except Exception:
+        pass
+    return 'N/A'
+
 def fetch_semantic_scholar(paper_doi, since_dt, paper=None):
     if paper is None:
         paper = {'doi': paper_doi, 'title': paper_doi}
     results = []
     if not paper_doi:
         return results
-    fields = 'title,authors,year,publicationDate,externalIds,venue,journal'
+    fields = 'title,authors,year,publicationDate,externalIds,venue,journal,authors.affiliation'
     base = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{paper_doi}/citations'
     offset = 0
     limit = 500
@@ -470,7 +556,7 @@ def fetch_full_citations(paper_doi):
     results = []
     if not paper_doi:
         return results
-    fields = 'title,authors,year,publicationDate,externalIds,venue,journal'
+    fields = 'title,authors,year,publicationDate,externalIds,venue,journal,authors.affiliation'
     base = f'https://api.semanticscholar.org/graph/v1/paper/DOI:{paper_doi}/citations'
     offset = 0
     limit = 500
@@ -535,8 +621,16 @@ def save_results(papers, now):
     weekly_papers.sort(key=lambda x: x.get('published', ''), reverse=True)
     for paper in all_papers:
         if 'coordinates' not in paper or paper['coordinates'] is None:
-            coords = geocode_affiliation(paper.get('affiliation', ''))
+            aff = paper.get('affiliation', 'N/A')
+            if aff == 'N/A' or not aff:
+                print(f'  [Aff] Fetching affiliation for {paper.get("id", paper.get("title", "")[:30])}...')
+                aff = fetch_paper_affiliation(paper.get('id', ''))
+                paper['affiliation'] = aff
+                time.sleep(1)
+            coords = geocode_affiliation(aff)
             paper['coordinates'] = coords
+            if coords:
+                print(f'  [Geo] {aff[:50]} -> ({coords["lat"]:.2f}, {coords["lon"]:.2f})')
             time.sleep(1)
     map_data = []
     for paper in all_papers:
