@@ -1,7 +1,51 @@
 {
-  "last_update": "2026-04-06 至 2026-04-13 02:42",
+  "last_update": "2026-04-26 至 2026-05-03 03:24",
   "topic_name": "地震成像",
   "papers": [
+    {
+      "id": "2604.27428v1",
+      "title": "Wave-Equation Migration Velocity Analysis for Multistatic Synthetic Aperture Ultrasound",
+      "url": "http://arxiv.org/abs/2604.27428v1",
+      "first_author": "Rehman Ali",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "声速不均匀性会引起组织相关的延迟和衍射效应，从而在 B 型超声图像中产生像差，这是传统波束形成所不具备的。逆时偏移（RTM）通过使用傅里叶分步方法模拟异质声速介质中的压力场，可以通过互相关发射和接收的压力场来重建B模式图像。因此，RTM 对于声速是可微分的。这使得能够重建声速分布，从而最大限度地减少 B 模式图像中的像差。在地震成像中，这种形式的衍射层析成像（称为波动方程偏移速度分析）可以粗略地理解为一种全波形反演（FWI），它作用于图像域而不是接收到的通道数据中的误差。这是第一个将 WEMVA 应用于医学脉冲回波超声成像的工作。体模实验显示图像质量显着提高，点目标分辨率从 1.22$\\pm$1.01 毫米提高到 0.32$\\pm$0.07 毫米，病灶对比度从 3.05 分贝提高到 4.39 分贝。",
+      "source": "arXiv",
+      "published": "2026-04-30"
+    },
+    {
+      "id": "2604.26938v1",
+      "title": "Meta-learning-enhanced implicit full waveform inversion",
+      "url": "http://arxiv.org/abs/2604.26938v1",
+      "first_author": "Huan Song",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "隐式全波形反演（IFWI）引入隐式神经表示，将地下速度模型参数化为空间坐标的连续函数，减轻了对初始模型的依赖，提高了反演灵活性。然而，IFWI仍然需要对每个新的勘探区域进行大量的迭代更新，导致收敛速度慢、计算成本高，并且缺乏跨不同地质环境共享先验知识的机制，从而限制了其效率和泛化能力。为了进一步加速收敛并增强跨区域泛化能力，我们提出了一种基于元学习的隐式全波形反演方法，称为元学习增强型隐式全波形反演（Meta-IFWI）。在此框架中，地下速度模型使用具有周期性激活函数（SIREN）的隐式神经网络来表示，同时采用元学习策略来预训练多个速度反演任务的单个网络。通过这个过程，网络学习不同地质情况下的共享反演先验和快速适应策略。对于新的反演任务，预训练的Meta-IFWI模型只需少量梯度更新即可有效地适应观测到的地震数据，从而显着减少反演所需的迭代次数。对分布内模型（包括分层合成模型和Overthrust模型）以及分布外复杂模型（例如Marmousi 2）进行的数值实验表明，与传统IFWI相比，所提出的Meta-IFWI提高了反演精度，同时大大加速了收敛并降低了计算成本。此外，Meta-IFWI 表现出增强的鲁棒性和更强的跨区域泛化能力。",
+      "source": "arXiv",
+      "published": "2026-04-29"
+    },
+    {
+      "id": "2604.15796v1",
+      "title": "TV-Regularized Frequency-Domain Full-Waveform Inversion for Single-Sided Linear Ultrasound Array Data",
+      "url": "http://arxiv.org/abs/2604.15796v1",
+      "first_author": "Rui Guo",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "定量声速（SoS）和组织衰减与病理密切相关；然而，传统的 B 模式图像仅限于定性可视化。现有的用于定量 SoS 重建的超声全波形反演 (FWI) 方法主要是在双面或环形阵列下开发的，这限制了它们在广泛采用的常规临床采集中的适用性。在这项工作中，我们开发了一种专为单侧线性超声阵列量身定制的频域全变分 (TV) 正则化 FWI 框架，该框架能够使用标准临床探头定量重建 SoS 图。为了解决该设置中严重的不适定性和计算挑战，高效的正演建模、快速梯度评估、基于 ADMM 的优化和多 GPU 并行化被集成到反演框架中。甲状腺囊肿成像场景中的数值实验表明，与传统 FWI 相比，所提出的方法重建了简单（充满液体）和实体囊肿的 SoS，并具有改进的视觉和定量性能。跨不同目标和阵列孔径的额外 2D 和 3D 模拟进一步阐明了单侧超声 FWI 的功能和局限性。",
+      "source": "arXiv",
+      "published": "2026-04-17"
+    },
+    {
+      "id": "2604.11920v1",
+      "title": "pDSurfTomo: A High-Performance Parallel Computing Package for Direct Surface Wave Tomography",
+      "url": "http://arxiv.org/abs/2604.11920v1",
+      "first_author": "Shaohang Zhu",
+      "corr_author": "N/A",
+      "affiliation": "arXiv Preprint",
+      "abs_zh": "表面波层析成像对于研究地壳和上地幔的剪切波速度结构至关重要。直接表面波层析成像方法 DSurfTomo 已成为最广泛采用的软件包之一，因为它能够考虑复杂介质中的射线路径弯曲，从而提高地下表征的准确性。但其固有的串行架构缺乏对多核CPU和GPU的有效支持。此外，在求解大规模线性系统时，其内置求解器的计算成本很高。因此，该软件很难满足当前对大规模、高分辨率表面波断层扫描的需求。为了解决这些限制，我们提出了 pDSurfTomo，这是一种利用混合 CPU-GPU 加速的高度优化包。首先，通过精细化的并行设计，克服了灵敏度核计算的可扩展性瓶颈；此外，它还利用矢量化技术加速面波色散建模，实现灵敏度核的高效计算。其次，它使用OpenMP实现了串行快速行进方法的并行化，显着减少了表面波走时的计算时间。最后，它结合了 GPU 加速来有效解决大规模稀疏线性最小二乘问题。为了简化工作流程，我们提供了具有远程服务器连接的跨平台 GUI，允许用户在本地执行和可视化反演任务，同时无缝利用远程计算集群。对华北 229 个站点观测到的色散数据集的应用表明，与原始 DSurfTomo 相比，pDSurfTomo 将计算时间减少了一个数量级以上，同时保持了可以忽略不计的差异。预计 pDSurfTomo 将为大规模、高分辨率表面波断层扫描提供高效且易于使用的解决方案。",
+      "source": "arXiv",
+      "published": "2026-04-13"
+    },
     {
       "id": "2604.07421v1",
       "title": "SPAMoE: Spectrum-Aware Hybrid Operator Framework for Full-Waveform Inversion",
@@ -12,50 +56,6 @@
       "abs_zh": "全波形反演（FWI）对于重建高分辨率地下速度模型至关重要，但仍然计算密集且不适定。虽然深度学习方法保证了效率，但现有的卷积神经网络 (CNN) 和单范式神经算子 (NO) 都在努力解决一个基本问题：多尺度地质特征的频率纠缠。为了应对这一挑战，我们提出了频谱保留自适应 MoE (SPAMoE)，这是一种新颖的频谱感知框架，用于解决复杂多尺度结构的逆问题。我们的方法引入了频谱保留 DINO 编码器，该编码器强制编码表示的高低频能量比的下限，减轻高频崩溃并稳定后续的频域建模。此外，我们设计了一种新颖的频谱分解和路由机制，可以动态地将频段分配给由 FNO、MNO 和 LNO 组成的专家混合 (MoE) 系综。在 OpenFWI 的 10 个子数据集上，实验表明，SPAMoE 相对于官方报告的最佳 OpenFWI 基线，平均 MAE 降低了 54.1%，从而为基于学习的全波形反演建立了新的架构框架。",
       "source": "arXiv",
       "published": "2026-04-08"
-    },
-    {
-      "id": "2604.00307v1",
-      "title": "SAGE: Subsurface AI-driven Geostatistical Extraction with proxy posterior",
-      "url": "http://arxiv.org/abs/2604.00307v1",
-      "first_author": "Huseyin Tuna Erdinc",
-      "corr_author": "N/A",
-      "affiliation": "arXiv Preprint",
-      "abs_zh": "生成网络的最新进展启用了地下速度模型合成的新方法，为全波形反演等传统方法提供了令人信服的替代方案。然而，这些方法主要依赖于高质量、地质真实的地下速度模型的大规模数据集的可用性，而这些数据集在实践中通常很难获得。我们引入了 SAGE，这是一种新颖的框架，用于根据不完整的观测（特别是稀疏测井曲线和偏移地震图像）生成统计上一致的代理速度。在训练过程中，SAGE 学习以两种模式（井和地震）为条件的速度模型的代理后验；推理时，它会产生仅以迁移图像为条件的全分辨率速度场，并且井信息隐式编码在学习的分布中。这使得能够生成地质上合理且统计上准确的速度实现。我们在合成数据集和现场数据集上验证了 SAGE，证明了它在有限的观测约束下捕获复杂的地下变化的能力。此外，从学习的代理分布中提取的样本可用于训练下游网络，支持反演工作流程。总体而言，SAGE 提供了一种可扩展且数据高效的途径，用于学习地震成像和反演的地质代理后验。回购链接：https://github.com/slimgroup/SAGE。",
-      "source": "arXiv",
-      "published": "2026-03-31"
-    },
-    {
-      "id": "2603.26191v1",
-      "title": "A Multi-physics Alternating Coupled Inversion Using Gravity and Full Waveform Data in Salt Dome",
-      "url": "http://arxiv.org/abs/2603.26191v1",
-      "first_author": "Siyuan Dong",
-      "corr_author": "N/A",
-      "affiliation": "arXiv Preprint",
-      "abs_zh": "复杂的盐几何形状和强烈的速度对比给速度模型构建和盐下成像带来了重大挑战。尽管全波形反演（FWI）提供高分辨率速度模型，但其性能很大程度上取决于初始模型的精度。另一方面，重力聚焦反演（GFI）可以恢复致密的密度分布，为地震勘探提供可靠的长波长构造信息，但其深度分辨率差且具有固有的非唯一性。为了利用全波形和重力数据的优势互补更好地反演盐结构，我们提出了一种盐丘模型多物理场交替耦合反演策略。提出的策略主要包括三个部分。首先，我们使用简单的分层速度模型执行 FWI，以获得初步速度更新并提取盐顶边界。其次，该结构信息被用作 GFI 中的约束，以恢复盐顶下方紧凑的盐密度分布。第三，由此产生的盐几何形状用于为下一阶段的 FWI 构建改进的速度模型。通过迭代交替，FWI为GFI提供了可靠的结构约束，而GFI为FWI提供了更合理的宏观盐模型，有效缓解了对初始模型的强烈依赖。此外，GFI 中引入了随深度变化的密度对比，以更好地表示沉积物压实效​​应。与使用水平分层初始模型的无约束GFI和传统FWI相比，该方法有效地改善了改进的BP盐模型和SEG/EAGE盐模型中的速度和密度重建。",
-      "source": "arXiv",
-      "published": "2026-03-27"
-    },
-    {
-      "id": "2603.24751v1",
-      "title": "Scalable Bayesian full waveform inversion via dual augmented Lagrangian SVGD",
-      "url": "http://arxiv.org/abs/2603.24751v1",
-      "first_author": "Kamal Aghazade",
-      "corr_author": "N/A",
-      "affiliation": "arXiv Preprint",
-      "abs_zh": "全波形反演是一个不适定的反演问题，其解的非唯一性——即由带限、有限孔径、噪声数据引起——需要不确定性量化以避免过度自信的地质解释。贝叶斯推理通过将解描述为后验分布而不是单点估计来满足这一需求。然而，从该分布中进行采样在计算上仍然具有挑战性：马尔可夫链蒙特卡罗和非摊余变分推理需要重复波动方程求解，而避免重复求解的摊余变分推理方法依赖于地球科学中本质上稀缺的训练数据，并且面临高维度中未解决的泛化挑战。为了解决这些限制，我们将斯坦因变分梯度下降与双增广拉格朗日公式下的乘子交替方向方法结合起来。通过将波算子固定在频率批次之间更新的背景模型上，只需每个频率每个粒子分解一次，消除每次迭代重构并将总成本降低到少数确定性反演的总成本，同时继承扩展空间公式的有利条件。应用于 Marmousi~II 模型时，所提出的方法提供了良好校准的不确定性估计，并以计算成本的一小部分实现了与标准增强拉格朗日 SVGD 相当的反演质量。",
-      "source": "arXiv",
-      "published": "2026-03-25"
-    },
-    {
-      "id": "2603.24415v1",
-      "title": "Reconstructing effective ultrasound transducer models via distributed source inversion",
-      "url": "http://arxiv.org/abs/2603.24415v1",
-      "first_author": "Tim Bürchner",
-      "corr_author": "N/A",
-      "affiliation": "arXiv Preprint",
-      "abs_zh": "超声波传播的精确建模对于超声检测中的高保真模拟和成像至关重要。主要挑战在于表征激励源，特别是对于相对于声波波长具有大孔径的换能器。在这种情况下，不均匀激发和空间干扰会显着影响最终的辐射方向图。本文提出了一种分布式源反演策略来重建有效的时空换能器模型，以再现实验测量的波场。重建的源模型可以捕获与孔径相关的相位和幅度变化，而无需详细了解换能器结构。该方法使用铝半圆柱体上的方向性测量进行了验证，其中结合重建源模型的模拟显示与实验方向性模式和波形形状非常一致。最后，逆时偏移和全波形反演的综合研究表明，准确的换能器建模对于基于模拟的成像和反演工作流程的成功至关重要，并显着提高重建质量。",
-      "source": "arXiv",
-      "published": "2026-03-25"
     },
     {
       "id": "10.1016/j.epsl.2026.119963",
@@ -102,69 +102,69 @@
       "published": "2026"
     },
     {
-      "id": "10.1029/2025gl119526",
-      "title": "Mesoscale Eddy Currents Reshape the Spatial Distribution of Wave Height in the Southern Ocean",
-      "url": "https://doi.org/10.1029/2025gl119526",
-      "first_author": "Tianyi Cheng",
-      "corr_author": "Alexander V. Babanin",
-      "affiliation": "Frontier Science Center for Deep Ocean Multispheres and Earth System (FDOMES) and Physical Oceanography Laboratory Ocean University of China  Qingdao China",
-      "abs_zh": "中尺度涡流影响海洋表面波浪，但它们对波高的影响仍然很难通过观测描述。在这里，我们使用沿轨 Jason-3 高度计测量结果检查了与南大洋 42,000 多个中尺度涡流相关的显着波高 (SWH) 变化。高度计复合材料显示出明显的子午偶极子，其中波传播与涡流一致的 SWH 降低，而相反侧的 SWH 增强。典型涡流（半径约 45 公里，地转速度异常约 0.15 米·秒）\n                    −1\n                    ）与 ∼5 cm 的 SWH 异常相关。再分析数据和理想化模拟进一步表明，与涡流相关的风异常、相对风效应和直流效应都对观测到的 SWH 模式有贡献，其中折射起着关键作用。这些结果强调了中尺度水流在重新分配波浪能量和塑造波高空间分布中的作用。",
+      "id": "10.1093/gji/ggag158",
+      "title": "Transdimensional ambient-noise tomography of the Zabargad Fracture Zone, Red Sea",
+      "url": "https://doi.org/10.1093/gji/ggag158",
+      "first_author": "Eduardo Valero Cano",
+      "corr_author": "Paul Martin Mai",
+      "affiliation": "PSE Division, King Abdullah University of Science and Technology (KAUST) , Thuwal 23955-6900 ,",
+      "abs_zh": "总结\n                  红海是地球上最年轻的超慢扩张海脊之一，也是研究从大陆裂谷到海洋扩张过渡的理想场所。在此背景下，扎巴尔加德断裂带 (ZFZ) 成为一个特别有趣的地区。 ZFZ 拥有显着特征，包括红海扩张轴的偏移、马巴希斯蒙斯海底火山和科布里特深卤水池。此外，该地区地震活跃，对附近沿海社区构成危险。尽管之前进行了地球物理研究，但很少有地震速度模型能够对 ZFZ 的浅层地下结构进行成像。在这项工作中，我们使用五个宽带站和 14 个海底地震仪记录的大约一年的地震环境噪声来估计 ZFZ 的剪切波速度结构。为此，我们计算垂直-垂直、径向-径向和横向-横向噪声相关性，获得瑞利波和拉夫波在 3 至 12 秒周期带内的群速度和相速度色散曲线，并采用跨维断层扫描来估计 ZFZ 的 1 维和 3 维各向同性剪切波速度模型。我们的一维速度模型表明，平均而言，ZFZ 地壳结构包括 1.5 公里厚的层（包括半远洋沉积物和蒸发岩）、2.8 公里厚的海洋基底以及从海平面以下 6.5 公里延伸到 8 公里的壳幔过渡层。同时，我们的 3D 模型与之前的地质和地球物理观测结果一致，并揭示了新的地下结构。特别是，它显示了马巴希斯深渊东部和南部的低速区域，与已知的沉积盆地相关。此外，我们的 3D 模型包含 Kebrit Deep 附近的低速区域，该区域与低地震活动区域和最近推断的扩展轴段相关。根据之前热液喷口不活跃的证据，我们推断这个低速区域表明基底温度较高",
+      "source": "Geophysical Journal International",
+      "published": "2026"
+    },
+    {
+      "id": "10.1093/gji/ggag152",
+      "title": "Seismic travel-time tomography under the peak ring of the Chicxulub impact crater",
+      "url": "https://doi.org/10.1093/gji/ggag152",
+      "first_author": "Penny Barton",
+      "corr_author": "Michael Warner",
+      "affiliation": "University of Cambridge, Earth Sciences; University of Cambridge, Homerton College",
+      "abs_zh": "总结\n                  我们展示了墨西哥希克苏鲁伯陨石撞击坑峰环结构象限下方上地壳的三维地震层析成像研究结果。对 6 公里拖缆和 48 个海底地震仪站记录的地震剖面网格的反射和折射走时进行反演，得到最大深度为 6-8 公里的良好解析的三维速度模型。该模型包括薄水层、低震速撞击后沉积填充物层和火山口基底，火山口基底通过代表火山口顶部的界面与填充物分开，该界面由法向入射反射镐定义。火山口基底显示出一个圆柱形特征，在地形峰环下方垂直向下延伸至少 8 公里（本次调查的分辨率深度），其特点是地震速度比相同深度的周围岩石慢。这一结果支持并扩展了先前在峰环中的地震折射工作以及科学钻探的观察结果，即与典型的花岗岩基底岩性相比，峰环中的材料显着降低了地震速度。我们使用速度模型对关键地震反射剖面进行叠前深度偏移。在此提出的最佳拟合模型中，先前在地震反射剖面上识别的突出倾斜反射体投射到峰环的外边缘，向内倾斜并穿过低速圆柱体，而没有明显的一阶阻抗对比。该结果意味着该倾斜反射器的反射率是由于薄的高对比度层（例如翻转结构内残留的冲击熔体或热液蚀变）造成的。我们还识别了从火山口边缘/内环向内成像良好的坍落块、峰环高度和宽度的变化以及峰环的相关变化。",
+      "source": "Geophysical Journal International",
+      "published": "2026"
+    },
+    {
+      "id": "10.1126/sciadv.adp3054",
+      "title": "Resonant Rossby wave mechanism for extreme weather performs poorly in simple model test",
+      "url": "https://doi.org/10.1126/sciadv.adp3054",
+      "first_author": "Todd A. Mooring",
+      "corr_author": "Marianna Linz",
+      "affiliation": "Department of Earth and Planetary Sciences, Harvard University, Cambridge, MA 02138, USA.",
+      "abs_zh": "准静止罗斯贝波的准共振放大（QRA）是一种针对中纬度极端天气的机制，已被多次提出但仅经过有限的测试。在这里，我们通过尝试在理想化的大气环流模型中创建准共振罗斯贝波来测试 QRA 理论，在该模型中，我们确定了预期适合（和不适合）准共振罗斯贝波存在的平均流动状态，并量化了相关波幅。对于被认为适合 QRA 的平均流量条件，反而发现相关波数的波比表面上不适合 QRA 的条件下更弱。这种情况不能通过改变适合 QRA 的平均流量的定义来强有力地改变。这些发现对 QRA 理论作为一种解释工具的当前形式的价值提出了质疑，并且更普遍地需要谨慎使用纯二维理论和/或纬向平均流来解释对流层极端事件动力学。",
+      "source": "Science Advances",
+      "published": "2026"
+    },
+    {
+      "id": "10.1029/2025gl120326",
+      "title": "Layered Seismic Anisotropy and Tectonics of the Anatolian Plate",
+      "url": "https://doi.org/10.1029/2025gl120326",
+      "first_author": "Chuanming Liu",
+      "corr_author": "Lili Feng",
+      "affiliation": "Department of Geological Sciences University of Missouri Columbia  Columbia MO USA",
+      "abs_zh": "安纳托利亚构造与西部的板块后退和东部的重力势能和大陆碰撞有关，导致安纳托利亚相对于欧亚大陆向西运动，部分容纳在北部和东部安纳托利亚转换断层上。我们使用新的瑞利波测量构建了三层方位角地震各向异性模型，并将结果与​​大地测量应变率和新的地壳接收函数分析以及地幔的新的和现有的剪切波分裂进行比较，以连接表面和深层动力学。在地壳中，各向异性主要受近期构造运动控制，特别是沿主要断裂带。在岩石圈地幔中，各向异性反映了安纳托利亚西部正在进行的构造变形，而安纳托利亚东部主要保留了先前的变形特征。在软流圈中，各向异性反映了地幔对流，包括希腊板块后退的影响。我们的模型为东地中海岩石圈变形和地球动力学提供了新的约束。",
       "source": "Geophysical Research Letters",
       "published": "2026"
     },
     {
-      "id": "10.1093/gji/ggag137",
-      "title": "Uncertainty in Hydrogeophysics: Electrical Resistivity Tomography with Variational Inference",
-      "url": "https://doi.org/10.1093/gji/ggag137",
-      "first_author": "Jiahe Yan",
-      "corr_author": "Andrew Binley",
-      "affiliation": "Lancaster Environment Centre, Lancaster University , Lancaster LA1 4YQ ,",
-      "abs_zh": "总结\n                  电阻率层析成像（ERT）是水文地质调查中广泛使用且有效的工具。传统的 ERT 反演方法基于基于梯度的算法，该算法通常提供确定性最优解，但存在不确定性。这种不确定性可能会对使用 ERT 进行水文地质解释产生重大影响。模型评价是反演后的关键一步，然而传统的评价方法都是定性的，主观性强。为了解决这些局限性，本研究引入了概率变分推理 (VI) 方法，称为 Stein 变分梯度下降 (SVGD)，以量化 ERT 反演中的电阻率分布和相关不确定性。通过综合实例来研究配置和噪声的影响，并将 SVGD 的性能与传统的反演和模型评估技术进行比较。还提出了现场案例研究及其模型验证，以证明现场不确定性量化的实际优势。结果表明，与传统方法相比，SVGD 可以有效减少正则化引入的伪影，并提供对地下结构更全面的定量见解。该研究还揭示了不确定性估计的基本统计数据解释的局限性，强调需要检查参数值的整个后验分布。此外，这项研究表明，最终的不确定性源于多种因素之间的权衡，例如地下结构的几何形状、测量技术和数据噪声水平。最后，我们还讨论了与水文地球物理中其他概率框架的一些比较，强调了其改善 ERT 中的不确定性和概率量化的潜力，以及水文地球物理耦合反演的未来可能的发展。",
-      "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
-      "id": "10.1093/gji/ggag096",
-      "title": "Estimation of elastic wave properties of tight sandstones using a reformulated digital rock physics method and ultrasonic experiments",
-      "url": "https://doi.org/10.1093/gji/ggag096",
-      "first_author": "Jing Ba",
-      "corr_author": "Martin Balcewicz",
-      "affiliation": "School of Earth Sciences and Engineering, Hohai University , Nanjing 211100 ,",
-      "abs_zh": "致密砂岩油藏作为一种分布广泛的非常规油气资源，其微观结构特征复杂，弹性波响应复杂。在这项研究中，我们使用重新制定的数字岩石物理方法来估计致密砂岩的波浪特性。选择来自中国四川盆地和鄂尔多斯盆地的 9 个致密砂岩岩心，在不同压力和流体饱和度下进行 X 射线衍射和超声测量。针对气体和水饱和度，分析了弹性波速度相对于有效压力的变化。进行两种分辨率的计算机断层扫描 (CT) 扫描，以重建多相数字岩石并研究矿物边界 (MB) 的影响。然后使用有限元和有限差分方法进行数值模拟并与超声数据进行比较。结果表明，在考虑 MB 的影响时，模拟可以有效地估计弹性特性。此外，CT 扫描的分辨率决定了捕获的微观结构的规模，这反过来又决定了数值模拟产生有效结果的压力范围。研究结果表明，从这些模拟中得出的波响应与扫描分辨率有着内在的联系。",
-      "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
-      "id": "10.1029/2025gl121541",
-      "title": "Decomposing Earthquake Moment Tensors Using P‐Wave First Motion: Insights Into Global Events With Significant Non‐Double‐Couple Components",
-      "url": "https://doi.org/10.1029/2025gl121541",
-      "first_author": "Zhifeng Wang",
-      "corr_author": "Yuyang Peng",
-      "affiliation": "School of Earth Sciences China University of Geosciences  Wuhan China",
-      "abs_zh": "将地震矩张量分解为各向同性和偏向分量是地震学中的标准。偏差部分进一步分为双耦合 (DC) 和非双耦合 (NDC) 分量，其中 NDC 提供了对源复杂性的洞察。然而，现有方法经常会因不同的物理解释而产生不一致的结果。我们提出了一种新颖的分解方法，将地震建模为两个直流子事件，其中第一个子事件由纵波初动数据确定，第二个子事件通过矩守恒分析得出。该方法简单、高效且可物理解释。我们评估其稳定性并将其应用于全球八个\n                    中号\n                    \n                      w\n                    \n                     ≥ 7.5 次地震（2000 年至 2023 年），NDC 成分大于 40%。结果与之前的研究非常吻合，证明了稳健性。当附加约束（例如余震机制）可用时，此方法可以扩展到多个子事件。它为探索复杂的破裂过程和了解大地震的物理机制提供了强大的工具。",
+      "id": "10.1029/2025gl119695",
+      "title": "Characteristics of Seismic Energy Rate Functions of Shallow Tremors",
+      "url": "https://doi.org/10.1029/2025gl119695",
+      "first_author": "Shunsuke Takemura",
+      "corr_author": "Suguru Yabe",
+      "affiliation": "Earthquake Research Institute the University of Tokyo  Tokyo Japan",
+      "abs_zh": "我们研究了南海俯冲带纪伊半岛东南部浅层地震的能量率函数。单峰函数（三角形或钟形）解释了小（<10\n                    4\n                     J) 浅震颤。随着地震辐射能量的增加，能量率函数变得更加复杂，并且用具有比三角函数更尖锐的峰值或具有小的子事件的单峰函数更好地表征。这些震动特征与普通地震不同。我们比较了浅层地震和深层地震的矩持续时间关系，发现浅层地震具有更大的地震矩。这种差异可以通过沿板块边界断层的热条件来解释。",
       "source": "Geophysical Research Letters",
       "published": "2026"
     },
     {
-      "id": "10.1093/gji/ggag132",
-      "title": "TTI Reflection waveform inversion based on the modified gradient sampling algorithm",
-      "url": "https://doi.org/10.1093/gji/ggag132",
-      "first_author": "Hengli Song",
-      "corr_author": "Jianming Zhang",
-      "affiliation": "State Key Laboratory of Marine Geology, Tongji University , Shanghai, 200092 ,",
-      "abs_zh": "总结\n                  反射波形反演（RWI）是重建中低波数地下参数的有效方法。随着各向异性对地震资料的影响越来越显着，RWI应扩展到倾斜横观各向同性(TTI)介质(TTI-RWI)以提高反演精度。与传统的各向同性或垂直横向各向同性 (VTI) 假设不同，TTI 模型提供了具有强烈构造活动的地质结构的更真实的表示。然而，TTI-RWI 的实际实施面临两个挑战。首先，由于它依赖于波形匹配，不准确的初始模型可能会导致周期跳跃和收敛到局部最小值。其次，速度和各向异性参数之间的固有耦合导致显着的参数串扰。当先验信息有限时，这些问题通常会同时存在。为了解决第一个挑战，我们提出了一种改进的梯度采样算法（GSA），该算法结合了全局优化信息，以在不增加计算成本的情况下减少周期跳跃。对于第二个挑战，我们设计了一种两阶段反演策略，其中首先使用 GSA 反演垂直纵波速度 vp0，然后通过高斯-牛顿优化联合反演 vp0 和各向异性参数 ε。所提出的 TTI-RWI 方法的有效性通过 Overthrust 模型的数值实验和现场海洋拖缆数据的应用得到了验证。",
+      "id": "10.1093/gji/ggag151",
+      "title": "Surface wave analysis using DAS and dense nodal array recordings in near-surface active surveying",
+      "url": "https://doi.org/10.1093/gji/ggag151",
+      "first_author": "Junwei Ma",
+      "corr_author": "Lipeng He",
+      "affiliation": "Southern University of Science and Technology Department of Ocean Science and Engineering, , Shenzhen ,",
+      "abs_zh": "总结\n                  分布式声学传感 (DAS) 通过精确测量光纤中反向散射激光脉冲信号的相位变化来捕获地震波场，从而反映连续光纤段上的分布应变或应变率。 DAS 波场测量对近地表成像的局限性仍不清楚，值得用传统的密集节点阵列进行验证。本研究比较了在中国深圳进行的近地表活动调查中的同位 DAS 和密集节点阵列记录。我们的现场实验揭示了 DAS 波场记录中相干信号的空间固定、阶梯状失真。这些伪影归因于标距空间平均值作用于具有异质灵敏度的光纤段，这可能是由反向散射强度和电缆耦合条件的变化引起的。这些失真导致 DAS 和同位地震仪的波形与其理论关系存在部分偏差。对所有节点上的 DAS 和地震仪波形之间的相位差进行统计比较，揭示出正态分布，表明 DAS 记录中普遍存在这种失真。此外，随着频率的增加，失真变得更加严重，导致DAS和地震仪之间的相位差分布过于分散。这导致在高频下从它们提取的色散曲线存在差异，因为色散提取取决于主通道贡献的相对能量峰值。这项研究表明，在不受失真严重影响的频率范围内，DAS 可以有效地提取可比较的色散曲线和速度结构剖面，代替节点阵列用于近地表成像应用，并通过全剖面比较进行验证。但 DAS 波场畸变限制了完整波场的高级应用，以获得更好的地下特性",
       "source": "Geophysical Journal International",
-      "published": "2026"
-    },
-    {
-      "id": "10.1785/0220250303",
-      "title": "Revealing Hidden\n                    <i>T</i>\n                    -Wave Sources in the South China Sea from an Island Seismometer Using Deep Metric Learning",
-      "url": "https://doi.org/10.1785/0220250303",
-      "first_author": "Chunchang Xia",
-      "corr_author": "Min Xu",
-      "affiliation": "1College of Artificial Intelligence, Guangxi Minzu University, Nanning, China",
-      "abs_zh": "T 波是地震波与复杂海底地形相互作用时产生的水声信号，能量转换为海洋声波，以声速（∼1.5 km/s）通过声音固定和测距通道传播。在南海等半封闭盆地中，复杂的测深由于信号模式的变化而造成了具有挑战性的检测条件。我们使用南海（2012-2024）的陆基地震数据开发了一个用于 T 波识别的深度度量学习框架。我们的半监督方法将 M ≥ 5.0 地震分为三类：无 T 相、单 T 相和多 T 相。深度学习模型取得了优异的性能，宏观 F1 分数高达 94.61%，特别是在检测复杂的多个 T 波模式方面表现出色。应用到较小的地震（M < 5.0）揭示了 116 个以前未检测到的 T 波事件。空间分析表明，T波事件集中在菲律宾板块西缘和马尼拉海沟，多个T相事件主要位于台湾岛东部，可能是由于该地区复杂的测深造成的。此外，越南海岸的一部分近岸地震会产生可检测到的 T 波，这表明沿海浅水区可能会实现地震与声能的耦合。这些发现促进了对半封闭盆地 T 波生成机制的理解，并为震声转换的空间模式提供了新的见解。扩展的 T 波目录和自动检测框架为海洋地震监测提供了宝贵的工具，并有助于提高对复杂测深环境中 T 波传播的理解。由于该框架是从单个岛屿地震仪开发而来，因此其对其他台站或地区的适用性仍有待在未来的研究中评估。",
-      "source": "Seismological Research Letters",
       "published": "2026"
     }
   ]
